@@ -1,0 +1,251 @@
+
+
+//	Base HTML Elements
+
+html {
+	font: $font-size-primary $font-family-primary;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  color: $font-color-primary;
+}
+
+hr {
+	outline: none;
+	border: none;
+	border-bottom: $border-width-primary solid $border-color-primary;
+}
+
+
+
+
+
+/*
+Typography
+
+General overview of typographical elements that will be available on the site.
+
+Styleguide 2
+*/
+
+
+
+// Titles
+//
+// Markup:
+// <h1>Title 1</h1>
+// <h2>Title 2</h2>
+// <h3>Title 3</h3>
+// <h4>Title 4</h4>
+// <h5>Title 5</h5>
+// <h1 class="emphasized">Title 1</h1>
+// <h2 class="emphasized">Title 2</h2>
+// <h3 class="emphasized">Title 3</h3>
+// <h4 class="emphasized">Title 4</h4>
+// <h5 class="emphasized">Title 5</h5>
+// <h1 class="headline">Title 1</h1>
+//
+// Styleguide 2.1
+
+%titles {
+	font-family: $titles-font-family-primary;
+	color: $font-color-primary;
+}
+
+.title-1 {
+	@extend %titles;
+	font-size: 2.25rem;
+}
+.title-2 {
+	@extend %titles;
+	font-size: 1.75rem;
+}
+.title-3 {
+	@extend %titles;
+	font-size: 1.5rem;
+}
+.title-4 {
+	@extend %titles;
+	font-size: 1.25rem;
+}
+.title-5 {
+	@extend %titles;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+h1 {
+	@extend .title-1;
+}
+h2 {
+	@extend .title-2;
+}
+h3 {
+	@extend .title-3;
+}
+h4 {
+	@extend .title-4;
+}
+h5 {
+	@extend .title-5;
+}
+
+
+
+// Body Copy
+//
+// Markup:
+// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
+// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+// <h3>Body Copy with a Title</h3>
+// <em class="subhead">Consectetur voluptatem ducimus atque, debitis pariatur</em>
+// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+//
+//
+// Styleguide 2.2
+
+p {
+	line-height: 1.875rem;
+}
+
+
+
+// Links
+//
+// :hover
+//
+// Markup:
+// <a href="" class="$modifierClass">An example link</a>
+//
+// Styleguide 2.3
+
+a {
+
+	font-family: $font-family-secondary;
+	color: $font-color-link;
+	text-decoration: $font-decoration-link;
+
+	&:hover,
+	&.pseudo-class-hover {
+		color: $font-color-link-hover;
+		text-decoration: $font-decoration-link-hover;
+	}
+
+	&:focus {
+		color: $font-color-link-focus;
+		text-decoration: $font-decoration-link-focus;
+	}
+
+}
+
+
+
+
+
+// Lists
+//
+// Styleguide 2.4
+
+ul, ol, dl {
+	margin: $spacing-outer 0;
+}
+
+li {
+	margin: $spacing-inner;
+}
+
+
+
+// Unordered Lists
+//
+// Markup:
+// <ul>
+// <li>Lorem ipsum dolor sit amet</li>
+// <li>Consectetur adipisicing elit</li>
+// <li>Quisquam ab ex, quos ducimus quasi</li>
+// <li>Tempora ratione amet fugit et</li>
+// </ul>
+//
+// Styleguide 2.4.1
+
+
+
+// Ordered Lists
+//
+// Markup:
+// <ol>
+// <li>Lorem ipsum dolor sit amet</li>
+// <li>Consectetur adipisicing elit</li>
+// <li>Quisquam ab ex, quos ducimus quasi</li>
+// <li>Tempora ratione amet fugit et</li>
+// </ol>
+//
+// Styleguide 2.4.2
+
+
+
+// Description Lists
+//
+// Markup:
+// <dl>
+//   <dt>Term #1</dt>
+//   <dd>Defintion for the term above.</dd>
+//   <dt>Term #2</dt>
+//   <dd>Defintion for the term above.</dd>
+// </dl>
+//
+// Styleguide 2.4.3
+
+dt {
+
+	@extend .title-5;
+	margin-top: $spacing-inner;
+
+	dl + & {
+		border-top: $border-width-primary solid $border-color-primary;
+		padding-top: $spacing-inner;
+	}
+}
+
+dd {
+	margin: $spacing-inner/2 $spacing-inner 0;
+}
+
+
+
+// Blockquote
+//
+// Markup:
+// <blockquote>
+// Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
+// cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
+// A, ut laudantium sunt blanditiis non at, tempora dolore.
+// <footer>
+// — <cite>Source Person, Additional Info</cite>
+// </footer>
+// </blockquote>
+//
+// Styleguide 2.5
+
+blockquote {
+
+	margin: $spacing-outer 0;
+	padding: $spacing-inner*3 $spacing-inner*3 $spacing-inner*2 $spacing-inner*4;
+	background: $background-color-secondary;
+	font-size: $font-size-primary*1.5;
+	line-height: $font-size-primary*3;
+	font-family: $font-family-secondary;
+	border-radius: $border-radius-primary*2;
+
+	footer {
+		padding-top: $spacing-inner;
+		font-size: $font-size-primary*1.125;
+		color: $font-color-primary;
+		text-align: right;
+	}
+
+}

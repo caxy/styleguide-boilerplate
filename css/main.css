@@ -1,0 +1,85 @@
+html {
+  font: 16px "PT Serif", serif; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #454f58; }
+
+hr {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f2f2f2; }
+
+/*
+Typography
+
+General overview of typographical elements that will be available on the site.
+
+Styleguide 1
+*/
+.title-1, h1, .title-2, h2, .title-3, h3, .title-4, h4, .title-5, h5, dt {
+  font-family: "Lato", sans-serif;
+  color: #454f58; }
+
+.title-1, h1 {
+  font-size: 2.25rem; }
+
+.title-2, h2 {
+  font-size: 1.75rem; }
+
+.title-3, h3 {
+  font-size: 1.5rem; }
+
+.title-4, h4 {
+  font-size: 1.25rem; }
+
+.title-5, h5, dt {
+  font-style: italic;
+  font-size: 1rem; }
+
+p {
+  line-height: 1.875rem; }
+
+a {
+  font-family: "Lato", sans-serif;
+  color: #148744;
+  text-decoration: none; }
+  a:hover, a.pseudo-class-hover {
+    color: #0d5b2e;
+    text-decoration: underline; }
+  a:focus {
+    color: #0d5b2e;
+    text-decoration: underline; }
+
+ul, ol, dl {
+  margin: 1.5rem 0; }
+
+li {
+  margin: 1rem; }
+
+dt {
+  margin-top: 1rem; }
+  dl + dt {
+    border-top: 1px solid #f2f2f2;
+    padding-top: 1rem; }
+
+dd {
+  margin: 0.5rem 1rem 0; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 3rem 3rem 2rem 4rem;
+  background: #738290;
+  font-size: 24px;
+  line-height: 48px;
+  font-family: "Lato", sans-serif;
+  border-radius: 26px; }
+  blockquote footer {
+    padding-top: 1rem;
+    font-size: 18px;
+    color: #454f58;
+    text-align: right; }
+
+/*# sourceMappingURL=main.css.map */

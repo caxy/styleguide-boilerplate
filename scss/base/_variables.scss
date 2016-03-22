@@ -1,0 +1,141 @@
+// ====== Brand/Site-Specific ====== //
+
+// Brand-specific, color-named vars belong here. Those names/variables
+// should never move past this file if it can be helped, though;
+// rather, make a role/context based variable and assign the brand-
+// specific value here instead.
+//
+// For example:
+//
+// Correct:
+// $company-blue: #002299; // set the hex
+// $font-link-color: $company-blue; // use the hex
+//
+// a { color: $font-link-color; }
+//
+// This way, if links need to change to, say, orange, you don't have
+// a misleading variable name scattered throughout your code, but you
+// also aren't left wondering "which one was the blue one again?"
+// because you can reference this file for the initial value.
+//
+// It can also be valuable to have general variables to be used later
+// to leverage the benefits of what is outlined above while still having
+// general variables to use elsewhere in the file:
+//
+// Correct:
+// $company-blue: #002299; // set the hex
+// $company-action-color: $company-blue; // use the hex
+// $font-link-color: $company-action-color; // use the general variable name 
+//
+// a { color: $font-link-color; }
+//
+// This makes things a little more readable, but use what works best for you.
+// The important things is to keep any brand- or company-specific variable
+// names in this file only.
+
+
+
+// === Colors === //
+
+$brand-grey: #5c6874;
+$brand-grey-dark: darken($brand-grey, 10%);
+$brand-grey-light: lighten($brand-grey, 10%);
+$brand-accent-blue: #334dae;
+$brand-accent-dark-green: #148744;
+
+$brand-action-color: $brand-accent-dark-green;
+
+// === Fonts === //
+
+$font-family-pt-serif: 'PT Serif', serif;
+$font-family-lato: 'Lato', sans-serif;
+$font-family-icon: 'FontAwesome', serif;
+
+
+
+
+
+// ====== Typography ====== //
+
+$font-color-primary: $brand-grey-dark;
+$font-color-secondary: $brand-grey;
+$font-color-tertiary: $brand-grey-light;
+
+$font-color-link: $brand-action-color;
+$font-color-link-hover: darken($brand-action-color, 10%);
+$font-color-link-focus: $font-color-link-hover;
+
+$font-decoration-link: none;
+$font-decoration-link-hover: underline;
+$font-decoration-link-focus: $font-decoration-link-hover;
+
+$font-family-primary: $font-family-pt-serif;
+$font-family-secondary: $font-family-lato;
+
+$titles-font-family-primary: $font-family-lato;
+$titles-family-secondary: $font-family-lato;
+
+$font-size-primary: 16px;
+$font-size-secondary: 13px;
+$font-size-tertiary: 11px;
+
+$line-spacing-primary: 1.6rem;
+
+
+
+// ====== Block Level Elements ====== //
+
+$background-color-primary: #fff;
+$background-color-secondary: $brand-grey-light;
+$background-color-tertiary: $brand-grey;
+
+$border-color-primary: darken($background-color-primary, 5%);
+$border-color-secondary: darken($background-color-secondary, 5%);
+$border-color-tertiary: darken($background-color-tertiary, 5%);
+
+$border-width-primary: 1px;
+$border-width-secondary: 2px;
+$border-width-tertiary: 4px;
+
+$border-radius-primary: 13px;
+$border-radius-secondary: 6px;
+
+
+
+// ====== Spacing ====== //
+
+$spacing-outer: 1.5rem; // eg. space between sections of content
+$spacing-inner: 1rem; // eg. space between siblings within a section
+$spacing-mobile: 2rem; // spacing between touchable mobile elements
+
+
+
+// ====== Form Elements ====== //
+
+// === Buttons === //
+
+// Default button values need discussion; these chould be leveraging
+// hard values, and there isn't a color darker than #636363 right now.
+// Going lighter risks ADA compliance.
+
+$button-color: #fff;
+$button-background: $brand-grey-dark;
+$button-background-hover: darken($button-background, 15%);
+
+$button-primary-color: #fff;
+$button-primary-background: $brand-action-color;
+$button-primary-background-hover: darken($brand-action-color, 15%);
+
+$button-font-primary: $font-family-secondary;
+
+// === Checkboxes/Radios === //
+
+$selector-color-unchecked: $brand-grey;
+$selector-color-checked: $brand-action-color;
+
+
+// === Breakpoints === //
+
+$screen-sm: 400px;
+$screen-med: 800px;
+$screen-lg: 1200px;
