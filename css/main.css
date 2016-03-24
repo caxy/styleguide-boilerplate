@@ -308,21 +308,9 @@ label.form-radio {
   cursor: pointer; }
   label.form-checkbox input,
   label.form-radio input {
-    display: none; }
-    label.form-checkbox input + i:after,
-    label.form-radio input + i:after {
-      position: absolute;
-      top: 1.2rem;
-      left: 0.75rem;
-      font-family: "FontAwesome", serif;
-      display: block;
-      font-style: normal;
-      font-size: 1.2rem;
-      content: "\f111";
-      color: #5c6874; }
-    label.form-checkbox input:checked + i:after,
-    label.form-radio input:checked + i:after {
-      color: #148744; }
+    position: absolute;
+    top: 1.5rem;
+    left: 0.5rem; }
   label.form-checkbox .field-description,
   label.form-radio .field-description {
     font-family: "Lato", sans-serif;
@@ -331,12 +319,6 @@ label.form-radio {
     padding: 0.075rem 0 0 1.5rem;
     letter-spacing: 0.75px;
     line-height: 1.5rem; }
-
-label.form-checkbox input:checked + i:after {
-  content: "\f058"; }
-
-label.form-radio input:checked + i:after {
-  content: "\f05d"; }
 
 .search-form {
   position: relative;

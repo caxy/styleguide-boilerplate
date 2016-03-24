@@ -289,25 +289,9 @@ label.form-radio {
 	cursor: pointer;
 
 	input {
-
-		display: none;
-
-		& + i:after {
 			position: absolute;
-			top: 1.2rem;
-			left: 0.75rem;
-			font-family: $font-family-icon;
-			display: block;
-			font-style: normal;
-			font-size: 1.2rem;
-			content: "\f111"; //\f10c
-			color: $selector-color-unchecked;
-		}
-
-		&:checked + i:after {
-			color: $selector-color-checked;
-		}
-
+			top: 1.5rem;
+			left: $spacing-inner/2;
 	}
 
 	.field-description {
@@ -319,22 +303,6 @@ label.form-radio {
 		line-height: 1.5rem;
 	}
 
-}
-
-label.form-checkbox {
-	input {
-		&:checked + i:after {
-			content: "\f058";
-		}
-	}
-}
-
-label.form-radio {
-	input {
-		&:checked + i:after {
-			content: "\f05d";
-		}
-	}
 }
 
 
