@@ -1,0 +1,89 @@
+
+// Output background/swatch classes for all color variables
+@mixin make-swatches($color-sets) {
+
+	@each $color-set-name, $color-set in $color-sets {
+
+		@each $name, $value in $color-set {
+			&.#{$color-set-name}-colors--#{$name} {
+			  background-color: $value;
+			  &::before {
+			  	content: "#{$name}: \a #{$value}";
+			  }
+			}
+		}
+
+	}
+	
+}
+
+.has-swatches {
+
+	@include flexbox;
+	@include justify-content(flex-start);
+	@include flex-wrap(wrap);
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	.swatch {
+		width: calc(25% - 1.5rem);
+		flex: 0 0 auto;
+		margin: 0.75rem;
+	}
+
+}
+
+.swatch {
+
+	padding: 0;
+	border: 1px solid $border-color-primary;
+	height: 14rem;
+
+	&::before {
+		display: block;
+		padding: $spacing-inner;
+		background: $background-color-primary;
+		border-bottom: 1px solid $border-color-primary;
+		font-size: $font-size-secondary;
+		white-space: pre;
+	}
+
+	@include make-swatches($color-sets);
+
+}
+
+
+
+// ====== Styleguide Presentation Classes ====== //
+
+.kss-section{
+
+	padding: $spacing-inner;
+
+	& > * {
+		margin-bottom: $spacing-outer;
+	}
+	
+	header {
+
+		padding: $spacing-inner 0;
+
+		span {
+			display: block;
+		}
+		%title {
+			margin-top: 0;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: $spacing-inner 0;
+	}
+
+}
+
+.kss-sidebar {
+	background: $panel-background-primary;
+	border-right: 1px solid $border-color-primary;
+}

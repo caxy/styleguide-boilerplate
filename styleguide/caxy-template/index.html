@@ -19,33 +19,24 @@
 </head>
 <body id="kss-node">
 
-<div class="kss-sidebar kss-style">
+<div class="kss-sidebar kss-style has-background--secondary">
   <header class="kss-header">
     <h1 class="kss-doc-title">{{options.title}}</h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
-        <a href="./index.html">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
-        </a>
+        <a href="./index.html">Overview</a>
       </li>
     {{#eachRoot}}
       <li class="kss-nav__menu-item">
-        <a href="section-{{referenceURI}}.html">
-          <span class="kss-nav__ref">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
-          ><span class="kss-nav__name">{{header}}</span>
-        </a>
+        <a href="section-{{referenceURI}}.html">{{header}}</a>
       {{#ifReference ../rootName}}
-        <ul class="kss-nav__menu-child">
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
         {{#eachSection reference}}
           {{#ifDepth 2 ../../../options.[nav-depth]}}
             <li class="kss-nav__menu-item">
-              <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
-                <span class="kss-nav__ref {{#ifDepth 3 100}}kss-nav__ref-child{{/ifDepth}}">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
-                ><span class="kss-nav__name">{{header}}</span>
-              </a>
+              <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
             </li>
           {{/ifDepth}}
         {{/eachSection}}
@@ -73,29 +64,30 @@
     {{#ifDepth 1}}
       <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{else}}
+      <hr />
       <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{/ifDepth}}
 
-    <div class="kss-style">
-      <h{{depth}} class="kss-title kss-title--level-{{depth}}">
-        <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-          <span class="kss-title__ref">
-            {{#ifNumeric reference}}
+      <header class="has-border--bottom">
+        <span>
+          <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
+            Section {{#ifNumeric reference}}
               {{reference}}
             {{else}}
               {{autoincrement}}
             {{/ifNumeric}}
-            <span class="kss-title__permalink-hash">
-              {{#ifNumeric reference}}
-                #permalink
-              {{else}}
-                #{{reference}}
-              {{/ifNumeric}}
-            </span>
-          </span>
+              
+            {{#ifNumeric reference}}
+              #permalink
+            {{else}}
+              #{{reference}}
+            {{/ifNumeric}}
+          </a>
+        </span>
+        <h{{depth}} class="kss-title kss-title--level-{{depth}}">
           {{header}}
-        </a>
-      </h{{depth}}>
+        </h{{depth}}> 
+      </header>
 
     {{#if parameters}}
       <ul class="kss-parameters">
@@ -116,10 +108,10 @@
     </div>
 
     {{#if markup}}
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example{{#if modifiers}}s{{/if}}
-        </div>
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example{{#if modifiers}}s{{/if}}:
+        </p>
       {{#if modifiers}}
         <div class="kss-modifier__default-name kss-style">
           Default styling
@@ -141,9 +133,11 @@
       {{/eachModifier}}
       </div>
 
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
       </div>
+
     {{/if}}
 
     {{#ifDepth 1}}

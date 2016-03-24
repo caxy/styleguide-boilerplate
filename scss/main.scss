@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
-@import 'base/_variables.scss';
-@import 'base/_mixins.scss';
-@import 'base/_mixins-flexbox.scss';
-//@import 'base/_utility.scss';
-@import 'base/_base.scss';
+@import 'http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css';
 
+@import 'variables/colors';
+@import 'variables/fonts';
+@import 'variables/structure';
+
+@import 'base/mixins';
+@import 'base/mixins-flexbox';
+@import 'base/base';
+@import 'base/utilities';
+
+
+@import 'styleguide/styleguide';

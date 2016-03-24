@@ -1,0 +1,46 @@
+
+
+.has-background--primary {
+	background: $background-color-primary;
+}
+
+.has-background--secondary {
+	background: $background-color-secondary;
+}
+
+.has-background--tertiary {
+	background: $background-color-tertiary;
+}
+
+
+.has-border--primary {
+	border: $border-width-primary solid $border-color-primary;
+}
+	.has-border--primary--top {
+		border-top: $border-width-primary solid $border-color-primary;
+	}
+	.has-border--primary--right {
+		border-right: $border-width-primary solid $border-color-primary;
+	}
+	.has-border--primary--bottom {
+		border-bottom: $border-width-primary solid $border-color-primary;
+	}
+	.has-border--primary--left {
+		border-bottom: $border-width-primary solid $border-color-primary;
+	}
+
+.has-border--secondary {
+	border: $border-width-secondary solid $border-color-secondary;
+}
+	.has-border--secondary--top {
+		border-top: $border-width-secondary solid $border-color-secondary;
+	}
+	.has-border--secondary--right {
+		border-right: $border-width-secondary solid $border-color-secondary;
+	}
+	.has-border--secondary--bottom {
+		border-bottom: $border-width-secondary solid $border-color-secondary;
+	}
+	.has-border--secondary--left {
+		border-bottom: $border-width-secondary solid $border-color-secondary;
+	}

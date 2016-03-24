@@ -14,6 +14,7 @@
     "kss",
     "node",
     "css",
+    "scss",
     "styleguide"
   ],
   "author": "Beck Kramer",
@@ -24,6 +25,6 @@
   "homepage": "https://github.com/caxy/styleguide-boilerplate#readme",
   "devDependencies": {
     "kss": "^2.4.0",
-    "sass": "^0.5.0"
+    "node-sass": "^3.4.2"
   }
 }

@@ -1,0 +1,25 @@
+
+// ====== Borders ====== //
+
+$border-width-primary: 1px;
+$border-width-secondary: 2px;
+$border-width-tertiary: 4px;
+
+$border-radius-primary: 13px;
+$border-radius-secondary: 6px;
+
+
+
+// ====== Spacing ====== //
+
+$spacing-outer: 1.5rem; // eg. space between sections of content
+$spacing-inner: 1rem; // eg. space between siblings within a section
+$spacing-mobile: 2rem; // spacing between touchable mobile elements
+
+
+
+// === Breakpoints === //
+
+$screen-sm: 400px;
+$screen-med: 800px;
+$screen-lg: 1200px;

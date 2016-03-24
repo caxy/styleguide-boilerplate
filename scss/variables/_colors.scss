@@ -1,0 +1,208 @@
+
+// ====== Brand/Site-Specific Colors====== //
+//
+// Brand-specific, color-named variabless belong here. They
+// should never move past this file if it can be helped, though;
+// rather, make a role/context based variable and assign the brand-
+// specific value here instead.
+//
+// For example:
+//
+// Correct:
+// $company-blue: #002299; // set the hex
+// $font-link-color: $company-blue; // use the hex
+//
+// a { color: $font-link-color; } // use elsewhere across your stylesheets
+//
+// This way, if links need to change to, say, orange, you don't have
+// a misleading variable name scattered throughout your code, but you
+// also aren't left wondering "which one was the blue one again?"
+// because you can reference this file for the initial value.
+//
+// It can also be valuable to have general variables to be used later
+// to leverage the benefits of what is outlined above while still having
+// general variables to use elsewhere in the file:
+//
+// Correct:
+// $company-blue: #002299; // set the hex
+// $company-action-color: $company-blue; // use the hex
+// $font-link-color: $company-action-color; // use the general brand name 
+//
+// a { color: $font-link-color; } // use elsewhere across your stylesheets
+//
+// This makes things a little more readable, but use what works best for you.
+// The important things is to keep any brand- or company-specific variable
+// names in variable files only.
+
+
+
+// Colors
+//
+// The following are colors included in this project.
+//
+// Styleguide 1.0
+
+// Brand Colors
+//
+// Markup: swatches_brand.html
+//
+// Styleguide 1.1
+
+
+$brand-grey: #5c6874;
+$brand-grey-dark: darken($brand-grey, 10%);
+$brand-grey-light: lighten($brand-grey, 50%);
+$brand-accent-blue: #334dae;
+$brand-accent-dark-green: #148744;
+
+$brand-action-color: $brand-accent-dark-green;
+
+$brand-colors: (
+	grey: $brand-grey,
+	grey-dark: $brand-grey-dark,
+	grey-light: $brand-grey-light,
+	accent-blue: $brand-accent-blue,
+	accent-dark-green: $brand-accent-dark-green
+);
+
+
+
+
+
+
+// ====== General Color Assignments ====== //
+
+
+
+// Font Colors
+//
+// Markup: swatches_font.html
+//
+// Styleguide 1.2
+
+$font-color-primary: $brand-grey-dark;
+$font-color-secondary: $brand-grey;
+$font-color-tertiary: $brand-grey-light;
+
+$font-color-link: $brand-action-color;
+$font-color-link-hover: darken($brand-action-color, 10%);
+$font-color-link-focus: $font-color-link-hover;
+
+$font-colors: (
+	primary: $font-color-primary,
+	secondary: $font-color-secondary,
+	tertiary: $font-color-tertiary,
+	link: $font-color-link,
+	link-hover: $font-color-link-hover,
+	link-focus: $font-color-link-focus
+);
+
+
+
+// ====== Block Level Elements ====== //
+
+// Background Colors
+//
+// Markup: swatches_block-elements.html
+//
+// Styleguide 1.3
+
+$background-color-primary: #fff;
+$background-color-secondary: $brand-grey-light;
+$background-color-tertiary: $brand-grey;
+
+$background-colors: (
+	primary: $background-color-primary,
+	secondary: $background-color-secondary,
+	tertiary: $background-color-tertiary
+);
+
+$panel-background-primary: darken($background-color-primary, 5%);
+$panel-background-secondary: darken($background-color-secondary, 5%);
+$panel-background-tertiary: darken($background-color-tertiary, 5%);
+
+$panel-colors: (
+	primary: $panel-background-primary,
+	secondary: $panel-background-secondary,
+	tertiary: $panel-background-tertiary
+);
+
+// Borders
+//
+// Markup: swatches_borders.html
+//
+// Styleguide 1.4
+
+$border-color-primary: darken($background-color-primary, 15%);
+$border-color-secondary: darken($background-color-secondary, 15%);
+$border-color-tertiary: darken($background-color-tertiary, 15%);
+
+$border-colors: (
+	primary: $border-color-primary,
+	secondary: $border-color-secondary,
+	tertiary: $border-color-tertiary
+);
+
+
+// Button Colors
+//
+// Markup: swatches_buttons.html
+//
+// Styleguide 1.5
+
+$button-font-color: #fff;
+$button-background: $brand-grey-dark;
+$button-background-hover: darken($button-background, 15%);
+
+$button-primary-font-color: #fff;
+$button-primary-background: $brand-action-color;
+$button-primary-background-hover: darken($brand-action-color, 15%);
+
+$button-colors: (
+	font-color: $button-font-color,
+	background: $button-background,
+	background-hover: $button-background-hover,
+	primary-font-color: $button-primary-font-color,
+	primary-background: $button-primary-background,
+	primary-background-hover: $button-primary-background-hover
+);
+
+
+
+// === Checkboxes/Radios === //
+
+$selector-color-unchecked: $brand-grey;
+$selector-color-checked: $brand-action-color;
+
+
+
+
+
+
+// ====== Organization & Styleguide Use ====== //
+//
+// Sets of colors should be grouped into a Color Set as follows:
+//
+// $color-set-name (
+//   primary: $color-primary,
+//   secondary: $color-secondary
+// );
+//
+// These should all then be added to the Color Sets Object below.
+//
+// Swatches will be created for the styleguide with the following class 
+// naming convention:
+//
+// .[color set name]--[variable name]
+//
+// So a color in the $font-colors set with the name `primary` will end up
+// with the class name `.font-colors--primary`
+
+$color-sets: (
+	brand: $brand-colors,
+	font: $font-colors,
+	background: $background-colors,
+	panel: $panel-colors,
+	border: $border-colors,
+	button: $button-colors
+);

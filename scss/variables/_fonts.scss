@@ -31,19 +31,7 @@
 //
 // This makes things a little more readable, but use what works best for you.
 // The important things is to keep any brand- or company-specific variable
-// names in this file only.
-
-
-
-// === Colors === //
-
-$brand-grey: #5c6874;
-$brand-grey-dark: darken($brand-grey, 10%);
-$brand-grey-light: lighten($brand-grey, 10%);
-$brand-accent-blue: #334dae;
-$brand-accent-dark-green: #148744;
-
-$brand-action-color: $brand-accent-dark-green;
+// names in this folder only.
 
 // === Fonts === //
 
@@ -53,17 +41,7 @@ $font-family-icon: 'FontAwesome', serif;
 
 
 
-
-
 // ====== Typography ====== //
-
-$font-color-primary: $brand-grey-dark;
-$font-color-secondary: $brand-grey;
-$font-color-tertiary: $brand-grey-light;
-
-$font-color-link: $brand-action-color;
-$font-color-link-hover: darken($brand-action-color, 10%);
-$font-color-link-focus: $font-color-link-hover;
 
 $font-decoration-link: none;
 $font-decoration-link-hover: underline;
@@ -83,59 +61,8 @@ $line-spacing-primary: 1.6rem;
 
 
 
-// ====== Block Level Elements ====== //
-
-$background-color-primary: #fff;
-$background-color-secondary: $brand-grey-light;
-$background-color-tertiary: $brand-grey;
-
-$border-color-primary: darken($background-color-primary, 5%);
-$border-color-secondary: darken($background-color-secondary, 5%);
-$border-color-tertiary: darken($background-color-tertiary, 5%);
-
-$border-width-primary: 1px;
-$border-width-secondary: 2px;
-$border-width-tertiary: 4px;
-
-$border-radius-primary: 13px;
-$border-radius-secondary: 6px;
-
-
-
-// ====== Spacing ====== //
-
-$spacing-outer: 1.5rem; // eg. space between sections of content
-$spacing-inner: 1rem; // eg. space between siblings within a section
-$spacing-mobile: 2rem; // spacing between touchable mobile elements
-
-
-
 // ====== Form Elements ====== //
 
 // === Buttons === //
 
-// Default button values need discussion; these chould be leveraging
-// hard values, and there isn't a color darker than #636363 right now.
-// Going lighter risks ADA compliance.
-
-$button-color: #fff;
-$button-background: $brand-grey-dark;
-$button-background-hover: darken($button-background, 15%);
-
-$button-primary-color: #fff;
-$button-primary-background: $brand-action-color;
-$button-primary-background-hover: darken($brand-action-color, 15%);
-
 $button-font-primary: $font-family-secondary;
-
-// === Checkboxes/Radios === //
-
-$selector-color-unchecked: $brand-grey;
-$selector-color-checked: $brand-action-color;
-
-
-// === Breakpoints === //
-
-$screen-sm: 400px;
-$screen-med: 800px;
-$screen-lg: 1200px;
