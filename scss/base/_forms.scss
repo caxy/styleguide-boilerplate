@@ -1,0 +1,386 @@
+/*
+Forms
+
+Styleguide 3
+*/
+
+// Buttons
+//
+// Markup:
+// <div class="has-buttons">
+// <button class="button-primary">Primary Button</button>
+// <button>Secondary Button</button>
+// <div>
+//
+// Styleguide 3.1
+
+
+
+button,
+.button,
+.button-primary {
+
+	background: $button-background;
+	color: $button-font-color;
+	border-radius: $border-radius-primary;
+	border: none;
+	outline: none;
+	padding: $spacing-inner $spacing-inner*3;
+	font-size: 1rem;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	font-family: $button-font-primary;
+	font-style: normal;
+
+	&:hover,
+	&:focus {
+		color: $button-font-color;
+		background: $button-background-hover;
+	}
+
+	&-primary {
+		color: $button-primary-font-color;
+		background: $button-primary-background;
+
+		&:hover,
+		&:focus {
+			background: $button-primary-background-hover;
+		}
+
+	}
+
+}
+
+.has-buttons {
+
+	button,
+	.button {
+		display:inline-block;
+		& + button,
+		& + .button {
+			margin: 0 $spacing-inner 0 0;
+		}
+	}
+
+	&.right {
+
+		text-align: right;
+
+		button,
+		.button {
+			& + button,
+			& + .button {
+				margin: 0 0 0 $spacing-inner;
+			}
+		}
+	}
+
+}
+
+@media (min-width: $screen-med) {
+	.has-buttons {
+		margin: $spacing-outer 0;
+	}
+}
+
+
+
+// Form Fields
+//
+// Styleguide 3.2.0
+
+
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+label.form-select,
+fieldset.has-checkboxes,
+fieldset.has-radios {
+
+	background: $panel-background-primary;
+	border: none;
+	box-sizing: border-box;
+	border-radius: $border-radius-primary;
+	font-family: $font-family-primary;
+
+	&:focus {
+		background: $background-color-secondary;
+	}
+}
+
+label.form-text {
+
+	position: relative;
+	background: $background-color-primary;
+	border-radius: 1rem;
+	box-sizing: border-box;
+	z-index: 1;
+	display: inline-block;
+	margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
+
+	.field-description {
+		position: absolute;
+		display: block;
+		left: 0.75rem;
+		top: 0.75rem;
+		z-index: 5;
+		font-family: $font-family-secondary;
+		letter-spacing:0.75px;
+	}
+
+	input[type="tel"],
+	input[type="text"],
+	input[type="number"],
+	input[type="email"],
+	input[type="search"],
+	input[type="password"],
+	textarea {
+		width: 100%;
+		font-size: 1rem;
+		min-width: 30rem;
+		padding: 2.25rem 0.75rem 0.75rem;
+		position: relative;
+		z-index: 3;
+		display: inline-block;
+		font-size: $font-size-primary;
+	}
+
+}
+
+// Text Inputs
+//
+// Markup:
+// <label for="styleguide-text-input-1" class="form-text">
+//   <span id="input-description-1" class="field-description">Input Description</span>
+//   <input id="styleguide-text-input-1" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+// </label>
+//
+// Styleguide 3.2.1
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+	padding: $spacing-inner/2;
+}
+
+
+// Text Areas
+//
+// Markup:
+// <label for="styleguide-textarea" class="form-text">
+//   <span id="input-description-2" class="field-description">Input Description</span>
+//   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
+// </label>
+//
+// Styleguide 3.2.2
+
+textarea {
+	height: 12rem;
+	resize: vertical;
+	line-height: 1.875rem;
+}
+
+
+
+// Select Menus
+//
+// Markup:
+// <label class="form-select" for="styleguide-select">
+//   <select id="styleguide-select" name="styleguide-select">
+//     <option>Select a Value</option>
+//     <option value="val1">Option 1</option>
+//     <option value="val2">Option 2</option>
+//     <option value="val3">Option 3</option>
+//   </select>
+// </label>
+//
+// Styleguide 3.2.3
+
+label.form-select {
+
+	position: relative;
+	border-radius: 1rem;
+	box-sizing: border-box;
+	z-index: 1;
+	display: inline-block;
+	margin: $spacing-outer/2 0;
+	padding: 1.5rem 0.75rem;
+
+	select {
+		display: block;
+		min-width: 30rem;
+		font-size: 1rem;
+		border: none;
+		outline: none;
+  		background: $panel-background-primary;
+		font-size: $font-size-primary;
+		font-family: $font-family-secondary;
+		letter-spacing: 0.75px;
+    	color: $font-color-primary;
+	}
+}
+
+
+
+// Checkboxes
+//
+// Markup: checkboxes.html
+//
+// Styleguide 3.2.4
+
+
+
+// Radio Inputs
+//
+// Markup: radio_inputs.html
+//
+// Styleguide 3.2.5
+
+fieldset {
+
+	margin: 4.5rem 0;
+	position: relative;
+	display: block;
+
+	legend {
+		position:absolute;
+		top: -2.25rem;
+	}
+
+	&.has-checkboxes,
+	&.has-radios  {
+
+		padding: $spacing-inner $spacing-inner/2;
+		min-width: 30rem;
+		display: inline-block;
+
+		label.form-checkbox,
+		label.form-radio {
+			display: inline-block;
+			float: left;
+			clear: left;
+		}
+
+		&.has-inline-fields {
+			label {
+				width: 50%;
+				clear: none;
+			}
+		}
+
+	}
+}
+
+label.form-checkbox,
+label.form-radio {
+
+	margin: 0;
+	padding: $spacing-inner;
+	position: relative;
+	cursor: pointer;
+
+	input {
+
+		display: none;
+
+		& + i:after {
+			position: absolute;
+			top: 1.2rem;
+			left: 0.75rem;
+			font-family: $font-family-icon;
+			display: block;
+			font-style: normal;
+			font-size: 1.2rem;
+			content: "\f111"; //\f10c
+			color: $selector-color-unchecked;
+		}
+
+		&:checked + i:after {
+			color: $selector-color-checked;
+		}
+
+	}
+
+	.field-description {
+		font-family: $font-family-secondary;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0.075rem 0 0 1.5rem;
+		letter-spacing: 0.75px;
+		line-height: 1.5rem;
+	}
+
+}
+
+label.form-checkbox {
+	input {
+		&:checked + i:after {
+			content: "\f058";
+		}
+	}
+}
+
+label.form-radio {
+	input {
+		&:checked + i:after {
+			content: "\f05d";
+		}
+	}
+}
+
+
+
+
+.search-form {
+
+  position: relative;
+  display: inline-block;
+
+  label.form-text {
+
+    input[type="search"] {
+      max-width: 100%;
+      margin-right:4rem;
+      padding: 1rem 0.75rem;
+      font-family: $font-family-secondary;
+      &::placeholder {
+        color: $font-color-primary;
+        font-size: 30px;
+      }
+    }
+
+  }
+
+  button.form-submit {
+
+    font-family: $font-family-icon;
+    color: $font-color-secondary;
+
+    position: absolute;
+    right: 0;
+    top:0;
+    border: none;
+    margin:0;
+    padding: 0.7rem 1rem;
+    background: none;
+    height:100%;
+    width:4rem;
+    text-align: center;
+    z-index: 5;
+
+    &:focus,
+    &:hover {
+      color: $font-color-primary;
+    }
+  }
+
+}

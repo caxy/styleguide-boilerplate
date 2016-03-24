@@ -109,9 +109,11 @@
 
     {{#if markup}}
       <div>
+        {{#unless hidemarkup}}
         <p class="title-5 has-border--primary--bottom">
           Display Example{{#if modifiers}}s{{/if}}:
         </p>
+        {{/unless}}
       {{#if modifiers}}
         <div class="kss-modifier__default-name kss-style">
           Default styling
@@ -132,12 +134,17 @@
         </div>
       {{/eachModifier}}
       </div>
-
+      {{#unless hidemarkup}}
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
       </div>
+      {{/unless}}
+    {{/if}}
 
+    {{#if devnotes}}
+      <p class="title-5 has-border--primary--bottom">Developer Notes:</p>
+      {{{devnotes}}}
     {{/if}}
 
     {{#ifDepth 1}}

@@ -42,9 +42,13 @@
 //
 // Styleguide 1.0
 
+
+
 // Brand Colors
-//
+// 
 // Markup: swatches_brand.html
+//
+// HideMarkup: true
 //
 // Styleguide 1.1
 
@@ -78,6 +82,8 @@ $brand-colors: (
 //
 // Markup: swatches_font.html
 //
+// HideMarkup: true
+//
 // Styleguide 1.2
 
 $font-color-primary: $brand-grey-dark;
@@ -105,6 +111,8 @@ $font-colors: (
 //
 // Markup: swatches_block-elements.html
 //
+// HideMarkup: true
+//
 // Styleguide 1.3
 
 $background-color-primary: #fff;
@@ -131,6 +139,8 @@ $panel-colors: (
 //
 // Markup: swatches_borders.html
 //
+// HideMarkup: true
+//
 // Styleguide 1.4
 
 $border-color-primary: darken($background-color-primary, 15%);
@@ -147,6 +157,8 @@ $border-colors: (
 // Button Colors
 //
 // Markup: swatches_buttons.html
+//
+// HideMarkup: true
 //
 // Styleguide 1.5
 

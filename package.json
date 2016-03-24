@@ -4,7 +4,8 @@
   "description": "A boilerplate KSS node styleguide implementation for projects.",
   "main": "index.js",
   "scripts": {
-    "generate-styleguide": "./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css ../css/main.css"
+    "generate-styleguide": "./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css ../css/main.css --custom devnotes --custom hidemarkup",
+    "generate-styleguide-verbose": "./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css ../css/main.css --verbose --custom devnotes --custom hidemarkup"
   },
   "repository": {
     "type": "git",

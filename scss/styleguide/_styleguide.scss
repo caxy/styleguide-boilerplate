@@ -87,3 +87,13 @@
 	background: $panel-background-primary;
 	border-right: 1px solid $border-color-primary;
 }
+
+.kss-style {
+	code,
+	pre {
+		background: none;
+		li {
+			margin: 0;
+		}
+	}
+}

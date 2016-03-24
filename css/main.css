@@ -85,7 +85,8 @@ blockquote {
 
 code, pre {
   line-height: 32px;
-  font-family: monospace; }
+  font-family: monospace;
+  font-size: 13px; }
 
 code {
   padding: 0.5rem;
@@ -129,6 +130,241 @@ code {
 
 .has-border--secondary--left {
   border-bottom: 2px solid #bac1c8; }
+
+/*
+Forms
+
+Styleguide 3
+*/
+button,
+.button,
+.button-primary {
+  background: #454f58;
+  color: #fff;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-family: "Lato", sans-serif;
+  font-style: normal; }
+  button:hover, button:focus,
+  .button:hover,
+  .button:focus,
+  .button-primary:hover,
+  .button-primary:focus {
+    color: #fff;
+    background: #24282d; }
+  button-primary,
+  .button-primary,
+  .button-primary-primary {
+    color: #fff;
+    background: #148744; }
+    button-primary:hover, button-primary:focus,
+    .button-primary:hover,
+    .button-primary:focus,
+    .button-primary-primary:hover,
+    .button-primary-primary:focus {
+      background: #0a4422; }
+
+.has-buttons button,
+.has-buttons .button {
+  display: inline-block; }
+  .has-buttons button + button, .has-buttons button + .button,
+  .has-buttons .button + button,
+  .has-buttons .button + .button {
+    margin: 0 1rem 0 0; }
+.has-buttons.right {
+  text-align: right; }
+  .has-buttons.right button + button, .has-buttons.right button + .button,
+  .has-buttons.right .button + button,
+  .has-buttons.right .button + .button {
+    margin: 0 0 0 1rem; }
+
+@media (min-width: 800px) {
+  .has-buttons {
+    margin: 1.5rem 0; } }
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+label.form-select,
+fieldset.has-checkboxes,
+fieldset.has-radios {
+  background: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 13px;
+  font-family: "PT Serif", serif; }
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="search"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  label.form-select:focus,
+  fieldset.has-checkboxes:focus,
+  fieldset.has-radios:focus {
+    background: #e5e8ea; }
+
+label.form-text {
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  z-index: 1;
+  display: inline-block;
+  margin: 0.75rem 0; }
+  label.form-text .field-description {
+    position: absolute;
+    display: block;
+    left: 0.75rem;
+    top: 0.75rem;
+    z-index: 5;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.75px; }
+  label.form-text input[type="tel"],
+  label.form-text input[type="text"],
+  label.form-text input[type="number"],
+  label.form-text input[type="email"],
+  label.form-text input[type="search"],
+  label.form-text input[type="password"],
+  label.form-text textarea {
+    width: 100%;
+    font-size: 1rem;
+    min-width: 30rem;
+    padding: 2.25rem 0.75rem 0.75rem;
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    font-size: 16px; }
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+  padding: 0.5rem; }
+
+textarea {
+  height: 12rem;
+  resize: vertical;
+  line-height: 1.875rem; }
+
+label.form-select {
+  position: relative;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  z-index: 1;
+  display: inline-block;
+  margin: 0.75rem 0;
+  padding: 1.5rem 0.75rem; }
+  label.form-select select {
+    display: block;
+    min-width: 30rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.75px;
+    color: #454f58; }
+
+fieldset {
+  margin: 4.5rem 0;
+  position: relative;
+  display: block; }
+  fieldset legend {
+    position: absolute;
+    top: -2.25rem; }
+  fieldset.has-checkboxes, fieldset.has-radios {
+    padding: 1rem 0.5rem;
+    min-width: 30rem;
+    display: inline-block; }
+    fieldset.has-checkboxes label.form-checkbox,
+    fieldset.has-checkboxes label.form-radio, fieldset.has-radios label.form-checkbox,
+    fieldset.has-radios label.form-radio {
+      display: inline-block;
+      float: left;
+      clear: left; }
+    fieldset.has-checkboxes.has-inline-fields label, fieldset.has-radios.has-inline-fields label {
+      width: 50%;
+      clear: none; }
+
+label.form-checkbox,
+label.form-radio {
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer; }
+  label.form-checkbox input,
+  label.form-radio input {
+    display: none; }
+    label.form-checkbox input + i:after,
+    label.form-radio input + i:after {
+      position: absolute;
+      top: 1.2rem;
+      left: 0.75rem;
+      font-family: "FontAwesome", serif;
+      display: block;
+      font-style: normal;
+      font-size: 1.2rem;
+      content: "\f111";
+      color: #5c6874; }
+    label.form-checkbox input:checked + i:after,
+    label.form-radio input:checked + i:after {
+      color: #148744; }
+  label.form-checkbox .field-description,
+  label.form-radio .field-description {
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.075rem 0 0 1.5rem;
+    letter-spacing: 0.75px;
+    line-height: 1.5rem; }
+
+label.form-checkbox input:checked + i:after {
+  content: "\f058"; }
+
+label.form-radio input:checked + i:after {
+  content: "\f05d"; }
+
+.search-form {
+  position: relative;
+  display: inline-block; }
+  .search-form label.form-text input[type="search"] {
+    max-width: 100%;
+    margin-right: 4rem;
+    padding: 1rem 0.75rem;
+    font-family: "Lato", sans-serif; }
+    .search-form label.form-text input[type="search"]::placeholder {
+      color: #454f58;
+      font-size: 30px; }
+  .search-form button.form-submit {
+    font-family: "FontAwesome", serif;
+    color: #5c6874;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    margin: 0;
+    padding: 0.7rem 1rem;
+    background: none;
+    height: 100%;
+    width: 4rem;
+    text-align: center;
+    z-index: 5; }
+    .search-form button.form-submit:focus, .search-form button.form-submit:hover {
+      color: #454f58; }
 
 .has-swatches {
   display: -webkit-box;
@@ -283,5 +519,12 @@ code {
 .kss-sidebar {
   background: #f2f2f2;
   border-right: 1px solid #d9d9d9; }
+
+.kss-style code,
+.kss-style pre {
+  background: none; }
+  .kss-style code li,
+  .kss-style pre li {
+    margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
