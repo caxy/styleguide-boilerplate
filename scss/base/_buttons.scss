@@ -1,0 +1,113 @@
+
+// Buttons and Button Contexts
+//
+// Styleguide 4
+
+
+// Buttons
+//
+// .button					- Default button state.
+// .button-primary	- When a button should be highlighted/is the main action in a set, use this class.
+//
+// Markup:
+// <button class="{{modifier_class}}">Button</button>
+//
+// PatternType: atom
+//
+// Styleguide 4.1
+
+
+
+%button {
+
+	background: $button-background;
+	color: $button-font-color;
+	border-radius: $border-radius-primary;
+	border: none;
+	outline: none;
+	padding: $spacing-inner $spacing-inner*3;
+	font-size: $font-size-button;
+	cursor: pointer;
+	font-family: $button-font-primary;
+	font-style: normal;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		color: $button-font-color;
+		background: $button-background-hover;
+	}
+
+}
+
+button,
+.button,
+.button-primary {
+	@extend %button;
+}
+
+.button-primary {
+
+	color: $button-primary-font-color;
+	background: $button-primary-background;
+
+	&:hover,
+	&:focus {
+		background: $button-primary-background-hover;
+	}
+
+}
+
+
+
+// Has-Buttons Contexts
+//
+// Like all context classes, a container with `.has-buttons` applied should only have
+// elements that are buttons or have a `.button` class applied.
+//
+// .right	- right aligns the buttons inside the container
+// .stacked	- stacks the buttons inside the container
+//
+// Markup:
+// <div class="has-buttons {{modifier_class}}">
+//   <button class="button-primary">Primary Button</button>
+//   <button>Default Button</button>
+// </div>
+//
+// PatternType: molecule
+//
+// ContainsPatterns: Only `buttons` or elements with the `.button` class
+//
+// Styleguide 4.2
+
+.has-buttons {
+
+	%button {
+
+		& + %button {
+			margin: 0 0 0 $spacing-inner;
+		}
+
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	&.stacked {
+
+		@extend .clearfix;
+
+		%button {
+
+			float: left;
+			clear: left;
+
+			& + %button {
+				margin: $spacing-outer 0 0;
+			}
+
+		}
+	}
+
+}

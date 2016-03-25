@@ -49,7 +49,7 @@ Styleguide 2
 %titles {
 	font-family: $titles-font-family-primary;
 	color: $font-color-primary;
-	margin: 0; // let context determine margin
+	margin: inherit; // let context determine margin
 }
 
 .title-1 {

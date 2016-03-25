@@ -10,8 +10,10 @@
 @import 'base/mixins-flexbox';
 @import 'base/base';
 @import 'base/utilities';
-@import 'base/forms';
+@import 'base/form';
+@import 'base/buttons';
 
+@import 'components/forms';
 @import 'components/page-level';
 
 @import 'styleguide/styleguide';

@@ -1,0 +1,81 @@
+// Forms
+//
+// Styleguide 3.2
+
+// Inline Form 
+//
+// Markup:
+// <form class="has-inline-elements">
+//   <label for="inline-form-text-input-1" class="form-text">
+//     <span id="inline-form-description-1" class="field-description">Input Description</span>
+//     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
+//   </label>
+//   <label for="inline-form-text-input-2" class="form-text">
+//     <span id="inline-form-description-2" class="field-description">Input Description</span>
+//     <input id="inline-form-text-input-2" name="inline-form-text-input-2" aria-labelledby="inline-form-description-2" type="text" title="Input Description" value="" />
+//   </label>
+//   <button type="submit">search</button>
+// </form>
+//
+// PatternType: molecule
+//
+// Styleguide 3.2.2
+
+// Search Form
+//
+// Markup:
+// <form class="search-form">
+//   <label class="form-text">
+//     <input placeholder="Enter a search term." type="search" />
+//   </label>
+//   <button type="submit">search</button>
+// </form>
+//
+// PatternType: molecule
+//
+// ContainsPatterns: Button, Input (Search)
+//
+// Styleguide 3.2.5
+
+.search-form {
+  
+  @include has-inline-elements();
+  position: relative;
+  display: inline-block;
+
+  label.form-text {
+
+    input[type="search"] {
+
+      margin-right: $spacing-inner;
+      padding: 1rem 0.75rem;
+      font-family: $font-family-secondary;
+
+    }
+
+  }
+
+  button.form-submit {
+
+    font-family: $font-family-icon;
+    color: $font-color-secondary;
+
+    position: absolute;
+    right: 0;
+    top:0;
+    border: none;
+    margin:0;
+    padding: 0.7rem 1rem;
+    background: none;
+    height:100%;
+    width:4rem;
+    text-align: center;
+    z-index: 5;
+
+    &:focus,
+    &:hover {
+      color: $font-color-primary;
+    }
+  }
+
+}

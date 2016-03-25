@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/http-server",
+    "generate-css": "sass scss/main.scss css/main.css",
+    "generate-minified-css": "cleancss -o css/main-min.css css/main.css",
     "generate-styleguide": "./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css ../css/main.css --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns",
     "generate-styleguide-verbose": "./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css ../css/main.css --verbose --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns"
   },
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/caxy/styleguide-boilerplate#readme",
   "devDependencies": {
+    "clean-css": "^3.4.10",
     "http-server": "^0.9.0",
     "kss": "^2.4.0",
     "node-sass": "^3.4.2"

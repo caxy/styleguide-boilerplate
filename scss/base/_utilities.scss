@@ -1,4 +1,74 @@
 
+// Utilities
+//
+// Provided here are several utilities to either include in other elements'
+// CSS, or to apply as classes directly to HTML elements.
+//
+// It's advised to not use @extend on the classes found here, as it can make
+// the compiled CSS a jumble and potentially harder to debug.
+//
+// Styleguide 50
+
+
+// clearfix() / .clearfix
+//
+// Useful when you need an element to clear its children, or to break an 
+// element out of the flow if its siblings.
+//
+// Styleguide 50.1
+
+@mixin clearfix() {
+	&::before,
+	&::after {
+	  content: '';
+	  display: table;
+	  clear: both;
+	}
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+
+
+
+
+// Context Class Utilities
+//
+// Context classes will effect the direct children of the element they're
+// applied to. If a context class relates directly to a visual attribute
+// (eg. `.has-background-*`), only that attribute will be applied.
+//
+// Styleguide 50.2
+
+
+
+// has-inline-elements() / .has-inline-elements
+//
+// Use if you need to have an element's direct children display inline.
+//
+// Styleguide 50.2.1
+
+@mixin has-inline-elements() {
+
+	vertical-align: baseline;
+
+	& > * {
+		display: inline-block;
+		margin: 0 $spacing-inner/2;
+	}
+
+}
+
+.has-inline-elements {
+	@include has-inline-elements();
+}
+
+
+
+
+
 
 .has-background--primary {
 	background: $background-color-primary;

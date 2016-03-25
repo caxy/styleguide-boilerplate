@@ -88,7 +88,6 @@
 
 		dd {
 			font-weight: $font-weight-bold;
-			text-transform: capitalize;
 			padding: 0 $spacing-inner/2;
 		}
 
@@ -105,6 +104,7 @@
 	.pattern-type {
 
 		display: inline-block;
+		text-transform: capitalize;
 
 		&::before {
 

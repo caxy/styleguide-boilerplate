@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal; }
 html {
-  font: 16px "PT Serif", serif; }
+  font: 1rem "PT Serif", serif; }
 
 * {
   box-sizing: border-box; }
@@ -30,7 +30,7 @@ Styleguide 2
 .title-1, h1, .title-2, h2, .title-3, h3, .title-4, h4, .title-5, h5, dt {
   font-family: "Lato", sans-serif;
   color: #3a4249;
-  margin: 0; }
+  margin: inherit; }
 
 .title-1, h1 {
   font-size: 2.25rem; }
@@ -49,7 +49,8 @@ Styleguide 2
   font-size: 1rem; }
 
 p {
-  line-height: 1.875rem; }
+  line-height: 1.875rem;
+  max-width: 70rem; }
 
 a {
   font-family: "Lato", sans-serif;
@@ -80,23 +81,34 @@ dd {
 blockquote {
   margin: 1.5rem 0;
   padding: 3rem 3rem 2rem 4rem;
-  font-size: 24px;
-  line-height: 48px;
+  font-size: 1.5rem;
+  line-height: 3rem;
   font-family: "Lato", sans-serif; }
   blockquote footer {
     padding-top: 1rem;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #3a4249;
     text-align: right; }
 
 code, pre {
-  line-height: 32px;
+  line-height: 2rem;
   font-family: monospace;
-  font-size: 13px; }
+  font-size: 0.866rem; }
 
 code {
   padding: 0.5rem;
   background: #f2f2f2; }
+
+.clearfix::before, .has-buttons.stacked::before, .clearfix::after, .has-buttons.stacked::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.has-inline-elements {
+  vertical-align: baseline; }
+  .has-inline-elements > * {
+    display: inline-block;
+    margin: 0 0.5rem; }
 
 .has-background--primary {
   background: #fff; }
@@ -138,59 +150,21 @@ code {
   border-bottom: 2px solid #bac1c8; }
 
 /*
-Forms
+Forms and Form Elements
 
 Styleguide 3
 */
-button,
-.button,
-.button-primary {
-  background: #3a4249;
-  color: #fff;
-  border-radius: 13px;
-  border: none;
-  outline: none;
-  padding: 1rem 3rem;
-  font-size: 16px;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  font-style: normal; }
-  button:hover, button:focus,
-  .button:hover,
-  .button:focus,
-  .button-primary:hover,
-  .button-primary:focus {
-    color: #fff;
-    background: #181c1f; }
-  button-primary,
-  .button-primary,
-  .button-primary-primary {
-    color: #fff;
-    background: #148744; }
-    button-primary:hover, button-primary:focus,
-    .button-primary:hover,
-    .button-primary:focus,
-    .button-primary-primary:hover,
-    .button-primary-primary:focus {
-      background: #0a4422; }
+/*
+Form Elements
 
-.has-buttons button,
-.has-buttons .button {
-  display: inline-block; }
-  .has-buttons button + button, .has-buttons button + .button,
-  .has-buttons .button + button,
-  .has-buttons .button + .button {
-    margin: 0 0 0 1rem; }
-.has-buttons.right {
-  text-align: right; }
-  .has-buttons.right button + button, .has-buttons.right button + .button,
-  .has-buttons.right .button + button,
-  .has-buttons.right .button + .button {
-    margin: 0 1rem 0 0; }
+Styleguide 3.1
+*/
+label,
+fieldset.has-checkboxes,
+fieldset.has-radios {
+  max-width: 40rem;
+  display: block; }
 
-@media (min-width: 800px) {
-  .has-buttons {
-    margin: 1.5rem 0; } }
 input[type="tel"],
 input[type="text"],
 input[type="number"],
@@ -202,9 +176,10 @@ label.form-select,
 fieldset.has-checkboxes,
 fieldset.has-radios {
   background: #f2f2f2;
-  border: 1px solid #f2f2f2;
   box-sizing: border-box;
-  border-radius: 13px; }
+  border: 1px solid #f2f2f2;
+  border-radius: 13px;
+  padding: 1rem; }
   input[type="tel"]:focus,
   input[type="text"]:focus,
   input[type="number"]:focus,
@@ -217,22 +192,41 @@ fieldset.has-radios {
   fieldset.has-radios:focus {
     border-color: #d9d9d9; }
 
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+  display: block;
+  position: relative;
+  width: 100%; }
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="search"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #d9d9d9; }
+
+.field-description {
+  display: block; }
+
 label.form-text {
   position: relative;
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 6px;
   box-sizing: border-box;
   z-index: 1;
-  display: inline-block;
-  min-width: 25rem;
-  margin: 0.75rem 0; }
+  min-width: 25rem; }
   label.form-text .field-description {
-    position: absolute;
-    display: block;
-    left: 0.75rem;
-    top: 0.5rem;
-    z-index: 5;
-    font-family: "Lato", sans-serif; }
+    font-family: "Lato", sans-serif;
+    line-height: 1.5rem;
+    margin: 1.5rem 0 0.5rem; }
   label.form-text input[type="tel"],
   label.form-text input[type="text"],
   label.form-text input[type="number"],
@@ -241,77 +235,58 @@ label.form-text {
   label.form-text input[type="password"],
   label.form-text textarea {
     width: 100%;
-    padding: 2.25rem 0.75rem 0.75rem;
     position: relative;
     z-index: 3;
     display: inline-block;
-    font-size: 16px; }
-
-input[type="tel"],
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="search"],
-input[type="password"],
-textarea {
-  padding: 0.5rem; }
+    font-size: 1rem; }
 
 textarea {
   height: 12rem;
   resize: vertical;
-  line-height: 1.875rem; }
+  line-height: 1.5rem; }
 
 label.form-select {
   position: relative;
-  border-radius: 1rem;
   box-sizing: border-box;
   z-index: 1;
   display: inline-block;
-  margin: 0.75rem 0;
-  padding: 1.5rem 0.75rem; }
+  margin: 0.75rem 0; }
   label.form-select select {
     display: block;
-    min-width: 30rem;
-    font-size: 1rem;
+    min-width: 100%;
+    font-size: 0.866rem;
     border: none;
     outline: none;
     background: #f2f2f2;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Lato", sans-serif;
-    letter-spacing: 0.75px;
     color: #3a4249; }
 
 label.form-checkbox,
 label.form-radio {
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
   position: relative;
   cursor: pointer; }
   label.form-checkbox input,
   label.form-radio input {
     position: absolute;
-    top: 1.5rem;
+    top: 1.425rem;
     left: 0.5rem; }
   label.form-checkbox .field-description,
   label.form-radio .field-description {
-    font-family: "Lato", sans-serif;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0.075rem 0 0 1.5rem;
-    letter-spacing: 0.75px;
+    padding: 0 1rem 0 0;
     line-height: 1.5rem; }
 
 fieldset {
-  margin: 4.5rem 0;
+  margin: 3rem 0 1.5rem;
   position: relative;
   display: block; }
   fieldset legend {
     position: absolute;
-    top: -2.25rem; }
+    top: -1.5rem; }
   fieldset.has-checkboxes, fieldset.has-radios {
-    padding: 1rem 0.5rem;
-    min-width: 30rem;
-    display: inline-block; }
+    padding: 1rem 0.5rem; }
     fieldset.has-checkboxes label.form-checkbox,
     fieldset.has-checkboxes label.form-radio, fieldset.has-radios label.form-checkbox,
     fieldset.has-radios label.form-radio {
@@ -322,17 +297,73 @@ fieldset {
       width: 50%;
       clear: none; }
 
+button,
+.button,
+.button-primary {
+  background: #3a4249;
+  color: #fff;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  display: inline-block; }
+  button:hover,
+  .button:hover,
+  .button-primary:hover, button:focus,
+  .button:focus,
+  .button-primary:focus {
+    color: #fff;
+    background: #181c1f; }
+
+.button-primary {
+  color: #fff;
+  background: #148744; }
+  .button-primary:hover, .button-primary:focus {
+    background: #0a4422; }
+
+.has-buttons button + button,
+.has-buttons .button + button,
+.has-buttons .button-primary + button,
+.has-buttons button + .button,
+.has-buttons .button + .button,
+.has-buttons .button-primary + .button,
+.has-buttons button + .button-primary,
+.has-buttons .button + .button-primary,
+.has-buttons .button-primary + .button-primary {
+  margin: 0 0 0 1rem; }
+.has-buttons.right {
+  text-align: right; }
+.has-buttons.stacked button,
+.has-buttons.stacked .button,
+.has-buttons.stacked .button-primary {
+  float: left;
+  clear: left; }
+  .has-buttons.stacked button + button,
+  .has-buttons.stacked .button + button,
+  .has-buttons.stacked .button-primary + button,
+  .has-buttons.stacked button + .button,
+  .has-buttons.stacked .button + .button,
+  .has-buttons.stacked .button-primary + .button,
+  .has-buttons.stacked button + .button-primary,
+  .has-buttons.stacked .button + .button-primary,
+  .has-buttons.stacked .button-primary + .button-primary {
+    margin: 1.5rem 0 0; }
+
 .search-form {
+  vertical-align: baseline;
   position: relative;
   display: inline-block; }
+  .search-form > * {
+    display: inline-block;
+    margin: 0 0.5rem; }
   .search-form label.form-text input[type="search"] {
-    width: auto;
     margin-right: 1rem;
     padding: 1rem 0.75rem;
     font-family: "Lato", sans-serif; }
-    .search-form label.form-text input[type="search"]::placeholder {
-      color: #3a4249;
-      font-size: 30px; }
   .search-form button.form-submit {
     font-family: "FontAwesome", serif;
     color: #5c6874;
@@ -353,6 +384,12 @@ fieldset {
 .page-header,
 .page-footer {
   padding: 1rem; }
+
+.page-header {
+  vertical-align: baseline; }
+  .page-header > * {
+    display: inline-block;
+    margin: 0 0.5rem; }
 
 .has-swatches {
   display: -webkit-box;
@@ -386,7 +423,7 @@ fieldset {
     padding: 1rem;
     background: #fff;
     border-bottom: 1px solid #d9d9d9;
-    font-size: 13px;
+    font-size: 0.866rem;
     white-space: pre; }
   .swatch.brand-colors--grey {
     background-color: #5c6874; }
@@ -501,7 +538,7 @@ fieldset {
     padding: 1rem 0; }
     .kss-section .kss-header small {
       display: block;
-      font-size: 13px; }
+      font-size: 0.866rem; }
     .kss-section .kss-header dl {
       margin: 1rem 0 0; }
     .kss-section .kss-header dt, .kss-section .kss-header dd {
@@ -509,14 +546,14 @@ fieldset {
       display: inline-block; }
     .kss-section .kss-header dd {
       font-weight: 600;
-      text-transform: capitalize;
       padding: 0 0.5rem; }
     .kss-section .kss-header dd + dt {
       margin-left: 1rem; }
   .kss-section h1, .kss-section h2, .kss-section h3, .kss-section h4, .kss-section h5, .kss-section h6 {
     margin: 1rem 0; }
   .kss-section .pattern-type {
-    display: inline-block; }
+    display: inline-block;
+    text-transform: capitalize; }
     .kss-section .pattern-type::before {
       display: inline-block;
       font-weight: 300;

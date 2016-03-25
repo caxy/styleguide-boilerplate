@@ -1,0 +1,284 @@
+/*
+Forms and Form Elements
+
+Styleguide 3
+*/
+
+
+
+
+
+/*
+Form Elements
+
+Styleguide 3.1
+*/
+
+
+
+// Form Fields
+//
+// All form fields should be wrapped inside of their respective label
+// elements. This accomplishes a few things:
+//
+// - Clicking on the label element will bring focus to its input regardless of whether a `for` value is set
+// - It groups all content relevant to an input in with it, which can aid screen readers in assigning context
+// - This provides a baked-in element that can be leveraged for positioning and spacing alongside the input itself, which can be very valuable
+// - A feedback class (error, alert, success, etc) applied to the label element will be inherited by all content, which leads to less markup
+//
+// Styleguide 3.1.2.0
+
+
+label,
+fieldset.has-checkboxes,
+fieldset.has-radios {
+	max-width: 40rem;
+	display: block;
+}
+
+
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+label.form-select,
+fieldset.has-checkboxes,
+fieldset.has-radios {
+
+	background: $panel-background-primary;
+	box-sizing: border-box;
+	border: $border-width-primary solid $panel-background-primary;
+	border-radius: $border-radius-primary;
+	padding: $spacing-inner;
+
+	&:focus {
+		border-color: $border-color-primary;
+	}
+
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+
+	display: block;
+	position: relative;
+	width: 100%;
+
+	&:focus {
+		border-color: $border-color-primary;
+	}
+
+}
+
+.field-description {
+	display: block;
+}
+
+// Text Inputs
+//
+// Markup:
+// <label for="styleguide-text-input-1" class="form-text">
+//   <span id="input-description-1" class="field-description">Input Description</span>
+//   <input id="styleguide-text-input-1" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+// </label>
+//
+// PatternType: atom
+//
+// Styleguide 3.1.2.1
+
+label.form-text {
+
+	position: relative;
+	background: $background-color-primary;
+	border-radius: $border-radius-secondary;
+	box-sizing: border-box;
+	z-index: 1;
+	min-width: 25rem;
+	//margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
+
+	.field-description {
+		font-family: $font-family-secondary;
+		line-height: $line-height-primary;
+		margin: $spacing-outer 0 $spacing-inner/2;
+	}
+
+	input[type="tel"],
+	input[type="text"],
+	input[type="number"],
+	input[type="email"],
+	input[type="search"],
+	input[type="password"],
+	textarea {
+		width: 100%;
+		position: relative;
+		z-index: 3;
+		display: inline-block;
+		font-size: $font-size-primary;
+	}
+
+}
+
+
+
+// Text Areas
+//
+// Markup:
+// <label for="styleguide-textarea" class="form-text">
+//   <span id="input-description-2" class="field-description">Input Description</span>
+//   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
+// </label>
+//
+// PatternType: atom
+//
+// Styleguide 3.1.2.2
+
+textarea {
+	height: 12rem;
+	resize: vertical;
+	line-height: $line-height-primary;
+}
+
+
+
+// Select Menus
+//
+// Markup:
+// <label class="form-select" for="styleguide-select">
+//   <select id="styleguide-select" name="styleguide-select">
+//     <option>Select a Value</option>
+//     <option value="val1">Option 1</option>
+//     <option value="val2">Option 2</option>
+//     <option value="val3">Option 3</option>
+//   </select>
+// </label>
+//
+// PatternType: atom
+//
+// Styleguide 3.1.2.3
+
+label.form-select {
+
+	position: relative;
+	box-sizing: border-box;
+	z-index: 1;
+	display: inline-block;
+	margin: $spacing-outer/2 0;
+
+	select {
+		display: block;
+		min-width: 100%;
+		font-size: $font-size-secondary;
+		border: none;
+		outline: none;
+  	background: $panel-background-primary;
+		font-size: $font-size-primary;
+		font-family: $font-family-secondary;
+    color: $font-color-primary;
+	}
+}
+
+
+
+// Checkboxes
+//
+// Markup:
+// <label class="form-checkbox" for="styleguide-checkbox">
+//   <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox-desc" value="val" />
+//   <span id="checkbox-desc" class="field-description">Value</span>
+//  </label>
+//
+// PatternType: atom
+//
+// Styleguide 3.1.2.4
+
+label.form-checkbox,
+label.form-radio {
+
+	margin: 0;
+	padding: $spacing-inner $spacing-inner $spacing-inner $spacing-inner*2;
+	position: relative;
+	cursor: pointer;
+
+	input {
+			position: absolute;
+			top: $line-height-primary * 0.95; // 0.95 = approx line-height * (line-height - font-size)
+			left: $spacing-inner/2;
+	}
+
+	.field-description {
+		padding: 0 $spacing-inner 0 0;
+		line-height: $line-height-primary;
+	}
+
+}
+
+
+
+// Radio Inputs
+//
+// Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
+// which present a Yes/No choice, radios present a This-or-That situation. As such, they always
+// need a context and should always be contained inside of a `fieldset` element with a `legend`.
+//
+// Markup: form_radios.html
+//
+// PatternType: atom
+//
+// Styleguide 3.1.2.5
+
+
+
+
+
+// Fieldsets
+//
+// Markup: form_fieldset.html
+//
+// PatternType: molecule
+//
+// Styleguide 3.1.3
+
+
+fieldset {
+
+	margin: $spacing-outer*2 0 $spacing-outer;
+	position: relative;
+	display: block;
+
+	legend {
+		position:absolute;
+		top: -$spacing-outer;
+	}
+
+	&.has-checkboxes,
+	&.has-radios  {
+
+		padding: $spacing-inner $spacing-inner/2;
+
+		label.form-checkbox,
+		label.form-radio {
+			display: inline-block;
+			float: left;
+			clear: left;
+		}
+
+		&.has-inline-fields {
+			label {
+				width: 50%;
+				clear: none;
+			}
+		}
+
+	}
+}
+

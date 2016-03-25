@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style has-background--secondary">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./index.html">Overview</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-1.html">Colors</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-2.html">Typography</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-3.html">Forms and Form Elements</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">Buttons and Button Contexts</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-6.html">Page-Level Containers</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-50.html">Utilities</a>
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
+            <li class="kss-nav__menu-item">
+              <a href="section-50.html#kssref-50-1">clearfix() / .clearfix</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-50.html#kssref-50-2">Context Class Utilities</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-50.html#kssref-50-2-1">has-inline-elements() / .has-inline-elements</a>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div id="kssref-50" class="kss-section kss-section--depth-1">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-50">
+            Section 
+              50
+          </a> 
+        </small>
+        <h1 class="kss-title kss-title--level-1">
+          Utilities
+        </h1>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Provided here are several utilities to either include in other elements&#39;
+CSS, or to apply as classes directly to HTML elements.</p>
+<p>It&#39;s advised to not use @extend on the classes found here, as it can make
+the compiled CSS a jumble and potentially harder to debug.</p>
+
+      </div>
+    </div>
+
+
+
+      </div>
+      <hr />
+      <section id="kssref-50-1" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-50-1">
+            Section 
+              50.1
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          clearfix() / .clearfix
+        </h2>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Useful when you need an element to clear its children, or to break an
+element out of the flow if its siblings.</p>
+
+      </div>
+    </div>
+
+
+
+      </section>
+      <hr />
+      <section id="kssref-50-2" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-50-2">
+            Section 
+              50.2
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Context Class Utilities
+        </h2>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Context classes will effect the direct children of the element they&#39;re
+applied to. If a context class relates directly to a visual attribute
+(eg. <code>.has-background-*</code>), only that attribute will be applied.</p>
+
+      </div>
+    </div>
+
+
+
+      </section>
+      <hr />
+      <section id="kssref-50-2-1" class="kss-section kss-section--depth-3">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-50-2-1">
+            Section 
+              50.2.1
+          </a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          has-inline-elements() / .has-inline-elements
+        </h3>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Use if you need to have an element&#39;s direct children display inline.</p>
+
+      </div>
+    </div>
+
+
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

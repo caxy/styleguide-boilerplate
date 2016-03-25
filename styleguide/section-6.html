@@ -38,17 +38,17 @@
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-4.html">Buttons and Button Contexts</a>
-        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
-            <li class="kss-nav__menu-item">
-              <a href="section-4.html#kssref-4-1">Buttons</a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-4.html#kssref-4-2">Has-Buttons Contexts</a>
-            </li>
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-6.html">Page-Level Containers</a>
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-1">Page-Level Header</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-2">Page-Level Footer</a>
+            </li>
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-50.html">Utilities</a>
@@ -58,17 +58,17 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div id="kssref-4" class="kss-section kss-section--depth-1">
+      <div id="kssref-6" class="kss-section kss-section--depth-1">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-4">
+          <a class="kss-title__permalink" href="#kssref-6">
             Section 
-              4
+              6
           </a> 
         </small>
         <h1 class="kss-title kss-title--level-1">
-          Buttons and Button Contexts
+          Page-Level Containers
         </h1>
       </header>
 
@@ -79,22 +79,24 @@
 
       </div>
       <hr />
-      <section id="kssref-4-1" class="kss-section kss-section--depth-2">
+      <section id="kssref-6-1" class="kss-section kss-section--depth-2">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-4-1">
+          <a class="kss-title__permalink" href="#kssref-6-1">
             Section 
-              4.1
+              6.1
           </a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Buttons
+          Page-Level Header
         </h2>
         <dl class="pattern-info">
           <dt>Pattern Type:</dt>
-          <dd class="pattern-type atom">atom</dd>
+          <dd class="pattern-type organism">organism</dd>
         
+          <dt>Contains:</dt>
+          <dd>Logo, Search Form, Navigation Menu</dd>
         </dl>
       </header>
 
@@ -103,114 +105,79 @@
 
       <div>
         <p class="title-5 has-border--primary--bottom">
-          Display Examples:
+          Display Example:
         </p>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
         <div class="kss-modifier__example">
-          <button class="[modifier class]">Button</button>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .button
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Default button state.
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button">Button</button>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .button-primary
-        </div>
-        <div class="kss-modifier__description kss-style">
-          When a button should be highlighted/is the main action in a set, use this class.
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button-primary">Button</button>
+          
+<header class="page-header">
+	<h1>Page Header</h1>
+	<form class="search-form">
+	  <label class="form-text">
+	    <input placeholder="Enter a search term." type="search" />
+	  </label>
+	  <button type="submit">search</button>
+	</form>
+</header>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Button&lt;/button&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">
+&lt;header class=&quot;page-header&quot;&gt;
+	&lt;h1&gt;Page Header&lt;/h1&gt;
+	&lt;form class=&quot;search-form&quot;&gt;
+	  &lt;label class=&quot;form-text&quot;&gt;
+	    &lt;input placeholder=&quot;Enter a search term.&quot; type=&quot;search&quot; /&gt;
+	  &lt;/label&gt;
+	  &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
+	&lt;/form&gt;
+&lt;/header&gt;</code></pre>
       </div>
 
 
       </section>
       <hr />
-      <section id="kssref-4-2" class="kss-section kss-section--depth-2">
+      <section id="kssref-6-2" class="kss-section kss-section--depth-2">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-4-2">
+          <a class="kss-title__permalink" href="#kssref-6-2">
             Section 
-              4.2
+              6.2
           </a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Has-Buttons Contexts
+          Page-Level Footer
         </h2>
         <dl class="pattern-info">
           <dt>Pattern Type:</dt>
-          <dd class="pattern-type molecule">molecule</dd>
+          <dd class="pattern-type organism">organism</dd>
         
           <dt>Contains:</dt>
-          <dd>Only &#x60;buttons&#x60; or elements with the &#x60;.button&#x60; class</dd>
+          <dd>Logo, Navigation Menu</dd>
         </dl>
       </header>
 
 
-      <div class="kss-description">
-        <p>Like all context classes, a container with <code>.has-buttons</code> applied should only have
-elements that are buttons or have a <code>.button</code> class applied.</p>
-
-      </div>
     </div>
 
       <div>
         <p class="title-5 has-border--primary--bottom">
-          Display Examples:
+          Display Example:
         </p>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
         <div class="kss-modifier__example">
-          <div class="has-buttons [modifier class]">
-  <button class="button-primary">Primary Button</button>
-  <button>Default Button</button>
-</div>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .right
-        </div>
-        <div class="kss-modifier__description kss-style">
-          right aligns the buttons inside the container
-        </div>
-        <div class="kss-modifier__example">
-          <div class="has-buttons right">
-  <button class="button-primary">Primary Button</button>
-  <button>Default Button</button>
-</div>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .stacked
-        </div>
-        <div class="kss-modifier__description kss-style">
-          stacks the buttons inside the container
-        </div>
-        <div class="kss-modifier__example">
-          <div class="has-buttons stacked">
-  <button class="button-primary">Primary Button</button>
-  <button>Default Button</button>
-</div>
+          
+<footer class="page-footer">
+	<span class="title-3">The Site's Footer</span>
+</footer>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;has-buttons [modifier class]&quot;&gt;
-  &lt;button class=&quot;button-primary&quot;&gt;Primary Button&lt;/button&gt;
-  &lt;button&gt;Default Button&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">
+&lt;footer class=&quot;page-footer&quot;&gt;
+	&lt;span class=&quot;title-3&quot;&gt;The Site&#x27;s Footer&lt;/span&gt;
+&lt;/footer&gt;</code></pre>
       </div>
 
 
