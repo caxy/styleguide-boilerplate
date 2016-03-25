@@ -28,16 +28,6 @@ Styleguide 3.1
 //
 // Styleguide 3.1.2.0
 
-
-label,
-fieldset.has-checkboxes,
-fieldset.has-radios {
-	max-width: 40rem;
-	display: block;
-}
-
-
-
 input[type="tel"],
 input[type="text"],
 input[type="number"],
@@ -99,8 +89,6 @@ select {
 label.form-text {
 
 	position: relative;
-	background: $background-color-primary;
-	border-radius: $border-radius-secondary;
 	box-sizing: border-box;
 	z-index: 1;
 	min-width: 25rem;
@@ -184,6 +172,7 @@ label.form-select {
 		font-size: $font-size-primary;
 		font-family: $font-family-secondary;
     color: $font-color-primary;
+    padding-right: $spacing-outer;
 	}
 }
 
@@ -208,6 +197,7 @@ label.form-radio {
 	padding: $spacing-inner $spacing-inner $spacing-inner $spacing-inner*2;
 	position: relative;
 	cursor: pointer;
+	display: inline-block;
 
 	input {
 			position: absolute;
@@ -254,10 +244,11 @@ fieldset {
 	margin: $spacing-outer*2 0 $spacing-outer;
 	position: relative;
 	display: block;
+	min-width: 40rem;
 
 	legend {
 		position:absolute;
-		top: -$spacing-outer;
+		top: -$spacing-outer*1.5;
 	}
 
 	&.has-checkboxes,

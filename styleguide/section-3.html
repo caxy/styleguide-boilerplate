@@ -52,6 +52,9 @@
               <a href="section-3.html#kssref-3-2-2">Inline Form</a>
             </li>
             <li class="kss-nav__menu-item">
+              <a href="section-3.html#kssref-3-2-3">Basic Form</a>
+            </li>
+            <li class="kss-nav__menu-item">
               <a href="section-3.html#kssref-3-2-5">Search Form</a>
             </li>
         </ul>
@@ -579,9 +582,9 @@ need a context and should always be contained inside of a <code>fieldset</code> 
     <span id="inline-form-description-1" class="field-description">Input Description</span>
     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
   </label>
-  <label for="inline-form-text-input-2" class="form-text">
-    <span id="inline-form-description-2" class="field-description">Input Description</span>
-    <input id="inline-form-text-input-2" name="inline-form-text-input-2" aria-labelledby="inline-form-description-2" type="text" title="Input Description" value="" />
+  <label class="form-checkbox" for="inline-form-checkbox-1">
+    <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
+    <span id="inline-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
   </label>
   <button type="submit">search</button>
 </form>
@@ -594,11 +597,77 @@ need a context and should always be contained inside of a <code>fieldset</code> 
     &lt;span id=&quot;inline-form-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
     &lt;input id=&quot;inline-form-text-input-1&quot; name=&quot;inline-form-text-input-1&quot; aria-labelledby=&quot;inline-form-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
   &lt;/label&gt;
-  &lt;label for=&quot;inline-form-text-input-2&quot; class=&quot;form-text&quot;&gt;
-    &lt;span id=&quot;inline-form-description-2&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
-    &lt;input id=&quot;inline-form-text-input-2&quot; name=&quot;inline-form-text-input-2&quot; aria-labelledby=&quot;inline-form-description-2&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+  &lt;label class=&quot;form-checkbox&quot; for=&quot;inline-form-checkbox-1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;inline-form-checkbox-1&quot; name=&quot;inline-form-checkbox-1&quot; aria-labelledby=&quot;inline-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
+    &lt;span id=&quot;inline-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;Checkbox Value&lt;/span&gt;
   &lt;/label&gt;
   &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-3-2-3" class="kss-section kss-section--depth-3">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-2-3">
+            Section 
+              3.2.3
+          </a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Basic Form
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+        </dl>
+      </header>
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <form class="form-basic">
+  <h3>Form Title</h3>
+  <label for="basic-form-text-input-1" class="form-text">
+    <span id="basic-form-description-1" class="field-description">Input Description</span>
+    <input id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-description-1" type="text" title="Input Description" value="" />
+  </label>
+  <label class="form-checkbox" for="basic-form-checkbox-1">
+    <input type="checkbox" id="basic-form-checkbox-1" name="basic-form-checkbox-1" aria-labelledby="basic-form-checkbox-desc-1" value="val2" />
+    <span id="basic-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
+  </label>
+  <div class="has-buttons">
+    <button class="button-primary" type="submit">submit</button>
+    <button type="submit">cancel</button>
+  </div>
+</form>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-basic&quot;&gt;
+  &lt;h3&gt;Form Title&lt;/h3&gt;
+  &lt;label for=&quot;basic-form-text-input-1&quot; class=&quot;form-text&quot;&gt;
+    &lt;span id=&quot;basic-form-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
+    &lt;input id=&quot;basic-form-text-input-1&quot; name=&quot;basic-form-text-input-1&quot; aria-labelledby=&quot;basic-form-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;form-checkbox&quot; for=&quot;basic-form-checkbox-1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;basic-form-checkbox-1&quot; name=&quot;basic-form-checkbox-1&quot; aria-labelledby=&quot;basic-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
+    &lt;span id=&quot;basic-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;Checkbox Value&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;div class=&quot;has-buttons&quot;&gt;
+    &lt;button class=&quot;button-primary&quot; type=&quot;submit&quot;&gt;submit&lt;/button&gt;
+    &lt;button type=&quot;submit&quot;&gt;cancel&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</code></pre>
       </div>
 

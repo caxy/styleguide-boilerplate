@@ -20,7 +20,11 @@
 // Styleguide 6.1
 
 .page-header {
-	@include has-inline-elements();
+	@include flexbox();
+	@include justify-content(space-between);
+	@include align-items(center);
+	padding: $spacing-outer;
+	background: $panel-background-secondary;
 }
 
 
@@ -35,5 +39,7 @@
 // Styleguide 6.2
 
 .page-footer {
-
+	padding: $spacing-outer;
+	color: $font-color-tertiary;
+	background: $panel-background-tertiary;
 }

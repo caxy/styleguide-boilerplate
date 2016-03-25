@@ -10,9 +10,9 @@
 //     <span id="inline-form-description-1" class="field-description">Input Description</span>
 //     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
 //   </label>
-//   <label for="inline-form-text-input-2" class="form-text">
-//     <span id="inline-form-description-2" class="field-description">Input Description</span>
-//     <input id="inline-form-text-input-2" name="inline-form-text-input-2" aria-labelledby="inline-form-description-2" type="text" title="Input Description" value="" />
+//   <label class="form-checkbox" for="inline-form-checkbox-1">
+//     <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
+//     <span id="inline-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
 //   </label>
 //   <button type="submit">search</button>
 // </form>
@@ -20,6 +20,40 @@
 // PatternType: molecule
 //
 // Styleguide 3.2.2
+
+// Basic Form
+//
+// Markup:
+// <form class="form-basic">
+//   <h3>Form Title</h3>
+//   <label for="basic-form-text-input-1" class="form-text">
+//     <span id="basic-form-description-1" class="field-description">Input Description</span>
+//     <input id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-description-1" type="text" title="Input Description" value="" />
+//   </label>
+//   <label class="form-checkbox" for="basic-form-checkbox-1">
+//     <input type="checkbox" id="basic-form-checkbox-1" name="basic-form-checkbox-1" aria-labelledby="basic-form-checkbox-desc-1" value="val2" />
+//     <span id="basic-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
+//   </label>
+//   <div class="has-buttons">
+//     <button class="button-primary" type="submit">submit</button>
+//     <button type="submit">cancel</button>
+//   </div>
+// </form>
+//
+// PatternType: molecule
+//
+// Styleguide 3.2.3
+
+.form-basic {
+  
+  max-width: 50rem;
+  
+  label.field-text {
+    display: block;
+    margin: $spacing-outer 0;
+  }
+
+}
 
 // Search Form
 //
