@@ -41,17 +41,17 @@
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-6.html">Page-Level Containers</a>
-        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
-            <li class="kss-nav__menu-item">
-              <a href="section-6.html#kssref-6-1">Page-Level Header</a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-6.html#kssref-6-2">Page-Level Footer</a>
-            </li>
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-20.html">Menus</a>
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
+            <li class="kss-nav__menu-item">
+              <a href="section-20.html#kssref-20-1">Breadcrumb Navigation</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-20.html#kssref-20-1">Main Navigation</a>
+            </li>
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-50.html">Utilities</a>
@@ -61,17 +61,17 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div id="kssref-6" class="kss-section kss-section--depth-1">
+      <div id="kssref-20" class="kss-section kss-section--depth-1">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-6">
+          <a class="kss-title__permalink" href="#kssref-20">
             Section 
-              6
+              20
           </a> 
         </small>
         <h1 class="kss-title kss-title--level-1">
-          Page-Level Containers
+          Menus
         </h1>
       </header>
 
@@ -82,24 +82,22 @@
 
       </div>
       <hr />
-      <section id="kssref-6-1" class="kss-section kss-section--depth-2">
+      <section id="kssref-20-1" class="kss-section kss-section--depth-2">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-6-1">
+          <a class="kss-title__permalink" href="#kssref-20-1">
             Section 
-              6.1
+              20.1
           </a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Page-Level Header
+          Breadcrumb Navigation
         </h2>
         <dl class="pattern-info">
           <dt>Pattern Type:</dt>
-          <dd class="pattern-type organism">organism</dd>
+          <dd class="pattern-type molecule">molecule</dd>
         
-          <dt>Contains:</dt>
-          <dd>Logo, Search Form, Navigation Menu</dd>
         </dl>
       </header>
 
@@ -111,77 +109,51 @@
           Display Example:
         </p>
         <div class="kss-modifier__example">
-          
-<header class="page-header">
-	<h1>Page Header</h1>
-	<form class="search-form">
-	  <label class="form-text">
-	    <input placeholder="Enter a search term." type="search" />
-	  </label>
-	  <button type="submit">search</button>
-	</form>
-</header>
+          <ul class="has-breadcrumbs">
+  <li class="breadcrumb">Home</li>
+  <li class="breadcrumb"><a href="">Level 1</a></li>
+  <li class="breadcrumb"><a href="">Level 2</a></li>
+</ul>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">
-&lt;header class=&quot;page-header&quot;&gt;
-	&lt;h1&gt;Page Header&lt;/h1&gt;
-	&lt;form class=&quot;search-form&quot;&gt;
-	  &lt;label class=&quot;form-text&quot;&gt;
-	    &lt;input placeholder=&quot;Enter a search term.&quot; type=&quot;search&quot; /&gt;
-	  &lt;/label&gt;
-	  &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
-	&lt;/form&gt;
-&lt;/header&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;has-breadcrumbs&quot;&gt;
+  &lt;li class=&quot;breadcrumb&quot;&gt;Home&lt;/li&gt;
+  &lt;li class=&quot;breadcrumb&quot;&gt;&lt;a href=&quot;&quot;&gt;Level 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;breadcrumb&quot;&gt;&lt;a href=&quot;&quot;&gt;Level 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
       </div>
 
 
       </section>
       <hr />
-      <section id="kssref-6-2" class="kss-section kss-section--depth-2">
+      <section id="kssref-20-1" class="kss-section kss-section--depth-2">
 
       <header class="kss-header has-border--bottom">
         <small>
-          <a class="kss-title__permalink" href="#kssref-6-2">
+          <a class="kss-title__permalink" href="#kssref-20-1">
             Section 
-              6.2
+              20.1
           </a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Page-Level Footer
+          Main Navigation
         </h2>
-        <dl class="pattern-info">
-          <dt>Pattern Type:</dt>
-          <dd class="pattern-type organism">organism</dd>
-        
-          <dt>Contains:</dt>
-          <dd>Logo, Navigation Menu</dd>
-        </dl>
       </header>
 
 
+      <div class="kss-description">
+        <nav>
+<ul class="main-navigation">
+  <li class="">Home</li>
+  <li class=""><a href="">Page 1</a></li>
+  <li class=""><a href="">Page 2</a></li>
+</ul>
+</nav>
+      </div>
     </div>
 
-      <div>
-        <p class="title-5 has-border--primary--bottom">
-          Display Example:
-        </p>
-        <div class="kss-modifier__example">
-          
-<footer class="page-footer">
-	<span class="title-3">The Site's Footer</span>
-</footer>
-        </div>
-      </div>
-      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">
-&lt;footer class=&quot;page-footer&quot;&gt;
-	&lt;span class=&quot;title-3&quot;&gt;The Site&#x27;s Footer&lt;/span&gt;
-&lt;/footer&gt;</code></pre>
-      </div>
 
 
       </section>

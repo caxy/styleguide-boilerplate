@@ -414,6 +414,22 @@ button,
   color: #e5e8ea;
   background: #515b66; }
 
+.breadcrumb {
+  margin: 0;
+  padding: 1rem 0; }
+  .breadcrumb + .breadcrumb {
+    padding-left: 0; }
+    .breadcrumb + .breadcrumb::before {
+      content: "/";
+      padding: 1rem; }
+
+.has-breadcrumbs {
+  list-style-type: none;
+  margin: 1.5rem 0;
+  padding: 0; }
+  .has-breadcrumbs .breadcrumb {
+    display: inline-block; }
+
 .has-swatches {
   display: -webkit-box;
   display: -webkit-flex;

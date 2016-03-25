@@ -1,0 +1,59 @@
+
+// Menus
+//
+// Styleguide 20
+
+// Breadcrumb Navigation
+//
+// Markup:
+// <ul class="has-breadcrumbs">
+//   <li class="breadcrumb">Home</li>
+//   <li class="breadcrumb"><a href="">Level 1</a></li>
+//   <li class="breadcrumb"><a href="">Level 2</a></li>
+// </ul>
+//
+// PatternType: molecule
+//
+// Styleguide 20.1
+
+.breadcrumb {
+	
+	margin: 0;
+	padding: $spacing-inner 0;
+	
+	& + .breadcrumb {
+	
+		padding-left: 0;
+	
+		&::before {
+			content: "/";
+			padding: $spacing-inner;
+		}
+
+	}
+}
+
+.has-breadcrumbs {
+	
+	list-style-type: none;
+	margin: $spacing-outer 0;
+	padding: 0;
+	
+	.breadcrumb {
+		display: inline-block;
+	}
+
+}
+
+
+// Main Navigation
+//
+// <nav>
+// <ul class="main-navigation">
+//   <li class="">Home</li>
+//   <li class=""><a href="">Page 1</a></li>
+//   <li class=""><a href="">Page 2</a></li>
+// </ul>
+// </nav>
+//
+// Styleguide 20.1
