@@ -8,6 +8,12 @@ Just pull these files into your project's assets folder and run `npm install` to
 
 `npm run generate-styleguide`
 
+or
+
+`npm run generate-styleguide-verbose`
+
+if you would like more information. Running either command also compiles a styleguide-specific version of the current CSS.
+
 If your folder structure needs to be different, just adjust the path found in the `package.json` file included here.
 
 # Populating the Styleguide

@@ -1,4 +1,6 @@
 
+@import '../main';
+
 // Output background/swatch classes for all color variables
 @mixin make-swatches($color-sets) {
 
