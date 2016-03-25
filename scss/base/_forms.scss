@@ -7,10 +7,12 @@ Styleguide 3
 // Buttons
 //
 // Markup:
-// <div class="has-buttons">
+//<h4>Primary Button</h4>
 // <button class="button-primary">Primary Button</button>
-// <button>Secondary Button</button>
-// <div>
+//<h4>Default/Secondary Button</h4>
+// <button>Default Button</button>
+//
+// PatternType: atom
 //
 // Styleguide 3.1
 
@@ -26,9 +28,8 @@ button,
 	border: none;
 	outline: none;
 	padding: $spacing-inner $spacing-inner*3;
-	font-size: 1rem;
+	font-size: $font-size-button;
 	cursor: pointer;
-	letter-spacing: 0.1rem;
 	font-family: $button-font-primary;
 	font-style: normal;
 
@@ -51,6 +52,23 @@ button,
 
 }
 
+// Has-Buttons Context
+//
+// Like all context classes, a container with `.has-buttons` applied should only have
+// elements that are buttons or have a `.button` class applied.
+//
+// Markup:
+// <div class="has-buttons">
+//   <button class="button-primary">Primary Button</button>
+//   <button>Default Button</button>
+// </div>
+//
+// PatternType: molecule
+//
+// ContainsPatterns: Button
+//
+// Styleguide 3.1.1
+
 .has-buttons {
 
 	button,
@@ -58,7 +76,7 @@ button,
 		display:inline-block;
 		& + button,
 		& + .button {
-			margin: 0 $spacing-inner 0 0;
+			margin: 0 0 0 $spacing-inner;
 		}
 	}
 
@@ -70,7 +88,7 @@ button,
 		.button {
 			& + button,
 			& + .button {
-				margin: 0 0 0 $spacing-inner;
+				margin: 0 $spacing-inner 0 0;
 			}
 		}
 	}
@@ -86,6 +104,14 @@ button,
 
 
 // Form Fields
+//
+// All form fields should be wrapped inside of their respective label
+// elements. This accommplishes a few things:
+//
+// - Clicking on the label element will bring focus to its input regardless of whether a `for` value is set
+// - It groups all content relevant to an input in with it, which can aid screen readers in assigning context
+// - This provides a baked-in element that can be leveraged for positioning and spacing alongside the input itself, which can be very valuable
+// - A feedback class (error, alert, success, etc) applied to the label element will be inherited by all content, which leads to less markup
 //
 // Styleguide 3.2.0
 
@@ -103,13 +129,12 @@ fieldset.has-checkboxes,
 fieldset.has-radios {
 
 	background: $panel-background-primary;
-	border: none;
+	border: $border-width-primary solid $panel-background-primary;
 	box-sizing: border-box;
 	border-radius: $border-radius-primary;
-	font-family: $font-family-primary;
 
 	&:focus {
-		background: $background-color-secondary;
+		border-color: $border-color-primary;
 	}
 }
 
@@ -121,16 +146,16 @@ label.form-text {
 	box-sizing: border-box;
 	z-index: 1;
 	display: inline-block;
+	min-width: 25rem;
 	margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
 
 	.field-description {
 		position: absolute;
 		display: block;
 		left: 0.75rem;
-		top: 0.75rem;
+		top: 0.5rem;
 		z-index: 5;
 		font-family: $font-family-secondary;
-		letter-spacing:0.75px;
 	}
 
 	input[type="tel"],
@@ -141,8 +166,6 @@ label.form-text {
 	input[type="password"],
 	textarea {
 		width: 100%;
-		font-size: 1rem;
-		min-width: 30rem;
 		padding: 2.25rem 0.75rem 0.75rem;
 		position: relative;
 		z-index: 3;
@@ -159,6 +182,8 @@ label.form-text {
 //   <span id="input-description-1" class="field-description">Input Description</span>
 //   <input id="styleguide-text-input-1" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
 // </label>
+//
+// PatternType: atom
 //
 // Styleguide 3.2.1
 
@@ -181,6 +206,8 @@ textarea {
 //   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
 // </label>
 //
+// PatternType: atom
+//
 // Styleguide 3.2.2
 
 textarea {
@@ -202,6 +229,8 @@ textarea {
 //     <option value="val3">Option 3</option>
 //   </select>
 // </label>
+//
+// PatternType: atom
 //
 // Styleguide 3.2.3
 
@@ -231,19 +260,62 @@ label.form-select {
 
 
 
-// Checkboxes
+// Radio Inputs
 //
-// Markup: checkboxes.html
+// Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
+// which present a Yes/No choice, radios present a This-or-That situation. As such, they always
+// need a context and should always be contained inside of a `fieldset` element with a `legend`.
+//
+// Markup: form_radios.html
+//
+// PatternType: atom
 //
 // Styleguide 3.2.4
 
 
 
-// Radio Inputs
+// Checkboxes
 //
-// Markup: radio_inputs.html
+// Markup: form_checkboxes.html
+//
+// PatternType: atom
 //
 // Styleguide 3.2.5
+
+label.form-checkbox,
+label.form-radio {
+
+	margin: 0;
+	padding: $spacing-inner;
+	position: relative;
+	cursor: pointer;
+
+	input {
+			position: absolute;
+			top: 1.5rem;
+			left: $spacing-inner/2;
+	}
+
+	.field-description {
+		font-family: $font-family-secondary;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0.075rem 0 0 1.5rem;
+		letter-spacing: 0.75px;
+		line-height: 1.5rem;
+	}
+
+}
+
+
+// Fieldsets
+//
+// Markup: form_radios.html
+//
+// PatternType: molecule
+//
+// Styleguide 3.3
+
 
 fieldset {
 
@@ -280,33 +352,21 @@ fieldset {
 	}
 }
 
-label.form-checkbox,
-label.form-radio {
 
-	margin: 0;
-	padding: $spacing-inner;
-	position: relative;
-	cursor: pointer;
-
-	input {
-			position: absolute;
-			top: 1.5rem;
-			left: $spacing-inner/2;
-	}
-
-	.field-description {
-		font-family: $font-family-secondary;
-		display: inline-block;
-		vertical-align: top;
-		padding: 0.075rem 0 0 1.5rem;
-		letter-spacing: 0.75px;
-		line-height: 1.5rem;
-	}
-
-}
-
-
-
+// Search Form
+//
+// Markup:
+// <form class="search-form">
+//   <label class="form-text">
+//     <input placeholder="Enter a search term." type="search" /> <button type="submit">search</button>
+//   </label>
+// </form>
+//
+// PatternType: molecule
+//
+// ContainsPatterns: Button, Input (Search)
+//
+// Styleguide 3.3
 
 .search-form {
 
@@ -316,14 +376,17 @@ label.form-radio {
   label.form-text {
 
     input[type="search"] {
-      max-width: 100%;
-      margin-right:4rem;
+
+    	width: auto;
+      margin-right: $spacing-inner;
       padding: 1rem 0.75rem;
       font-family: $font-family-secondary;
+      
       &::placeholder {
         color: $font-color-primary;
         font-size: 30px;
       }
+
     }
 
   }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style has-background--secondary">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./index.html">Overview</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-1.html">Colors</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-2.html">Typography</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-3.html">Forms</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">Page-Level Containers</a>
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
+            <li class="kss-nav__menu-item">
+              <a href="section-4.html#kssref-4-1">Page-Level Header</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-4.html#kssref-4-2">Page-Level Footer</a>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div id="kssref-4" class="kss-section kss-section--depth-1">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-4">
+            Section 
+              4
+          </a> 
+        </small>
+        <h1 class="kss-title kss-title--level-1">
+          Page-Level Containers
+        </h1>
+      </header>
+
+
+    </div>
+
+
+
+      </div>
+      <hr />
+      <section id="kssref-4-1" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-4-1">
+            Section 
+              4.1
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Page-Level Header
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type organism">organism</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Logo, Search Form, Navigation Menu</dd>
+        </dl>
+      </header>
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          
+<header class="page-header">
+	<h1>Page Header</h1>
+	<form class="search-form">
+	  <label class="form-text">
+	    <input placeholder="Enter a search term." type="search" /> <button type="submit">search</button>
+	  </label>
+	</form>
+</header>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">
+&lt;header class=&quot;page-header&quot;&gt;
+	&lt;h1&gt;Page Header&lt;/h1&gt;
+	&lt;form class=&quot;search-form&quot;&gt;
+	  &lt;label class=&quot;form-text&quot;&gt;
+	    &lt;input placeholder=&quot;Enter a search term.&quot; type=&quot;search&quot; /&gt; &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
+	  &lt;/label&gt;
+	&lt;/form&gt;
+&lt;/header&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-4-2" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-4-2">
+            Section 
+              4.2
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Page-Level Footer
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type organism">organism</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Logo, Navigation Menu</dd>
+        </dl>
+      </header>
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          
+<footer class="page-footer">
+	<span class="title-3">The Site's Footer</span>
+</footer>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">
+&lt;footer class=&quot;page-footer&quot;&gt;
+	&lt;span class=&quot;title-3&quot;&gt;The Site&#x27;s Footer&lt;/span&gt;
+&lt;/footer&gt;</code></pre>
+      </div>
+
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

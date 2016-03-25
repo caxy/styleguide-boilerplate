@@ -12,8 +12,6 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,400italic,700italic|PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" href="../css/main.css">
 
@@ -42,6 +40,9 @@
               <a href="section-3.html#kssref-3-1">Buttons</a>
             </li>
             <li class="kss-nav__menu-item">
+              <a href="section-3.html#kssref-3-1-1">Has-Buttons Context</a>
+            </li>
+            <li class="kss-nav__menu-item">
               <a href="section-3.html#kssref-3-2">Form Fields</a>
             </li>
             <li class="kss-nav__menu-item">
@@ -54,12 +55,21 @@
               <a href="section-3.html#kssref-3-2-3">Select Menus</a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-3.html#kssref-3-2-4">Checkboxes</a>
+              <a href="section-3.html#kssref-3-2-4">Radio Inputs</a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-3.html#kssref-3-2-5">Radio Inputs</a>
+              <a href="section-3.html#kssref-3-2-5">Checkboxes</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-3.html#kssref-3-3">Search Form</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-3.html#kssref-3-3">Fieldsets</a>
             </li>
         </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">Page-Level Containers</a>
       </li>
     </ul>
   </nav>
@@ -68,18 +78,16 @@
 
       <div id="kssref-3" class="kss-section kss-section--depth-1">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3">
             Section 
               3
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h1 class="kss-title kss-title--level-1">
           Forms
-        </h1> 
+        </h1>
       </header>
 
 
@@ -91,18 +99,21 @@
       <hr />
       <section id="kssref-3-1" class="kss-section kss-section--depth-2">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-1">
             Section 
               3.1
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h2 class="kss-title kss-title--level-2">
           Buttons
-        </h2> 
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
       </header>
 
 
@@ -113,18 +124,69 @@
           Display Example:
         </p>
         <div class="kss-modifier__example">
-          <div class="has-buttons">
+          <h4>Primary Button</h4>
 <button class="button-primary">Primary Button</button>
-<button>Secondary Button</button>
-<div>
+<h4>Default/Secondary Button</h4>
+<button>Default Button</button>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4&gt;Primary Button&lt;/h4&gt;
+&lt;button class=&quot;button-primary&quot;&gt;Primary Button&lt;/button&gt;
+&lt;h4&gt;Default/Secondary Button&lt;/h4&gt;
+&lt;button&gt;Default Button&lt;/button&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-3-1-1" class="kss-section kss-section--depth-3">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-1-1">
+            Section 
+              3.1.1
+          </a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Has-Buttons Context
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Button</dd>
+        </dl>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Like all context classes, a container with <code>.has-buttons</code> applied should only have
+elements that are buttons or have a <code>.button</code> class applied.</p>
+
+      </div>
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <div class="has-buttons">
+  <button class="button-primary">Primary Button</button>
+  <button>Default Button</button>
+</div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;has-buttons&quot;&gt;
-&lt;button class=&quot;button-primary&quot;&gt;Primary Button&lt;/button&gt;
-&lt;button&gt;Secondary Button&lt;/button&gt;
-&lt;div&gt;</code></pre>
+  &lt;button class=&quot;button-primary&quot;&gt;Primary Button&lt;/button&gt;
+  &lt;button&gt;Default Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
 
@@ -132,21 +194,30 @@
       <hr />
       <section id="kssref-3-2" class="kss-section kss-section--depth-2">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-2">
             Section 
               3.2
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h2 class="kss-title kss-title--level-2">
           Form Fields
-        </h2> 
+        </h2>
       </header>
 
 
+      <div class="kss-description">
+        <p>All form fields should be wrapped inside of their respective label
+elements. This accommplishes a few things:</p>
+<ul>
+<li>Clicking on the label element will bring focus to its input regardless of whether a <code>for</code> value is set</li>
+<li>It groups all content relevant to an input in with it, which can aid screen readers in assigning context</li>
+<li>This provides a baked-in element that can be leveraged for positioning and spacing alongside the input itself, which can be very valuable</li>
+<li>A feedback class (error, alert, success, etc) applied to the label element will be inherited by all content, which leads to less markup</li>
+</ul>
+
+      </div>
     </div>
 
 
@@ -155,18 +226,21 @@
       <hr />
       <section id="kssref-3-2-1" class="kss-section kss-section--depth-3">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-2-1">
             Section 
               3.2.1
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h3 class="kss-title kss-title--level-3">
           Text Inputs
-        </h3> 
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
       </header>
 
 
@@ -196,18 +270,21 @@
       <hr />
       <section id="kssref-3-2-2" class="kss-section kss-section--depth-3">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-2-2">
             Section 
               3.2.2
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h3 class="kss-title kss-title--level-3">
           Text Areas
-        </h3> 
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
       </header>
 
 
@@ -237,18 +314,21 @@
       <hr />
       <section id="kssref-3-2-3" class="kss-section kss-section--depth-3">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-2-3">
             Section 
               3.2.3
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
         <h3 class="kss-title kss-title--level-3">
           Select Menus
-        </h3> 
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
       </header>
 
 
@@ -286,18 +366,123 @@
       <hr />
       <section id="kssref-3-2-4" class="kss-section kss-section--depth-3">
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-3-2-4">
             Section 
               3.2.4
-              
-              #permalink
-          </a>
-        </span>
+          </a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Radio Inputs
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
+which present a Yes/No choice, radios present a This-or-That situation. As such, they always
+need a context and should always be contained inside of a <code>fieldset</code> element with a <code>legend</code>.</p>
+
+      </div>
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <fieldset class="has-radios" for="styleguide-radio">
+  <legend>Input Description</legend>
+  <label class="form-radio" for="styleguide-radio-1">
+		<input type="radio" id="styleguide-radio-1" name="styleguide-radio-1" aria-labelledby="radio-desc-1" value="val1" />
+		<span id="radio-desc-1" class="field-description">Value 1</span>
+	 </label>
+  <label class="form-radio" for="styleguide-radio-2">
+		<input type="radio" id="styleguide-radio-2" name="styleguide-radio-1" aria-labelledby="radio-desc-2" value="val2" />
+		<span id="radio-desc-2" class="field-description">Value 2</span>
+	 </label>
+  <label class="form-radio" for="styleguide-radio-3">
+		<input type="radio" id="styleguide-radio-3" name="styleguide-radio-1" aria-labelledby="radio-desc-3" value="val3" />
+		<span id="radio-desc-3" class="field-description">Value 3</span>
+	 </label>
+</fieldset>
+<fieldset class="has-radios has-inline-fields" for="styleguide-radio">
+  <legend>Input Description with Inline Fields</legend>
+  <label class="form-radio" for="second_styleguide-radio-1">
+		<input type="radio" id="second_styleguide-radio-1" name="second_styleguide-radio" aria-labelledby="radio-desc-4" value="val1" />
+		<span id="radio-desc-4" class="field-description">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
+	 </label>
+  <label class="form-radio" for="second_styleguide-radio-2">
+		<input type="radio" id="second_styleguide-radio-2" name="second_styleguide-radio" aria-labelledby="radio-desc-5" value="val2" />
+		<span id="radio-desc-5" class="field-description"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
+	 </label>
+  <label class="form-radio" for="second_styleguide-radio-3">
+		<input type="radio" id="second_styleguide-radio-3" name="second_styleguide-radio" aria-labelledby="radio-desc-6" value="val3" />
+		<span id="radio-desc-6" class="field-description">Value 3</span>
+	 </label>
+</fieldset>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;has-radios&quot; for=&quot;styleguide-radio&quot;&gt;
+  &lt;legend&gt;Input Description&lt;/legend&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-1&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-1&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-1&quot; value=&quot;val1&quot; /&gt;
+		&lt;span id=&quot;radio-desc-1&quot; class=&quot;field-description&quot;&gt;Value 1&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-2&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-2&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-2&quot; value=&quot;val2&quot; /&gt;
+		&lt;span id=&quot;radio-desc-2&quot; class=&quot;field-description&quot;&gt;Value 2&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-3&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-3&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-3&quot; value=&quot;val3&quot; /&gt;
+		&lt;span id=&quot;radio-desc-3&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+	 &lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;has-radios has-inline-fields&quot; for=&quot;styleguide-radio&quot;&gt;
+  &lt;legend&gt;Input Description with Inline Fields&lt;/legend&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-1&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-1&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-4&quot; value=&quot;val1&quot; /&gt;
+		&lt;span id=&quot;radio-desc-4&quot; class=&quot;field-description&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-2&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-2&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-5&quot; value=&quot;val2&quot; /&gt;
+		&lt;span id=&quot;radio-desc-5&quot; class=&quot;field-description&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-3&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-3&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-6&quot; value=&quot;val3&quot; /&gt;
+		&lt;span id=&quot;radio-desc-6&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+	 &lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-3-2-5" class="kss-section kss-section--depth-3">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-2-5">
+            Section 
+              3.2.5
+          </a> 
+        </small>
         <h3 class="kss-title kss-title--level-3">
           Checkboxes
-        </h3> 
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
       </header>
 
 
@@ -377,20 +562,121 @@
 
       </section>
       <hr />
-      <section id="kssref-3-2-5" class="kss-section kss-section--depth-3">
+      <section id="kssref-3-3" class="kss-section kss-section--depth-2">
 
-      <header class="has-border--bottom">
-        <span>
-          <a class="kss-title__permalink" href="#kssref-3-2-5">
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-3">
             Section 
-              3.2.5
-              
-              #permalink
-          </a>
-        </span>
-        <h3 class="kss-title kss-title--level-3">
-          Radio Inputs
-        </h3> 
+              3.3
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Search Form
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Button, Input (Search)</dd>
+        </dl>
+      </header>
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <fieldset class="has-radios" for="styleguide-radio">
+  <legend>Input Description</legend>
+  <label class="form-radio" for="styleguide-radio-1">
+		<input type="radio" id="styleguide-radio-1" name="styleguide-radio-1" aria-labelledby="radio-desc-1" value="val1" />
+		<span id="radio-desc-1" class="field-description">Value 1</span>
+	 </label>
+  <label class="form-radio" for="styleguide-radio-2">
+		<input type="radio" id="styleguide-radio-2" name="styleguide-radio-1" aria-labelledby="radio-desc-2" value="val2" />
+		<span id="radio-desc-2" class="field-description">Value 2</span>
+	 </label>
+  <label class="form-radio" for="styleguide-radio-3">
+		<input type="radio" id="styleguide-radio-3" name="styleguide-radio-1" aria-labelledby="radio-desc-3" value="val3" />
+		<span id="radio-desc-3" class="field-description">Value 3</span>
+	 </label>
+</fieldset>
+<fieldset class="has-radios has-inline-fields" for="styleguide-radio">
+  <legend>Input Description with Inline Fields</legend>
+  <label class="form-radio" for="second_styleguide-radio-1">
+		<input type="radio" id="second_styleguide-radio-1" name="second_styleguide-radio" aria-labelledby="radio-desc-4" value="val1" />
+		<span id="radio-desc-4" class="field-description">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
+	 </label>
+  <label class="form-radio" for="second_styleguide-radio-2">
+		<input type="radio" id="second_styleguide-radio-2" name="second_styleguide-radio" aria-labelledby="radio-desc-5" value="val2" />
+		<span id="radio-desc-5" class="field-description"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
+	 </label>
+  <label class="form-radio" for="second_styleguide-radio-3">
+		<input type="radio" id="second_styleguide-radio-3" name="second_styleguide-radio" aria-labelledby="radio-desc-6" value="val3" />
+		<span id="radio-desc-6" class="field-description">Value 3</span>
+	 </label>
+</fieldset>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;has-radios&quot; for=&quot;styleguide-radio&quot;&gt;
+  &lt;legend&gt;Input Description&lt;/legend&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-1&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-1&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-1&quot; value=&quot;val1&quot; /&gt;
+		&lt;span id=&quot;radio-desc-1&quot; class=&quot;field-description&quot;&gt;Value 1&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-2&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-2&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-2&quot; value=&quot;val2&quot; /&gt;
+		&lt;span id=&quot;radio-desc-2&quot; class=&quot;field-description&quot;&gt;Value 2&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-3&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-3&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-3&quot; value=&quot;val3&quot; /&gt;
+		&lt;span id=&quot;radio-desc-3&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+	 &lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;has-radios has-inline-fields&quot; for=&quot;styleguide-radio&quot;&gt;
+  &lt;legend&gt;Input Description with Inline Fields&lt;/legend&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-1&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-1&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-4&quot; value=&quot;val1&quot; /&gt;
+		&lt;span id=&quot;radio-desc-4&quot; class=&quot;field-description&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-2&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-2&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-5&quot; value=&quot;val2&quot; /&gt;
+		&lt;span id=&quot;radio-desc-5&quot; class=&quot;field-description&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
+	 &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-3&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-3&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-6&quot; value=&quot;val3&quot; /&gt;
+		&lt;span id=&quot;radio-desc-6&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+	 &lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-3-3" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-3">
+            Section 
+              3.3
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Fieldsets
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+        </dl>
       </header>
 
 

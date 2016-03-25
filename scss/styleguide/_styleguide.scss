@@ -65,20 +65,75 @@
 		margin-bottom: $spacing-outer;
 	}
 	
-	header {
+	.kss-header {
 
 		padding: $spacing-inner 0;
 
-		span {
+		small {
 			display: block;
+			font-size: $font-size-secondary;
 		}
 		%title {
 			margin-top: 0;
 		}
+
+		dl {
+			margin: $spacing-inner 0 0;
+		}
+
+		dt, dd {
+			margin: 0;
+			display: inline-block;
+		}
+
+		dd {
+			font-weight: $font-weight-bold;
+			text-transform: capitalize;
+			padding: 0 $spacing-inner/2;
+		}
+
+		dd + dt {
+			margin-left: $spacing-inner;
+		}
+
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		margin: $spacing-inner 0;
+	}
+
+	.pattern-type {
+
+		display: inline-block;
+
+		&::before {
+
+			display: inline-block;
+			font-weight: $font-weight-normal;
+			padding: 0 $spacing-inner/2 0 0;
+			font-family: $font-family-icon;
+			color: $font-color-secondary;
+
+		}
+
+		&.atom {
+			&::before {
+				content: "\f0c8";
+			}
+		}
+
+		&.molecule {
+			&::before {
+				content: "\f009";
+			}
+		}
+
+		&.organism {
+			&::before {
+				content: "\f00a";
+			}
+		}
+
 	}
 
 }
@@ -96,4 +151,5 @@
 			margin: 0;
 		}
 	}
+
 }

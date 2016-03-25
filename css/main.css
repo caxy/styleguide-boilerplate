@@ -1,4 +1,10 @@
 @import "http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 html {
   font: 16px "PT Serif", serif; }
 
@@ -6,7 +12,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  color: #454f58; }
+  color: #3a4249; }
 
 hr {
   outline: none;
@@ -23,7 +29,7 @@ Styleguide 2
 */
 .title-1, h1, .title-2, h2, .title-3, h3, .title-4, h4, .title-5, h5, dt {
   font-family: "Lato", sans-serif;
-  color: #454f58;
+  color: #3a4249;
   margin: 0; }
 
 .title-1, h1 {
@@ -80,7 +86,7 @@ blockquote {
   blockquote footer {
     padding-top: 1rem;
     font-size: 18px;
-    color: #454f58;
+    color: #3a4249;
     text-align: right; }
 
 code, pre {
@@ -139,15 +145,14 @@ Styleguide 3
 button,
 .button,
 .button-primary {
-  background: #454f58;
+  background: #3a4249;
   color: #fff;
   border-radius: 13px;
   border: none;
   outline: none;
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
-  letter-spacing: 0.1rem;
   font-family: "Lato", sans-serif;
   font-style: normal; }
   button:hover, button:focus,
@@ -156,7 +161,7 @@ button,
   .button-primary:hover,
   .button-primary:focus {
     color: #fff;
-    background: #24282d; }
+    background: #181c1f; }
   button-primary,
   .button-primary,
   .button-primary-primary {
@@ -175,13 +180,13 @@ button,
   .has-buttons button + button, .has-buttons button + .button,
   .has-buttons .button + button,
   .has-buttons .button + .button {
-    margin: 0 1rem 0 0; }
+    margin: 0 0 0 1rem; }
 .has-buttons.right {
   text-align: right; }
   .has-buttons.right button + button, .has-buttons.right button + .button,
   .has-buttons.right .button + button,
   .has-buttons.right .button + .button {
-    margin: 0 0 0 1rem; }
+    margin: 0 1rem 0 0; }
 
 @media (min-width: 800px) {
   .has-buttons {
@@ -197,10 +202,9 @@ label.form-select,
 fieldset.has-checkboxes,
 fieldset.has-radios {
   background: #f2f2f2;
-  border: none;
+  border: 1px solid #f2f2f2;
   box-sizing: border-box;
-  border-radius: 13px;
-  font-family: "PT Serif", serif; }
+  border-radius: 13px; }
   input[type="tel"]:focus,
   input[type="text"]:focus,
   input[type="number"]:focus,
@@ -211,7 +215,7 @@ fieldset.has-radios {
   label.form-select:focus,
   fieldset.has-checkboxes:focus,
   fieldset.has-radios:focus {
-    background: #e5e8ea; }
+    border-color: #d9d9d9; }
 
 label.form-text {
   position: relative;
@@ -220,15 +224,15 @@ label.form-text {
   box-sizing: border-box;
   z-index: 1;
   display: inline-block;
+  min-width: 25rem;
   margin: 0.75rem 0; }
   label.form-text .field-description {
     position: absolute;
     display: block;
     left: 0.75rem;
-    top: 0.75rem;
+    top: 0.5rem;
     z-index: 5;
-    font-family: "Lato", sans-serif;
-    letter-spacing: 0.75px; }
+    font-family: "Lato", sans-serif; }
   label.form-text input[type="tel"],
   label.form-text input[type="text"],
   label.form-text input[type="number"],
@@ -237,8 +241,6 @@ label.form-text {
   label.form-text input[type="password"],
   label.form-text textarea {
     width: 100%;
-    font-size: 1rem;
-    min-width: 30rem;
     padding: 2.25rem 0.75rem 0.75rem;
     position: relative;
     z-index: 3;
@@ -277,7 +279,27 @@ label.form-select {
     font-size: 16px;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.75px;
-    color: #454f58; }
+    color: #3a4249; }
+
+label.form-checkbox,
+label.form-radio {
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer; }
+  label.form-checkbox input,
+  label.form-radio input {
+    position: absolute;
+    top: 1.5rem;
+    left: 0.5rem; }
+  label.form-checkbox .field-description,
+  label.form-radio .field-description {
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.075rem 0 0 1.5rem;
+    letter-spacing: 0.75px;
+    line-height: 1.5rem; }
 
 fieldset {
   margin: 4.5rem 0;
@@ -300,36 +322,16 @@ fieldset {
       width: 50%;
       clear: none; }
 
-label.form-checkbox,
-label.form-radio {
-  margin: 0;
-  padding: 1rem;
-  position: relative;
-  cursor: pointer; }
-  label.form-checkbox input,
-  label.form-radio input {
-    position: absolute;
-    top: 1.5rem;
-    left: 0.5rem; }
-  label.form-checkbox .field-description,
-  label.form-radio .field-description {
-    font-family: "Lato", sans-serif;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0.075rem 0 0 1.5rem;
-    letter-spacing: 0.75px;
-    line-height: 1.5rem; }
-
 .search-form {
   position: relative;
   display: inline-block; }
   .search-form label.form-text input[type="search"] {
-    max-width: 100%;
-    margin-right: 4rem;
+    width: auto;
+    margin-right: 1rem;
     padding: 1rem 0.75rem;
     font-family: "Lato", sans-serif; }
     .search-form label.form-text input[type="search"]::placeholder {
-      color: #454f58;
+      color: #3a4249;
       font-size: 30px; }
   .search-form button.form-submit {
     font-family: "FontAwesome", serif;
@@ -346,7 +348,11 @@ label.form-radio {
     text-align: center;
     z-index: 5; }
     .search-form button.form-submit:focus, .search-form button.form-submit:hover {
-      color: #454f58; }
+      color: #3a4249; }
+
+.page-header,
+.page-footer {
+  padding: 1rem; }
 
 .has-swatches {
   display: -webkit-box;
@@ -387,9 +393,9 @@ label.form-radio {
     .swatch.brand-colors--grey::before {
       content: "grey: \a#5c6874"; }
   .swatch.brand-colors--grey-dark {
-    background-color: #454f58; }
+    background-color: #3a4249; }
     .swatch.brand-colors--grey-dark::before {
-      content: "grey-dark: \a#454f58"; }
+      content: "grey-dark: \a#3a4249"; }
   .swatch.brand-colors--grey-light {
     background-color: #e5e8ea; }
     .swatch.brand-colors--grey-light::before {
@@ -403,9 +409,9 @@ label.form-radio {
     .swatch.brand-colors--accent-dark-green::before {
       content: "accent-dark-green: \a#148744"; }
   .swatch.font-colors--primary {
-    background-color: #454f58; }
+    background-color: #3a4249; }
     .swatch.font-colors--primary::before {
-      content: "primary: \a#454f58"; }
+      content: "primary: \a#3a4249"; }
   .swatch.font-colors--secondary {
     background-color: #5c6874; }
     .swatch.font-colors--secondary::before {
@@ -467,13 +473,13 @@ label.form-radio {
     .swatch.button-colors--font-color::before {
       content: "font-color: \a#fff"; }
   .swatch.button-colors--background {
-    background-color: #454f58; }
+    background-color: #3a4249; }
     .swatch.button-colors--background::before {
-      content: "background: \a#454f58"; }
+      content: "background: \a#3a4249"; }
   .swatch.button-colors--background-hover {
-    background-color: #24282d; }
+    background-color: #181c1f; }
     .swatch.button-colors--background-hover::before {
-      content: "background-hover: \a#24282d"; }
+      content: "background-hover: \a#181c1f"; }
   .swatch.button-colors--primary-font-color {
     background-color: #fff; }
     .swatch.button-colors--primary-font-color::before {
@@ -491,12 +497,38 @@ label.form-radio {
   padding: 1rem; }
   .kss-section > * {
     margin-bottom: 1.5rem; }
-  .kss-section header {
+  .kss-section .kss-header {
     padding: 1rem 0; }
-    .kss-section header span {
-      display: block; }
+    .kss-section .kss-header small {
+      display: block;
+      font-size: 13px; }
+    .kss-section .kss-header dl {
+      margin: 1rem 0 0; }
+    .kss-section .kss-header dt, .kss-section .kss-header dd {
+      margin: 0;
+      display: inline-block; }
+    .kss-section .kss-header dd {
+      font-weight: 600;
+      text-transform: capitalize;
+      padding: 0 0.5rem; }
+    .kss-section .kss-header dd + dt {
+      margin-left: 1rem; }
   .kss-section h1, .kss-section h2, .kss-section h3, .kss-section h4, .kss-section h5, .kss-section h6 {
     margin: 1rem 0; }
+  .kss-section .pattern-type {
+    display: inline-block; }
+    .kss-section .pattern-type::before {
+      display: inline-block;
+      font-weight: 300;
+      padding: 0 0.5rem 0 0;
+      font-family: "FontAwesome", serif;
+      color: #5c6874; }
+    .kss-section .pattern-type.atom::before {
+      content: "\f0c8"; }
+    .kss-section .pattern-type.molecule::before {
+      content: "\f009"; }
+    .kss-section .pattern-type.organism::before {
+      content: "\f00a"; }
 
 .kss-sidebar {
   background: #f2f2f2;

@@ -12,8 +12,6 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,400italic,700italic|PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/kss.css">
   {{{styles}}}
 </head>
@@ -68,25 +66,30 @@
       <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{/ifDepth}}
 
-      <header class="has-border--bottom">
-        <span>
+      <header class="kss-header has-border--bottom">
+        <small>
           <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
             Section {{#ifNumeric reference}}
               {{reference}}
             {{else}}
               {{autoincrement}}
             {{/ifNumeric}}
-              
-            {{#ifNumeric reference}}
-              #permalink
-            {{else}}
-              #{{reference}}
-            {{/ifNumeric}}
-          </a>
-        </span>
+          </a> 
+        </small>
         <h{{depth}} class="kss-title kss-title--level-{{depth}}">
           {{header}}
-        </h{{depth}}> 
+        </h{{depth}}>
+        {{#if patterntype}}
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type {{patterntype}}">{{patterntype}}</dd>
+        
+          {{#if containspatterns}}
+          <dt>Contains:</dt>
+          <dd>{{containspatterns}}</dd>
+          {{/if}}
+        </dl>
+        {{/if}}
       </header>
 
     {{#if parameters}}

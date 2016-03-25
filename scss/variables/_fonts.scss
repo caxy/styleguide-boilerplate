@@ -35,6 +35,14 @@
 
 // === Fonts === //
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/fontawesome-webfont.woff') format("woff"), url('../fonts/fontawesome-webfont.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $font-family-pt-serif: 'PT Serif', serif;
 $font-family-lato: 'Lato', sans-serif;
 $font-family-icon: 'FontAwesome', serif;
@@ -57,7 +65,12 @@ $font-size-primary: 16px;
 $font-size-secondary: 13px;
 $font-size-tertiary: 11px;
 
+$font-size-button: $font-size-primary;
+
 $line-spacing-primary: 1.6rem;
+
+$font-weight-bold: 600;
+$font-weight-normal: 300;
 
 
 
