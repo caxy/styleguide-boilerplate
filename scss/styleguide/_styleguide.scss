@@ -152,6 +152,18 @@
 			}
 		}
 
+		&.template {
+			&::before {
+				content: "\f0db";
+			}
+		}
+
+		&.page {
+			&::before {
+				content: "\f15b";
+			}
+		}
+
 	}
 
 }

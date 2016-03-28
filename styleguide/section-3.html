@@ -174,12 +174,27 @@ elements. This accomplishes a few things:</p>
 
       <div>
         <p class="title-5 has-border--primary--bottom">
-          Display Example:
+          Display Examples:
         </p>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
         <div class="kss-modifier__example">
           <label for="styleguide-text-input-1" class="form-text">
   <span id="input-description-1" class="field-description">Input Description</span>
-  <input id="styleguide-text-input-1" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+  <input id="styleguide-text-input-1" class="[modifier class]" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+</label>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          :focus
+        </div>
+        <div class="kss-modifier__description kss-style">
+          focus state
+        </div>
+        <div class="kss-modifier__example">
+          <label for="styleguide-text-input-1" class="form-text">
+  <span id="input-description-1" class="field-description">Input Description</span>
+  <input id="styleguide-text-input-1" class="pseudo-class-focus" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
 </label>
         </div>
       </div>
@@ -187,7 +202,7 @@ elements. This accomplishes a few things:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;styleguide-text-input-1&quot; class=&quot;form-text&quot;&gt;
   &lt;span id=&quot;input-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
-  &lt;input id=&quot;styleguide-text-input-1&quot; name=&quot;styleguide-text-input-1&quot; aria-labelledby=&quot;input-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+  &lt;input id=&quot;styleguide-text-input-1&quot; class=&quot;[modifier class]&quot; name=&quot;styleguide-text-input-1&quot; aria-labelledby=&quot;input-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
 &lt;/label&gt;</code></pre>
       </div>
 
@@ -710,7 +725,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
   <label class="form-text">
     <input placeholder="Enter a search term." type="search" />
   </label>
-  <button type="submit">search</button>
+  <button value="search" type="submit"></button>
 </form>
         </div>
       </div>
@@ -720,7 +735,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
   &lt;label class=&quot;form-text&quot;&gt;
     &lt;input placeholder=&quot;Enter a search term.&quot; type=&quot;search&quot; /&gt;
   &lt;/label&gt;
-  &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
+  &lt;button value=&quot;search&quot; type=&quot;submit&quot;&gt;&lt;/button&gt;
 &lt;/form&gt;</code></pre>
       </div>
 

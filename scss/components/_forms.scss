@@ -70,7 +70,7 @@
 //   <label class="form-text">
 //     <input placeholder="Enter a search term." type="search" />
 //   </label>
-//   <button type="submit">search</button>
+//   <button value="search" type="submit"></button>
 // </form>
 //
 // PatternType: molecule
@@ -81,16 +81,21 @@
 
 .search-form {
   
-  @include has-inline-elements();
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  overflow: hidden;
+
+  .form-text,
+  button.form-submit {
+    display: inline-block;
+    white-space: normal;
+  }
 
   .form-text {
 
     input[type="search"] {
-
-      margin-right: $spacing-inner;
+      
       padding: 1rem 0.75rem;
       font-family: $font-family-secondary;
 
@@ -98,26 +103,33 @@
 
   }
 
-  button.form-submit {
+  button {
 
-    font-family: $font-family-icon;
-    color: $font-color-secondary;
-
+    border: none;
+    margin:0;
+    background: none;
+    height:100%;
+    text-align: center;
     position: absolute;
     right: 0;
     top:0;
-    border: none;
-    margin:0;
-    padding: 0.7rem 1rem;
-    background: none;
-    height:100%;
-    width:4rem;
-    text-align: center;
     z-index: 5;
+    padding: 1rem;
+    transition: 0.25s;
+
+    &::after {
+      font-family: $font-family-icon;
+      color: $font-color-secondary;
+      content: "\f002";
+    }
 
     &:focus,
     &:hover {
-      color: $font-color-primary;
+      text-decoration: none;
+      background: $panel-background-tertiary;
+      &::after {
+        color: $font-color-tertiary;
+      }
     }
   }
 

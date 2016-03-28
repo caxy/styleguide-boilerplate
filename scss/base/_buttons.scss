@@ -8,8 +8,9 @@
 //
 // Button text should always be [chose a case] and no longer than [X] words long.
 //
-// .button					- Default button state.
+// ::hover	-	Hover state
 // .button-primary	- When a button should be highlighted/is the main action in a set, use this class.
+// .button-primary::hover	- When a button should be highlighted/is the main action in a set, use this class.
 //
 // Markup:
 // <button class="{{modifier_class}}">Button</button>
@@ -24,8 +25,7 @@
 
 	background: $button-background;
 	color: $button-font-color;
-	border-radius: $border-radius-primary;
-	border: none;
+	border: 1px solid $button-background;
 	padding: $spacing-inner $spacing-inner*3;
 	font-size: $font-size-button;
 	cursor: pointer;
@@ -34,8 +34,10 @@
 
 	&:hover,
 	&:focus {
+		outline: none;
 		color: $button-font-color;
 		background: $button-background-hover;
+		text-decoration: underline;
 	}
 
 }
@@ -50,6 +52,7 @@ button,
 
 	color: $button-primary-font-color;
 	background: $button-primary-background;
+	border-color: $button-primary-background;
 
 	&:hover,
 	&:focus {

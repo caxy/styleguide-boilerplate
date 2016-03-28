@@ -42,7 +42,6 @@ fieldset.has-radios {
 	background: $panel-background-primary;
 	box-sizing: border-box;
 	border: $border-width-primary solid $panel-background-primary;
-	border-radius: $border-radius-primary;
 	padding: $spacing-inner;
 
 	&:focus {
@@ -65,6 +64,7 @@ select {
 	width: 100%;
 
 	&:focus {
+		outline: none;
 		border-color: $border-color-primary;
 	}
 
@@ -76,10 +76,12 @@ select {
 
 // Text Inputs
 //
+// :focus  - focus state
+//
 // Markup:
 // <label for="styleguide-text-input-1" class="form-text">
 //   <span id="input-description-1" class="field-description">Input Description</span>
-//   <input id="styleguide-text-input-1" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+//   <input id="styleguide-text-input-1" class="{{modifier_class}}" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
 // </label>
 //
 // PatternType: atom
@@ -89,7 +91,6 @@ select {
 .form-text {
 
 	position: relative;
-	box-sizing: border-box;
 	z-index: 1;
 	min-width: 25rem;
 	//margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
