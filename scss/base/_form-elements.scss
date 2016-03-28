@@ -86,7 +86,7 @@ select {
 //
 // Styleguide 3.1.2.1
 
-label.form-text {
+.form-text {
 
 	position: relative;
 	box-sizing: border-box;
@@ -95,7 +95,6 @@ label.form-text {
 	//margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
 
 	.field-description {
-		font-family: $font-family-secondary;
 		line-height: $line-height-primary;
 		margin: $spacing-outer 0 $spacing-inner/2;
 	}
@@ -111,7 +110,6 @@ label.form-text {
 		position: relative;
 		z-index: 3;
 		display: inline-block;
-		font-size: $font-size-primary;
 	}
 
 }
@@ -154,7 +152,7 @@ textarea {
 //
 // Styleguide 3.1.2.3
 
-label.form-select {
+.form-select {
 
 	position: relative;
 	box-sizing: border-box;
@@ -165,13 +163,8 @@ label.form-select {
 	select {
 		display: block;
 		min-width: 100%;
-		font-size: $font-size-secondary;
 		border: none;
-		outline: none;
   	background: $panel-background-primary;
-		font-size: $font-size-primary;
-		font-family: $font-family-secondary;
-    color: $font-color-primary;
     padding-right: $spacing-outer;
 	}
 }
@@ -190,8 +183,8 @@ label.form-select {
 //
 // Styleguide 3.1.2.4
 
-label.form-checkbox,
-label.form-radio {
+.form-checkbox,
+.form-radio {
 
 	margin: 0;
 	padding: $spacing-inner $spacing-inner $spacing-inner $spacing-inner*2;
@@ -256,15 +249,15 @@ fieldset {
 
 		padding: $spacing-inner $spacing-inner/2;
 
-		label.form-checkbox,
-		label.form-radio {
-			display: inline-block;
+		.form-checkbox,
+		.form-radio {
 			float: left;
 			clear: left;
 		}
 
 		&.has-inline-fields {
-			label {
+			.form-checkbox,
+			.form-radio  {
 				width: 50%;
 				clear: none;
 			}

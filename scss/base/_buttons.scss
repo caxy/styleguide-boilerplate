@@ -26,12 +26,10 @@
 	color: $button-font-color;
 	border-radius: $border-radius-primary;
 	border: none;
-	outline: none;
 	padding: $spacing-inner $spacing-inner*3;
 	font-size: $font-size-button;
 	cursor: pointer;
 	font-family: $button-font-primary;
-	font-style: normal;
 	display: inline-block;
 
 	&:hover,

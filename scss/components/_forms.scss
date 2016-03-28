@@ -46,9 +46,17 @@
 
 .form-basic {
   
-  max-width: 50rem;
+  max-width: 40rem;
+
+  label {
+    margin: $spacing-outer 0;
+    input,
+    textarea {
+      display: block;
+    }
+  }
   
-  label.field-text {
+  .field-text {
     display: block;
     margin: $spacing-outer 0;
   }
@@ -76,8 +84,9 @@
   @include has-inline-elements();
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 
-  label.form-text {
+  .form-text {
 
     input[type="search"] {
 

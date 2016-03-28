@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import 'http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css';
+@import 'normalize';
 
 @import 'variables/colors';
 @import 'variables/fonts';
@@ -10,7 +10,7 @@
 @import 'base/mixins-flexbox';
 @import 'base/base';
 @import 'base/utilities';
-@import 'base/form';
+@import 'base/form-elements';
 @import 'base/buttons';
 
 @import 'components/forms';

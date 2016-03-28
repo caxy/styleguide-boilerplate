@@ -15,7 +15,6 @@ body {
 }
 
 hr {
-	outline: none;
 	border: none;
 	border-bottom: $border-width-primary solid $border-color-primary;
 	margin: $spacing-outer 0;
@@ -37,12 +36,15 @@ Styleguide 2
 
 // Titles
 //
+// .title-1	- Equivalent to an H1's default state.
+// .title-2	- Equivalent to an H2's default state.
+// .title-3	- Equivalent to an H3's default state.
+// .title-4	- Equivalent to an H4's default state.
+// .title-5	- Equivalent to an H5's default state.
+// .title-6	- Equivalent to an H6's default state.
+//
 // Markup:
-// <h1>Title 1</h1>
-// <h2>Title 2</h2>
-// <h3>Title 3</h3>
-// <h4>Title 4</h4>
-// <h5>Title 5</h5>
+// <span class="{{modifier_class}}">Title Example for {{modifier_class}}</span>
 //
 // Styleguide 2.1
 
