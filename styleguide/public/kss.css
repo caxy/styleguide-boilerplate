@@ -20,12 +20,12 @@
 
 @media screen and (min-width:769px){#kss-node{padding:0;background:#fff}
 #kss-node .kss-main,
-#kss-node .kss-sidebar{float:left;margin-right:-100%;box-sizing:border-box}
+#kss-node .kss-sidebar{padding: 1.5rem;float:left;margin-right:-100%;box-sizing:border-box}
 }
 #kss-node .kss-main{width:100%;margin:0 auto}
-@media screen and (min-width:769px){#kss-node .kss-main{width:80%;margin-left:20%;padding:0 20px 0 30px}
+@media screen and (min-width:769px){#kss-node .kss-main{width:80%;margin-left:20%;}
 }
-@media screen and (min-width:769px){#kss-node .kss-sidebar{position:fixed;width:20%;height:100%;overflow:auto;padding:0 1.5em;border-bottom:0; }
+@media screen and (min-width:769px){#kss-node .kss-sidebar{position:fixed;width:20%;height:100%;overflow:auto; }
 }
 #kss-node .kss-doc-title{margin:0}
 @media screen and (min-width:769px){
