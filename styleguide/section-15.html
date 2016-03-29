@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/main-dev.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style has-background--secondary">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./index.html">Overview</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-1.html">Colors</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-2.html">Typography</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-3.html">Forms and Form Elements</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">Buttons and Button Contexts</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-10.html">Page-Level Containers</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-15.html">Panels and Cards</a>
+        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
+            <li class="kss-nav__menu-item">
+              <a href="section-15.html#kssref-15-1">Panels</a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-15.html#kssref-15-2">Cards</a>
+            </li>
+        </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-20.html">Menus</a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-50.html">Utilities</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div id="kssref-15" class="kss-section kss-section--depth-1">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-15">
+            Section 
+              15
+          </a> 
+        </small>
+        <h1 class="kss-title kss-title--level-1">
+          Panels and Cards
+        </h1>
+      </header>
+
+
+    </div>
+
+
+
+      </div>
+      <hr />
+      <section id="kssref-15-1" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-15-1">
+            Section 
+              15.1
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Panels
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type organism">organism</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Links, Images, Titles, Body Copy, Cards, Navigation, Forms</dd>
+        </dl>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Panels are general groupings of content that need to be separated
+from the main flow of copy on a page, to either highlight content
+or direct a user towards areas to learn more via a CTA.</p>
+<p>Ideally there should not be more than 2-3 panels per page, since
+their point is to highlight content, and if everything is
+highlighted, nothing is.</p>
+
+      </div>
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <div class="panel">
+  <h2 class="title-1">Simple Panel Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
+</div>
+
+<div class="panel">
+  <h2 class="title-1">More Complex Panel Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
+  <hr />
+  <form>
+    <h3 class="title-4">Sign Up for Special Offers!</h3>
+    <div class="has-inline-elements">
+      <label for="inline-form-text-input-1" class="form-text">
+        <span id="inline-form-description-1" class="field-description">Email Address</span>
+        <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="email" title="Email Address" value="" />
+      </label>
+      <label class="form-checkbox" for="inline-form-checkbox-1">
+        <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
+        <span id="inline-form-checkbox-desc-1" class="field-description">It's alright to email me.</span>
+      </label>
+      <button type="submit">sign up</button>
+    </div>
+    <p class="copy-tertiary">Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.</p>
+  </form>
+</div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
+  &lt;h2 class=&quot;title-1&quot;&gt;Simple Panel Title&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h2 class=&quot;title-1&quot;&gt;More Complex Panel Title&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
+  &lt;hr /&gt;
+  &lt;form&gt;
+    &lt;h3 class=&quot;title-4&quot;&gt;Sign Up for Special Offers!&lt;/h3&gt;
+    &lt;div class=&quot;has-inline-elements&quot;&gt;
+      &lt;label for=&quot;inline-form-text-input-1&quot; class=&quot;form-text&quot;&gt;
+        &lt;span id=&quot;inline-form-description-1&quot; class=&quot;field-description&quot;&gt;Email Address&lt;/span&gt;
+        &lt;input id=&quot;inline-form-text-input-1&quot; name=&quot;inline-form-text-input-1&quot; aria-labelledby=&quot;inline-form-description-1&quot; type=&quot;email&quot; title=&quot;Email Address&quot; value=&quot;&quot; /&gt;
+      &lt;/label&gt;
+      &lt;label class=&quot;form-checkbox&quot; for=&quot;inline-form-checkbox-1&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;inline-form-checkbox-1&quot; name=&quot;inline-form-checkbox-1&quot; aria-labelledby=&quot;inline-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
+        &lt;span id=&quot;inline-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;It&#x27;s alright to email me.&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot;&gt;sign up&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;copy-tertiary&quot;&gt;Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.&lt;/p&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+      </section>
+      <hr />
+      <section id="kssref-15-2" class="kss-section kss-section--depth-2">
+
+      <header class="kss-header has-border--bottom">
+        <small>
+          <a class="kss-title__permalink" href="#kssref-15-2">
+            Section 
+              15.2
+          </a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Cards
+        </h2>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Links, Images, Titles</dd>
+        </dl>
+      </header>
+
+
+      <div class="kss-description">
+        <p>Cards should contain a maximum of four types of atoms. Cards are
+basically beefed-up CTAs, so if a situation requires more content,
+a different pattern should be leveraged instead (eg. panel).</p>
+
+      </div>
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+        <div class="kss-modifier__example">
+          <div class="card">
+  <h3>Card Title</h3>
+  <p>Officia ex consequatur modi quasi facilis!</p>
+  <a href="">Read More</a>
+</div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;card&quot;&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Officia ex consequatur modi quasi facilis!&lt;/p&gt;
+  &lt;a href=&quot;&quot;&gt;Read More&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

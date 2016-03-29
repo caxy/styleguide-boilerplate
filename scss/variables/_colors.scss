@@ -94,6 +94,10 @@ $font-color-link: $brand-action-color;
 $font-color-link-hover: darken($brand-action-color, 10%);
 $font-color-link-focus: $font-color-link-hover;
 
+$title-font-color-primary: $brand-grey-dark;
+$title-font-color-secondary: $brand-grey;
+$title-font-color-tertiary: $brand-grey-light;
+
 $font-colors: (
 	primary: $font-color-primary,
 	secondary: $font-color-secondary,
@@ -101,6 +105,12 @@ $font-colors: (
 	link: $font-color-link,
 	link-hover: $font-color-link-hover,
 	link-focus: $font-color-link-focus
+);
+
+$title-colors: (
+	primary: $title-font-color-primary,
+	secondary: $title-font-color-secondary,
+	tertiary: $title-font-color-tertiary
 );
 
 
@@ -213,6 +223,7 @@ $selector-color-checked: $brand-action-color;
 $color-sets: (
 	brand: $brand-colors,
 	font: $font-colors,
+	titles: $title-colors,
 	background: $background-colors,
 	panel: $panel-colors,
 	border: $border-colors,

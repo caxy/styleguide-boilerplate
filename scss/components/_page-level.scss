@@ -1,7 +1,7 @@
 
 // Page-Level Containers
 //
-// Styleguide 6
+// Styleguide 10
 
 .page-header,
 .page-footer {
@@ -17,7 +17,7 @@
 //
 // ContainsPatterns: Logo, Search Form, Navigation Menu
 //
-// Styleguide 6.1
+// Styleguide 10.1
 
 .page-header {
 	@include flexbox();
@@ -36,7 +36,7 @@
 //
 // ContainsPatterns: Logo, Navigation Menu
 //
-// Styleguide 6.2
+// Styleguide 10.2
 
 .page-footer {
 	padding: $spacing-outer;
