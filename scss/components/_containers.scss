@@ -27,11 +27,9 @@
 //
 // Styleguide 15.1
 
-.panel {
-	
-	@extend %container;
+.panel,
+.panel-fullbleed {
 
-	margin: $spacing-outer;
 	background: $panel-background-primary;
 	border: $border-width-primary solid $border-color-primary;
 
@@ -46,6 +44,19 @@
 		background: lighten($panel-background-primary, 15%);
 	}
 
+}
+
+.panel {
+	@extend %container;
+	@include width-capped();
+	margin: $spacing-outer;
+}
+
+.panel-fullbleed {
+	@extend .panel;
+	@include width-fullbleed();
+	margin-top: $spacing-outer;
+	margin-bottom: $spacing-outer;
 }
 
 

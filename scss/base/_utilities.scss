@@ -67,6 +67,57 @@
 
 
 
+// Widths
+//
+// These utilities are for page-level containers to allow for fullbleed
+// or capped width displays.
+//
+// Styleguide 50.3
+
+
+
+// width-capped() / .width-capped
+//
+// Styleguide 50.3.1
+
+@mixin width-capped() {
+	width: 100%;
+	margin-top: $spacing-outer;
+	margin-bottom: $spacing-outer;
+	max-width: 80rem;
+}
+
+.width-capped {
+	@include width-capped();
+}
+
+
+
+// width-fullbleed() / .width-fullbleed
+//
+// Styleguide 50.3.1
+
+@mixin width-fullbleed() {
+	
+	max-width: none;
+	width: 100%;
+	position: relative;
+	left: -50%;
+	margin-left: 50%;
+	
+	& > * {
+		@include width-capped();
+	}
+
+}
+
+.width-fullbleed {
+	@include width-fullbleed();
+}
+
+
+
+
 
 
 

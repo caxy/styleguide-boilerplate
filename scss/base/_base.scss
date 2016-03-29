@@ -51,7 +51,7 @@ Styleguide 2
 %titles {
 	font-family: $title-font-family-primary;
 	color: $title-font-color-primary;
-	margin: 0; // let context define margin
+	margin: 0 0 $spacing-inner 0;
 }
 
 .title-1 {
@@ -107,7 +107,8 @@ h5 {
 
 p,
 .copy {
-	line-height: 1.875rem;
+	line-height: $line-height-primary;
+	margin: $spacing-inner 0;
 }
 
 .copy-tertiary {

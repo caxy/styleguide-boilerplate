@@ -473,6 +473,22 @@ code {
     display: inline-block;
     margin: 0 0.5rem; }
 
+.width-capped {
+  width: 100%;
+  margin: 1.5rem;
+  max-width: 70rem; }
+
+.width-fullbleed {
+  max-width: none;
+  width: 100%;
+  position: relative;
+  left: -50%;
+  margin-left: 50%; }
+  .width-fullbleed > * {
+    width: 100%;
+    margin: 1.5rem;
+    max-width: 70rem; }
+
 .has-background--primary {
   background: #fff; }
 
@@ -767,6 +783,9 @@ button,
 
 .page-header,
 .page-footer {
+  width: 100%;
+  margin: 1.5rem;
+  max-width: 70rem;
   padding: 1rem; }
 
 .page-header {
@@ -793,74 +812,102 @@ button,
   color: #e5e8ea;
   background: #515b66; }
 
-.panel, .card {
+.panel, .panel-fullbleed, .card {
   padding: 1rem; }
 
-.panel {
-  margin: 1.5rem;
+.panel, .panel-fullbleed,
+.panel-fullbleed {
   background: #f2f2f2;
   border: 1px solid #d9d9d9; }
-  .panel .title-1, .panel h1, .panel .title-2, .panel h2, .panel .title-3, .panel h3, .panel .title-4, .panel h4, .panel .title-5, .panel h5, .panel dt,
+  .panel .title-1, .panel-fullbleed .title-1, .panel h1, .panel-fullbleed h1, .panel .title-2, .panel-fullbleed .title-2, .panel h2, .panel-fullbleed h2, .panel .title-3, .panel-fullbleed .title-3, .panel h3, .panel-fullbleed h3, .panel .title-4, .panel-fullbleed .title-4, .panel h4, .panel-fullbleed h4, .panel .title-5, .panel-fullbleed .title-5, .panel h5, .panel-fullbleed h5, .panel dt, .panel-fullbleed dt,
   .panel p,
+  .panel-fullbleed p,
   .panel ul,
-  .panel img {
+  .panel-fullbleed ul,
+  .panel img,
+  .panel-fullbleed img,
+  .panel-fullbleed .title-1,
+  .panel-fullbleed h1,
+  .panel-fullbleed .title-2,
+  .panel-fullbleed h2,
+  .panel-fullbleed .title-3,
+  .panel-fullbleed h3,
+  .panel-fullbleed .title-4,
+  .panel-fullbleed h4,
+  .panel-fullbleed .title-5,
+  .panel-fullbleed h5,
+  .panel-fullbleed dt,
+  .panel-fullbleed p,
+  .panel-fullbleed ul,
+  .panel-fullbleed img {
     margin: 1rem 0; }
-  .panel input[type="tel"],
+  .panel input[type="tel"], .panel-fullbleed input[type="tel"],
   .panel input[type="text"],
+  .panel-fullbleed input[type="text"],
   .panel input[type="number"],
+  .panel-fullbleed input[type="number"],
   .panel input[type="email"],
+  .panel-fullbleed input[type="email"],
   .panel input[type="search"],
+  .panel-fullbleed input[type="search"],
   .panel input[type="password"],
+  .panel-fullbleed input[type="password"],
   .panel textarea,
+  .panel-fullbleed textarea,
   .panel label.form-select,
+  .panel-fullbleed label.form-select,
   .panel fieldset.has-checkboxes,
-  .panel fieldset.has-radios {
+  .panel-fullbleed fieldset.has-checkboxes,
+  .panel fieldset.has-radios,
+  .panel-fullbleed fieldset.has-radios,
+  .panel-fullbleed input[type="tel"],
+  .panel-fullbleed input[type="text"],
+  .panel-fullbleed input[type="number"],
+  .panel-fullbleed input[type="email"],
+  .panel-fullbleed input[type="search"],
+  .panel-fullbleed input[type="password"],
+  .panel-fullbleed textarea,
+  .panel-fullbleed label.form-select,
+  .panel-fullbleed fieldset.has-checkboxes,
+  .panel-fullbleed fieldset.has-radios {
     background: white; }
 
+.panel, .panel-fullbleed {
+  width: 100%;
+  margin: 1.5rem;
+  max-width: 70rem;
+  margin: 1.5rem; }
+
+.panel-fullbleed {
+  max-width: none;
+  width: 100%;
+  position: relative;
+  left: -50%;
+  margin-left: 50%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .panel-fullbleed > * {
+    width: 100%;
+    margin: 1.5rem;
+    max-width: 70rem; }
+
 .card {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: stretch;
   position: relative;
   background: #f2f2f2;
-  border: 1px solid #d9d9d9; }
-  .card a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -moz-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    color: #3a4249;
-    min-height: 100%;
-    min-width: 100%; }
-    .card a:focus, .card a:hover {
-      background: #f2f2f2;
-      border-color: #bac1c8; }
+  border: 1px solid #d9d9d9;
+  text-align: left; }
   .card > * {
     max-width: 100%;
-    margin: auto; }
+    margin: 1rem;
+    display: block; }
   .card img {
     max-width: 100%;
     height: auto; }
+  @media screen and (min-width: 60rem) {
+    .card {
+      width: 33%; } }
+  @media screen and (min-width: 90rem) {
+    .card {
+      width: 25%; } }
 
 /*# sourceMappingURL=main.css.map */

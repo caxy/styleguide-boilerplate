@@ -390,7 +390,7 @@ Styleguide 2
 .title-1, h1, .title-2, h2, .title-3, h3, .title-4, h4, .title-5, h5, dt {
   font-family: "Lato", sans-serif;
   color: #3a4249;
-  margin: 0; }
+  margin: 0 0 1rem 0; }
 
 .title-1, h1 {
   font-size: 2.25rem; }
@@ -410,7 +410,8 @@ Styleguide 2
 
 p,
 .copy {
-  line-height: 1.875rem; }
+  line-height: 1.75rem;
+  margin: 1rem 0; }
 
 .copy-tertiary {
   font-size: 0.75rem; }
@@ -472,6 +473,24 @@ code {
   .has-inline-elements > * {
     display: inline-block;
     margin: 0 0.5rem; }
+
+.width-capped {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 80rem; }
+
+.width-fullbleed {
+  max-width: none;
+  width: 100%;
+  position: relative;
+  left: -50%;
+  margin-left: 50%; }
+  .width-fullbleed > * {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 80rem; }
 
 .has-background--primary {
   background: #fff; }
@@ -578,7 +597,7 @@ select {
   z-index: 1;
   min-width: 25rem; }
   .form-text .field-description {
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     margin: 1.5rem 0 0.5rem; }
   .form-text input[type="tel"],
   .form-text input[type="text"],
@@ -595,7 +614,7 @@ select {
 textarea {
   height: 12rem;
   resize: vertical;
-  line-height: 1.5rem; }
+  line-height: 1.75rem; }
 
 .form-select {
   position: relative;
@@ -620,12 +639,12 @@ textarea {
   .form-checkbox input,
   .form-radio input {
     position: absolute;
-    top: 1.425rem;
+    top: 1.6625rem;
     left: 0.5rem; }
   .form-checkbox .field-description,
   .form-radio .field-description {
     padding: 0 1rem 0 0;
-    line-height: 1.5rem; }
+    line-height: 1.75rem; }
 
 fieldset {
   margin: 3rem 0 1.5rem;
@@ -787,35 +806,94 @@ button,
   align-items: center;
   padding: 1.5rem;
   background: #d7dbdf; }
+  .page-header .title-1, .page-header h1, .page-header .title-2, .page-header h2, .page-header .title-3, .page-header h3, .page-header .title-4, .page-header h4, .page-header .title-5, .page-header h5, .page-header dt {
+    margin: 0; }
 
 .page-footer {
   padding: 1.5rem;
   color: #e5e8ea;
   background: #515b66; }
 
-.panel, .card {
+.panel, .panel-fullbleed, .card {
   padding: 1rem; }
 
-.panel {
-  margin: 1.5rem;
+.panel, .panel-fullbleed,
+.panel-fullbleed {
   background: #f2f2f2;
   border: 1px solid #d9d9d9; }
-  .panel .title-1, .panel h1, .panel .title-2, .panel h2, .panel .title-3, .panel h3, .panel .title-4, .panel h4, .panel .title-5, .panel h5, .panel dt,
+  .panel .title-1, .panel-fullbleed .title-1, .panel h1, .panel-fullbleed h1, .panel .title-2, .panel-fullbleed .title-2, .panel h2, .panel-fullbleed h2, .panel .title-3, .panel-fullbleed .title-3, .panel h3, .panel-fullbleed h3, .panel .title-4, .panel-fullbleed .title-4, .panel h4, .panel-fullbleed h4, .panel .title-5, .panel-fullbleed .title-5, .panel h5, .panel-fullbleed h5, .panel dt, .panel-fullbleed dt,
   .panel p,
+  .panel-fullbleed p,
   .panel ul,
-  .panel img {
+  .panel-fullbleed ul,
+  .panel img,
+  .panel-fullbleed img,
+  .panel-fullbleed .title-1,
+  .panel-fullbleed h1,
+  .panel-fullbleed .title-2,
+  .panel-fullbleed h2,
+  .panel-fullbleed .title-3,
+  .panel-fullbleed h3,
+  .panel-fullbleed .title-4,
+  .panel-fullbleed h4,
+  .panel-fullbleed .title-5,
+  .panel-fullbleed h5,
+  .panel-fullbleed dt,
+  .panel-fullbleed p,
+  .panel-fullbleed ul,
+  .panel-fullbleed img {
     margin: 1rem 0; }
-  .panel input[type="tel"],
+  .panel input[type="tel"], .panel-fullbleed input[type="tel"],
   .panel input[type="text"],
+  .panel-fullbleed input[type="text"],
   .panel input[type="number"],
+  .panel-fullbleed input[type="number"],
   .panel input[type="email"],
+  .panel-fullbleed input[type="email"],
   .panel input[type="search"],
+  .panel-fullbleed input[type="search"],
   .panel input[type="password"],
+  .panel-fullbleed input[type="password"],
   .panel textarea,
+  .panel-fullbleed textarea,
   .panel label.form-select,
+  .panel-fullbleed label.form-select,
   .panel fieldset.has-checkboxes,
-  .panel fieldset.has-radios {
+  .panel-fullbleed fieldset.has-checkboxes,
+  .panel fieldset.has-radios,
+  .panel-fullbleed fieldset.has-radios,
+  .panel-fullbleed input[type="tel"],
+  .panel-fullbleed input[type="text"],
+  .panel-fullbleed input[type="number"],
+  .panel-fullbleed input[type="email"],
+  .panel-fullbleed input[type="search"],
+  .panel-fullbleed input[type="password"],
+  .panel-fullbleed textarea,
+  .panel-fullbleed label.form-select,
+  .panel-fullbleed fieldset.has-checkboxes,
+  .panel-fullbleed fieldset.has-radios {
     background: white; }
+
+.panel, .panel-fullbleed {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 80rem;
+  margin: 1.5rem; }
+
+.panel-fullbleed {
+  max-width: none;
+  width: 100%;
+  position: relative;
+  left: -50%;
+  margin-left: 50%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .panel-fullbleed > * {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 80rem; }
 
 .card {
   position: relative;

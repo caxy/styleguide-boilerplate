@@ -20,11 +20,17 @@
 // Styleguide 10.1
 
 .page-header {
+	
 	@include flexbox();
 	@include justify-content(space-between);
 	@include align-items(center);
 	padding: $spacing-outer;
 	background: $panel-background-secondary;
+
+	%titles {
+		margin: 0;
+	}
+
 }
 
 
