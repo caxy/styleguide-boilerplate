@@ -50,12 +50,38 @@
 
 // Main Navigation
 //
-// <nav>
-// <ul class="main-navigation">
-//   <li class="">Home</li>
-//   <li class=""><a href="">Page 1</a></li>
-//   <li class=""><a href="">Page 2</a></li>
+// <nav class="navigation-site">
+// <ul class="menu has-menu-items">
+//   <li class="menu-item"><a href="">Home</a></li>
+//   <li class="menu-item"><a href="">Page 1</a></li>
+//   <li class="menu-item"><a href="">Page 2</a></li>
 // </ul>
 // </nav>
 //
 // Styleguide 20.1
+
+
+.navigation-site {
+
+	margin: 0 0 $spacing-outer;
+	padding: 0;
+	background: $panel-background-primary;
+	position: relative;
+
+	.has-menu-items {
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+	& > .menu {
+		@include width-capped();
+		@include flexbox();
+		@include flex-flow(row nowrap);
+		margin: 0 auto;
+		&,
+		ul {
+			list-style-type: none;
+		}
+	}
+}

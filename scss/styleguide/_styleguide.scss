@@ -71,6 +71,17 @@
 
 }
 
+.navigation-site .menu ul {
+	@include flexbox();
+	@include flex-flow(row nowrap);
+	@include width-capped();
+	background: $panel-background-primary;
+	border-top: $border-width-primary dotted $border-color-primary;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+
 
 
 // ====== Styleguide Presentation Classes ====== //

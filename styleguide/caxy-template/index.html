@@ -17,35 +17,35 @@
 </head>
 <body id="kss-node">
 
-<div class="kss-sidebar kss-style has-background--secondary">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">{{options.title}}</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a href="./index.html">Overview</a>
-      </li>
-    {{#eachRoot}}
-      <li class="kss-nav__menu-item">
-        <a href="section-{{referenceURI}}.html">{{header}}</a>
-      {{#ifReference ../rootName}}
-        <ul class="kss-nav__menu-child has-border--secondary--top has-border--secondary--bottom">
-        {{#eachSection reference}}
-          {{#ifDepth 2 ../../../options.[nav-depth]}}
-            <li class="kss-nav__menu-item">
-              <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-            </li>
-          {{/ifDepth}}
-        {{/eachSection}}
-        </ul>
-      {{/ifReference}}
-      </li>
-    {{/eachRoot}}
-    </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
+<header class="kss-header page-header">
+  <h1 class="kss-doc-title">{{options.title}}</h1>
+</header>
+
+<nav class="navigation-site">
+  <ul class="menu has-menu-items">
+    <li class="menu-item">
+      <a href="./index.html">Overview</a>
+    </li>
+  {{#eachRoot}}
+    <li class="menu-item">
+      <a href="section-{{referenceURI}}.html">{{header}}</a>
+    {{#ifReference ../rootName}}
+      <ul class="has-menu-items">
+      {{#eachSection reference}}
+        {{#ifDepth 2 ../../../options.[nav-depth]}}
+          <li class="menu-item">
+            <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+          </li>
+        {{/ifDepth}}
+      {{/eachSection}}
+      </ul>
+    {{/ifReference}}
+    </li>
+  {{/eachRoot}}
+  </ul>
+</nav>
+
+<main role="main" class="page-main">
 {{#if homepage}}
   <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
     {{{homepage}}}

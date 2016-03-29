@@ -476,8 +476,6 @@ code {
 
 .width-capped {
   width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
   max-width: 80rem; }
 
 .width-fullbleed {
@@ -488,8 +486,6 @@ code {
   margin-left: 50%; }
   .width-fullbleed > * {
     width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     max-width: 80rem; }
 
 .has-background--primary {
@@ -784,7 +780,34 @@ button,
   .has-breadcrumbs .breadcrumb {
     display: inline-block; }
 
+.navigation-site {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  background: #f2f2f2;
+  position: relative; }
+  .navigation-site .has-menu-items {
+    margin: 0;
+    padding: 0;
+    position: relative; }
+  .navigation-site > .menu {
+    width: 100%;
+    max-width: 80rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    margin: 0 auto; }
+    .navigation-site > .menu,
+    .navigation-site > .menu ul {
+      list-style-type: none; }
+
 .page-header,
+.page-main,
 .page-footer {
   padding: 1rem; }
 
@@ -808,6 +831,11 @@ button,
   background: #d7dbdf; }
   .page-header .title-1, .page-header h1, .page-header .title-2, .page-header h2, .page-header .title-3, .page-header h3, .page-header .title-4, .page-header h4, .page-header .title-5, .page-header h5, .page-header dt {
     margin: 0; }
+
+.page-main {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto; }
 
 .page-footer {
   padding: 1.5rem;
@@ -876,8 +904,6 @@ button,
 
 .panel, .panel-fullbleed {
   width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
   max-width: 80rem;
   margin: 1.5rem; }
 
@@ -891,8 +917,6 @@ button,
   margin-bottom: 1.5rem; }
   .panel-fullbleed > * {
     width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     max-width: 80rem; }
 
 .card {
@@ -1098,6 +1122,24 @@ button,
     border: 1px solid #04180c; }
   .swatch.button-colors--primary-background-hover::after {
     content: "primary-background-hover: \a#0a4422"; }
+
+.navigation-site .menu ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 80rem;
+  background: #f2f2f2;
+  border-top: 1px dotted #d9d9d9;
+  position: absolute;
+  left: 0;
+  top: 100%; }
 
 .kss-section {
   padding: 1rem; }
