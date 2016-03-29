@@ -16,6 +16,8 @@ if you would like more information. Running either command also compiles a style
 
 If your folder structure needs to be different, just adjust the path found in the `package.json` file included here.
 
+To view your styleguide locally, it's recommended you run `http-server` to get around quirks that can crop up with font rendering outside of a server setting.
+
 # Populating the Styleguide
 
 KSS uses a slight variation of markdown to populate Handlebars templates and create your styleguide. This markdown should be included in relevant CSS files, and provides inline documentation of your CSS as a nice byproduct.
