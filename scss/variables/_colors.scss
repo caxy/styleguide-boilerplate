@@ -62,11 +62,11 @@ $brand-accent-dark-green: #148744;
 $brand-action-color: $brand-accent-dark-green;
 
 $brand-colors: (
-	grey: $brand-grey,
-	grey-dark: $brand-grey-dark,
-	grey-light: $brand-grey-light,
-	accent-blue: $brand-accent-blue,
-	accent-dark-green: $brand-accent-dark-green
+	"grey": $brand-grey,
+	"grey-dark": $brand-grey-dark,
+	"grey-light": $brand-grey-light,
+	"accent-blue": $brand-accent-blue,
+	"accent-dark-green": $brand-accent-dark-green
 );
 
 
@@ -99,18 +99,18 @@ $title-font-color-secondary: $brand-grey;
 $title-font-color-tertiary: $brand-grey-light;
 
 $font-colors: (
-	primary: $font-color-primary,
-	secondary: $font-color-secondary,
-	tertiary: $font-color-tertiary,
-	link: $font-color-link,
-	link-hover: $font-color-link-hover,
-	link-focus: $font-color-link-focus
+	"primary": $font-color-primary,
+	"secondary": $font-color-secondary,
+	"tertiary": $font-color-tertiary,
+	"link": $font-color-link,
+	"link-hover": $font-color-link-hover,
+	"link-focus": $font-color-link-focus
 );
 
 $title-colors: (
-	primary: $title-font-color-primary,
-	secondary: $title-font-color-secondary,
-	tertiary: $title-font-color-tertiary
+	"primary": $title-font-color-primary,
+	"secondary": $title-font-color-secondary,
+	"tertiary": $title-font-color-tertiary
 );
 
 
@@ -130,9 +130,9 @@ $background-color-secondary: $brand-grey-light;
 $background-color-tertiary: $brand-grey;
 
 $background-colors: (
-	primary: $background-color-primary,
-	secondary: $background-color-secondary,
-	tertiary: $background-color-tertiary
+	"primary": $background-color-primary,
+	"secondary": $background-color-secondary,
+	"tertiary": $background-color-tertiary
 );
 
 $panel-background-primary: darken($background-color-primary, 5%);
@@ -140,9 +140,9 @@ $panel-background-secondary: darken($background-color-secondary, 5%);
 $panel-background-tertiary: darken($background-color-tertiary, 5%);
 
 $panel-colors: (
-	primary: $panel-background-primary,
-	secondary: $panel-background-secondary,
-	tertiary: $panel-background-tertiary
+	"primary": $panel-background-primary,
+	"secondary": $panel-background-secondary,
+	"tertiary": $panel-background-tertiary
 );
 
 // Borders
@@ -158,9 +158,9 @@ $border-color-secondary: darken($background-color-secondary, 15%);
 $border-color-tertiary: darken($background-color-tertiary, 15%);
 
 $border-colors: (
-	primary: $border-color-primary,
-	secondary: $border-color-secondary,
-	tertiary: $border-color-tertiary
+	"primary": $border-color-primary,
+	"secondary": $border-color-secondary,
+	"tertiary": $border-color-tertiary
 );
 
 
@@ -181,12 +181,12 @@ $button-primary-background: $brand-action-color;
 $button-primary-background-hover: darken($brand-action-color, 15%);
 
 $button-colors: (
-	font-color: $button-font-color,
-	background: $button-background,
-	background-hover: $button-background-hover,
-	primary-font-color: $button-primary-font-color,
-	primary-background: $button-primary-background,
-	primary-background-hover: $button-primary-background-hover
+	"font-color": $button-font-color,
+	"background": $button-background,
+	"background-hover": $button-background-hover,
+	"primary-font-color": $button-primary-font-color,
+	"primary-background": $button-primary-background,
+	"primary-background-hover": $button-primary-background-hover
 );
 
 
@@ -221,11 +221,11 @@ $selector-color-checked: $brand-action-color;
 // with the class name `.font-colors--primary`
 
 $color-sets: (
-	brand: $brand-colors,
-	font: $font-colors,
-	titles: $title-colors,
-	background: $background-colors,
-	panel: $panel-colors,
-	border: $border-colors,
-	button: $button-colors
+	"brand": $brand-colors,
+	"font": $font-colors,
+	"titles": $title-colors,
+	"background": $background-colors,
+	"panel": $panel-colors,
+	"border": $border-colors,
+	"button": $button-colors
 );
