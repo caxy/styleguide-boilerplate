@@ -366,6 +366,70 @@ textarea {
   src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+.clearfix::before, .has-buttons.stacked::before, .clearfix::after, .has-buttons.stacked::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.has-inline-elements {
+  vertical-align: baseline; }
+  .has-inline-elements > * {
+    display: inline-block;
+    margin: 0 0.5rem; }
+
+.width-capped {
+  width: 100%;
+  max-width: 80rem; }
+
+.width-fullbleed {
+  max-width: none;
+  width: 100%;
+  position: relative;
+  left: -50%;
+  margin-left: 50%; }
+  .width-fullbleed > * {
+    width: 100%;
+    max-width: 80rem; }
+
+.has-background--primary {
+  background: #fff; }
+
+.has-background--secondary {
+  background: #e5e8ea; }
+
+.has-background--tertiary {
+  background: #5c6874; }
+
+.has-border--primary {
+  border: 1px solid #d9d9d9; }
+
+.has-border--primary--top {
+  border-top: 1px solid #d9d9d9; }
+
+.has-border--primary--right {
+  border-right: 1px solid #d9d9d9; }
+
+.has-border--primary--bottom {
+  border-bottom: 1px solid #d9d9d9; }
+
+.has-border--primary--left {
+  border-left: 1px solid #d9d9d9; }
+
+.has-border--secondary {
+  border: 2px solid #bac1c8; }
+
+.has-border--secondary--top {
+  border-top: 2px solid #bac1c8; }
+
+.has-border--secondary--right {
+  border-right: 2px solid #bac1c8; }
+
+.has-border--secondary--bottom {
+  border-bottom: 2px solid #bac1c8; }
+
+.has-border--secondary--left {
+  border-left: 2px solid #bac1c8; }
+
 html {
   font: 1rem "PT Serif", serif; }
 
@@ -390,7 +454,7 @@ Styleguide 2
 .title-1, h1, .title-2, h2, .title-3, h3, .title-4, h4, .title-5, h5, dt {
   font-family: "Lato", sans-serif;
   color: #3a4249;
-  margin: 0; }
+  margin: 0 0 1rem 0; }
 
 .title-1, h1 {
   font-size: 2.25rem; }
@@ -410,7 +474,8 @@ Styleguide 2
 
 p,
 .copy {
-  line-height: 1.875rem; }
+  line-height: 1.75rem;
+  margin: 1rem 0; }
 
 .copy-tertiary {
   font-size: 0.75rem; }
@@ -461,72 +526,6 @@ code, pre {
 code {
   padding: 0.5rem;
   background: #f2f2f2; }
-
-.clearfix::before, .has-buttons.stacked::before, .clearfix::after, .has-buttons.stacked::after {
-  content: '';
-  display: table;
-  clear: both; }
-
-.has-inline-elements {
-  vertical-align: baseline; }
-  .has-inline-elements > * {
-    display: inline-block;
-    margin: 0 0.5rem; }
-
-.width-capped {
-  width: 100%;
-  margin: 1.5rem;
-  max-width: 70rem; }
-
-.width-fullbleed {
-  max-width: none;
-  width: 100%;
-  position: relative;
-  left: -50%;
-  margin-left: 50%; }
-  .width-fullbleed > * {
-    width: 100%;
-    margin: 1.5rem;
-    max-width: 70rem; }
-
-.has-background--primary {
-  background: #fff; }
-
-.has-background--secondary {
-  background: #e5e8ea; }
-
-.has-background--tertiary {
-  background: #5c6874; }
-
-.has-border--primary {
-  border: 1px solid #d9d9d9; }
-
-.has-border--primary--top {
-  border-top: 1px solid #d9d9d9; }
-
-.has-border--primary--right {
-  border-right: 1px solid #d9d9d9; }
-
-.has-border--primary--bottom {
-  border-bottom: 1px solid #d9d9d9; }
-
-.has-border--primary--left {
-  border-bottom: 1px solid #d9d9d9; }
-
-.has-border--secondary {
-  border: 2px solid #bac1c8; }
-
-.has-border--secondary--top {
-  border-top: 2px solid #bac1c8; }
-
-.has-border--secondary--right {
-  border-right: 2px solid #bac1c8; }
-
-.has-border--secondary--bottom {
-  border-bottom: 2px solid #bac1c8; }
-
-.has-border--secondary--left {
-  border-bottom: 2px solid #bac1c8; }
 
 /*
 Forms and Form Elements
@@ -594,7 +593,7 @@ select {
   z-index: 1;
   min-width: 25rem; }
   .form-text .field-description {
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     margin: 1.5rem 0 0.5rem; }
   .form-text input[type="tel"],
   .form-text input[type="text"],
@@ -611,7 +610,7 @@ select {
 textarea {
   height: 12rem;
   resize: vertical;
-  line-height: 1.5rem; }
+  line-height: 1.75rem; }
 
 .form-select {
   position: relative;
@@ -636,12 +635,12 @@ textarea {
   .form-checkbox input,
   .form-radio input {
     position: absolute;
-    top: 1.425rem;
+    top: 1.6625rem;
     left: 0.5rem; }
   .form-checkbox .field-description,
   .form-radio .field-description {
     padding: 0 1rem 0 0;
-    line-height: 1.5rem; }
+    line-height: 1.75rem; }
 
 fieldset {
   margin: 3rem 0 1.5rem;
@@ -781,11 +780,35 @@ button,
   .has-breadcrumbs .breadcrumb {
     display: inline-block; }
 
+.navigation-site {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  background: #f2f2f2;
+  position: relative; }
+  .navigation-site .has-menu-items {
+    margin: 0;
+    padding: 0;
+    position: relative; }
+  .navigation-site > .menu {
+    width: 100%;
+    max-width: 80rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    margin: 0 auto; }
+    .navigation-site > .menu,
+    .navigation-site > .menu ul {
+      list-style-type: none; }
+
 .page-header,
+.page-main,
 .page-footer {
-  width: 100%;
-  margin: 1.5rem;
-  max-width: 70rem;
   padding: 1rem; }
 
 .page-header {
@@ -806,6 +829,13 @@ button,
   align-items: center;
   padding: 1.5rem;
   background: #d7dbdf; }
+  .page-header .title-1, .page-header h1, .page-header .title-2, .page-header h2, .page-header .title-3, .page-header h3, .page-header .title-4, .page-header h4, .page-header .title-5, .page-header h5, .page-header dt {
+    margin: 0; }
+
+.page-main {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto; }
 
 .page-footer {
   padding: 1.5rem;
@@ -874,8 +904,7 @@ button,
 
 .panel, .panel-fullbleed {
   width: 100%;
-  margin: 1.5rem;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 1.5rem; }
 
 .panel-fullbleed {
@@ -888,8 +917,7 @@ button,
   margin-bottom: 1.5rem; }
   .panel-fullbleed > * {
     width: 100%;
-    margin: 1.5rem;
-    max-width: 70rem; }
+    max-width: 80rem; }
 
 .card {
   position: relative;

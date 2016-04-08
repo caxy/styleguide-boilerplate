@@ -6,10 +6,11 @@
 @import 'variables/fonts';
 @import 'variables/structure';
 
-@import 'base/mixins';
-@import 'base/mixins-flexbox';
+@import 'utilities/mixins';
+@import 'utilities/mixins-flexbox';
+@import 'utilities/utilities';
+
 @import 'base/base';
-@import 'base/utilities';
 @import 'base/form-elements';
 @import 'base/buttons';
 

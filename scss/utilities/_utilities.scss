@@ -117,7 +117,16 @@
 
 
 
+// Aesthetic Utilities
+//
+// Styleguide 50.4
 
+// Background Color Utilities Classes
+//
+// These classes should not be extended (just reference the
+// $background-color-X variable needed).
+//
+// Styleguide 50.4.1
 
 .has-background--primary {
 	background: $background-color-primary;
@@ -132,34 +141,81 @@
 }
 
 
+
+// Border Utilities
+//
+// Styleguide 50.4.2
+
+// Primary Border Utility Class & Mixin
+//
+// These classes should not be extended.
+//
+// @mixin border-primary(position)
+//
+// .has-border--primary	- Primary border applied to all sides.
+// .has-border--primary--top	- Primary border applied to top side.
+// .has-border--primary--right	- Primary border applied to right side.
+// .has-border--primary--bottom	- Primary border applied to bottom side.
+// .has-border--primary--left	- Primary border applied to left side.
+//
+// Styleguide 50.4.2.1
+
+@mixin border-primary($position:'') {
+	@if $position != '' {
+		$position: -#{$position};
+	}
+	border#{$position}: $border-width-primary solid $border-color-primary;
+}
+
 .has-border--primary {
-	border: $border-width-primary solid $border-color-primary;
+	@include border-primary();
 }
 	.has-border--primary--top {
-		border-top: $border-width-primary solid $border-color-primary;
+		@include border-primary(top);
 	}
 	.has-border--primary--right {
-		border-right: $border-width-primary solid $border-color-primary;
+		@include border-primary(right);
 	}
 	.has-border--primary--bottom {
-		border-bottom: $border-width-primary solid $border-color-primary;
+		@include border-primary(bottom);
 	}
 	.has-border--primary--left {
-		border-bottom: $border-width-primary solid $border-color-primary;
+		@include border-primary(left);
 	}
 
+// Secondary Border Utility Class & Mixin
+//
+// These classes should not be extended.
+//
+// @mixin border-secondary(position)
+//
+// .has-border--secondary	- Secondary border applied to all sides.
+// .has-border--secondary--top	- Secondary border applied to top side.
+// .has-border--secondary--right	- Secondary border applied to right side.
+// .has-border--secondary--bottom	- Secondary border applied to bottom side.
+// .has-border--secondary--left	- Secondary border applied to left side.
+//
+// Styleguide 50.4.2.2
+
+@mixin border-secondary($position:'') {
+	@if $position != '' {
+		$position: -#{$position};
+	}
+	border#{$position}: $border-width-secondary solid $border-color-secondary;
+}
+
 .has-border--secondary {
-	border: $border-width-secondary solid $border-color-secondary;
+	@include border-secondary();
 }
 	.has-border--secondary--top {
-		border-top: $border-width-secondary solid $border-color-secondary;
+		@include border-secondary(top);
 	}
 	.has-border--secondary--right {
-		border-right: $border-width-secondary solid $border-color-secondary;
+		@include border-secondary(right);
 	}
 	.has-border--secondary--bottom {
-		border-bottom: $border-width-secondary solid $border-color-secondary;
+		@include border-secondary(bottom);
 	}
 	.has-border--secondary--left {
-		border-bottom: $border-width-secondary solid $border-color-secondary;
+		@include border-secondary(left);
 	}
