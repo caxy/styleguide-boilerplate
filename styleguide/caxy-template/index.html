@@ -92,6 +92,12 @@
         {{/if}}
       </header>
 
+    {{#if description}}
+      <div class="kss-description">
+        {{{description}}}
+      </div>
+    {{/if}}
+
     {{#if parameters}}
       <ul class="kss-parameters">
       {{#eachParameter}}
@@ -103,11 +109,6 @@
       </ul>
     {{/if}}
 
-    {{#if description}}
-      <div class="kss-description">
-        {{{description}}}
-      </div>
-    {{/if}}
     </div>
 
     {{#if markup}}

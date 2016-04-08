@@ -474,7 +474,7 @@ Styleguide 2
 
 p,
 .copy {
-  line-height: 1.75rem;
+  line-height: 1.5rem;
   margin: 1rem 0; }
 
 .copy-tertiary {
@@ -593,7 +593,7 @@ select {
   z-index: 1;
   min-width: 25rem; }
   .form-text .field-description {
-    line-height: 1.75rem;
+    line-height: 1.5rem;
     margin: 1.5rem 0 0.5rem; }
   .form-text input[type="tel"],
   .form-text input[type="text"],
@@ -610,7 +610,7 @@ select {
 textarea {
   height: 12rem;
   resize: vertical;
-  line-height: 1.75rem; }
+  line-height: 1.5rem; }
 
 .form-select {
   position: relative;
@@ -635,12 +635,12 @@ textarea {
   .form-checkbox input,
   .form-radio input {
     position: absolute;
-    top: 1.6625rem;
+    top: 1.425rem;
     left: 0.5rem; }
   .form-checkbox .field-description,
   .form-radio .field-description {
     padding: 0 1rem 0 0;
-    line-height: 1.75rem; }
+    line-height: 1.5rem; }
 
 fieldset {
   margin: 3rem 0 1.5rem;
@@ -967,8 +967,8 @@ button,
   .swatch .dot {
     display: block;
     border-radius: 100%;
-    height: 15rem;
-    width: 15rem;
+    height: 13rem;
+    width: 13rem;
     margin: 1rem auto; }
   .swatch::after {
     margin: 1rem auto;
@@ -981,147 +981,147 @@ button,
     background-color: #5c6874;
     border: 1px solid #454f58; }
   .swatch.brand-colors--grey::after {
-    content: "grey: \a#5c6874"; }
+    content: "grey: \a#5c6874 \argb(92, 104, 116)"; }
   .swatch.brand-colors--grey-dark .dot {
     background-color: #3a4249;
     border: 1px solid #24282d; }
   .swatch.brand-colors--grey-dark::after {
-    content: "grey-dark: \a#3a4249"; }
+    content: "grey-dark: \a#3a4249 \argb(58, 66, 73)"; }
   .swatch.brand-colors--grey-light .dot {
     background-color: #e5e8ea;
     border: 1px solid #c8ced4; }
   .swatch.brand-colors--grey-light::after {
-    content: "grey-light: \a#e5e8ea"; }
+    content: "grey-light: \a#e5e8ea \argb(229, 232, 234)"; }
   .swatch.brand-colors--accent-blue .dot {
     background-color: #334dae;
     border: 1px solid #273c87; }
   .swatch.brand-colors--accent-blue::after {
-    content: "accent-blue: \a#334dae"; }
+    content: "accent-blue: \a#334dae \argb(51, 77, 174)"; }
   .swatch.brand-colors--accent-dark-green .dot {
     background-color: #148744;
     border: 1px solid #0d5b2e; }
   .swatch.brand-colors--accent-dark-green::after {
-    content: "accent-dark-green: \a#148744"; }
+    content: "accent-dark-green: \a#148744 \argb(20, 135, 68)"; }
   .swatch.font-colors--primary .dot {
     background-color: #3a4249;
     border: 1px solid #24282d; }
   .swatch.font-colors--primary::after {
-    content: "primary: \a#3a4249"; }
+    content: "primary: \a#3a4249 \argb(58, 66, 73)"; }
   .swatch.font-colors--secondary .dot {
     background-color: #5c6874;
     border: 1px solid #454f58; }
   .swatch.font-colors--secondary::after {
-    content: "secondary: \a#5c6874"; }
+    content: "secondary: \a#5c6874 \argb(92, 104, 116)"; }
   .swatch.font-colors--tertiary .dot {
     background-color: #e5e8ea;
     border: 1px solid #c8ced4; }
   .swatch.font-colors--tertiary::after {
-    content: "tertiary: \a#e5e8ea"; }
+    content: "tertiary: \a#e5e8ea \argb(229, 232, 234)"; }
   .swatch.font-colors--link .dot {
     background-color: #148744;
     border: 1px solid #0d5b2e; }
   .swatch.font-colors--link::after {
-    content: "link: \a#148744"; }
+    content: "link: \a#148744 \argb(20, 135, 68)"; }
   .swatch.font-colors--link-hover .dot {
     background-color: #0d5b2e;
     border: 1px solid #072e17; }
   .swatch.font-colors--link-hover::after {
-    content: "link-hover: \a#0d5b2e"; }
+    content: "link-hover: \a#0d5b2e \argb(13, 91, 46)"; }
   .swatch.font-colors--link-focus .dot {
     background-color: #0d5b2e;
     border: 1px solid #072e17; }
   .swatch.font-colors--link-focus::after {
-    content: "link-focus: \a#0d5b2e"; }
+    content: "link-focus: \a#0d5b2e \argb(13, 91, 46)"; }
   .swatch.titles-colors--primary .dot {
     background-color: #3a4249;
     border: 1px solid #24282d; }
   .swatch.titles-colors--primary::after {
-    content: "primary: \a#3a4249"; }
+    content: "primary: \a#3a4249 \argb(58, 66, 73)"; }
   .swatch.titles-colors--secondary .dot {
     background-color: #5c6874;
     border: 1px solid #454f58; }
   .swatch.titles-colors--secondary::after {
-    content: "secondary: \a#5c6874"; }
+    content: "secondary: \a#5c6874 \argb(92, 104, 116)"; }
   .swatch.titles-colors--tertiary .dot {
     background-color: #e5e8ea;
     border: 1px solid #c8ced4; }
   .swatch.titles-colors--tertiary::after {
-    content: "tertiary: \a#e5e8ea"; }
+    content: "tertiary: \a#e5e8ea \argb(229, 232, 234)"; }
   .swatch.background-colors--primary .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
   .swatch.background-colors--primary::after {
-    content: "primary: \a#fff"; }
+    content: "primary: \a#fff \argb(255, 255, 255)"; }
   .swatch.background-colors--secondary .dot {
     background-color: #e5e8ea;
     border: 1px solid #c8ced4; }
   .swatch.background-colors--secondary::after {
-    content: "secondary: \a#e5e8ea"; }
+    content: "secondary: \a#e5e8ea \argb(229, 232, 234)"; }
   .swatch.background-colors--tertiary .dot {
     background-color: #5c6874;
     border: 1px solid #454f58; }
   .swatch.background-colors--tertiary::after {
-    content: "tertiary: \a#5c6874"; }
+    content: "tertiary: \a#5c6874 \argb(92, 104, 116)"; }
   .swatch.panel-colors--primary .dot {
     background-color: #f2f2f2;
     border: 1px solid #d9d9d9; }
   .swatch.panel-colors--primary::after {
-    content: "primary: \a#f2f2f2"; }
+    content: "primary: \a#f2f2f2 \argb(242, 242, 242)"; }
   .swatch.panel-colors--secondary .dot {
     background-color: #d7dbdf;
     border: 1px solid #bac1c8; }
   .swatch.panel-colors--secondary::after {
-    content: "secondary: \a#d7dbdf"; }
+    content: "secondary: \a#d7dbdf \argb(215, 219, 223)"; }
   .swatch.panel-colors--tertiary .dot {
     background-color: #515b66;
     border: 1px solid #3a4249; }
   .swatch.panel-colors--tertiary::after {
-    content: "tertiary: \a#515b66"; }
+    content: "tertiary: \a#515b66 \argb(81, 91, 102)"; }
   .swatch.border-colors--primary .dot {
     background-color: #d9d9d9;
     border: 1px solid #bfbfbf; }
   .swatch.border-colors--primary::after {
-    content: "primary: \a#d9d9d9"; }
+    content: "primary: \a#d9d9d9 \argb(217, 217, 217)"; }
   .swatch.border-colors--secondary .dot {
     background-color: #bac1c8;
     border: 1px solid #9ea8b2; }
   .swatch.border-colors--secondary::after {
-    content: "secondary: \a#bac1c8"; }
+    content: "secondary: \a#bac1c8 \argb(186, 193, 200)"; }
   .swatch.border-colors--tertiary .dot {
     background-color: #3a4249;
     border: 1px solid #24282d; }
   .swatch.border-colors--tertiary::after {
-    content: "tertiary: \a#3a4249"; }
+    content: "tertiary: \a#3a4249 \argb(58, 66, 73)"; }
   .swatch.button-colors--font-color .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
   .swatch.button-colors--font-color::after {
-    content: "font-color: \a#fff"; }
+    content: "font-color: \a#fff \argb(255, 255, 255)"; }
   .swatch.button-colors--background .dot {
     background-color: #3a4249;
     border: 1px solid #24282d; }
   .swatch.button-colors--background::after {
-    content: "background: \a#3a4249"; }
+    content: "background: \a#3a4249 \argb(58, 66, 73)"; }
   .swatch.button-colors--background-hover .dot {
     background-color: #181c1f;
     border: 1px solid #020202; }
   .swatch.button-colors--background-hover::after {
-    content: "background-hover: \a#181c1f"; }
+    content: "background-hover: \a#181c1f \argb(24, 28, 31)"; }
   .swatch.button-colors--primary-font-color .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
   .swatch.button-colors--primary-font-color::after {
-    content: "primary-font-color: \a#fff"; }
+    content: "primary-font-color: \a#fff \argb(255, 255, 255)"; }
   .swatch.button-colors--primary-background .dot {
     background-color: #148744;
     border: 1px solid #0d5b2e; }
   .swatch.button-colors--primary-background::after {
-    content: "primary-background: \a#148744"; }
+    content: "primary-background: \a#148744 \argb(20, 135, 68)"; }
   .swatch.button-colors--primary-background-hover .dot {
     background-color: #0a4422;
     border: 1px solid #04180c; }
   .swatch.button-colors--primary-background-hover::after {
-    content: "primary-background-hover: \a#0a4422"; }
+    content: "primary-background-hover: \a#0a4422 \argb(10, 68, 34)"; }
 
 .navigation-site .menu ul {
   display: -webkit-box;

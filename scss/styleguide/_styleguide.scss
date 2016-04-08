@@ -7,6 +7,10 @@
 	@each $color-set-name, $color-set in $color-sets {
 
 		@each $name, $value in $color-set {
+
+			$red: red($value);
+			$green: green($value);
+			$blue: blue($value);
 			
 			&.#{$color-set-name}-colors--#{$name} {
 				
@@ -14,8 +18,9 @@
 					background-color: $value;
 					border: 1px solid darken($value, 10%);
 				}
+
 				&::after {
-					content: "#{$name}: \a #{$value}";
+					content: "#{$name}: \a #{$value} \a rgb(#{$red}, #{$green}, #{$blue})";
 				}
 
 			}
@@ -52,8 +57,8 @@
 
 		display: block;
 		border-radius: 100%;
-		height: 15rem;
-		width: 15rem;
+		height: 13rem;
+		width: 13rem;
 		margin: $spacing-inner auto;
 
 	}

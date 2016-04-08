@@ -474,7 +474,7 @@ Styleguide 2
 
 p,
 .copy {
-  line-height: 1.75rem;
+  line-height: 1.5rem;
   margin: 1rem 0; }
 
 .copy-tertiary {
@@ -593,7 +593,7 @@ select {
   z-index: 1;
   min-width: 25rem; }
   .form-text .field-description {
-    line-height: 1.75rem;
+    line-height: 1.5rem;
     margin: 1.5rem 0 0.5rem; }
   .form-text input[type="tel"],
   .form-text input[type="text"],
@@ -610,7 +610,7 @@ select {
 textarea {
   height: 12rem;
   resize: vertical;
-  line-height: 1.75rem; }
+  line-height: 1.5rem; }
 
 .form-select {
   position: relative;
@@ -635,12 +635,12 @@ textarea {
   .form-checkbox input,
   .form-radio input {
     position: absolute;
-    top: 1.6625rem;
+    top: 1.425rem;
     left: 0.5rem; }
   .form-checkbox .field-description,
   .form-radio .field-description {
     padding: 0 1rem 0 0;
-    line-height: 1.75rem; }
+    line-height: 1.5rem; }
 
 fieldset {
   margin: 3rem 0 1.5rem;
