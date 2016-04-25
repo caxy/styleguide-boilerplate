@@ -2,7 +2,9 @@
 
 Boilerplate for Caxy living styleguide implementations. Uses KSS-node to render.
 
-## Using in projects
+[KSS Documentation](http://warpspire.com/kss/)
+
+## Generating the Styleguide
 
 Just pull these files into your project's assets folder and run `npm install` to get up and running. If you don't need to adjust the folder structure, you can then run the following to build your styleguide:
 
@@ -15,6 +17,8 @@ or
 if you would like more information. Running either command also compiles a styleguide-specific version of the current CSS.
 
 If your folder structure needs to be different, just adjust the path found in the `package.json` file included here.
+
+## Viewing the Styleguide
 
 To view your styleguide locally, it's recommended you run `http-server` to get around quirks that can crop up with font rendering outside of a server setting.
 
