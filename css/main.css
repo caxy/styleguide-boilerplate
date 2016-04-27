@@ -378,7 +378,6 @@ textarea {
     margin: 0 0.5rem; }
 
 .width-capped {
-  width: 100%;
   max-width: 800px;
   max-width: 80rem; }
 
@@ -389,7 +388,6 @@ textarea {
   left: -50%;
   margin-left: 50%; }
   .width-fullbleed > * {
-    width: 100%;
     max-width: 800px;
     max-width: 80rem; }
 
@@ -792,7 +790,6 @@ button,
     padding: 0;
     position: relative; }
   .navigation-site > .menu {
-    width: 100%;
     max-width: 800px;
     max-width: 80rem;
     display: -webkit-box;
@@ -836,7 +833,6 @@ button,
     margin: 0; }
 
 .page-main {
-  width: 100%;
   max-width: 800px;
   max-width: 80rem;
   margin: 0 auto; }
@@ -907,7 +903,6 @@ button,
     background: white; }
 
 .panel, .panel-fullbleed {
-  width: 100%;
   max-width: 800px;
   max-width: 80rem;
   margin: 1.5rem; }
@@ -921,7 +916,6 @@ button,
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
   .panel-fullbleed > * {
-    width: 100%;
     max-width: 800px;
     max-width: 80rem; }
 

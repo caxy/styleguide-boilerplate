@@ -118,6 +118,7 @@ select {
 		position: relative;
 		z-index: 3;
 		display: inline-block;
+		border: $border-width-primary solid $border-color-primary;
 	}
 
 }
@@ -194,7 +195,6 @@ textarea {
 .form-checkbox,
 .form-radio {
 
-	margin: 0;
 	padding: $spacing-inner $spacing-inner $spacing-inner $spacing-inner*2;
 	position: relative;
 	cursor: pointer;

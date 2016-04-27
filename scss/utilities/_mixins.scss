@@ -73,7 +73,10 @@
 
 	& > * {
 		display: inline-block;
-		margin: 0 $spacing-inner/2;
+		margin: 0 0 0 $spacing-inner;
+		&:first-child {
+			margin: 0;
+		}
 	}
 
 }
@@ -98,7 +101,6 @@
 // Styleguide 50.3.1
 
 @mixin width-capped() {
-	width: 100%;
 	@include rem-backup(max-width, 80);
 }
 
