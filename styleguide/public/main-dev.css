@@ -803,7 +803,8 @@ button,
     -moz-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-size: 0.866rem; }
     .navigation-site > .menu,
     .navigation-site > .menu ul {
       list-style-type: none; }

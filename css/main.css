@@ -375,7 +375,9 @@ textarea {
   vertical-align: baseline; }
   .has-inline-elements > * {
     display: inline-block;
-    margin: 0 0.5rem; }
+    margin: 0 0 0 1rem; }
+    .has-inline-elements > *:first-child {
+      margin: 0; }
 
 .width-capped {
   max-width: 800px;
@@ -605,7 +607,8 @@ select {
     width: 100%;
     position: relative;
     z-index: 3;
-    display: inline-block; }
+    display: inline-block;
+    border: 1px solid #d9d9d9; }
 
 textarea {
   height: 12rem;
@@ -627,7 +630,6 @@ textarea {
 
 .form-checkbox,
 .form-radio {
-  margin: 0;
   padding: 1rem 1rem 1rem 2rem;
   position: relative;
   cursor: pointer;
@@ -801,7 +803,8 @@ button,
     -moz-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-size: 0.866rem; }
     .navigation-site > .menu,
     .navigation-site > .menu ul {
       list-style-type: none; }

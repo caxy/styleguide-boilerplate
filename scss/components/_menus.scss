@@ -79,6 +79,7 @@
 		@include flexbox();
 		@include flex-flow(row nowrap);
 		margin: 0 auto;
+		font-size: $font-size-secondary;
 		&,
 		ul {
 			list-style-type: none;
