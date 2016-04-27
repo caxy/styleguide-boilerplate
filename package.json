@@ -7,8 +7,8 @@
     "start": "./node_modules/.bin/http-server",
     "generate-css": "sass scss/main.scss css/main.css",
     "generate-minified-css": "cleancss -o css/main-min.css css/main.css",
-    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css | ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns",
-    "generate-styleguide-verbose": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css | ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --verbose --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns"
+    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns",
+    "generate-styleguide-verbose": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --verbose --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns"
   },
   "repository": {
     "type": "git",
