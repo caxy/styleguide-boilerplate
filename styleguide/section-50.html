@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
+
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
@@ -43,72 +44,71 @@
       <a href="section-10.html">Page-Level Containers</a>
     </li>
     <li class="menu-item">
-      <a href="section-15.html">Panels and Cards</a>
+      <a href="section-15.html">Containers</a>
     </li>
     <li class="menu-item">
       <a href="section-20.html">Menus</a>
     </li>
     <li class="menu-item">
       <a href="section-50.html">Utilities</a>
-      <ul class="has-menu-items">
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-1">clearfix() / .clearfix</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-2">Input the REM value and a pixel value will be added as well for legacy support.</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-2">Context Class Utilities</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-2-1">has-inline-elements() / .has-inline-elements</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-3">Widths</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-3-1">width-fullbleed() / .width-fullbleed</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-3-1">width-capped() / .width-capped</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-4">Aesthetic Utilities</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-4-1">Background Color Utilities Classes</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-50.html#kssref-50-4-2">Border Utilities</a>
-          </li>
-      </ul>
     </li>
   </ul>
 </nav>
 
 <main role="main" class="page-main">
 
+
+
       <div id="kssref-50" class="kss-section kss-section--depth-1">
 
-      <header class="kss-header has-border--bottom">
-        <small>
-          <a class="kss-title__permalink" href="#kssref-50">
-            Section 
-              50
-          </a> 
-        </small>
+      <header>
         <h1 class="kss-title kss-title--level-1">
           Utilities
         </h1>
+        
+        <ul class="table-of-contents">
+            <li>
+              <a href="section-50.html#kssref-50-1">clearfix() / .clearfix</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-2">REM Legacy Support</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-2">Context Class Utilities</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-2-1">has-inline-elements() / .has-inline-elements</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-3">Widths</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-3-1">width-fullbleed() / .width-fullbleed</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-3-1">width-capped() / .width-capped</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-4">Aesthetic Utilities</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-4-1">Background Color Utilities Classes</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-4-2">Border Utilities</a>
+            </li>
+            <li>
+              <a href="section-50.html#kssref-50-5">Spacing Utilities</a>
+            </li>
+        </ul>
+
       </header>
 
-      <div class="kss-description">
-        <p>Provided here are several utilities to either include in other elements&#39;
+      <p>Provided here are several utilities to either include in other elements&#39;
 CSS, or to apply as classes directly to HTML elements.</p>
 <p>It&#39;s advised to not use @extend on the classes found here, as it can make
 the compiled CSS a jumble and potentially harder to debug.</p>
 
-      </div>
 
 
     </div>
@@ -116,26 +116,22 @@ the compiled CSS a jumble and potentially harder to debug.</p>
 
 
       </div>
+
       <hr />
       <section id="kssref-50-1" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-1">
-            Section 
-              50.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-1">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           clearfix() / .clearfix
         </h2>
       </header>
 
-      <div class="kss-description">
-        <p>Useful when you need an element to clear its children, or to break an
+      <p>Useful when you need an element to clear its children, or to break an
 element out of the flow if its siblings.</p>
 
-      </div>
 
 
     </div>
@@ -143,30 +139,31 @@ element out of the flow if its siblings.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-2" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-2">
-            Section 
-              50.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Input the REM value and a pixel value will be added as well for legacy support.
+          REM Legacy Support
         </h2>
       </header>
 
+      <p>Input the REM value and a pixel value will be added as well for
+legacy support.</p>
+
 
       <ul class="kss-parameters">
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">$rule</code>
-          <div class="kss-parameters__description">The name of the CSS rule (eg. padding-top, margin-left, border-width, etc.)</div>
+        <li class="has-inline-items">
+          <code>$rule</code>
+          <span>The name of the CSS rule (eg. padding-top, margin-left, border-width, etc.)</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">$value</code>
-          <div class="kss-parameters__description">The vale, in REM, without a suffix (eg. 1.5 rem would just be entered as 1.5)</div>
+        <li class="has-inline-items">
+          <code>$value</code>
+          <span>The vale, in REM, without a suffix (eg. 1.5 rem would just be entered as 1.5)</span>
         </li>
       </ul>
 
@@ -175,27 +172,23 @@ element out of the flow if its siblings.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-2" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-2">
-            Section 
-              50.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Context Class Utilities
         </h2>
       </header>
 
-      <div class="kss-description">
-        <p>Context classes will effect the direct children of the element they&#39;re
+      <p>Context classes will effect the direct children of the element they&#39;re
 applied to. If a context class relates directly to a visual attribute
 (eg. <code>.has-background-*</code>), only that attribute will be applied.</p>
 
-      </div>
 
 
     </div>
@@ -203,25 +196,21 @@ applied to. If a context class relates directly to a visual attribute
 
 
       </section>
+
       <hr />
       <section id="kssref-50-2-1" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-2-1">
-            Section 
-              50.2.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-2-1">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           has-inline-elements() / .has-inline-elements
         </h3>
       </header>
 
-      <div class="kss-description">
-        <p>Use if you need to have an element&#39;s direct children display inline.</p>
+      <p>Use if you need to have an element&#39;s direct children display inline.</p>
 
-      </div>
 
 
     </div>
@@ -229,26 +218,22 @@ applied to. If a context class relates directly to a visual attribute
 
 
       </section>
+
       <hr />
       <section id="kssref-50-3" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-3">
-            Section 
-              50.3
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-3">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Widths
         </h2>
       </header>
 
-      <div class="kss-description">
-        <p>These utilities are for page-level containers to allow for fullbleed
+      <p>These utilities are for page-level containers to allow for fullbleed
 or capped width displays.</p>
 
-      </div>
 
 
     </div>
@@ -256,15 +241,13 @@ or capped width displays.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-3-1" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-3-1">
-            Section 
-              50.3.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-3-1">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           width-fullbleed() / .width-fullbleed
@@ -278,15 +261,13 @@ or capped width displays.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-3-1" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-3-1">
-            Section 
-              50.3.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-3-1">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           width-capped() / .width-capped
@@ -300,15 +281,13 @@ or capped width displays.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-4" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-4">
-            Section 
-              50.4
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-4">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Aesthetic Utilities
@@ -322,26 +301,22 @@ or capped width displays.</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-4-1" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-4-1">
-            Section 
-              50.4.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-4-1">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Background Color Utilities Classes
         </h3>
       </header>
 
-      <div class="kss-description">
-        <p>These classes should not be extended (just reference the
+      <p>These classes should not be extended (just reference the
 $background-color-X variable needed).</p>
 
-      </div>
 
 
     </div>
@@ -349,15 +324,13 @@ $background-color-X variable needed).</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-4-2" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-4-2">
-            Section 
-              50.4.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-4-2">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Border Utilities
@@ -371,47 +344,44 @@ $background-color-X variable needed).</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-4-2-1" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-4-2-1">
-            Section 
-              50.4.2.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-4-2-1">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Primary Border Utility Class &amp; Mixin
         </h4>
       </header>
 
-      <div class="kss-description">
-        <p>These classes should not be extended.</p>
-<p>@mixin border-primary(position)</p>
+      <p>These classes should not be extended.</p>
+<p>@mixin border-primary($position)</p>
+<p>$position    -    top/right/bottom/left</p>
 
-      </div>
 
       <ul class="kss-parameters">
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--primary</code>
-          <div class="kss-parameters__description">Primary border applied to all sides.</div>
+        <li class="has-inline-items">
+          <code>.has-border--primary</code>
+          <span>Primary border applied to all sides.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--primary--top</code>
-          <div class="kss-parameters__description">Primary border applied to top side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--primary--top</code>
+          <span>Primary border applied to top side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--primary--right</code>
-          <div class="kss-parameters__description">Primary border applied to right side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--primary--right</code>
+          <span>Primary border applied to right side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--primary--bottom</code>
-          <div class="kss-parameters__description">Primary border applied to bottom side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--primary--bottom</code>
+          <span>Primary border applied to bottom side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--primary--left</code>
-          <div class="kss-parameters__description">Primary border applied to left side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--primary--left</code>
+          <span>Primary border applied to left side.</span>
         </li>
       </ul>
 
@@ -420,49 +390,68 @@ $background-color-X variable needed).</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-50-4-2-2" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-50-4-2-2">
-            Section 
-              50.4.2.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-50-4-2-2">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Secondary Border Utility Class &amp; Mixin
         </h4>
       </header>
 
-      <div class="kss-description">
-        <p>These classes should not be extended.</p>
-<p>@mixin border-secondary(position)</p>
+      <p>These classes should not be extended.</p>
+<p>@mixin border-secondary($position)</p>
+<p>$position    -    top/right/bottom/left</p>
 
-      </div>
 
       <ul class="kss-parameters">
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--secondary</code>
-          <div class="kss-parameters__description">Secondary border applied to all sides.</div>
+        <li class="has-inline-items">
+          <code>.has-border--secondary</code>
+          <span>Secondary border applied to all sides.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--secondary--top</code>
-          <div class="kss-parameters__description">Secondary border applied to top side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--secondary--top</code>
+          <span>Secondary border applied to top side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--secondary--right</code>
-          <div class="kss-parameters__description">Secondary border applied to right side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--secondary--right</code>
+          <span>Secondary border applied to right side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--secondary--bottom</code>
-          <div class="kss-parameters__description">Secondary border applied to bottom side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--secondary--bottom</code>
+          <span>Secondary border applied to bottom side.</span>
         </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.has-border--secondary--left</code>
-          <div class="kss-parameters__description">Secondary border applied to left side.</div>
+        <li class="has-inline-items">
+          <code>.has-border--secondary--left</code>
+          <span>Secondary border applied to left side.</span>
         </li>
       </ul>
+
+    </div>
+
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-50-5" class="kss-section kss-section--depth-2">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-50-5">Link to this Section</a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Spacing Utilities
+        </h2>
+      </header>
+
+      <p>@mixin container-spacing()</p>
+
+
 
     </div>
 

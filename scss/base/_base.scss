@@ -36,15 +36,15 @@ Styleguide 2
 
 // Titles
 //
-// .title-1	- Equivalent to an H1's default state.
-// .title-2	- Equivalent to an H2's default state.
-// .title-3	- Equivalent to an H3's default state.
-// .title-4	- Equivalent to an H4's default state.
-// .title-5	- Equivalent to an H5's default state.
-// .title-6	- Equivalent to an H6's default state.
+// Every heading has an equivalent `.title-[#]` class that corresponds to its
+// styles. This allows for HTML present to always be semantic, even if it needs
+// to be rendered in a way that's tied to a different heading.
 //
-// Markup:
-// <span class="{{modifier_class}}">Title Example for {{modifier_class}}</span>
+// For example, if you needed an H3 tag to look like an H1, rather than putting
+// an H1 where it didn't belong, you could use `<h3 class="title-1">Title</h3>`
+// to achieve the desired look.
+//
+// Markup: titles.html
 //
 // Styleguide 2.1
 
@@ -52,6 +52,11 @@ Styleguide 2
 	font-family: $title-font-family-primary;
 	color: $title-font-color-primary;
 	margin: 0 0 $spacing-inner 0;
+
+	p + & {
+		margin: $spacing-outer 0 $spacing-inner 0;
+	}
+
 }
 
 .title-1 {
@@ -120,7 +125,7 @@ p,
 // Links
 //
 // Markup:
-// <a href="">An example link</a>
+// <p><a href="">An example link</a></p>
 //
 // Styleguide 2.3
 
@@ -151,8 +156,11 @@ a {
 //
 // Styleguide 2.4
 
-ul, ol, dl {
+ul,
+ol,
+dl {
 	margin: $spacing-outer 0;
+	padding: 0;
 }
 
 li {
@@ -202,7 +210,7 @@ li {
 dt {
 
 	@extend .title-5;
-	margin-top: $spacing-inner;
+	margin: $spacing-inner 0 0 0;
 
 	dl + & {
 		border-top: $border-width-primary solid $border-color-primary;

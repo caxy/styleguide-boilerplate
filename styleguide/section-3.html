@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
+
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
@@ -35,29 +36,6 @@
     </li>
     <li class="menu-item">
       <a href="section-3.html">Forms and Form Elements</a>
-      <ul class="has-menu-items">
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-1">Form Elements</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-1-2">Form Fields</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-1-3">Fieldsets</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-2">Forms</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-2-2">Inline Form</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-2-3">Basic Form</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-3.html#kssref-3-2-5">Search Form</a>
-          </li>
-      </ul>
     </li>
     <li class="menu-item">
       <a href="section-4.html">Buttons and Button Contexts</a>
@@ -66,7 +44,7 @@
       <a href="section-10.html">Page-Level Containers</a>
     </li>
     <li class="menu-item">
-      <a href="section-15.html">Panels and Cards</a>
+      <a href="section-15.html">Containers</a>
     </li>
     <li class="menu-item">
       <a href="section-20.html">Menus</a>
@@ -79,18 +57,39 @@
 
 <main role="main" class="page-main">
 
+
+
       <div id="kssref-3" class="kss-section kss-section--depth-1">
 
-      <header class="kss-header has-border--bottom">
-        <small>
-          <a class="kss-title__permalink" href="#kssref-3">
-            Section 
-              3
-          </a> 
-        </small>
+      <header>
         <h1 class="kss-title kss-title--level-1">
           Forms and Form Elements
         </h1>
+        
+        <ul class="table-of-contents">
+            <li>
+              <a href="section-3.html#kssref-3-1">Form Elements</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-1-2">Form Fields</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-1-3">Fieldsets</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-2">Forms</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-2-2">Inline Form</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-2-3">Basic Form</a>
+            </li>
+            <li>
+              <a href="section-3.html#kssref-3-2-5">Search Form</a>
+            </li>
+        </ul>
+
       </header>
 
 
@@ -100,15 +99,13 @@
 
 
       </div>
+
       <hr />
       <section id="kssref-3-1" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1">
-            Section 
-              3.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Form Elements
@@ -122,23 +119,20 @@
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2">
-            Section 
-              3.1.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Form Fields
         </h3>
       </header>
 
-      <div class="kss-description">
-        <p>All form fields should be wrapped inside of their respective label
+      <p>All form fields should be wrapped inside of their respective label
 elements. This accomplishes a few things:</p>
 <ul>
 <li>Clicking on the label element will bring focus to its input regardless of whether a <code>for</code> value is set</li>
@@ -147,7 +141,6 @@ elements. This accomplishes a few things:</p>
 <li>A feedback class (error, alert, success, etc) applied to the label element will be inherited by all content, which leads to less markup</li>
 </ul>
 
-      </div>
 
 
     </div>
@@ -155,15 +148,13 @@ elements. This accomplishes a few things:</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2-1" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2-1">
-            Section 
-              3.1.2.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2-1">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Text Inputs
@@ -183,26 +174,26 @@ elements. This accomplishes a few things:</p>
         <p class="title-5 has-border--primary--bottom">
           Display Examples:
         </p>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-        <div class="kss-modifier__example">
-          <label for="styleguide-text-input-1" class="form-text">
+        <div class="copy">
+          <span class="title-6">Default styling</span>
+          <div>
+            <label for="styleguide-text-input-1" class="form-text">
   <span id="input-description-1" class="field-description">Input Description</span>
   <input id="styleguide-text-input-1" class="[modifier class]" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
 </label>
+          </div>
         </div>
-        <div class="kss-modifier__name kss-style">
-          :focus
-        </div>
-        <div class="kss-modifier__description kss-style">
-          focus state
-        </div>
-        <div class="kss-modifier__example">
-          <label for="styleguide-text-input-1" class="form-text">
+        <div class="copy">
+          <span class="title-6">:focus</span>
+          <p>
+            focus state
+          </p>
+          <div>
+            <label for="styleguide-text-input-1" class="form-text">
   <span id="input-description-1" class="field-description">Input Description</span>
   <input id="styleguide-text-input-1" class="pseudo-class-focus" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
 </label>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -215,15 +206,13 @@ elements. This accomplishes a few things:</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2-2" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2-2">
-            Section 
-              3.1.2.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2-2">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Text Areas
@@ -243,11 +232,12 @@ elements. This accomplishes a few things:</p>
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <label for="styleguide-textarea" class="form-text">
+          <div>
+            <label for="styleguide-textarea" class="form-text">
   <span id="input-description-2" class="field-description">Input Description</span>
   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
 </label>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -260,15 +250,13 @@ elements. This accomplishes a few things:</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2-3" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2-3">
-            Section 
-              3.1.2.3
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2-3">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Select Menus
@@ -288,8 +276,8 @@ elements. This accomplishes a few things:</p>
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <label class="form-select" for="styleguide-select">
+          <div>
+            <label class="form-select" for="styleguide-select">
   <select id="styleguide-select" name="styleguide-select">
     <option>Select a Value</option>
     <option value="val1">Option 1</option>
@@ -297,6 +285,7 @@ elements. This accomplishes a few things:</p>
     <option value="val3">Option 3</option>
   </select>
 </label>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -313,15 +302,13 @@ elements. This accomplishes a few things:</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2-4" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2-4">
-            Section 
-              3.1.2.4
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2-4">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Checkboxes
@@ -341,11 +328,12 @@ elements. This accomplishes a few things:</p>
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <label class="form-checkbox" for="styleguide-checkbox">
+          <div>
+            <label class="form-checkbox" for="styleguide-checkbox">
   <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox-desc" value="val" />
   <span id="checkbox-desc" class="field-description">Value</span>
  </label>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -358,15 +346,13 @@ elements. This accomplishes a few things:</p>
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-2-5" class="kss-section kss-section--depth-4">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-2-5">
-            Section 
-              3.1.2.5
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-2-5">Link to this Section</a> 
         </small>
         <h4 class="kss-title kss-title--level-4">
           Radio Inputs
@@ -378,12 +364,10 @@ elements. This accomplishes a few things:</p>
         </dl>
       </header>
 
-      <div class="kss-description">
-        <p>Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
+      <p>Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
 which present a Yes/No choice, radios present a This-or-That situation. As such, they always
 need a context and should always be contained inside of a <code>fieldset</code> element with a <code>legend</code>.</p>
 
-      </div>
 
 
     </div>
@@ -392,8 +376,8 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <fieldset class="has-radios" for="styleguide-radio">
+          <div>
+            <fieldset class="has-radios" for="styleguide-radio">
   <legend>Input Description</legend>
   <label class="form-radio" for="styleguide-radio-1">
 		<input type="radio" id="styleguide-radio-1" name="styleguide-radio-1" aria-labelledby="radio-desc-1" value="val1" />
@@ -423,6 +407,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 		<span id="radio-desc-6" class="field-description">Value 3</span>
 	 </label>
 </fieldset>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -461,15 +446,13 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 
 
       </section>
+
       <hr />
       <section id="kssref-3-1-3" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-1-3">
-            Section 
-              3.1.3
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-1-3">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Fieldsets
@@ -489,8 +472,8 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <fieldset class="has-checkboxes" for="styleguide-checkbox">
+          <div>
+            <fieldset class="has-checkboxes" for="styleguide-checkbox">
   <legend>Fieldset Description</legend>
   <label class="form-checkbox" for="styleguide-checkbox-1">
 		<input type="checkbox" id="styleguide-checkbox-1" name="styleguide-checkbox-1" aria-labelledby="checkbox-desc-1" value="val1" />
@@ -520,6 +503,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 		<span id="checkbox-desc-6" class="field-description">Value 3</span>
 	 </label>
 </fieldset>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -558,15 +542,13 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 
 
       </section>
+
       <hr />
       <section id="kssref-3-2" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2">
-            Section 
-              3.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Forms
@@ -580,15 +562,13 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 
 
       </section>
+
       <hr />
       <section id="kssref-3-2-2" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-2">
-            Section 
-              3.2.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-2-2">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Inline Form
@@ -608,8 +588,8 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <form class="has-inline-elements">
+          <div>
+            <form class="has-inline-elements">
   <label for="inline-form-text-input-1" class="form-text">
     <span id="inline-form-description-1" class="field-description">Input Description</span>
     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
@@ -620,6 +600,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
   </label>
   <button type="submit">search</button>
 </form>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -639,15 +620,13 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 
 
       </section>
+
       <hr />
       <section id="kssref-3-2-3" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-3">
-            Section 
-              3.2.3
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-2-3">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Basic Form
@@ -667,8 +646,8 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <form class="form-basic">
+          <div>
+            <form class="form-basic">
   <h3>Form Title</h3>
   <label for="basic-form-text-input-1" class="form-text">
     <span id="basic-form-description-1" class="field-description">Input Description</span>
@@ -683,6 +662,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
     <button type="submit">cancel</button>
   </div>
 </form>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -706,15 +686,13 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 
 
       </section>
+
       <hr />
       <section id="kssref-3-2-5" class="kss-section kss-section--depth-3">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-5">
-            Section 
-              3.2.5
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-3-2-5">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Search Form
@@ -736,13 +714,14 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <form class="search-form">
+          <div>
+            <form class="search-form">
   <label class="form-text">
     <input placeholder="Enter a search term." type="search" />
   </label>
   <button value="search" type="submit"></button>
 </form>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>

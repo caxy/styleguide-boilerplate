@@ -85,6 +85,9 @@ button,
 
 .has-buttons {
 
+	margin: $spacing-outer 0;
+	display: block;
+
 	%button {
 
 		& + %button {

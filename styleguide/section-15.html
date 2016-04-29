@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
+
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
@@ -43,15 +44,7 @@
       <a href="section-10.html">Page-Level Containers</a>
     </li>
     <li class="menu-item">
-      <a href="section-15.html">Panels and Cards</a>
-      <ul class="has-menu-items">
-          <li class="menu-item">
-            <a href="section-15.html#kssref-15-1">Panels</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-15.html#kssref-15-2">Cards</a>
-          </li>
-      </ul>
+      <a href="section-15.html">Containers</a>
     </li>
     <li class="menu-item">
       <a href="section-20.html">Menus</a>
@@ -64,18 +57,27 @@
 
 <main role="main" class="page-main">
 
+
+
       <div id="kssref-15" class="kss-section kss-section--depth-1">
 
-      <header class="kss-header has-border--bottom">
-        <small>
-          <a class="kss-title__permalink" href="#kssref-15">
-            Section 
-              15
-          </a> 
-        </small>
+      <header>
         <h1 class="kss-title kss-title--level-1">
-          Panels and Cards
+          Containers
         </h1>
+        
+        <ul class="table-of-contents">
+            <li>
+              <a href="section-15.html#kssref-15-1">Sections and Articles</a>
+            </li>
+            <li>
+              <a href="section-15.html#kssref-15-2">Panels</a>
+            </li>
+            <li>
+              <a href="section-15.html#kssref-15-3">Cards</a>
+            </li>
+        </ul>
+
       </header>
 
 
@@ -85,15 +87,33 @@
 
 
       </div>
+
       <hr />
       <section id="kssref-15-1" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-15-1">
-            Section 
-              15.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-15-1">Link to this Section</a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Sections and Articles
+        </h2>
+      </header>
+
+
+
+    </div>
+
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-15-2" class="kss-section kss-section--depth-2">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-15-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Panels
@@ -107,15 +127,13 @@
         </dl>
       </header>
 
-      <div class="kss-description">
-        <p>Panels are general groupings of content that need to be separated
+      <p>Panels are general groupings of content that need to be separated
 from the main flow of copy on a page, to either highlight content
 or direct a user towards areas to learn more via a CTA.</p>
 <p>Ideally there should not be more than 2-3 panels per page, since
 their point is to highlight content, and if everything is
 highlighted, nothing is.</p>
 
-      </div>
 
 
     </div>
@@ -124,8 +142,8 @@ highlighted, nothing is.</p>
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <div class="panel">
+          <div>
+            <div class="panel">
   <h2 class="title-1">Simple Panel Title</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
 </div>
@@ -155,6 +173,7 @@ highlighted, nothing is.</p>
   <h2 class="title-1">Fullbleed Panel Title</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
 </div>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -193,15 +212,13 @@ highlighted, nothing is.</p>
 
 
       </section>
-      <hr />
-      <section id="kssref-15-2" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <hr />
+      <section id="kssref-15-3" class="kss-section kss-section--depth-2">
+
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-15-2">
-            Section 
-              15.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-15-3">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Cards
@@ -215,12 +232,10 @@ highlighted, nothing is.</p>
         </dl>
       </header>
 
-      <div class="kss-description">
-        <p>Cards should contain a maximum of four types of atoms. Cards are
+      <p>Cards should contain a maximum of four types of atoms. Cards are
 basically beefed-up CTAs, so if a situation requires more content,
 a different pattern should be leveraged instead (eg. panel).</p>
 
-      </div>
 
 
     </div>
@@ -229,12 +244,13 @@ a different pattern should be leveraged instead (eg. panel).</p>
         <p class="title-5 has-border--primary--bottom">
           Display Example:
         </p>
-        <div class="kss-modifier__example">
-          <div class="card">
+          <div>
+            <div class="card">
   <h3>Card Title</h3>
   <p>Officia ex consequatur modi quasi facilis!</p>
   <a href="">Read More</a>
 </div>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>

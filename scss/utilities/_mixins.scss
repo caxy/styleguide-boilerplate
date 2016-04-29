@@ -34,6 +34,8 @@
 
 
 
+// REM Legacy Support
+//
 // Input the REM value and a pixel value will be added as well for
 // legacy support.
 //
@@ -70,6 +72,7 @@
 @mixin has-inline-elements() {
 
 	vertical-align: baseline;
+	margin: $spacing-outer 0;
 
 	& > * {
 		display: inline-block;
@@ -169,7 +172,9 @@
 //
 // These classes should not be extended.
 //
-// @mixin border-primary(position)
+// @mixin border-primary($position)
+//
+// $position	-	top/right/bottom/left
 //
 // .has-border--primary	- Primary border applied to all sides.
 // .has-border--primary--top	- Primary border applied to top side.
@@ -206,7 +211,9 @@
 //
 // These classes should not be extended.
 //
-// @mixin border-secondary(position)
+// @mixin border-secondary($position)
+//
+// $position	-	top/right/bottom/left
 //
 // .has-border--secondary	- Secondary border applied to all sides.
 // .has-border--secondary--top	- Secondary border applied to top side.
@@ -238,3 +245,15 @@
 	.has-border--secondary--left {
 		@include border-secondary(left);
 	}
+
+
+
+// Spacing Utilities
+//
+// @mixin container-spacing()
+//
+// Styleguide 50.5
+
+@mixin spacing-container() {
+
+}

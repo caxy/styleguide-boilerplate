@@ -1,5 +1,5 @@
 
-// Panels and Cards
+// Containers
 //
 // Styleguide 15
 
@@ -7,6 +7,17 @@
 	padding: $spacing-inner;
 }
 
+
+
+// Sections and Articles
+//
+// Styleguide 15.1
+
+section,
+article {
+	padding: $spacing-inner;
+	margin-bottom: $spacing-outer;
+}
 
 
 // Panels
@@ -25,7 +36,7 @@
 //
 // Markup: container_panel.html
 //
-// Styleguide 15.1
+// Styleguide 15.2
 
 .panel,
 .panel-fullbleed {
@@ -78,7 +89,7 @@
 //   <a href="">Read More</a>
 // </div>
 // 
-// Styleguide 15.2
+// Styleguide 15.3
 
 .card {
 	

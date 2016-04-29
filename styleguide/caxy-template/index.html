@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
+
   {{{styles}}}
 </head>
 <body id="kss-node">
@@ -29,17 +30,6 @@
   {{#eachRoot}}
     <li class="menu-item">
       <a href="section-{{referenceURI}}.html">{{header}}</a>
-    {{#ifReference ../rootName}}
-      <ul class="has-menu-items">
-      {{#eachSection reference}}
-        {{#ifDepth 2 ../../../options.[nav-depth]}}
-          <li class="menu-item">
-            <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-          </li>
-        {{/ifDepth}}
-      {{/eachSection}}
-      </ul>
-    {{/ifReference}}
     </li>
   {{/eachRoot}}
   </ul>
@@ -58,7 +48,9 @@
     The "root" element comes first in this loop, and can be detected using
     the "#ifDepth 1" block as seen below.
   }}
+
   {{#eachSection rootName}}
+
     {{#ifDepth 1}}
       <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{else}}
@@ -66,15 +58,27 @@
       <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{/ifDepth}}
 
-      <header class="kss-header has-border--bottom">
+    {{#ifDepth 1}}
+      <header>
+        <h{{depth}} class="kss-title kss-title--level-{{depth}}">
+          {{header}}
+        </h{{depth}}>
+        
+        <ul class="table-of-contents">
+        {{#eachSection reference}}
+          {{#ifDepth 2 ../../../options.[nav-depth]}}
+            <li>
+              <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+            </li>
+          {{/ifDepth}}
+        {{/eachSection}}
+        </ul>
+
+      </header>
+    {{else}}
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-            Section {{#ifNumeric reference}}
-              {{reference}}
-            {{else}}
-              {{autoincrement}}
-            {{/ifNumeric}}
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">Link to this Section</a> 
         </small>
         <h{{depth}} class="kss-title kss-title--level-{{depth}}">
           {{header}}
@@ -91,19 +95,18 @@
         </dl>
         {{/if}}
       </header>
+    {{/ifDepth}}
 
     {{#if description}}
-      <div class="kss-description">
-        {{{description}}}
-      </div>
+      {{{description}}}
     {{/if}}
 
     {{#if parameters}}
       <ul class="kss-parameters">
       {{#eachParameter}}
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">{{name}}</code>
-          <div class="kss-parameters__description">{{{description}}}</div>
+        <li class="has-inline-items">
+          <code>{{name}}</code>
+          <span>{{{description}}}</span>
         </li>
       {{/eachParameter}}
       </ul>
@@ -119,22 +122,22 @@
         </p>
         {{/unless}}
       {{#if modifiers}}
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
+        <div class="copy">
+          <span class="title-6">Default styling</span>
       {{/if}}
-        <div class="kss-modifier__example">
-          {{{markup}}}
+          <div>
+            {{{markup}}}
+          </div>
         </div>
       {{#eachModifier}}
-        <div class="kss-modifier__name kss-style">
-          {{name}}
-        </div>
-        <div class="kss-modifier__description kss-style">
-          {{{description}}}
-        </div>
-        <div class="kss-modifier__example">
-          {{{markup}}}
+        <div class="copy">
+          <span class="title-6">{{name}}</span>
+          <p>
+            {{{description}}}
+          </p>
+          <div>
+            {{{markup}}}
+          </div>
         </div>
       {{/eachModifier}}
       </div>

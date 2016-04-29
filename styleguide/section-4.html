@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
+
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
@@ -38,20 +39,12 @@
     </li>
     <li class="menu-item">
       <a href="section-4.html">Buttons and Button Contexts</a>
-      <ul class="has-menu-items">
-          <li class="menu-item">
-            <a href="section-4.html#kssref-4-1">Buttons</a>
-          </li>
-          <li class="menu-item">
-            <a href="section-4.html#kssref-4-2">Has-Buttons Contexts</a>
-          </li>
-      </ul>
     </li>
     <li class="menu-item">
       <a href="section-10.html">Page-Level Containers</a>
     </li>
     <li class="menu-item">
-      <a href="section-15.html">Panels and Cards</a>
+      <a href="section-15.html">Containers</a>
     </li>
     <li class="menu-item">
       <a href="section-20.html">Menus</a>
@@ -64,18 +57,24 @@
 
 <main role="main" class="page-main">
 
+
+
       <div id="kssref-4" class="kss-section kss-section--depth-1">
 
-      <header class="kss-header has-border--bottom">
-        <small>
-          <a class="kss-title__permalink" href="#kssref-4">
-            Section 
-              4
-          </a> 
-        </small>
+      <header>
         <h1 class="kss-title kss-title--level-1">
           Buttons and Button Contexts
         </h1>
+        
+        <ul class="table-of-contents">
+            <li>
+              <a href="section-4.html#kssref-4-1">Buttons</a>
+            </li>
+            <li>
+              <a href="section-4.html#kssref-4-2">Has-Buttons Contexts</a>
+            </li>
+        </ul>
+
       </header>
 
 
@@ -85,15 +84,13 @@
 
 
       </div>
+
       <hr />
       <section id="kssref-4-1" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-4-1">
-            Section 
-              4.1
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-4-1">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Buttons
@@ -105,10 +102,8 @@
         </dl>
       </header>
 
-      <div class="kss-description">
-        <p>Button text should always be [chose a case] and no longer than [X] words long.</p>
+      <p>Button text should always be [chose a case] and no longer than [X] words long.</p>
 
-      </div>
 
 
     </div>
@@ -117,38 +112,38 @@
         <p class="title-5 has-border--primary--bottom">
           Display Examples:
         </p>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
+        <div class="copy">
+          <span class="title-6">Default styling</span>
+          <div>
+            <button class="[modifier class]">Button</button>
+          </div>
         </div>
-        <div class="kss-modifier__example">
-          <button class="[modifier class]">Button</button>
+        <div class="copy">
+          <span class="title-6">::hover</span>
+          <p>
+            Hover state
+          </p>
+          <div>
+            <button class="pseudo-class- pseudo-class-hover">Button</button>
+          </div>
         </div>
-        <div class="kss-modifier__name kss-style">
-          ::hover
+        <div class="copy">
+          <span class="title-6">.button-primary</span>
+          <p>
+            When a button should be highlighted/is the main action in a set, use this class.
+          </p>
+          <div>
+            <button class="button-primary">Button</button>
+          </div>
         </div>
-        <div class="kss-modifier__description kss-style">
-          Hover state
-        </div>
-        <div class="kss-modifier__example">
-          <button class="pseudo-class- pseudo-class-hover">Button</button>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .button-primary
-        </div>
-        <div class="kss-modifier__description kss-style">
-          When a button should be highlighted/is the main action in a set, use this class.
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button-primary">Button</button>
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .button-primary::hover
-        </div>
-        <div class="kss-modifier__description kss-style">
-          When a button should be highlighted/is the main action in a set, use this class.
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button-primary pseudo-class- pseudo-class-hover">Button</button>
+        <div class="copy">
+          <span class="title-6">.button-primary::hover</span>
+          <p>
+            When a button should be highlighted/is the main action in a set, use this class.
+          </p>
+          <div>
+            <button class="button-primary pseudo-class- pseudo-class-hover">Button</button>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
@@ -158,15 +153,13 @@
 
 
       </section>
+
       <hr />
       <section id="kssref-4-2" class="kss-section kss-section--depth-2">
 
-      <header class="kss-header has-border--bottom">
+      <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-4-2">
-            Section 
-              4.2
-          </a> 
+          <a class="kss-title__permalink" href="#kssref-4-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Has-Buttons Contexts
@@ -180,11 +173,9 @@
         </dl>
       </header>
 
-      <div class="kss-description">
-        <p>Like all context classes, a container with <code>.has-buttons</code> applied should only have
+      <p>Like all context classes, a container with <code>.has-buttons</code> applied should only have
 elements that are buttons or have a <code>.button</code> class applied.</p>
 
-      </div>
 
 
     </div>
@@ -193,38 +184,38 @@ elements that are buttons or have a <code>.button</code> class applied.</p>
         <p class="title-5 has-border--primary--bottom">
           Display Examples:
         </p>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-        <div class="kss-modifier__example">
-          <div class="has-buttons [modifier class]">
+        <div class="copy">
+          <span class="title-6">Default styling</span>
+          <div>
+            <div class="has-buttons [modifier class]">
   <button class="button-primary">Primary Button</button>
   <button>Default Button</button>
 </div>
+          </div>
         </div>
-        <div class="kss-modifier__name kss-style">
-          .right
-        </div>
-        <div class="kss-modifier__description kss-style">
-          right aligns the buttons inside the container
-        </div>
-        <div class="kss-modifier__example">
-          <div class="has-buttons right">
+        <div class="copy">
+          <span class="title-6">.right</span>
+          <p>
+            right aligns the buttons inside the container
+          </p>
+          <div>
+            <div class="has-buttons right">
   <button class="button-primary">Primary Button</button>
   <button>Default Button</button>
 </div>
+          </div>
         </div>
-        <div class="kss-modifier__name kss-style">
-          .stacked
-        </div>
-        <div class="kss-modifier__description kss-style">
-          stacks the buttons inside the container
-        </div>
-        <div class="kss-modifier__example">
-          <div class="has-buttons stacked">
+        <div class="copy">
+          <span class="title-6">.stacked</span>
+          <p>
+            stacks the buttons inside the container
+          </p>
+          <div>
+            <div class="has-buttons stacked">
   <button class="button-primary">Primary Button</button>
   <button>Default Button</button>
 </div>
+          </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>

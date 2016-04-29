@@ -2,6 +2,13 @@
 //
 // Styleguide 3.2
 
+form {
+  padding: $spacing-inner 0;
+  margin-bottom: $spacing-outer;
+}
+
+
+
 // Inline Form 
 //
 // Markup:
@@ -85,6 +92,8 @@
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
+  padding: 0;
+  margin-bottom: 0;
 
   .form-text,
   button.form-submit {
