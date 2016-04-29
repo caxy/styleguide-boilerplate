@@ -602,7 +602,7 @@ select {
   min-width: 25rem; }
   .form-text .field-description {
     line-height: 1.5rem;
-    margin: 2rem 0 0.5rem; }
+    margin: 0 0 0.5rem; }
   .form-text input[type="tel"],
   .form-text input[type="text"],
   .form-text input[type="number"],
@@ -737,13 +737,15 @@ form {
 .form-basic {
   max-width: 40rem; }
   .form-basic label {
-    margin: 2rem 0; }
+    margin: 0 0 2rem 0; }
     .form-basic label input,
     .form-basic label textarea {
       display: block; }
   .form-basic .field-text {
     display: block;
     margin: 2rem 0; }
+  .form-basic .has-buttons {
+    margin-top: 0; }
 
 .search-form {
   position: relative;
