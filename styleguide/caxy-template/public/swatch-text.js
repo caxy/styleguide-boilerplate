@@ -17,6 +17,6 @@ function renderColorValues() {
 	).getPropertyValue('content');
 
 	// values are returned wrapped in ". Need to remove.
-	$(this).prepend(colorInfo.replace(/\"/g,''));
+	$(this).prepend(colorInfo.replace(/\"/g,'').replace(/\-/g,' '));
 
 }
