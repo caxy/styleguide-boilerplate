@@ -49,22 +49,22 @@
 
 $site-red: (
 	'base': #CC0000,
-	'light': #F37171,
-	'dark': #930000
+	'light': lighten(#CC0000, 20%),
+	'dark': darken(#CC0000, 10%)
 	);
 $site-blue: (
 	'base': #3366CC,
-	'light': #7EA2E8,
-	'dark': #2A54A6
+	'light': lighten(#3366CC, 20%),
+	'dark': darken(#3366CC, 10%)
 	);
 $site-green: (
-	'base': #096321,
-	'light': #11b73d,
-	'dark': #0a6222
+	'base': #006622,
+	'light': lighten(#006622, 20%),
+	'dark': darken(#006622, 10%)
 	);
 
 $site-grey: (
-	'base': #949494,  // bumped from #979797 to pass AA @ 18px
+	'base': #777,
 	'light': #C6C6C6,
 	'dark': #333
 	);
