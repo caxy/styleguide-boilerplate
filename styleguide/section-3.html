@@ -6,21 +6,23 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>KSS Style Guide</title>
+  <title>Style Guide - Version 1.0</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-
+  <script src="https://use.typekit.net/hyf8mjc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
 <body id="kss-node">
 
 <header class="kss-header page-header">
-  <h1 class="kss-doc-title">KSS Style Guide</h1>
+  <h1 class="kss-doc-title">Style Guide</h1>
+  <span class="version">version 1.0</span>
 </header>
 
 <nav class="navigation-site">
@@ -29,7 +31,7 @@
       <a href="./index.html">Overview</a>
     </li>
     <li class="menu-item">
-      <a href="section-1.html">Colors</a>
+      <a href="section-1.html">Colors, Fonts and Icons</a>
     </li>
     <li class="menu-item">
       <a href="section-2.html">Typography</a>
@@ -38,19 +40,7 @@
       <a href="section-3.html">Forms and Form Elements</a>
     </li>
     <li class="menu-item">
-      <a href="section-4.html">Buttons and Button Contexts</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-10.html">Page-Level Containers</a>
-    </li>
-    <li class="menu-item">
       <a href="section-15.html">Containers</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-20.html">Menus</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-50.html">Utilities</a>
     </li>
   </ul>
 </nav>
@@ -65,32 +55,50 @@
         <h1 class="kss-title kss-title--level-1">
           Forms and Form Elements
         </h1>
-        
-        <ul class="table-of-contents">
-            <li>
-              <a href="section-3.html#kssref-3-1">Form Elements</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-1-2">Form Fields</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-1-3">Fieldsets</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-2">Forms</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-2-2">Inline Form</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-2-3">Basic Form</a>
-            </li>
-            <li>
-              <a href="section-3.html#kssref-3-2-5">Search Form</a>
-            </li>
-        </ul>
-
       </header>
+
+      <h2>Sections:</h2>
+      <ul class="table-of-contents">
+          <li>
+            <a href="section-3.html#kssref-3-1">Form Elements</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-1-2">Form Fields</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-1-3">File Upload Fields</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-1-4">Fieldsets</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-2">Buttons and Button Contexts</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-2-1">Buttons</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-2-2">Has-Buttons Contexts</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-5">Form Validation</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-5-1">Required Fields</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-6-2">Feedback Messaging</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-10">Forms</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-10-1">Inline Form</a>
+          </li>
+          <li>
+            <a href="section-3.html#kssref-3-10-2">Basic Form</a>
+          </li>
+      </ul>
 
 
 
@@ -132,7 +140,9 @@
         </h3>
       </header>
 
-      <p>All form fields should be wrapped inside of their respective label
+        <p>Form fields will fill their containers 100% unless the sepcific
+situation dictates otherwise. This is to mainly aid in a mobile-first approach.</p>
+<p>All form fields should be wrapped inside of their respective label
 elements. This accomplishes a few things:</p>
 <ul>
 <li>Clicking on the label element will bring focus to its input regardless of whether a <code>for</code> value is set</li>
@@ -177,9 +187,9 @@ elements. This accomplishes a few things:</p>
         <div class="copy">
           <span class="title-6">Default styling</span>
           <div>
-            <label for="styleguide-text-input-1" class="form-text">
-  <span id="input-description-1" class="field-description">Input Description</span>
-  <input id="styleguide-text-input-1" class="[modifier class]" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+            <label for="styleguide-text-input-1" class="form-textfield">
+  <span id="input-title-1" class="field-title">Input Title</span>
+  <input id="styleguide-text-input-1" class="[modifier class]" name="styleguide-text-input-1" aria-labelledby="input-title-1" type="text" title="Input Title" value="" />
 </label>
           </div>
         </div>
@@ -189,18 +199,18 @@ elements. This accomplishes a few things:</p>
             focus state
           </p>
           <div>
-            <label for="styleguide-text-input-1" class="form-text">
-  <span id="input-description-1" class="field-description">Input Description</span>
-  <input id="styleguide-text-input-1" class="pseudo-class-focus" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+            <label for="styleguide-text-input-1" class="form-textfield">
+  <span id="input-title-1" class="field-title">Input Title</span>
+  <input id="styleguide-text-input-1" class="pseudo-class-focus" name="styleguide-text-input-1" aria-labelledby="input-title-1" type="text" title="Input Title" value="" />
 </label>
           </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;styleguide-text-input-1&quot; class=&quot;form-text&quot;&gt;
-  &lt;span id=&quot;input-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
-  &lt;input id=&quot;styleguide-text-input-1&quot; class=&quot;[modifier class]&quot; name=&quot;styleguide-text-input-1&quot; aria-labelledby=&quot;input-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;styleguide-text-input-1&quot; class=&quot;form-textfield&quot;&gt;
+  &lt;span id=&quot;input-title-1&quot; class=&quot;field-title&quot;&gt;Input Title&lt;/span&gt;
+  &lt;input id=&quot;styleguide-text-input-1&quot; class=&quot;[modifier class]&quot; name=&quot;styleguide-text-input-1&quot; aria-labelledby=&quot;input-title-1&quot; type=&quot;text&quot; title=&quot;Input Title&quot; value=&quot;&quot; /&gt;
 &lt;/label&gt;</code></pre>
       </div>
 
@@ -233,18 +243,18 @@ elements. This accomplishes a few things:</p>
           Display Example:
         </p>
           <div>
-            <label for="styleguide-textarea" class="form-text">
-  <span id="input-description-2" class="field-description">Input Description</span>
-  <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
+            <label for="styleguide-textarea" class="form-textfield">
+  <span id="input-title-2" class="field-title">Input Title</span>
+  <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-title-2" title="Input Title" value=""></textarea>
 </label>
           </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;styleguide-textarea&quot; class=&quot;form-text&quot;&gt;
-  &lt;span id=&quot;input-description-2&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
-  &lt;textarea id=&quot;styleguide-textarea&quot; name=&quot;styleguide-textarea&quot; aria-labelledby=&quot;input-description-2&quot; title=&quot;Input Description&quot; value=&quot;&quot;&gt;&lt;/textarea&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;styleguide-textarea&quot; class=&quot;form-textfield&quot;&gt;
+  &lt;span id=&quot;input-title-2&quot; class=&quot;field-title&quot;&gt;Input Title&lt;/span&gt;
+  &lt;textarea id=&quot;styleguide-textarea&quot; name=&quot;styleguide-textarea&quot; aria-labelledby=&quot;input-title-2&quot; title=&quot;Input Title&quot; value=&quot;&quot;&gt;&lt;/textarea&gt;
 &lt;/label&gt;</code></pre>
       </div>
 
@@ -278,12 +288,15 @@ elements. This accomplishes a few things:</p>
         </p>
           <div>
             <label class="form-select" for="styleguide-select">
-  <select id="styleguide-select" name="styleguide-select">
-    <option>Select a Value</option>
-    <option value="val1">Option 1</option>
-    <option value="val2">Option 2</option>
-    <option value="val3">Option 3</option>
-  </select>
+  <span id="select-title" class="field-title">Select Title</span>
+  <div class="form-select-wrapper">
+    <select id="styleguide-select" name="styleguide-select" aria-labelledby="select-title">
+      <option>Select a Value</option>
+      <option value="val1">Option 1</option>
+      <option value="val2">Option 2</option>
+      <option value="val3">Option 3</option>
+    </select>
+  </div>
 </label>
           </div>
         </div>
@@ -291,12 +304,15 @@ elements. This accomplishes a few things:</p>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label class=&quot;form-select&quot; for=&quot;styleguide-select&quot;&gt;
-  &lt;select id=&quot;styleguide-select&quot; name=&quot;styleguide-select&quot;&gt;
-    &lt;option&gt;Select a Value&lt;/option&gt;
-    &lt;option value=&quot;val1&quot;&gt;Option 1&lt;/option&gt;
-    &lt;option value=&quot;val2&quot;&gt;Option 2&lt;/option&gt;
-    &lt;option value=&quot;val3&quot;&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;span id=&quot;select-title&quot; class=&quot;field-title&quot;&gt;Select Title&lt;/span&gt;
+  &lt;div class=&quot;form-select-wrapper&quot;&gt;
+    &lt;select id=&quot;styleguide-select&quot; name=&quot;styleguide-select&quot; aria-labelledby=&quot;select-title&quot;&gt;
+      &lt;option&gt;Select a Value&lt;/option&gt;
+      &lt;option value=&quot;val1&quot;&gt;Option 1&lt;/option&gt;
+      &lt;option value=&quot;val2&quot;&gt;Option 2&lt;/option&gt;
+      &lt;option value=&quot;val3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/label&gt;</code></pre>
       </div>
 
@@ -330,8 +346,15 @@ elements. This accomplishes a few things:</p>
         </p>
           <div>
             <label class="form-checkbox" for="styleguide-checkbox">
-  <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox-desc" value="val" />
-  <span id="checkbox-desc" class="field-description">Value</span>
+  <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox1" value="val" />
+  <i role="presentation"></i>
+  <span id="checkbox1" class="field-title">Value</span>
+ </label><br />
+<label class="form-checkbox" for="styleguide-checkbox-2">
+  <input type="checkbox" id="styleguide-checkbox-2" name="styleguide-checkbox-2" aria-labelledby="checkbox2" aria-describedby="checkbox2desc" value="val" />
+  <i role="presentation"></i>
+  <span id="checkbox2" class="field-title">Value</span>
+  <small id="checkbox2desc">A description for this checkbox.</small>
  </label>
           </div>
         </div>
@@ -339,8 +362,15 @@ elements. This accomplishes a few things:</p>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox&quot; name=&quot;styleguide-checkbox&quot; aria-labelledby=&quot;checkbox-desc&quot; value=&quot;val&quot; /&gt;
-  &lt;span id=&quot;checkbox-desc&quot; class=&quot;field-description&quot;&gt;Value&lt;/span&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox&quot; name=&quot;styleguide-checkbox&quot; aria-labelledby=&quot;checkbox1&quot; value=&quot;val&quot; /&gt;
+  &lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+  &lt;span id=&quot;checkbox1&quot; class=&quot;field-title&quot;&gt;Value&lt;/span&gt;
+ &lt;/label&gt;&lt;br /&gt;
+&lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-2&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-2&quot; name=&quot;styleguide-checkbox-2&quot; aria-labelledby=&quot;checkbox2&quot; aria-describedby=&quot;checkbox2desc&quot; value=&quot;val&quot; /&gt;
+  &lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+  &lt;span id=&quot;checkbox2&quot; class=&quot;field-title&quot;&gt;Value&lt;/span&gt;
+  &lt;small id=&quot;checkbox2desc&quot;&gt;A description for this checkbox.&lt;/small&gt;
  &lt;/label&gt;</code></pre>
       </div>
 
@@ -364,7 +394,7 @@ elements. This accomplishes a few things:</p>
         </dl>
       </header>
 
-      <p>Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
+        <p>Radio inputs are very unique in that they will always to come in a set. Unlike checkboxes,
 which present a Yes/No choice, radios present a This-or-That situation. As such, they always
 need a context and should always be contained inside of a <code>fieldset</code> element with a <code>legend</code>.</p>
 
@@ -381,30 +411,36 @@ need a context and should always be contained inside of a <code>fieldset</code> 
   <legend>Input Description</legend>
   <label class="form-radio" for="styleguide-radio-1">
 		<input type="radio" id="styleguide-radio-1" name="styleguide-radio-1" aria-labelledby="radio-desc-1" value="val1" />
-		<span id="radio-desc-1" class="field-description">Value 1</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-1" class="field-title">Value 1</span>
 	 </label>
   <label class="form-radio" for="styleguide-radio-2">
 		<input type="radio" id="styleguide-radio-2" name="styleguide-radio-1" aria-labelledby="radio-desc-2" value="val2" />
-		<span id="radio-desc-2" class="field-description">Value 2</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-2" class="field-title">Value 2</span>
 	 </label>
   <label class="form-radio" for="styleguide-radio-3">
 		<input type="radio" id="styleguide-radio-3" name="styleguide-radio-1" aria-labelledby="radio-desc-3" value="val3" />
-		<span id="radio-desc-3" class="field-description">Value 3</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-3" class="field-title">Value 3</span>
 	 </label>
 </fieldset>
 <fieldset class="has-radios has-inline-fields" for="styleguide-radio">
   <legend>Input Description with Inline Fields</legend>
   <label class="form-radio" for="second_styleguide-radio-1">
 		<input type="radio" id="second_styleguide-radio-1" name="second_styleguide-radio" aria-labelledby="radio-desc-4" value="val1" />
-		<span id="radio-desc-4" class="field-description">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-4" class="field-title">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
 	 </label>
   <label class="form-radio" for="second_styleguide-radio-2">
 		<input type="radio" id="second_styleguide-radio-2" name="second_styleguide-radio" aria-labelledby="radio-desc-5" value="val2" />
-		<span id="radio-desc-5" class="field-description"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-5" class="field-title"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
 	 </label>
   <label class="form-radio" for="second_styleguide-radio-3">
 		<input type="radio" id="second_styleguide-radio-3" name="second_styleguide-radio" aria-labelledby="radio-desc-6" value="val3" />
-		<span id="radio-desc-6" class="field-description">Value 3</span>
+		<i role="presentation"></i>
+		<span id="radio-desc-6" class="field-title">Value 3</span>
 	 </label>
 </fieldset>
           </div>
@@ -416,30 +452,36 @@ need a context and should always be contained inside of a <code>fieldset</code> 
   &lt;legend&gt;Input Description&lt;/legend&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-1&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-1&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-1&quot; value=&quot;val1&quot; /&gt;
-		&lt;span id=&quot;radio-desc-1&quot; class=&quot;field-description&quot;&gt;Value 1&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-1&quot; class=&quot;field-title&quot;&gt;Value 1&lt;/span&gt;
 	 &lt;/label&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-2&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-2&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-2&quot; value=&quot;val2&quot; /&gt;
-		&lt;span id=&quot;radio-desc-2&quot; class=&quot;field-description&quot;&gt;Value 2&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-2&quot; class=&quot;field-title&quot;&gt;Value 2&lt;/span&gt;
 	 &lt;/label&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;styleguide-radio-3&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;styleguide-radio-3&quot; name=&quot;styleguide-radio-1&quot; aria-labelledby=&quot;radio-desc-3&quot; value=&quot;val3&quot; /&gt;
-		&lt;span id=&quot;radio-desc-3&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-3&quot; class=&quot;field-title&quot;&gt;Value 3&lt;/span&gt;
 	 &lt;/label&gt;
 &lt;/fieldset&gt;
 &lt;fieldset class=&quot;has-radios has-inline-fields&quot; for=&quot;styleguide-radio&quot;&gt;
   &lt;legend&gt;Input Description with Inline Fields&lt;/legend&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-1&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-1&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-4&quot; value=&quot;val1&quot; /&gt;
-		&lt;span id=&quot;radio-desc-4&quot; class=&quot;field-description&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-4&quot; class=&quot;field-title&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
 	 &lt;/label&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-2&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-2&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-5&quot; value=&quot;val2&quot; /&gt;
-		&lt;span id=&quot;radio-desc-5&quot; class=&quot;field-description&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-5&quot; class=&quot;field-title&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
 	 &lt;/label&gt;
   &lt;label class=&quot;form-radio&quot; for=&quot;second_styleguide-radio-3&quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;second_styleguide-radio-3&quot; name=&quot;second_styleguide-radio&quot; aria-labelledby=&quot;radio-desc-6&quot; value=&quot;val3&quot; /&gt;
-		&lt;span id=&quot;radio-desc-6&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
+		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+		&lt;span id=&quot;radio-desc-6&quot; class=&quot;field-title&quot;&gt;Value 3&lt;/span&gt;
 	 &lt;/label&gt;
 &lt;/fieldset&gt;</code></pre>
       </div>
@@ -453,6 +495,51 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       <header>
         <small>
           <a class="kss-title__permalink" href="#kssref-3-1-3">Link to this Section</a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          File Upload Fields
+        </h3>
+      </header>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+          <div>
+            <label class="form-textfield" for="edit-file--2">
+  <span class="field-title" id="edit-file--2--label">File</span>
+  <input type="file" aria-labelledby="edit-file--2--label" class="form-file" size="60" name="files[file]" id="edit-file--2" aria-describedby="edit-file--2--description">
+  <small class="description" id="edit-file--2--description">
+    Information about the field, like what file types are selected.
+  </small>
+</label>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label class=&quot;form-textfield&quot; for=&quot;edit-file--2&quot;&gt;
+  &lt;span class=&quot;field-title&quot; id=&quot;edit-file--2--label&quot;&gt;File&lt;/span&gt;
+  &lt;input type=&quot;file&quot; aria-labelledby=&quot;edit-file--2--label&quot; class=&quot;form-file&quot; size=&quot;60&quot; name=&quot;files[file]&quot; id=&quot;edit-file--2&quot; aria-describedby=&quot;edit-file--2--description&quot;&gt;
+  &lt;small class=&quot;description&quot; id=&quot;edit-file--2--description&quot;&gt;
+    Information about the field, like what file types are selected.
+  &lt;/small&gt;
+&lt;/label&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-1-4" class="kss-section kss-section--depth-3">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-1-4">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Fieldsets
@@ -473,71 +560,127 @@ need a context and should always be contained inside of a <code>fieldset</code> 
           Display Example:
         </p>
           <div>
-            <fieldset class="has-checkboxes" for="styleguide-checkbox">
-  <legend>Fieldset Description</legend>
-  <label class="form-checkbox" for="styleguide-checkbox-1">
-		<input type="checkbox" id="styleguide-checkbox-1" name="styleguide-checkbox-1" aria-labelledby="checkbox-desc-1" value="val1" />
-		<span id="checkbox-desc-1" class="field-description">Value 1</span>
-	 </label>
-  <label class="form-checkbox" for="styleguide-checkbox-2">
-		<input type="checkbox" id="styleguide-checkbox-2" name="styleguide-checkbox-2" aria-labelledby="checkbox-desc-2" value="val2" />
-		<span id="checkbox-desc-2" class="field-description">Value 2</span>
-	 </label>
-  <label class="form-checkbox" for="styleguide-checkbox-3">
-		<input type="checkbox" id="styleguide-checkbox-3" name="styleguide-checkbox-3" aria-labelledby="checkbox-desc-3" value="val3" />
-		<span id="checkbox-desc-3" class="field-description">Value 3</span>
-	 </label>
-</fieldset>
-<fieldset class="has-checkboxes has-inline-fields" for="styleguide-checkbox">
-  <legend>Fieldset Description with Inline Fields</legend>
-  <label class="form-checkbox" for="second_styleguide-checkbox-1">
-		<input type="checkbox" id="second_styleguide-checkbox-1" name="second_styleguide-checkbox-1" aria-labelledby="checkbox-desc-4" value="val1" />
-		<span id="checkbox-desc-4" class="field-description">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
-	 </label>
-  <label class="form-checkbox" for="second_styleguide-checkbox-2">
-		<input type="checkbox" id="second_styleguide-checkbox-2" name="second_styleguide-checkbox-2" aria-labelledby="checkbox-desc-5" value="val2" />
-		<span id="checkbox-desc-5" class="field-description"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
-	 </label>
-  <label class="form-checkbox" for="second_styleguide-checkbox-3">
-		<input type="checkbox" id="second_styleguide-checkbox-3" name="second_styleguide-checkbox-3" aria-labelledby="checkbox-desc-6" value="val3" />
-		<span id="checkbox-desc-6" class="field-description">Value 3</span>
-	 </label>
-</fieldset>
+            <form>
+
+	<h5 class="has-border--primary--bottom">Fieldset with Checkboxes:</h5>
+	<fieldset class="has-checkboxes" for="styleguide-checkbox">
+	  <legend>Fieldset Label</legend>
+	  <label class="form-checkbox" for="styleguide-checkbox-1">
+			<input type="checkbox" id="styleguide-checkbox-1" name="styleguide-checkbox-1" aria-labelledby="checkbox-desc-1" value="val1" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-1" class="field-title">Value 1</span>
+		 </label>
+	  <label class="form-checkbox" for="fs_styleguide-checkbox-2">
+			<input type="checkbox" id="fs_styleguide-checkbox-2" name="fs_styleguide-checkbox-2" aria-labelledby="checkbox-desc-2" value="val2" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-2" class="field-title">Value 2</span>
+		 </label>
+	  <label class="form-checkbox" for="styleguide-checkbox-3">
+			<input type="checkbox" id="styleguide-checkbox-3" name="styleguide-checkbox-3" aria-labelledby="checkbox-desc-3" value="val3" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-3" class="field-title">Value 3</span>
+		 </label>
+	</fieldset>
+
+	<h5 class="has-border--primary--bottom">Fieldset with Inline Checkboxes:</h5>
+	<fieldset class="has-checkboxes has-inline-fields" for="styleguide-checkbox">
+	  <legend>Fieldset Label</legend>
+	  <label class="form-checkbox" for="second_styleguide-checkbox-1">
+			<input type="checkbox" id="second_styleguide-checkbox-1" name="second_styleguide-checkbox-1" aria-labelledby="checkbox-desc-4" value="val1" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-4" class="field-title">Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?</span>
+		 </label>
+	  <label class="form-checkbox" for="second_fs_styleguide-checkbox-2">
+			<input type="checkbox" id="second_fs_styleguide-checkbox-2" name="second_fs_styleguide-checkbox-2" aria-labelledby="checkbox-desc-5" value="val2" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-5" class="field-title"><strong>Labels can have addtl. styling.</strong><br />And descriptive text.</span>
+		 </label>
+	  <label class="form-checkbox" for="second_styleguide-checkbox-3">
+			<input type="checkbox" id="second_styleguide-checkbox-3" name="second_styleguide-checkbox-3" aria-labelledby="checkbox-desc-6" value="val3" />
+			<i role="presentation"></i>
+			<span id="checkbox-desc-6" class="field-title">Value 3</span>
+		 </label>
+	</fieldset>
+
+	<h5 class="has-border--primary--bottom">Fieldset with Different Input Types:</h5>
+	<fieldset>
+		<legend>Fieldset Label</legend>
+		<label for="basic-form-email-input-1" class="form-textfield">
+		  <span id="basic-form-email-label-1" class="field-title">Text Input Label</span>
+		  <input tabindex="0" id="basic-form-email-input-1" name="basic-form-email-input-1" aria-labelledby="basic-form-email-label-1" type="email" title="Input Description" value="" />
+		  <small>A description or some helper text for this element.</small>
+		</label>
+		<label for="basic-form-text-input-1" class="form-textfield">
+		  <span id="basic-form-text-label-1" class="field-title">Text Input Label</span>
+		  <input tabindex="0" id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-text-label-1" type="text" title="Input Description" value="" />
+		  <small>A description or some helper text for this element.</small>
+		</label>
+	</fieldset>
+
+</form>
           </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;has-checkboxes&quot; for=&quot;styleguide-checkbox&quot;&gt;
-  &lt;legend&gt;Fieldset Description&lt;/legend&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-1&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-1&quot; name=&quot;styleguide-checkbox-1&quot; aria-labelledby=&quot;checkbox-desc-1&quot; value=&quot;val1&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;Value 1&lt;/span&gt;
-	 &lt;/label&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-2&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-2&quot; name=&quot;styleguide-checkbox-2&quot; aria-labelledby=&quot;checkbox-desc-2&quot; value=&quot;val2&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-2&quot; class=&quot;field-description&quot;&gt;Value 2&lt;/span&gt;
-	 &lt;/label&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-3&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-3&quot; name=&quot;styleguide-checkbox-3&quot; aria-labelledby=&quot;checkbox-desc-3&quot; value=&quot;val3&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-3&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
-	 &lt;/label&gt;
-&lt;/fieldset&gt;
-&lt;fieldset class=&quot;has-checkboxes has-inline-fields&quot; for=&quot;styleguide-checkbox&quot;&gt;
-  &lt;legend&gt;Fieldset Description with Inline Fields&lt;/legend&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_styleguide-checkbox-1&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;second_styleguide-checkbox-1&quot; name=&quot;second_styleguide-checkbox-1&quot; aria-labelledby=&quot;checkbox-desc-4&quot; value=&quot;val1&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-4&quot; class=&quot;field-description&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
-	 &lt;/label&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_styleguide-checkbox-2&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;second_styleguide-checkbox-2&quot; name=&quot;second_styleguide-checkbox-2&quot; aria-labelledby=&quot;checkbox-desc-5&quot; value=&quot;val2&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-5&quot; class=&quot;field-description&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
-	 &lt;/label&gt;
-  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_styleguide-checkbox-3&quot;&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;second_styleguide-checkbox-3&quot; name=&quot;second_styleguide-checkbox-3&quot; aria-labelledby=&quot;checkbox-desc-6&quot; value=&quot;val3&quot; /&gt;
-		&lt;span id=&quot;checkbox-desc-6&quot; class=&quot;field-description&quot;&gt;Value 3&lt;/span&gt;
-	 &lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+
+	&lt;h5 class=&quot;has-border--primary--bottom&quot;&gt;Fieldset with Checkboxes:&lt;/h5&gt;
+	&lt;fieldset class=&quot;has-checkboxes&quot; for=&quot;styleguide-checkbox&quot;&gt;
+	  &lt;legend&gt;Fieldset Label&lt;/legend&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-1&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-1&quot; name=&quot;styleguide-checkbox-1&quot; aria-labelledby=&quot;checkbox-desc-1&quot; value=&quot;val1&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-1&quot; class=&quot;field-title&quot;&gt;Value 1&lt;/span&gt;
+		 &lt;/label&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;fs_styleguide-checkbox-2&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;fs_styleguide-checkbox-2&quot; name=&quot;fs_styleguide-checkbox-2&quot; aria-labelledby=&quot;checkbox-desc-2&quot; value=&quot;val2&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-2&quot; class=&quot;field-title&quot;&gt;Value 2&lt;/span&gt;
+		 &lt;/label&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;styleguide-checkbox-3&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;styleguide-checkbox-3&quot; name=&quot;styleguide-checkbox-3&quot; aria-labelledby=&quot;checkbox-desc-3&quot; value=&quot;val3&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-3&quot; class=&quot;field-title&quot;&gt;Value 3&lt;/span&gt;
+		 &lt;/label&gt;
+	&lt;/fieldset&gt;
+
+	&lt;h5 class=&quot;has-border--primary--bottom&quot;&gt;Fieldset with Inline Checkboxes:&lt;/h5&gt;
+	&lt;fieldset class=&quot;has-checkboxes has-inline-fields&quot; for=&quot;styleguide-checkbox&quot;&gt;
+	  &lt;legend&gt;Fieldset Label&lt;/legend&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_styleguide-checkbox-1&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;second_styleguide-checkbox-1&quot; name=&quot;second_styleguide-checkbox-1&quot; aria-labelledby=&quot;checkbox-desc-4&quot; value=&quot;val1&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-4&quot; class=&quot;field-title&quot;&gt;Labels can be very long. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab quam officia ad labore consequuntur, facere voluptatibus veniam, sint autem quidem esse reprehenderit, corporis consectetur porro incidunt. Blanditiis, molestias, est?&lt;/span&gt;
+		 &lt;/label&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_fs_styleguide-checkbox-2&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;second_fs_styleguide-checkbox-2&quot; name=&quot;second_fs_styleguide-checkbox-2&quot; aria-labelledby=&quot;checkbox-desc-5&quot; value=&quot;val2&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-5&quot; class=&quot;field-title&quot;&gt;&lt;strong&gt;Labels can have addtl. styling.&lt;/strong&gt;&lt;br /&gt;And descriptive text.&lt;/span&gt;
+		 &lt;/label&gt;
+	  &lt;label class=&quot;form-checkbox&quot; for=&quot;second_styleguide-checkbox-3&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; id=&quot;second_styleguide-checkbox-3&quot; name=&quot;second_styleguide-checkbox-3&quot; aria-labelledby=&quot;checkbox-desc-6&quot; value=&quot;val3&quot; /&gt;
+			&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;checkbox-desc-6&quot; class=&quot;field-title&quot;&gt;Value 3&lt;/span&gt;
+		 &lt;/label&gt;
+	&lt;/fieldset&gt;
+
+	&lt;h5 class=&quot;has-border--primary--bottom&quot;&gt;Fieldset with Different Input Types:&lt;/h5&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Fieldset Label&lt;/legend&gt;
+		&lt;label for=&quot;basic-form-email-input-1&quot; class=&quot;form-textfield&quot;&gt;
+		  &lt;span id=&quot;basic-form-email-label-1&quot; class=&quot;field-title&quot;&gt;Text Input Label&lt;/span&gt;
+		  &lt;input tabindex=&quot;0&quot; id=&quot;basic-form-email-input-1&quot; name=&quot;basic-form-email-input-1&quot; aria-labelledby=&quot;basic-form-email-label-1&quot; type=&quot;email&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+		  &lt;small&gt;A description or some helper text for this element.&lt;/small&gt;
+		&lt;/label&gt;
+		&lt;label for=&quot;basic-form-text-input-1&quot; class=&quot;form-textfield&quot;&gt;
+		  &lt;span id=&quot;basic-form-text-label-1&quot; class=&quot;field-title&quot;&gt;Text Input Label&lt;/span&gt;
+		  &lt;input tabindex=&quot;0&quot; id=&quot;basic-form-text-input-1&quot; name=&quot;basic-form-text-input-1&quot; aria-labelledby=&quot;basic-form-text-label-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+		  &lt;small&gt;A description or some helper text for this element.&lt;/small&gt;
+		&lt;/label&gt;
+	&lt;/fieldset&gt;
+
+&lt;/form&gt;</code></pre>
       </div>
 
 
@@ -549,6 +692,339 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       <header>
         <small>
           <a class="kss-title__permalink" href="#kssref-3-2">Link to this Section</a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Buttons and Button Contexts
+        </h2>
+      </header>
+
+
+
+    </div>
+
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-2-1" class="kss-section kss-section--depth-3">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-2-1">Link to this Section</a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Buttons
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type atom">atom</dd>
+        
+        </dl>
+      </header>
+
+        <p>Button text should be no longer than [X] words long.</p>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Examples:
+        </p>
+        <div class="copy">
+          <span class="title-6">Default styling</span>
+          <div>
+            <button class="[modifier class]">Button</button>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="title-6">::hover</span>
+          <p>
+            Hover state
+          </p>
+          <div>
+            <button class="pseudo-class- pseudo-class-hover">Button</button>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="title-6">.button--primary</span>
+          <p>
+            When a button should be highlighted/is the main action in a set, use this class.
+          </p>
+          <div>
+            <button class="button--primary">Button</button>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="title-6">.button--primary::hover</span>
+          <p>
+            When a button should be highlighted/is the main action in a set, use this class.
+          </p>
+          <div>
+            <button class="button--primary pseudo-class- pseudo-class-hover">Button</button>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Button&lt;/button&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-2-2" class="kss-section kss-section--depth-3">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-2-2">Link to this Section</a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Has-Buttons Contexts
+        </h3>
+        <dl class="pattern-info">
+          <dt>Pattern Type:</dt>
+          <dd class="pattern-type molecule">molecule</dd>
+        
+          <dt>Contains:</dt>
+          <dd>Only &#x60;buttons&#x60; or elements with the &#x60;.button&#x60; class</dd>
+        </dl>
+      </header>
+
+        <p>Like all context classes, a container with <code>.has-buttons</code> applied should only have
+elements that are buttons or have a <code>.button</code> class applied. If more than one button
+is present in a given use case, one should be identified as the primary button.</p>
+<p>All buttons stack at the smallest breakpoint.</p>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Examples:
+        </p>
+        <div class="copy">
+          <span class="title-6">Default styling</span>
+          <div>
+            <div class="has-buttons [modifier class]">
+  <button class="button--primary">Primary Button</button>
+  <button>Default Button</button>
+</div>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="title-6">.right</span>
+          <p>
+            right aligns the buttons inside the container
+          </p>
+          <div>
+            <div class="has-buttons right">
+  <button class="button--primary">Primary Button</button>
+  <button>Default Button</button>
+</div>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="title-6">.stacked</span>
+          <p>
+            stacks the buttons inside the container
+          </p>
+          <div>
+            <div class="has-buttons stacked">
+  <button class="button--primary">Primary Button</button>
+  <button>Default Button</button>
+</div>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;has-buttons [modifier class]&quot;&gt;
+  &lt;button class=&quot;button--primary&quot;&gt;Primary Button&lt;/button&gt;
+  &lt;button&gt;Default Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-5" class="kss-section kss-section--depth-2">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-5">Link to this Section</a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Form Validation
+        </h2>
+      </header>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+          <div>
+            <label for="validation-input-1" class="form-textfield has-feedback error">
+  <span id="validation-title-1" class="field-title">Input In Error/Invalid State</span>
+  <input id="validation-input-1" class="" name="validation-input-1" aria-labelledby="validation-title-1" type="text" title="Input Title" value="" />
+  <small class="feedback-message">Clear information about how to enter a valid value.</small>
+  <small>Description of what's expected in this field.</small>
+</label>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;validation-input-1&quot; class=&quot;form-textfield has-feedback error&quot;&gt;
+  &lt;span id=&quot;validation-title-1&quot; class=&quot;field-title&quot;&gt;Input In Error/Invalid State&lt;/span&gt;
+  &lt;input id=&quot;validation-input-1&quot; class=&quot;&quot; name=&quot;validation-input-1&quot; aria-labelledby=&quot;validation-title-1&quot; type=&quot;text&quot; title=&quot;Input Title&quot; value=&quot;&quot; /&gt;
+  &lt;small class=&quot;feedback-message&quot;&gt;Clear information about how to enter a valid value.&lt;/small&gt;
+  &lt;small&gt;Description of what&#x27;s expected in this field.&lt;/small&gt;
+&lt;/label&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-5-1" class="kss-section kss-section--depth-3">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-5-1">Link to this Section</a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Required Fields
+        </h3>
+      </header>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+          <div>
+            <label class="form-textfield required" for="validation-text" id="validation-text--label">
+	<span class="field-title">Subject <abbr title="required">*</abbr></span>
+	<input type="text" aria-describedby="validation-text--title" aria-labelledby="validation-text--label" aria-required="true" required="required" id="validation-text" >
+</label>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label class=&quot;form-textfield required&quot; for=&quot;validation-text&quot; id=&quot;validation-text--label&quot;&gt;
+	&lt;span class=&quot;field-title&quot;&gt;Subject &lt;abbr title=&quot;required&quot;&gt;*&lt;/abbr&gt;&lt;/span&gt;
+	&lt;input type=&quot;text&quot; aria-describedby=&quot;validation-text--title&quot; aria-labelledby=&quot;validation-text--label&quot; aria-required=&quot;true&quot; required=&quot;required&quot; id=&quot;validation-text&quot; &gt;
+&lt;/label&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-6-2" class="kss-section kss-section--depth-3">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-6-2">Link to this Section</a> 
+        </small>
+        <h3 class="kss-title kss-title--level-3">
+          Feedback Messaging
+        </h3>
+      </header>
+
+        <p>Feedback messaging accommodates supplemental information for a given
+page, form, or other element. If the messaging is referring to specific
+form fields or elements, links to those elements will be provided so
+so those issues can be efficiently dealt with.</p>
+<p>Feedback messaging will have a Title describing the type of feedback
+(error/alert/success) followed by a colon. Brevity is encouraged in all
+type with this pattern.</p>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+          <div>
+            
+<h4>Feedback: Error</h4>
+<div class="panel feedback-message error">
+	<span class="feedback-message__title title-2">Errors Found:</span>
+	<p>Two fields need to be corrected below:</p>
+	<ul class="has-inline-elements">
+		<li><a href="">Link to issue</a></li>
+		<li><a href="">Link to issue</a></li>
+	</ul>
+</div>
+
+<h4>Feedback: Warning/Status</h4>
+<div class="panel feedback-message status">
+	<span class="feedback-message__title title-2">Additional Information:</span>
+	<p>Here's a tip about the content/action. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aliquam delectus cupiditate mollitia, provident fugiat facilis voluptate rem vero ducimus adipisci odit est <a href="">culpa debitis esse possimus</a>, harum distinctio voluptas?</p>
+	<p>Adding another paragraph to really stress test. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam saepe sint ea maiores, labore illo, sunt inventore rem ipsum. Provident possimus maxime dolore corporis architecto dicta fugit, nemo sunt! <a href="">More info</a></p>
+</div>
+
+<h4>Feedback: Success</h4>
+<div class="panel feedback-message success">
+	<span class="feedback-message__title title-2">Success Notification:</span>
+	<p>A message about what can be expected to happen next. <a href="">More info</a></p>
+</div>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">
+&lt;h4&gt;Feedback: Error&lt;/h4&gt;
+&lt;div class=&quot;panel feedback-message error&quot;&gt;
+	&lt;span class=&quot;feedback-message__title title-2&quot;&gt;Errors Found:&lt;/span&gt;
+	&lt;p&gt;Two fields need to be corrected below:&lt;/p&gt;
+	&lt;ul class=&quot;has-inline-elements&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Link to issue&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Link to issue&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Feedback: Warning/Status&lt;/h4&gt;
+&lt;div class=&quot;panel feedback-message status&quot;&gt;
+	&lt;span class=&quot;feedback-message__title title-2&quot;&gt;Additional Information:&lt;/span&gt;
+	&lt;p&gt;Here&#x27;s a tip about the content/action. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aliquam delectus cupiditate mollitia, provident fugiat facilis voluptate rem vero ducimus adipisci odit est &lt;a href=&quot;&quot;&gt;culpa debitis esse possimus&lt;/a&gt;, harum distinctio voluptas?&lt;/p&gt;
+	&lt;p&gt;Adding another paragraph to really stress test. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam saepe sint ea maiores, labore illo, sunt inventore rem ipsum. Provident possimus maxime dolore corporis architecto dicta fugit, nemo sunt! &lt;a href=&quot;&quot;&gt;More info&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Feedback: Success&lt;/h4&gt;
+&lt;div class=&quot;panel feedback-message success&quot;&gt;
+	&lt;span class=&quot;feedback-message__title title-2&quot;&gt;Success Notification:&lt;/span&gt;
+	&lt;p&gt;A message about what can be expected to happen next. &lt;a href=&quot;&quot;&gt;More info&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-3-10" class="kss-section kss-section--depth-2">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-3-10">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Forms
@@ -564,11 +1040,11 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       </section>
 
       <hr />
-      <section id="kssref-3-2-2" class="kss-section kss-section--depth-3">
+      <section id="kssref-3-10-1" class="kss-section kss-section--depth-3">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-2">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-3-10-1">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Inline Form
@@ -591,14 +1067,15 @@ need a context and should always be contained inside of a <code>fieldset</code> 
           <div>
             <form class="has-inline-elements">
   <label for="inline-form-text-input-1" class="form-text">
-    <span id="inline-form-description-1" class="field-description">Input Description</span>
+    <span id="inline-form-description-1" class="field-title">Input Description</span>
     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
   </label>
   <label class="form-checkbox" for="inline-form-checkbox-1">
     <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
-    <span id="inline-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
+    <i role="presentation"></i>
+    <span id="inline-form-checkbox-desc-1" class="field-title">Checkbox Value</span>
   </label>
-  <button type="submit">search</button>
+  <button type="submit">submit</button>
 </form>
           </div>
         </div>
@@ -607,14 +1084,15 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;has-inline-elements&quot;&gt;
   &lt;label for=&quot;inline-form-text-input-1&quot; class=&quot;form-text&quot;&gt;
-    &lt;span id=&quot;inline-form-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
+    &lt;span id=&quot;inline-form-description-1&quot; class=&quot;field-title&quot;&gt;Input Description&lt;/span&gt;
     &lt;input id=&quot;inline-form-text-input-1&quot; name=&quot;inline-form-text-input-1&quot; aria-labelledby=&quot;inline-form-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
   &lt;/label&gt;
   &lt;label class=&quot;form-checkbox&quot; for=&quot;inline-form-checkbox-1&quot;&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;inline-form-checkbox-1&quot; name=&quot;inline-form-checkbox-1&quot; aria-labelledby=&quot;inline-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
-    &lt;span id=&quot;inline-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;Checkbox Value&lt;/span&gt;
+    &lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+    &lt;span id=&quot;inline-form-checkbox-desc-1&quot; class=&quot;field-title&quot;&gt;Checkbox Value&lt;/span&gt;
   &lt;/label&gt;
-  &lt;button type=&quot;submit&quot;&gt;search&lt;/button&gt;
+  &lt;button type=&quot;submit&quot;&gt;submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
       </div>
 
@@ -622,11 +1100,11 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       </section>
 
       <hr />
-      <section id="kssref-3-2-3" class="kss-section kss-section--depth-3">
+      <section id="kssref-3-10-2" class="kss-section kss-section--depth-3">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-3">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-3-10-2">Link to this Section</a> 
         </small>
         <h3 class="kss-title kss-title--level-3">
           Basic Form
@@ -638,6 +1116,8 @@ need a context and should always be contained inside of a <code>fieldset</code> 
         </dl>
       </header>
 
+        <p>Simple form showing every form element type in one place.</p>
+
 
 
     </div>
@@ -647,19 +1127,59 @@ need a context and should always be contained inside of a <code>fieldset</code> 
           Display Example:
         </p>
           <div>
-            <form class="form-basic">
+            <form>
   <h3>Form Title</h3>
-  <label for="basic-form-text-input-1" class="form-text">
-    <span id="basic-form-description-1" class="field-description">Input Description</span>
-    <input id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-description-1" type="text" title="Input Description" value="" />
+  <label for="basic-form-text-input-1" class="form-textfield">
+    <span id="basic-form-label-1" class="field-title">Text Input Label</span>
+    <input tabindex="0" id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-label-1" aria-describedby="input1desc" type="text" title="Input Description" value="" />
+    <small id="input1desc">A description or some helper text for this element.</small>
+  </label>
+  <label class="form-select" for="basic-form-select">
+    <span id="form-select-title" class="field-title">Select Title</span>
+    <div class="form-select-wrapper">
+      <select id="basic-form-select" name="basic-form-select" aria-labelledby="form-select-title">
+        <option>Select a Value</option>
+        <option value="val1">Option 1</option>
+        <option value="val2">Option 2</option>
+        <option value="val3">Option 3</option>
+      </select>
+    </div>
+  </label>
+  <label for="basic-form-email-input-1" class="form-textfield">
+    <span id="basic-form-email-label-1" class="field-title">Text Input Label</span>
+    <input tabindex="0" id="basic-form-email-input-1" name="basic-form-email-input-1" aria-labelledby="basic-form-email-label-1" type="text" title="Input Description" value="" />
+    <small>A description or some helper text for this element.</small>
+  </label>
+  <fieldset class="has-radios" for="styleguide-radio">
+    <legend>Radio Set Label</legend>
+    <label class="form-radio" for="basic-form-radio-1">
+  		<input tabindex="0" checked="checked" type="radio" id="basic-form-radio-1" name="basic-form-radio-1" aria-labelledby="radio-desc-1" value="val1" />
+  		<i role="presentation"></i>
+  		<span id="radio-desc-1" class="field-title">Value 1</span>
+  	 </label>
+    <label class="form-radio" for="basic-form-radio-2">
+  		<input tabindex="0" type="radio" id="basic-form-radio-2" name="basic-form-radio-1" aria-labelledby="radio-desc-2" value="val2" />
+  		<i role="presentation"></i>
+  		<span id="radio-desc-2" class="field-title">Value 2</span>
+  	 </label>
+    <label class="form-radio" for="basic-form-radio-3">
+  		<input tabindex="0" type="radio" id="basic-form-radio-3" name="basic-form-radio-1" aria-labelledby="radio-desc-3" value="val3" />
+  		<i role="presentation"></i>
+  		<span id="radio-desc-3" class="field-title">Value 3</span>
+  	 </label>
+  </fieldset>
+  <label for="styleguide-textarea" class="form-textfield">
+    <span id="input-description-2" class="field-title">Textarea Label</span>
+    <textarea tabindex="0" id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
   </label>
   <label class="form-checkbox" for="basic-form-checkbox-1">
-    <input type="checkbox" id="basic-form-checkbox-1" name="basic-form-checkbox-1" aria-labelledby="basic-form-checkbox-desc-1" value="val2" />
-    <span id="basic-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
+    <input tabindex="0" type="checkbox" id="basic-form-checkbox-1" name="basic-form-checkbox-1" aria-labelledby="basic-form-checkbox-desc-1" value="val2" />
+    <i role="presentation"></i>
+    <span id="basic-form-checkbox-desc-1" class="field-title">Single Checkbox Label</span>
   </label>
   <div class="has-buttons">
-    <button class="button-primary" type="submit">submit</button>
-    <button type="submit">cancel</button>
+    <button tabindex="0" class="button--primary" type="submit">submit</button>
+    <button tabindex="0" type="submit">cancel</button>
   </div>
 </form>
           </div>
@@ -667,70 +1187,60 @@ need a context and should always be contained inside of a <code>fieldset</code> 
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-basic&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
   &lt;h3&gt;Form Title&lt;/h3&gt;
-  &lt;label for=&quot;basic-form-text-input-1&quot; class=&quot;form-text&quot;&gt;
-    &lt;span id=&quot;basic-form-description-1&quot; class=&quot;field-description&quot;&gt;Input Description&lt;/span&gt;
-    &lt;input id=&quot;basic-form-text-input-1&quot; name=&quot;basic-form-text-input-1&quot; aria-labelledby=&quot;basic-form-description-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+  &lt;label for=&quot;basic-form-text-input-1&quot; class=&quot;form-textfield&quot;&gt;
+    &lt;span id=&quot;basic-form-label-1&quot; class=&quot;field-title&quot;&gt;Text Input Label&lt;/span&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;basic-form-text-input-1&quot; name=&quot;basic-form-text-input-1&quot; aria-labelledby=&quot;basic-form-label-1&quot; aria-describedby=&quot;input1desc&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+    &lt;small id=&quot;input1desc&quot;&gt;A description or some helper text for this element.&lt;/small&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;form-select&quot; for=&quot;basic-form-select&quot;&gt;
+    &lt;span id=&quot;form-select-title&quot; class=&quot;field-title&quot;&gt;Select Title&lt;/span&gt;
+    &lt;div class=&quot;form-select-wrapper&quot;&gt;
+      &lt;select id=&quot;basic-form-select&quot; name=&quot;basic-form-select&quot; aria-labelledby=&quot;form-select-title&quot;&gt;
+        &lt;option&gt;Select a Value&lt;/option&gt;
+        &lt;option value=&quot;val1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;val2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;val3&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+  &lt;label for=&quot;basic-form-email-input-1&quot; class=&quot;form-textfield&quot;&gt;
+    &lt;span id=&quot;basic-form-email-label-1&quot; class=&quot;field-title&quot;&gt;Text Input Label&lt;/span&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;basic-form-email-input-1&quot; name=&quot;basic-form-email-input-1&quot; aria-labelledby=&quot;basic-form-email-label-1&quot; type=&quot;text&quot; title=&quot;Input Description&quot; value=&quot;&quot; /&gt;
+    &lt;small&gt;A description or some helper text for this element.&lt;/small&gt;
+  &lt;/label&gt;
+  &lt;fieldset class=&quot;has-radios&quot; for=&quot;styleguide-radio&quot;&gt;
+    &lt;legend&gt;Radio Set Label&lt;/legend&gt;
+    &lt;label class=&quot;form-radio&quot; for=&quot;basic-form-radio-1&quot;&gt;
+  		&lt;input tabindex=&quot;0&quot; checked=&quot;checked&quot; type=&quot;radio&quot; id=&quot;basic-form-radio-1&quot; name=&quot;basic-form-radio-1&quot; aria-labelledby=&quot;radio-desc-1&quot; value=&quot;val1&quot; /&gt;
+  		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+  		&lt;span id=&quot;radio-desc-1&quot; class=&quot;field-title&quot;&gt;Value 1&lt;/span&gt;
+  	 &lt;/label&gt;
+    &lt;label class=&quot;form-radio&quot; for=&quot;basic-form-radio-2&quot;&gt;
+  		&lt;input tabindex=&quot;0&quot; type=&quot;radio&quot; id=&quot;basic-form-radio-2&quot; name=&quot;basic-form-radio-1&quot; aria-labelledby=&quot;radio-desc-2&quot; value=&quot;val2&quot; /&gt;
+  		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+  		&lt;span id=&quot;radio-desc-2&quot; class=&quot;field-title&quot;&gt;Value 2&lt;/span&gt;
+  	 &lt;/label&gt;
+    &lt;label class=&quot;form-radio&quot; for=&quot;basic-form-radio-3&quot;&gt;
+  		&lt;input tabindex=&quot;0&quot; type=&quot;radio&quot; id=&quot;basic-form-radio-3&quot; name=&quot;basic-form-radio-1&quot; aria-labelledby=&quot;radio-desc-3&quot; value=&quot;val3&quot; /&gt;
+  		&lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+  		&lt;span id=&quot;radio-desc-3&quot; class=&quot;field-title&quot;&gt;Value 3&lt;/span&gt;
+  	 &lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;label for=&quot;styleguide-textarea&quot; class=&quot;form-textfield&quot;&gt;
+    &lt;span id=&quot;input-description-2&quot; class=&quot;field-title&quot;&gt;Textarea Label&lt;/span&gt;
+    &lt;textarea tabindex=&quot;0&quot; id=&quot;styleguide-textarea&quot; name=&quot;styleguide-textarea&quot; aria-labelledby=&quot;input-description-2&quot; title=&quot;Input Description&quot; value=&quot;&quot;&gt;&lt;/textarea&gt;
   &lt;/label&gt;
   &lt;label class=&quot;form-checkbox&quot; for=&quot;basic-form-checkbox-1&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;basic-form-checkbox-1&quot; name=&quot;basic-form-checkbox-1&quot; aria-labelledby=&quot;basic-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
-    &lt;span id=&quot;basic-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;Checkbox Value&lt;/span&gt;
+    &lt;input tabindex=&quot;0&quot; type=&quot;checkbox&quot; id=&quot;basic-form-checkbox-1&quot; name=&quot;basic-form-checkbox-1&quot; aria-labelledby=&quot;basic-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
+    &lt;i role=&quot;presentation&quot;&gt;&lt;/i&gt;
+    &lt;span id=&quot;basic-form-checkbox-desc-1&quot; class=&quot;field-title&quot;&gt;Single Checkbox Label&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;has-buttons&quot;&gt;
-    &lt;button class=&quot;button-primary&quot; type=&quot;submit&quot;&gt;submit&lt;/button&gt;
-    &lt;button type=&quot;submit&quot;&gt;cancel&lt;/button&gt;
+    &lt;button tabindex=&quot;0&quot; class=&quot;button--primary&quot; type=&quot;submit&quot;&gt;submit&lt;/button&gt;
+    &lt;button tabindex=&quot;0&quot; type=&quot;submit&quot;&gt;cancel&lt;/button&gt;
   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-      </div>
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-3-2-5" class="kss-section kss-section--depth-3">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-3-2-5">Link to this Section</a> 
-        </small>
-        <h3 class="kss-title kss-title--level-3">
-          Search Form
-        </h3>
-        <dl class="pattern-info">
-          <dt>Pattern Type:</dt>
-          <dd class="pattern-type molecule">molecule</dd>
-        
-          <dt>Contains:</dt>
-          <dd>Button, Input (Search)</dd>
-        </dl>
-      </header>
-
-
-
-    </div>
-
-      <div>
-        <p class="title-5 has-border--primary--bottom">
-          Display Example:
-        </p>
-          <div>
-            <form class="search-form">
-  <label class="form-text">
-    <input placeholder="Enter a search term." type="search" />
-  </label>
-  <button value="search" type="submit"></button>
-</form>
-          </div>
-        </div>
-      </div>
-      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;search-form&quot;&gt;
-  &lt;label class=&quot;form-text&quot;&gt;
-    &lt;input placeholder=&quot;Enter a search term.&quot; type=&quot;search&quot; /&gt;
-  &lt;/label&gt;
-  &lt;button value=&quot;search&quot; type=&quot;submit&quot;&gt;&lt;/button&gt;
 &lt;/form&gt;</code></pre>
       </div>
 
@@ -739,6 +1249,7 @@ need a context and should always be contained inside of a <code>fieldset</code> 
 </article>
 
 <!-- SCRIPTS -->
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

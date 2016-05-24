@@ -24,7 +24,7 @@
 				}
 				
 				&::before {
-					content: "#{$name} <br /> #{$value} / rgb(#{$red}, #{$green}, #{$blue})";
+					content: "<h5>#{$name}</h5> #{$value} / rgb(#{$red}, #{$green}, #{$blue})";
 				}
 
 			}
@@ -49,7 +49,6 @@
 		@include flex-direction(column);
 		flex: 1;
 		margin: 1rem 0;
-
 	}
 
 }
@@ -60,16 +59,17 @@
 
 	padding: 0;
 	text-align: center;
-	font-family: $font-family-secondary;
 	font-size: $font-size-secondary;
 
 	.dot {
-
 		display: block;
 		height: 6rem;
 		width: 100%;
 		margin: $spacing-inner auto;
+	}
 
+	small {
+		padding: 0 1rem;
 	}
 
 	&::before,
@@ -94,10 +94,17 @@
 }
 
 .table-of-contents {
+	
 	@include flexbox();
-	@include flex-direction(column);
+	@include flex-direction(row);
 	@include flex-wrap(wrap);
-	max-height: 14rem;
+	list-style-type: none;
+
+	& li {
+		flex: 0 0 25%;
+		margin: $spacing-inner/2 0;
+		padding: 0;
+	}
 }
 
 // Markup and Display Example Titles
@@ -176,9 +183,31 @@
 	}
 
 }
+// Any styleguide-specific documentation or comments should go here.
 
+// Colors, Fonts and Icons
+//
+// The following are colors and fonts included in this project.
+//
+// Styleguide 1.0
 
+.card-font {
 
+	.font-title {
+		font-size: 1.5rem;
+	}
+
+	&.primary {
+		.font-title {
+			font-family: $font-family-primary;
+		}
+	}
+	&.secondary {
+		.font-title {
+			font-family: $font-family-secondary;
+		}
+	}
+}
 
 // Large copy example
 //
@@ -187,3 +216,9 @@
 // HideMarkup: true
 //
 // Styleguide 2.1000
+
+// Styleguide-specific 
+
+.kss-header {
+	background: $panel-background-accent-primary;
+}

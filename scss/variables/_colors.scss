@@ -36,40 +36,52 @@
 
 
 
-// Colors
-//
-// The following are colors included in this project.
-//
-// Styleguide 1.0
 
 
-
-// Brand Colors
+// Site Colors
 // 
-// Markup: swatches_brand.html
+// Markup: swatches_site.html
 //
 // HideMarkup: true
 //
 // Styleguide 1.1
 
 
-$brand-grey: #5c6874;
-$brand-grey-dark: darken($brand-grey, 15%);
-$brand-grey-light: lighten($brand-grey, 50%);
-$brand-accent-blue: #334dae;
-$brand-accent-dark-green: #148744;
+$site-red: (
+	'base': #CC0000,
+	'light': #F37171,
+	'dark': #930000
+	);
+$site-blue: (
+	'base': #3366CC,
+	'light': #7EA2E8,
+	'dark': #2A54A6
+	);
+$site-green: (
+	'base': #096321,
+	'light': #11b73d,
+	'dark': #0a6222
+	);
 
-$brand-action-color: $brand-accent-dark-green;
+$site-grey: (
+	'base': #949494,  // bumped from #979797 to pass AA @ 18px
+	'light': #C6C6C6,
+	'dark': #333
+	);
 
-$brand-colors: (
-	"grey": $brand-grey,
-	"grey-dark": $brand-grey-dark,
-	"grey-light": $brand-grey-light,
-	"accent-blue": $brand-accent-blue,
-	"accent-dark-green": $brand-accent-dark-green
+$site-colors: (
+	'red' : $site-red,
+	'blue' : $site-blue,
+	'green' : $site-green,
+	'grey': $site-grey,
 );
 
+$site-action-color: map-get($site-green, 'base');
+$site-action-color-active: map-get($site-green, 'dark');
+$site-action-color-background: darken($site-action-color, 6%);
 
+// Use for descriptive content that is not in and of itself actionable.
+$site-accent-color: map-get($site-blue, 'base');
 
 
 
@@ -86,17 +98,17 @@ $brand-colors: (
 //
 // Styleguide 1.2
 
-$font-color-primary: $brand-grey-dark;
-$font-color-secondary: $brand-grey;
-$font-color-tertiary: $brand-grey-light;
+$font-color-primary: map-get($site-grey, 'dark');
+$font-color-secondary: map-get($site-grey, 'base');
+$font-color-tertiary: map-get($site-grey, 'light');
 
-$font-color-link: $brand-action-color;
-$font-color-link-hover: darken($brand-action-color, 10%);
-$font-color-link-focus: $font-color-link-hover;
+$font-color-link: $site-action-color;
+$font-color-link-hover: $site-action-color-active;
+$font-color-link-focus: $site-action-color-active;
 
-$title-font-color-primary: $brand-grey-dark;
-$title-font-color-secondary: $brand-grey;
-$title-font-color-tertiary: $brand-grey-light;
+$title-font-color-primary: map-get($site-grey, 'dark');
+$title-font-color-secondary: map-get($site-grey, 'base');
+$title-font-color-tertiary: map-get($site-grey, 'light');
 
 $font-colors: (
 	"primary": $font-color-primary,
@@ -126,11 +138,11 @@ $title-colors: (
 //
 // HideMarkup: true
 //
-// Styleguide 1.3
+// __Styleguide 1.3
 
 $background-color-primary: #fff;
-$background-color-secondary: $brand-grey-light;
-$background-color-tertiary: $brand-grey;
+$background-color-secondary: map-get($site-grey, 'light');
+$background-color-tertiary: map-get($site-grey, 'base');
 
 $background-colors: (
 	"primary": $background-color-primary,
@@ -138,9 +150,12 @@ $background-colors: (
 	"tertiary": $background-color-tertiary
 );
 
-$panel-background-primary: darken($background-color-primary, 5%);
-$panel-background-secondary: darken($background-color-secondary, 5%);
-$panel-background-tertiary: darken($background-color-tertiary, 5%);
+$panel-background-primary: darken($background-color-primary, 10%);
+$panel-background-secondary: darken($background-color-secondary, 10%);
+$panel-background-tertiary: darken($background-color-tertiary, 10%);
+$panel-background-accent-primary: map-get($site-blue, 'base');
+$panel-background-accent-secondary: map-get($site-green, 'base');
+$panel-background-accent-teriary: map-get($site-green, 'base');
 
 $panel-colors: (
 	"primary": $panel-background-primary,
@@ -154,16 +169,17 @@ $panel-colors: (
 //
 // HideMarkup: true
 //
-// Styleguide 1.4
+// __Styleguide 1.4
 
-$border-color-primary: darken($background-color-primary, 15%);
-$border-color-secondary: darken($background-color-secondary, 15%);
-$border-color-tertiary: darken($background-color-tertiary, 15%);
+$border-color-primary: darken($background-color-primary, 20%);
+$border-color-secondary: darken($background-color-secondary, 20%);
+$border-color-tertiary: darken($background-color-tertiary, 20%);
 
 $border-colors: (
 	"primary": $border-color-primary,
 	"secondary": $border-color-secondary,
-	"tertiary": $border-color-tertiary
+	"tertiary": $border-color-tertiary,
+	"accent": $site-accent-color
 );
 
 
@@ -176,12 +192,12 @@ $border-colors: (
 // Styleguide 1.5
 
 $button-font-color: #fff;
-$button-background: $brand-grey-dark;
-$button-background-hover: darken($button-background, 15%);
+$button-background: darken(map-get($site-grey, 'base'), 12%);
+$button-background-hover: map-get($site-grey, 'dark');
 
 $button-primary-font-color: #fff;
-$button-primary-background: $brand-action-color;
-$button-primary-background-hover: darken($brand-action-color, 15%);
+$button-primary-background: $site-action-color-background;
+$button-primary-background-hover: $site-action-color-active;
 
 $button-colors: (
 	"font-color": $button-font-color,
@@ -194,10 +210,23 @@ $button-colors: (
 
 
 
+// Form Colors
+//
+// Markup: swatches_form.html
+//
+// HideMarkup: true
+
+$form-color-error: map-get($site-red, 'base');
+$form-color-error-background: map-get($site-red, 'base');
+$form-color-success: map-get($site-green, 'base');
+$form-color-success-background: $site-action-color-background;
+$form-color-status: map-get($site-blue, 'base');
+$form-color-status-background: map-get($site-blue, 'base');
+
 // === Checkboxes/Radios === //
 
-$selector-color-unchecked: $brand-grey;
-$selector-color-checked: $brand-action-color;
+$selector-color-unchecked: map-get($site-grey, 'base');
+$selector-color-checked: $site-action-color;
 
 
 
@@ -224,7 +253,10 @@ $selector-color-checked: $brand-action-color;
 // with the class name `.font-colors--primary`
 
 $color-sets: (
-	"brand": $brand-colors,
+	"site-red": $site-red,
+	"site-blue": $site-blue,
+	"site-green": $site-green,
+	"site-grey": $site-grey,
 	"font": $font-colors,
 	"titles": $title-colors,
 	"background": $background-colors,

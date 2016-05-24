@@ -1,10 +1,10 @@
-# KSS Styleguide Boilerplate
+# KSS Styleguide
 
-Boilerplate for Caxy living styleguide implementations. Uses KSS-node to render.
+Caxy's boilerplate styleguide. Uses KSS-node to render.
 
 [KSS Documentation](http://warpspire.com/kss/)
 
-## Generating the Styleguide
+## How to Generate Styleguide
 
 Just pull these files into your project's assets folder and run `npm install` to get up and running. If you don't need to adjust the folder structure, you can then run the following to build your styleguide:
 

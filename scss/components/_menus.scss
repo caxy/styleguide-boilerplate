@@ -1,7 +1,7 @@
 
 // Menus
 //
-// Styleguide 20
+// __Styleguide 20
 
 // Breadcrumb Navigation
 //
@@ -16,7 +16,7 @@
 //
 // ContainsPatterns: Links
 //
-// Styleguide 20.1
+// __Styleguide 20.1
 
 .breadcrumb {
 	
@@ -58,7 +58,7 @@
 // </ul>
 // </nav>
 //
-// Styleguide 20.1
+// __Styleguide 20.1
 
 
 .navigation-site {
@@ -75,14 +75,26 @@
 	}
 
 	& > .menu {
+		
 		@include width-capped();
 		@include flexbox();
 		@include flex-flow(row nowrap);
+		@include justify-content(space-between);
 		margin: 0 auto;
 		font-size: $font-size-secondary;
+
 		&,
 		ul {
 			list-style-type: none;
+			text-align: center;
 		}
+		
+		.menu-item {
+			@include flexbox();
+			align-items: center;
+			display: flex;
+		}
+
 	}
+
 }

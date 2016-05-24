@@ -6,20 +6,22 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>{{options.title}}</title>
+  <title>{{options.title}} - Version 1.0</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-
+  <script src="https://use.typekit.net/hyf8mjc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   {{{styles}}}
 </head>
 <body id="kss-node">
 
 <header class="kss-header page-header">
   <h1 class="kss-doc-title">{{options.title}}</h1>
+  <span class="version">version 1.0</span>
 </header>
 
 <nav class="navigation-site">
@@ -60,21 +62,24 @@
 
     {{#ifDepth 1}}
       <header>
-        <h{{depth}} class="kss-title kss-title--level-{{depth}}">
+        <h1 class="kss-title kss-title--level-{{depth}}">
           {{header}}
         </h{{depth}}>
-        
-        <ul class="table-of-contents">
-        {{#eachSection reference}}
-          {{#ifDepth 2 ../../../options.[nav-depth]}}
-            <li>
-              <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-            </li>
-          {{/ifDepth}}
-        {{/eachSection}}
-        </ul>
-
       </header>
+
+      {{#if description}}
+        {{{description}}}
+      {{/if}}
+      <h2>Sections:</h2>
+      <ul class="table-of-contents">
+      {{#eachSection reference}}
+        {{#ifDepth 2 ../../../options.[nav-depth]}}
+          <li>
+            <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+          </li>
+        {{/ifDepth}}
+      {{/eachSection}}
+      </ul>
     {{else}}
       <header>
         <small>
@@ -98,7 +103,10 @@
     {{/ifDepth}}
 
     {{#if description}}
-      {{{description}}}
+      {{#ifDepth 1}}
+      {{else}}
+        {{{description}}}
+      {{/ifDepth}}
     {{/if}}
 
     {{#if parameters}}
@@ -151,7 +159,7 @@
 
     {{#if devnotes}}
       <p class="title-5 has-border--primary--bottom">Developer Notes:</p>
-      {{{devnotes}}}
+      {{devnotes}}
     {{/if}}
 
     {{#ifDepth 1}}
@@ -164,6 +172,7 @@
 </article>
 
 <!-- SCRIPTS -->
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

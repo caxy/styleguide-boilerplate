@@ -3,7 +3,7 @@
 //	Base HTML Elements
 
 html {
-	font: $font-size-primary $font-family-primary;
+	font: $font-weight-normal $font-size-primary $font-family-primary;
 }
 
 * {
@@ -12,6 +12,7 @@ html {
 
 body {
   color: $font-color-primary;
+  font-family: $font-family-primary;
 }
 
 hr {
@@ -27,7 +28,7 @@ hr {
 /*
 Typography
 
-General overview of typographical elements that will be available on the site.
+All text should pass [WCAG 2.0 AA standards](https://www.w3.org/WAI/WCAG20/quickref/) for contrast.
 
 Styleguide 2
 */
@@ -36,49 +37,80 @@ Styleguide 2
 
 // Titles
 //
-// Every heading has an equivalent `.title-[#]` class that corresponds to its
-// styles. This allows for HTML present to always be semantic, even if it needs
-// to be rendered in a way that's tied to a different heading.
+// **QUESTION:** `Titles should always be [case needed] and [contain/not contain] ending punctuation.`
 //
-// For example, if you needed an H3 tag to look like an H1, rather than putting
-// an H1 where it didn't belong, you could use `<h3 class="title-1">Title</h3>`
-// to achieve the desired look.
+// Devnotes: Every heading has an equivalent `.title-[#]` class that corresponds to its
+// styles. This allows for HTML present to always be semantic, even if it needs
+// to be rendered in a way that's tied to a different heading. For example, if you needed
+// an H3 tag to look like an H1, rather than putting an H1 where it didn't belong, you could use
+// `<h3 class="title-1">Title</h3>` to achieve the desired look.
 //
 // Markup: titles.html
 //
-// Styleguide 2.1
+// Styleguide 2.2
 
 %titles {
-	font-family: $title-font-family-primary;
+
 	color: $title-font-color-primary;
+	font-family: $title-font-family-primary;
 	margin: 0 0 $spacing-inner 0;
+	font-weight: $font-weight-normal;
+	font-style: normal;
 
 	p + & {
 		margin: $spacing-outer 0 $spacing-inner 0;
 	}
 
+	header > & {
+		margin: 0;
+	}
+
 }
 
 .title-1 {
+	
 	@extend %titles;
-	font-size: 2.25rem;
+	$font-size: 2.5rem; 
+	font-size: $font-size;
+
+	& + .subheading {
+		font-size: $font-size * 0.75;
+	}
 }
 .title-2 {
+	
 	@extend %titles;
-	font-size: 1.75rem;
+	$font-size: 1.25rem; 
+	font-size: $font-size;
+
+	& + .subheading {
+		font-size: $font-size * 0.75;
+	}
 }
 .title-3 {
 	@extend %titles;
-	font-size: 1.5rem;
+	font-style: italic;
+	$font-size: 2rem; 
+	font-size: $font-size;
 }
 .title-4 {
 	@extend %titles;
-	font-size: 1.25rem;
+	font-style: italic;
+	$font-size: 1.5rem; 
+	font-size: $font-size;
 }
 .title-5 {
 	@extend %titles;
 	font-style: italic;
+	$font-size: 1.2rem; 
+	font-size: $font-size;
+	font-weight: $font-weight-semibold;
+}
+.title-6 {
+	@extend %titles;
+	font-style: italic;
 	font-size: 1rem;
+	font-weight: $font-weight-semibold;
 }
 
 h1 {
@@ -96,19 +128,50 @@ h4 {
 h5 {
 	@extend .title-5;
 }
+h6 {
+	@extend .title-6;
+}
+
+
+
+// Subheadings
+//
+// **QUESTION:** `Subheadings should always be [case needed] and [contain/not contain] ending punctuation.`
+//
+// Subheadings should only be used in tandem with Title 1 and Title 2 headings, and should never be used
+// independently from Titles.
+//
+// Devnotes: Subheadings should be 75% the size of a given title's font size.
+//
+// Markup:
+// <h1></h1><span class="subheading">Subheading for Title 1</span>
+// <h2></h2><span class="subheading">Subheading for Title 2</span>
+//
+// Styleguide 2.2.1
+
+.subheading {
+	font-family: $title-font-family-secondary;
+	font-style: italic;
+	color: $title-font-color-secondary;
+	font-weight: $font-weight-normal;
+}
+
+
 
 
 
 // Body Copy
 //
+// Body copy uses the Calluna font, sized 18px, with a line height of 1.5rem.
+//
 // Markup:
-// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
-// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+// <p>Lorem ipsum dolor sit amet, <a href="">consectetur adipisicing</a> elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
+// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui ullam praesentium sed odio deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
 // <h3>Body Copy with a Title</h3>
 // <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
 //
 //
-// Styleguide 2.2
+// Styleguide 2.3
 
 p,
 .copy {
@@ -127,11 +190,10 @@ p,
 // Markup:
 // <p><a href="">An example link</a></p>
 //
-// Styleguide 2.3
+// Styleguide 2.4
 
 a {
 
-	font-family: $font-family-secondary;
 	color: $font-color-link;
 	text-decoration: $font-decoration-link;
 
@@ -146,6 +208,10 @@ a {
 		text-decoration: $font-decoration-link-focus;
 	}
 
+	p > & {
+		padding: 0 0.25em;
+	}
+
 }
 
 
@@ -153,18 +219,16 @@ a {
 
 
 // Lists
-//
-// Styleguide 2.4
 
 ul,
 ol,
 dl {
-	margin: $spacing-outer 0;
+	margin: $spacing-inner 0 $spacing-outer 0;
 	padding: 0;
 }
 
 li {
-	margin: $spacing-inner;
+	margin: $spacing-inner/2 $spacing-inner;
 }
 
 
@@ -178,7 +242,7 @@ li {
 //   <li>Quisquam ab ex, quos ducimus quasi</li>
 // </ul>
 //
-// Styleguide 2.4.1
+// Styleguide 2.5
 
 
 
@@ -191,7 +255,7 @@ li {
 //   <li>Quisquam ab ex, quos ducimus quasi</li>
 // </ol>
 //
-// Styleguide 2.4.2
+// Styleguide 2.6
 
 
 
@@ -205,7 +269,7 @@ li {
 //   <dd>Defintion for the term above.</dd>
 // </dl>
 //
-// Styleguide 2.4.3
+// Styleguide 2.7
 
 dt {
 
@@ -226,17 +290,19 @@ dd {
 
 // Blockquote
 //
+// Blockquote copy should always be surrounded by double quotes.
+//
 // Markup:
 // <blockquote>
-// Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
+// "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
 // cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
-// A, ut laudantium sunt blanditiis non at, tempora dolore.
+// A, ut laudantium sunt blanditiis non at, tempora dolore."
 // <footer>
 // — <cite>Source Person, Additional Info</cite>
 // </footer>
 // </blockquote>
 //
-// Styleguide 2.5
+// Styleguide 2.8
 
 blockquote {
 
@@ -244,7 +310,8 @@ blockquote {
 	padding: $spacing-inner*3 $spacing-inner*3 $spacing-inner*2 $spacing-inner*4;
 	font-size: $font-size-primary*1.5;
 	line-height: $font-size-primary*3;
-	font-family: $font-family-secondary;
+	font-style: italic;
+	color: $font-color-secondary;
 
 	footer {
 		padding-top: $spacing-inner;
@@ -261,13 +328,13 @@ blockquote {
 
 // Code
 //
-// Styleguide 2.6
+// Not referenced in styleguide.
 
 code, pre {
 
-	line-height: $font-size-primary*2;
 	font-family: monospace;
 	font-size: $font-size-secondary;
+	font-size: 0.866rem;
 
 }
 
@@ -280,10 +347,10 @@ code, pre {
 // cumque alias error <code>deserunt labore</code> iste qui aliquid, rerum, esse reprehenderit.
 // A, ut laudantium sunt blanditiis non at, tempora dolore.</p>
 //
-// Styleguide 2.6.1
+// Not referenced in styleguide.
 
 code {
-	padding: $spacing-inner/2;
+	padding: $spacing-inner/4 $spacing-inner/2;
 	background: $panel-background-primary;
 }
 
@@ -298,4 +365,14 @@ code {
 // A, ut laudantium sunt blanditiis non at, tempora dolore.
 // </pre>
 //
-// Styleguide 2.6.2
+// Not referenced in styleguide.
+
+
+
+
+
+// Strong tag
+
+strong {
+	font-weight: $font-weight-bold;
+}

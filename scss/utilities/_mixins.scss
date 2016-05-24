@@ -6,16 +6,12 @@
 //
 // It's advised to not use @extend on the classes found here, as it can make
 // the compiled CSS a jumble and potentially harder to debug.
-//
-// Styleguide 50
 
 
 // clearfix() / .clearfix
 //
 // Useful when you need an element to clear its children, or to break an 
 // element out of the flow if its siblings.
-//
-// Styleguide 50.1
 
 @mixin clearfix() {
 	&::before,
@@ -41,8 +37,6 @@
 //
 // $rule	- The name of the CSS rule (eg. padding-top, margin-left, border-width, etc.)
 // $value	- The vale, in REM, without a suffix (eg. 1.5 rem would just be entered as 1.5)
-//
-// Styleguide 50.2
 
 @mixin rem-backup($rule, $value) {
   #{$rule}: ($value * 10) + px;
@@ -58,25 +52,30 @@
 // Context classes will effect the direct children of the element they're
 // applied to. If a context class relates directly to a visual attribute
 // (eg. `.has-background-*`), only that attribute will be applied.
-//
-// Styleguide 50.2
 
 
 
 // has-inline-elements() / .has-inline-elements
 //
 // Use if you need to have an element's direct children display inline.
-//
-// Styleguide 50.2.1
 
 @mixin has-inline-elements() {
 
-	vertical-align: baseline;
 	margin: $spacing-outer 0;
+	white-space: nowrap;
+
+	&:before {
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em; /* Adjusts for spacing */
+	}
 
 	& > * {
 		display: inline-block;
 		margin: 0 0 0 $spacing-inner;
+		vertical-align: bottom;
 		&:first-child {
 			margin: 0;
 		}
@@ -94,17 +93,13 @@
 //
 // These utilities are for page-level containers to allow for fullbleed
 // or capped width displays.
-//
-// Styleguide 50.3
 
 
 
 // width-capped() / .width-capped
-//
-// Styleguide 50.3.1
 
 @mixin width-capped() {
-	@include rem-backup(max-width, 80);
+	@include rem-backup(max-width, 70);
 }
 
 .width-capped {
@@ -114,8 +109,6 @@
 
 
 // width-fullbleed() / .width-fullbleed
-//
-// Styleguide 50.3.1
 
 @mixin width-fullbleed() {
 	
@@ -140,15 +133,11 @@
 
 
 // Aesthetic Utilities
-//
-// Styleguide 50.4
 
 // Background Color Utilities Classes
 //
 // These classes should not be extended (just reference the
 // $background-color-X variable needed).
-//
-// Styleguide 50.4.1
 
 .has-background--primary {
 	background: $background-color-primary;
@@ -165,8 +154,6 @@
 
 
 // Border Utilities
-//
-// Styleguide 50.4.2
 
 // Primary Border Utility Class & Mixin
 //
@@ -181,8 +168,6 @@
 // .has-border--primary--right	- Primary border applied to right side.
 // .has-border--primary--bottom	- Primary border applied to bottom side.
 // .has-border--primary--left	- Primary border applied to left side.
-//
-// Styleguide 50.4.2.1
 
 @mixin border-primary($position:'') {
 	@if $position != '' {
@@ -220,8 +205,6 @@
 // .has-border--secondary--right	- Secondary border applied to right side.
 // .has-border--secondary--bottom	- Secondary border applied to bottom side.
 // .has-border--secondary--left	- Secondary border applied to left side.
-//
-// Styleguide 50.4.2.2
 
 @mixin border-secondary($position:'') {
 	@if $position != '' {
@@ -251,9 +234,5 @@
 // Spacing Utilities
 //
 // @mixin container-spacing()
-//
-// Styleguide 50.5
 
-@mixin spacing-container() {
-
-}
+@mixin spacing-container() {}

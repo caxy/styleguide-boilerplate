@@ -6,21 +6,23 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>KSS Style Guide</title>
+  <title>Style Guide - Version 1.0</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-
+  <script src="https://use.typekit.net/hyf8mjc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
 <body id="kss-node">
 
 <header class="kss-header page-header">
-  <h1 class="kss-doc-title">KSS Style Guide</h1>
+  <h1 class="kss-doc-title">Style Guide</h1>
+  <span class="version">version 1.0</span>
 </header>
 
 <nav class="navigation-site">
@@ -29,7 +31,7 @@
       <a href="./index.html">Overview</a>
     </li>
     <li class="menu-item">
-      <a href="section-1.html">Colors</a>
+      <a href="section-1.html">Colors, Fonts and Icons</a>
     </li>
     <li class="menu-item">
       <a href="section-2.html">Typography</a>
@@ -38,19 +40,7 @@
       <a href="section-3.html">Forms and Form Elements</a>
     </li>
     <li class="menu-item">
-      <a href="section-4.html">Buttons and Button Contexts</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-10.html">Page-Level Containers</a>
-    </li>
-    <li class="menu-item">
       <a href="section-15.html">Containers</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-20.html">Menus</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-50.html">Utilities</a>
     </li>
   </ul>
 </nav>
@@ -65,49 +55,40 @@
         <h1 class="kss-title kss-title--level-1">
           Typography
         </h1>
-        
-        <ul class="table-of-contents">
-            <li>
-              <a href="section-2.html#kssref-2-1">Titles</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-2">Body Copy</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-3">Links</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-4">Lists</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-4-1">Unordered Lists</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-4-2">Ordered Lists</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-4-3">Description Lists</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-5">Blockquote</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-6">Code</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-6-1">Code Tag</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-6-2">Preformatted Tag</a>
-            </li>
-            <li>
-              <a href="section-2.html#kssref-2-1000">Large copy example</a>
-            </li>
-        </ul>
-
       </header>
 
-      <p>General overview of typographical elements that will be available on the site.</p>
+        <p>All text should pass <a href="https://www.w3.org/WAI/WCAG20/quickref/">WCAG 2.0 AA standards</a> for contrast.</p>
+
+      <h2>Sections:</h2>
+      <ul class="table-of-contents">
+          <li>
+            <a href="section-2.html#kssref-2-2">Titles</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-2-1">Subheadings</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-3">Body Copy</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-4">Links</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-5">Unordered Lists</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-6">Ordered Lists</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-7">Description Lists</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-8">Blockquote</a>
+          </li>
+          <li>
+            <a href="section-2.html#kssref-2-1000">Large copy example</a>
+          </li>
+      </ul>
 
 
 
@@ -118,23 +99,18 @@
       </div>
 
       <hr />
-      <section id="kssref-2-1" class="kss-section kss-section--depth-2">
+      <section id="kssref-2-2" class="kss-section kss-section--depth-2">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-1">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-2">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Titles
         </h2>
       </header>
 
-      <p>Every heading has an equivalent <code>.title-[#]</code> class that corresponds to its
-styles. This allows for HTML present to always be semantic, even if it needs
-to be rendered in a way that&#39;s tied to a different heading.</p>
-<p>For example, if you needed an H3 tag to look like an H1, rather than putting
-an H1 where it didn&#39;t belong, you could use <code>&lt;h3 class=&quot;title-1&quot;&gt;Title&lt;/h3&gt;</code>
-to achieve the desired look.</p>
+        <p><strong>QUESTION:</strong> <code>Titles should always be [case needed] and [contain/not contain] ending punctuation.</code></p>
 
 
 
@@ -164,20 +140,30 @@ to achieve the desired look.</p>
 &lt;h6&gt;Title 6&lt;/h6&gt;</code></pre>
       </div>
 
+      <p class="title-5 has-border--primary--bottom">Developer Notes:</p>
+      Every heading has an equivalent &#x60;.title-[#]&#x60; class that corresponds to its
+styles. This allows for HTML present to always be semantic, even if it needs
+to be rendered in a way that&#x27;s tied to a different heading. For example, if you needed
+an H3 tag to look like an H1, rather than putting an H1 where it didn&#x27;t belong, you could use
+&#x60;&lt;h3 class=&quot;title-1&quot;&gt;Title&lt;/h3&gt;&#x60; to achieve the desired look.
 
       </section>
 
       <hr />
-      <section id="kssref-2-2" class="kss-section kss-section--depth-2">
+      <section id="kssref-2-2-1" class="kss-section kss-section--depth-3">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-2">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-2-1">Link to this Section</a> 
         </small>
-        <h2 class="kss-title kss-title--level-2">
-          Body Copy
-        </h2>
+        <h3 class="kss-title kss-title--level-3">
+          Subheadings
+        </h3>
       </header>
+
+        <p><strong>QUESTION:</strong> <code>Subheadings should always be [case needed] and [contain/not contain] ending punctuation.</code></p>
+<p>Subheadings should only be used in tandem with Title 1 and Title 2 headings, and should never be used
+independently from Titles.</p>
 
 
 
@@ -188,21 +174,19 @@ to achieve the desired look.</p>
           Display Example:
         </p>
           <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
-<h3>Body Copy with a Title</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+            <h1></h1><span class="subheading">Subheading for Title 1</span>
+<h2></h2><span class="subheading">Subheading for Title 2</span>
           </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui &lt;a href=&quot;&quot;&gt;ullam praesentium sed odio&lt;/a&gt; deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!&lt;/p&gt;
-&lt;h3&gt;Body Copy with a Title&lt;/h3&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui &lt;a href=&quot;&quot;&gt;ullam praesentium sed odio&lt;/a&gt; deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!&lt;/p&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h1&gt;&lt;/h1&gt;&lt;span class=&quot;subheading&quot;&gt;Subheading for Title 1&lt;/span&gt;
+&lt;h2&gt;&lt;/h2&gt;&lt;span class=&quot;subheading&quot;&gt;Subheading for Title 2&lt;/span&gt;</code></pre>
       </div>
 
+      <p class="title-5 has-border--primary--bottom">Developer Notes:</p>
+      Subheadings should be 75% the size of a given title&#x27;s font size.
 
       </section>
 
@@ -212,6 +196,47 @@ to achieve the desired look.</p>
       <header>
         <small>
           <a class="kss-title__permalink" href="#kssref-2-3">Link to this Section</a> 
+        </small>
+        <h2 class="kss-title kss-title--level-2">
+          Body Copy
+        </h2>
+      </header>
+
+        <p>Body copy uses the Calluna font, sized 18px, with a line height of 1.5rem.</p>
+
+
+
+    </div>
+
+      <div>
+        <p class="title-5 has-border--primary--bottom">
+          Display Example:
+        </p>
+          <div>
+            <p>Lorem ipsum dolor sit amet, <a href="">consectetur adipisicing</a> elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui ullam praesentium sed odio deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+<h3>Body Copy with a Title</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+          </div>
+        </div>
+      </div>
+      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href=&quot;&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui ullam praesentium sed odio deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!&lt;/p&gt;
+&lt;h3&gt;Body Copy with a Title&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui &lt;a href=&quot;&quot;&gt;ullam praesentium sed odio&lt;/a&gt; deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!&lt;/p&gt;</code></pre>
+      </div>
+
+
+      </section>
+
+      <hr />
+      <section id="kssref-2-4" class="kss-section kss-section--depth-2">
+
+      <header>
+        <small>
+          <a class="kss-title__permalink" href="#kssref-2-4">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Links
@@ -240,35 +265,15 @@ to achieve the desired look.</p>
       </section>
 
       <hr />
-      <section id="kssref-2-4" class="kss-section kss-section--depth-2">
+      <section id="kssref-2-5" class="kss-section kss-section--depth-2">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-4">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-5">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
-          Lists
-        </h2>
-      </header>
-
-
-
-    </div>
-
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-2-4-1" class="kss-section kss-section--depth-3">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-2-4-1">Link to this Section</a> 
-        </small>
-        <h3 class="kss-title kss-title--level-3">
           Unordered Lists
-        </h3>
+        </h2>
       </header>
 
 
@@ -301,15 +306,15 @@ to achieve the desired look.</p>
       </section>
 
       <hr />
-      <section id="kssref-2-4-2" class="kss-section kss-section--depth-3">
+      <section id="kssref-2-6" class="kss-section kss-section--depth-2">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-4-2">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-6">Link to this Section</a> 
         </small>
-        <h3 class="kss-title kss-title--level-3">
+        <h2 class="kss-title kss-title--level-2">
           Ordered Lists
-        </h3>
+        </h2>
       </header>
 
 
@@ -342,15 +347,15 @@ to achieve the desired look.</p>
       </section>
 
       <hr />
-      <section id="kssref-2-4-3" class="kss-section kss-section--depth-3">
+      <section id="kssref-2-7" class="kss-section kss-section--depth-2">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-4-3">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-7">Link to this Section</a> 
         </small>
-        <h3 class="kss-title kss-title--level-3">
+        <h2 class="kss-title kss-title--level-2">
           Description Lists
-        </h3>
+        </h2>
       </header>
 
 
@@ -385,16 +390,18 @@ to achieve the desired look.</p>
       </section>
 
       <hr />
-      <section id="kssref-2-5" class="kss-section kss-section--depth-2">
+      <section id="kssref-2-8" class="kss-section kss-section--depth-2">
 
       <header>
         <small>
-          <a class="kss-title__permalink" href="#kssref-2-5">Link to this Section</a> 
+          <a class="kss-title__permalink" href="#kssref-2-8">Link to this Section</a> 
         </small>
         <h2 class="kss-title kss-title--level-2">
           Blockquote
         </h2>
       </header>
+
+        <p>Blockquote copy should always be surrounded by double quotes.</p>
 
 
 
@@ -406,9 +413,9 @@ to achieve the desired look.</p>
         </p>
           <div>
             <blockquote>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
 cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.
+A, ut laudantium sunt blanditiis non at, tempora dolore."
 <footer>
 — <cite>Source Person, Additional Info</cite>
 </footer>
@@ -419,111 +426,13 @@ A, ut laudantium sunt blanditiis non at, tempora dolore.
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;blockquote&gt;
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
+&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
 cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.
+A, ut laudantium sunt blanditiis non at, tempora dolore.&quot;
 &lt;footer&gt;
 — &lt;cite&gt;Source Person, Additional Info&lt;/cite&gt;
 &lt;/footer&gt;
 &lt;/blockquote&gt;</code></pre>
-      </div>
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-2-6" class="kss-section kss-section--depth-2">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-2-6">Link to this Section</a> 
-        </small>
-        <h2 class="kss-title kss-title--level-2">
-          Code
-        </h2>
-      </header>
-
-
-
-    </div>
-
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-2-6-1" class="kss-section kss-section--depth-3">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-2-6-1">Link to this Section</a> 
-        </small>
-        <h3 class="kss-title kss-title--level-3">
-          Code Tag
-        </h3>
-      </header>
-
-
-
-    </div>
-
-      <div>
-        <p class="title-5 has-border--primary--bottom">
-          Display Example:
-        </p>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
-cumque alias error <code>deserunt labore</code> iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.</p>
-          </div>
-        </div>
-      </div>
-      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
-cumque alias error &lt;code&gt;deserunt labore&lt;/code&gt; iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.&lt;/p&gt;</code></pre>
-      </div>
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-2-6-2" class="kss-section kss-section--depth-3">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-2-6-2">Link to this Section</a> 
-        </small>
-        <h3 class="kss-title kss-title--level-3">
-          Preformatted Tag
-        </h3>
-      </header>
-
-
-
-    </div>
-
-      <div>
-        <p class="title-5 has-border--primary--bottom">
-          Display Example:
-        </p>
-          <div>
-            <pre>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
-cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.
-</pre>
-          </div>
-        </div>
-      </div>
-      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;pre&gt;
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum libero,
-cumque alias error deserunt labore iste qui aliquid, rerum, esse reprehenderit.
-A, ut laudantium sunt blanditiis non at, tempora dolore.
-&lt;/pre&gt;</code></pre>
       </div>
 
 
@@ -547,7 +456,44 @@ A, ut laudantium sunt blanditiis non at, tempora dolore.
 
       <div>
           <div>
-            typography.html NOT FOUND!
+            <header>
+	<h1>Heading Level 1</h1>
+	<span class="subheading">Beatae odio maiores eum nulla accusantium!</span>
+</header>
+	       
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, <strong>condimentum sed</strong>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Ut felis.</p>
+
+<p>Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+<h2>Heading Level 2</h2>
+	       
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+
+<h3>Heading Level 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus dolore excepturi ad expedita, doloremque id enim iusto ratione tempore amet perferendis numquam, nulla nostrum magnam quam neque, necessitatibus dicta! Ipsa!</p>
+
+<blockquote>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+	<footer>
+	— <cite>Source Person, Additional Info</cite>
+	</footer>
+</blockquote>
+
+<p>Consectetur adipisicing elit. Qui unde voluptates voluptatem et autem eos eaque iusto atque ea aliquam laborum cupiditate pariatur explicabo, dicta molestias sapiente laboriosam eveniet! Rem.</p>
+
+<h4>Heading Level 4:</h4>
+
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus dolore excepturi ad expedita, doloremque id enim iusto ratione tempore amet perferendis numquam, nulla nostrum magnam quam neque, necessitatibus dicta! Ipsa!</p>
+
           </div>
         </div>
       </div>
@@ -557,6 +503,7 @@ A, ut laudantium sunt blanditiis non at, tempora dolore.
 </article>
 
 <!-- SCRIPTS -->
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

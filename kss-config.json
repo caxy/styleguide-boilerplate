@@ -1,0 +1,21 @@
+{
+  "//": "The source and destination paths are relative to this file.",
+  "source": [
+    "scss/"
+  ],
+  "title": "Style Guide",
+  "destination":  "styleguide/",
+  "template": "styleguide/caxy-template",
+  "//": "The css and js paths are URLs relative to the generated style guide.",
+  "css": [
+    "public/main-dev.css"
+  ],
+  "js": [
+  ],
+  "custom": [
+     "devnotes",
+     "hidemarkup",
+     "patterntype",
+     "containspatterns"
+  ]
+}

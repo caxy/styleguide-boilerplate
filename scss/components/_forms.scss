@@ -1,6 +1,6 @@
 // Forms
 //
-// Styleguide 3.2
+// Styleguide 3.10
 
 form {
   padding: $spacing-inner 0;
@@ -14,62 +14,51 @@ form {
 // Markup:
 // <form class="has-inline-elements">
 //   <label for="inline-form-text-input-1" class="form-text">
-//     <span id="inline-form-description-1" class="field-description">Input Description</span>
+//     <span id="inline-form-description-1" class="field-title">Input Description</span>
 //     <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="text" title="Input Description" value="" />
 //   </label>
 //   <label class="form-checkbox" for="inline-form-checkbox-1">
 //     <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
-//     <span id="inline-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
+//     <i role="presentation"></i>
+//     <span id="inline-form-checkbox-desc-1" class="field-title">Checkbox Value</span>
 //   </label>
-//   <button type="submit">search</button>
+//   <button type="submit">submit</button>
 // </form>
 //
 // PatternType: molecule
 //
-// Styleguide 3.2.2
+// Styleguide 3.10.1
 
 // Basic Form
 //
-// Markup:
-// <form class="form-basic">
-//   <h3>Form Title</h3>
-//   <label for="basic-form-text-input-1" class="form-text">
-//     <span id="basic-form-description-1" class="field-description">Input Description</span>
-//     <input id="basic-form-text-input-1" name="basic-form-text-input-1" aria-labelledby="basic-form-description-1" type="text" title="Input Description" value="" />
-//   </label>
-//   <label class="form-checkbox" for="basic-form-checkbox-1">
-//     <input type="checkbox" id="basic-form-checkbox-1" name="basic-form-checkbox-1" aria-labelledby="basic-form-checkbox-desc-1" value="val2" />
-//     <span id="basic-form-checkbox-desc-1" class="field-description">Checkbox Value</span>
-//   </label>
-//   <div class="has-buttons">
-//     <button class="button-primary" type="submit">submit</button>
-//     <button type="submit">cancel</button>
-//   </div>
-// </form>
+// Simple form showing every form element type in one place.
+//
+// Markup: form_basic.html
 //
 // PatternType: molecule
 //
-// Styleguide 3.2.3
+// Styleguide 3.10.2
 
-.form-basic {
+form {
   
   max-width: 40rem;
 
   label {
-    margin: 0 0 $spacing-outer 0;
-    input,
-    textarea {
+
+    margin-bottom: $spacing-inner;
+    display: block;
+
+    %form-field {
       display: block;
     }
-  }
-  
-  .field-text {
-    display: block;
-    margin: $spacing-outer 0;
   }
 
   .has-buttons {
     margin-top: 0;
+  }
+
+  &.has-inline-elements {
+    max-width: none;
   }
 
 }
@@ -88,7 +77,7 @@ form {
 //
 // ContainsPatterns: Button, Input (Search)
 //
-// Styleguide 3.2.5
+// __Styleguide 3.3.5
 
 .search-form {
   
@@ -98,6 +87,10 @@ form {
   overflow: hidden;
   padding: 0;
   margin-bottom: 0;
+
+  label {
+    margin: 0;
+  }
 
   .form-text,
   button.form-submit {

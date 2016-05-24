@@ -6,21 +6,23 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>KSS Style Guide</title>
+  <title>Style Guide - Version 1.0</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-
+  <script src="https://use.typekit.net/hyf8mjc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="public/main-dev.css">
 
 </head>
 <body id="kss-node">
 
 <header class="kss-header page-header">
-  <h1 class="kss-doc-title">KSS Style Guide</h1>
+  <h1 class="kss-doc-title">Style Guide</h1>
+  <span class="version">version 1.0</span>
 </header>
 
 <nav class="navigation-site">
@@ -29,7 +31,7 @@
       <a href="./index.html">Overview</a>
     </li>
     <li class="menu-item">
-      <a href="section-1.html">Colors</a>
+      <a href="section-1.html">Colors, Fonts and Icons</a>
     </li>
     <li class="menu-item">
       <a href="section-2.html">Typography</a>
@@ -38,19 +40,7 @@
       <a href="section-3.html">Forms and Form Elements</a>
     </li>
     <li class="menu-item">
-      <a href="section-4.html">Buttons and Button Contexts</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-10.html">Page-Level Containers</a>
-    </li>
-    <li class="menu-item">
       <a href="section-15.html">Containers</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-20.html">Menus</a>
-    </li>
-    <li class="menu-item">
-      <a href="section-50.html">Utilities</a>
     </li>
   </ul>
 </nav>
@@ -65,20 +55,14 @@
         <h1 class="kss-title kss-title--level-1">
           Containers
         </h1>
-        
-        <ul class="table-of-contents">
-            <li>
-              <a href="section-15.html#kssref-15-1">Sections and Articles</a>
-            </li>
-            <li>
-              <a href="section-15.html#kssref-15-2">Panels</a>
-            </li>
-            <li>
-              <a href="section-15.html#kssref-15-3">Cards</a>
-            </li>
-        </ul>
-
       </header>
+
+      <h2>Sections:</h2>
+      <ul class="table-of-contents">
+          <li>
+            <a href="section-15.html#kssref-15-3">Cards</a>
+          </li>
+      </ul>
 
 
 
@@ -87,131 +71,6 @@
 
 
       </div>
-
-      <hr />
-      <section id="kssref-15-1" class="kss-section kss-section--depth-2">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-15-1">Link to this Section</a> 
-        </small>
-        <h2 class="kss-title kss-title--level-2">
-          Sections and Articles
-        </h2>
-      </header>
-
-
-
-    </div>
-
-
-
-      </section>
-
-      <hr />
-      <section id="kssref-15-2" class="kss-section kss-section--depth-2">
-
-      <header>
-        <small>
-          <a class="kss-title__permalink" href="#kssref-15-2">Link to this Section</a> 
-        </small>
-        <h2 class="kss-title kss-title--level-2">
-          Panels
-        </h2>
-        <dl class="pattern-info">
-          <dt>Pattern Type:</dt>
-          <dd class="pattern-type organism">organism</dd>
-        
-          <dt>Contains:</dt>
-          <dd>Links, Images, Titles, Body Copy, Cards, Navigation, Forms</dd>
-        </dl>
-      </header>
-
-      <p>Panels are general groupings of content that need to be separated
-from the main flow of copy on a page, to either highlight content
-or direct a user towards areas to learn more via a CTA.</p>
-<p>Ideally there should not be more than 2-3 panels per page, since
-their point is to highlight content, and if everything is
-highlighted, nothing is.</p>
-
-
-
-    </div>
-
-      <div>
-        <p class="title-5 has-border--primary--bottom">
-          Display Example:
-        </p>
-          <div>
-            <div class="panel">
-  <h2 class="title-1">Simple Panel Title</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
-</div>
-
-<div class="panel">
-  <h2 class="title-1">More Complex Panel Title</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
-  <hr />
-  <form>
-    <h3 class="title-4">Sign Up for Special Offers!</h3>
-    <div class="has-inline-elements">
-      <label for="inline-form-text-input-1" class="form-text">
-        <span id="inline-form-description-1" class="field-description">Email Address</span>
-        <input id="inline-form-text-input-1" name="inline-form-text-input-1" aria-labelledby="inline-form-description-1" type="email" title="Email Address" value="" />
-      </label>
-      <label class="form-checkbox" for="inline-form-checkbox-1">
-        <input type="checkbox" id="inline-form-checkbox-1" name="inline-form-checkbox-1" aria-labelledby="inline-form-checkbox-desc-1" value="val2" />
-        <span id="inline-form-checkbox-desc-1" class="field-description">It's alright to email me.</span>
-      </label>
-      <button type="submit">sign up</button>
-    </div>
-    <p class="copy-tertiary">Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.</p>
-  </form>
-</div>
-
-<div class="panel-fullbleed">
-  <h2 class="title-1">Fullbleed Panel Title</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
-</div>
-          </div>
-        </div>
-      </div>
-      <p class="title-5 has-border--primary--bottom">Markup Example:</p>
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
-  &lt;h2 class=&quot;title-1&quot;&gt;Simple Panel Title&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;panel&quot;&gt;
-  &lt;h2 class=&quot;title-1&quot;&gt;More Complex Panel Title&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
-  &lt;hr /&gt;
-  &lt;form&gt;
-    &lt;h3 class=&quot;title-4&quot;&gt;Sign Up for Special Offers!&lt;/h3&gt;
-    &lt;div class=&quot;has-inline-elements&quot;&gt;
-      &lt;label for=&quot;inline-form-text-input-1&quot; class=&quot;form-text&quot;&gt;
-        &lt;span id=&quot;inline-form-description-1&quot; class=&quot;field-description&quot;&gt;Email Address&lt;/span&gt;
-        &lt;input id=&quot;inline-form-text-input-1&quot; name=&quot;inline-form-text-input-1&quot; aria-labelledby=&quot;inline-form-description-1&quot; type=&quot;email&quot; title=&quot;Email Address&quot; value=&quot;&quot; /&gt;
-      &lt;/label&gt;
-      &lt;label class=&quot;form-checkbox&quot; for=&quot;inline-form-checkbox-1&quot;&gt;
-        &lt;input type=&quot;checkbox&quot; id=&quot;inline-form-checkbox-1&quot; name=&quot;inline-form-checkbox-1&quot; aria-labelledby=&quot;inline-form-checkbox-desc-1&quot; value=&quot;val2&quot; /&gt;
-        &lt;span id=&quot;inline-form-checkbox-desc-1&quot; class=&quot;field-description&quot;&gt;It&#x27;s alright to email me.&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;sign up&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;copy-tertiary&quot;&gt;Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.&lt;/p&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;panel-fullbleed&quot;&gt;
-  &lt;h2 class=&quot;title-1&quot;&gt;Fullbleed Panel Title&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-      </div>
-
-
-      </section>
 
       <hr />
       <section id="kssref-15-3" class="kss-section kss-section--depth-2">
@@ -232,7 +91,7 @@ highlighted, nothing is.</p>
         </dl>
       </header>
 
-      <p>Cards should contain a maximum of four types of atoms. Cards are
+        <p>Cards should contain a maximum of four types of atoms. Cards are
 basically beefed-up CTAs, so if a situation requires more content,
 a different pattern should be leveraged instead (eg. panel).</p>
 
@@ -245,21 +104,69 @@ a different pattern should be leveraged instead (eg. panel).</p>
           Display Example:
         </p>
           <div>
-            <div class="card">
-  <h3>Card Title</h3>
-  <p>Officia ex consequatur modi quasi facilis!</p>
-  <a href="">Read More</a>
-</div>
+            <ul class="has-cards">
+	<li class="card">
+		<a class="card__link" href="">
+			<div class="card__copy">
+			  <h3 class="title-2">Card Title</h3>
+			  <span class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			  <p>Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?</p>
+			</div>
+		</a>
+	</li>
+	<li class="card">
+		<a class="card__link" href="">
+			<div class="card__copy">
+			  <h3 class="title-2">Card Title</h3>
+			  <span class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			  <p>Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?</p>
+			</div>
+		</a>
+	</li>
+	<li class="card">
+		<a class="card__link" href="">
+			<div class="card__copy">
+			  <h3 class="title-2">Card Title</h3>
+			  <span class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			  <p>Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?</p>
+			</div>
+		</a>
+	</li>
+</ul>
           </div>
         </div>
       </div>
       <p class="title-5 has-border--primary--bottom">Markup Example:</p>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;card&quot;&gt;
-  &lt;h3&gt;Card Title&lt;/h3&gt;
-  &lt;p&gt;Officia ex consequatur modi quasi facilis!&lt;/p&gt;
-  &lt;a href=&quot;&quot;&gt;Read More&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;has-cards&quot;&gt;
+	&lt;li class=&quot;card&quot;&gt;
+		&lt;a class=&quot;card__link&quot; href=&quot;&quot;&gt;
+			&lt;div class=&quot;card__copy&quot;&gt;
+			  &lt;h3 class=&quot;title-2&quot;&gt;Card Title&lt;/h3&gt;
+			  &lt;span class=&quot;subheading&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/span&gt;
+			  &lt;p&gt;Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;card&quot;&gt;
+		&lt;a class=&quot;card__link&quot; href=&quot;&quot;&gt;
+			&lt;div class=&quot;card__copy&quot;&gt;
+			  &lt;h3 class=&quot;title-2&quot;&gt;Card Title&lt;/h3&gt;
+			  &lt;span class=&quot;subheading&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/span&gt;
+			  &lt;p&gt;Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;card&quot;&gt;
+		&lt;a class=&quot;card__link&quot; href=&quot;&quot;&gt;
+			&lt;div class=&quot;card__copy&quot;&gt;
+			  &lt;h3 class=&quot;title-2&quot;&gt;Card Title&lt;/h3&gt;
+			  &lt;span class=&quot;subheading&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/span&gt;
+			  &lt;p&gt;Illum vel ipsa quasi culpa quo sapiente recusandae iusto doloremque quos excepturi ipsam, beatae blanditiis quae iure?&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
       </div>
 
 
@@ -267,6 +174,7 @@ a different pattern should be leveraged instead (eg. panel).</p>
 </article>
 
 <!-- SCRIPTS -->
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

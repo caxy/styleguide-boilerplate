@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/http-server",
-    "generate-css": "sass scss/main.scss css/main.css",
-    "generate-minified-css": "cleancss -o css/main-min.css css/main.css",
-    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns",
-    "generate-styleguide-verbose": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node scss --template styleguide/caxy-template --css public/main-dev.css --verbose --custom devnotes --custom hidemarkup --custom patterntype --custom containspatterns"
+    "generate-css": "sass scss/main.scss css/main.css && cleancss -o css/main-min.css css/main.css",
+    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node --config kss-config.json",
+    "generate-styleguide-verbose": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss-node --config kss-config.json --verbose"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caxy/styleguide-boilerplate.git"
+    "url": "git+https://github.com/caxy/discoverdesign-styleguide.git"
   },
   "keywords": [
     "kss",
@@ -24,9 +23,9 @@
   "author": "Beck Kramer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/caxy/styleguide-boilerplate/issues"
+    "url": "https://github.com/caxy/discoverdesign-styleguide/issues"
   },
-  "homepage": "https://github.com/caxy/styleguide-boilerplate#readme",
+  "homepage": "https://github.com/caxy/discoverdesign-styleguide#readme",
   "devDependencies": {
     "clean-css": "^3.4.10",
     "http-server": "^0.9.0",

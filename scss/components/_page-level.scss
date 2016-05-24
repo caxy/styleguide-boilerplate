@@ -1,7 +1,7 @@
 
 // Page-Level Containers
 //
-// Styleguide 10
+// __Styleguide 10
 
 .page-header,
 .page-main,
@@ -18,18 +18,19 @@
 //
 // ContainsPatterns: Logo, Search Form, Navigation Menu
 //
-// Styleguide 10.1
+// __Styleguide 10.1
 
 .page-header {
 	
 	@include flexbox();
 	@include justify-content(space-between);
 	@include align-items(center);
+	color: #fff;
 	padding: $spacing-outer;
-	background: $panel-background-secondary;
 
 	%titles {
 		margin: 0;
+		color: #fff;
 	}
 
 }
@@ -48,10 +49,8 @@
 //
 // ContainsPatterns: Logo, Navigation Menu
 //
-// Styleguide 10.2
+// __Styleguide 10.2
 
 .page-footer {
 	padding: $spacing-outer;
-	color: $font-color-tertiary;
-	background: $panel-background-tertiary;
 }

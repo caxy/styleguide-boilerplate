@@ -18,9 +18,11 @@ Styleguide 3.1
 
 // Form Fields
 //
+// Form fields will fill their containers 100% unless the sepcific
+// situation dictates otherwise. This is to mainly aid in a mobile-first approach.
+//
 // All form fields should be wrapped inside of their respective label
 // elements. This accomplishes a few things:
-//
 // - Clicking on the label element will bring focus to its input regardless of whether a `for` value is set
 // - It groups all content relevant to an input in with it, which can aid screen readers in assigning context
 // - This provides a baked-in element that can be leveraged for positioning and spacing alongside the input itself, which can be very valuable
@@ -33,34 +35,38 @@ Styleguide 3.1
 	background: $panel-background-primary;
 	box-sizing: border-box;
 	border: $border-width-primary solid $panel-background-primary;
-	padding: $spacing-inner;
+	padding: $spacing-inner/2 $spacing-inner;
+	border-radius: 5px;
 
 	&:focus {
 		border-color: $border-color-primary;
 	}
 }
 
+%form-element-spacing {
+	margin: $spacing-outer 0;
+}
+
 input[type="tel"],
+input[type="url"],
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="search"],
 input[type="password"],
 textarea,
-label.form-select,
-fieldset.has-checkboxes,
-fieldset.has-radios {
-
+.form-select-wrapper {
 	@extend %form-field;
-
 }
 
 input[type="tel"],
+input[type="url"],
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="search"],
 input[type="password"],
+input[type="file"],
 textarea,
 select {
 
@@ -70,13 +76,14 @@ select {
 
 	&:focus {
 		outline: none;
-		border-color: $border-color-primary;
 	}
 
 }
 
-.field-description {
+.field-title {
 	display: block;
+	line-height: $line-height-primary;
+	margin: 0 0 $spacing-inner/2;
 }
 
 
@@ -86,39 +93,34 @@ select {
 // :focus  - focus state
 //
 // Markup:
-// <label for="styleguide-text-input-1" class="form-text">
-//   <span id="input-description-1" class="field-description">Input Description</span>
-//   <input id="styleguide-text-input-1" class="{{modifier_class}}" name="styleguide-text-input-1" aria-labelledby="input-description-1" type="text" title="Input Description" value="" />
+// <label for="styleguide-text-input-1" class="form-textfield">
+//   <span id="input-title-1" class="field-title">Input Title</span>
+//   <input id="styleguide-text-input-1" class="{{modifier_class}}" name="styleguide-text-input-1" aria-labelledby="input-title-1" type="text" title="Input Title" value="" />
 // </label>
 //
 // PatternType: atom
 //
 // Styleguide 3.1.2.1
 
-.form-text {
+.form-textfield {
 
 	position: relative;
 	z-index: 1;
 	min-width: 25rem;
+	@extend %form-element-spacing;
 	//margin: $spacing-outer/2 0; // because element is inline-block, margins won't collapse.
 
-	.field-description {
-		line-height: $line-height-primary;
-		margin: 0 0 $spacing-inner/2;
-	}
-
-	input[type="tel"],
-	input[type="text"],
-	input[type="number"],
-	input[type="email"],
-	input[type="search"],
-	input[type="password"],
+	input,
 	textarea {
 		width: 100%;
 		position: relative;
 		z-index: 3;
 		display: inline-block;
-		border: $border-width-primary solid $border-color-primary;
+	}
+
+	.field-title {
+		font-style: italic;
+		font-weight: $font-weight-semibold;
 	}
 
 }
@@ -128,9 +130,9 @@ select {
 // Text Areas
 //
 // Markup:
-// <label for="styleguide-textarea" class="form-text">
-//   <span id="input-description-2" class="field-description">Input Description</span>
-//   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-description-2" title="Input Description" value=""></textarea>
+// <label for="styleguide-textarea" class="form-textfield">
+//   <span id="input-title-2" class="field-title">Input Title</span>
+//   <textarea id="styleguide-textarea" name="styleguide-textarea" aria-labelledby="input-title-2" title="Input Title" value=""></textarea>
 // </label>
 //
 // PatternType: atom
@@ -149,12 +151,15 @@ textarea {
 //
 // Markup:
 // <label class="form-select" for="styleguide-select">
-//   <select id="styleguide-select" name="styleguide-select">
-//     <option>Select a Value</option>
-//     <option value="val1">Option 1</option>
-//     <option value="val2">Option 2</option>
-//     <option value="val3">Option 3</option>
-//   </select>
+//   <span id="select-title" class="field-title">Select Title</span>
+//   <div class="form-select-wrapper">
+//     <select id="styleguide-select" name="styleguide-select" aria-labelledby="select-title">
+//       <option>Select a Value</option>
+//       <option value="val1">Option 1</option>
+//       <option value="val2">Option 2</option>
+//       <option value="val3">Option 3</option>
+//     </select>
+//   </div>
 // </label>
 //
 // PatternType: atom
@@ -163,20 +168,45 @@ textarea {
 
 .form-select {
 
-	position: relative;
-	box-sizing: border-box;
-	z-index: 1;
-	display: inline-block;
-	margin: $spacing-outer/2 0;
+	@extend %form-element-spacing;
 
-	select {
-		display: block;
-		min-width: 100%;
-		border: none;
-  	background: $panel-background-primary;
-    padding-right: $spacing-outer;
+	.field-title {
+		font-style: italic;
+		font-weight: $font-weight-semibold;
+	}
+
+	.description {
+		@include clearfix();
+	}
+	
+	.form-select-wrapper {
+
+		position: relative;
+		box-sizing: border-box;
+		z-index: 1;
+		display: inline-block;
+		background: $panel-background-primary;
+		padding: 0;
+		overflow: hidden;
+
+		select {
+			-webkit-appearance: none; // to remove glossiness on Safari
+			padding: $spacing-inner/3 $spacing-inner;
+			display: block;
+			min-width: 98%;
+			min-height: 98%;
+			border: none;
+	  	background: none;
+	  	border: $border-width-primary solid $panel-background-primary;
+	  	&:focus {
+	  		border-color: $border-color-primary;
+	  		background: $panel-background-primary;
+	  	}
+		}
 	}
 }
+
+
 
 
 
@@ -184,8 +214,15 @@ textarea {
 //
 // Markup:
 // <label class="form-checkbox" for="styleguide-checkbox">
-//   <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox-desc" value="val" />
-//   <span id="checkbox-desc" class="field-description">Value</span>
+//   <input type="checkbox" id="styleguide-checkbox" name="styleguide-checkbox" aria-labelledby="checkbox1" value="val" />
+//   <i role="presentation"></i>
+//   <span id="checkbox1" class="field-title">Value</span>
+//  </label><br />
+// <label class="form-checkbox" for="styleguide-checkbox-2">
+//   <input type="checkbox" id="styleguide-checkbox-2" name="styleguide-checkbox-2" aria-labelledby="checkbox2" aria-describedby="checkbox2desc" value="val" />
+//   <i role="presentation"></i>
+//   <span id="checkbox2" class="field-title">Value</span>
+//   <small id="checkbox2desc">A description for this checkbox.</small>
 //  </label>
 //
 // PatternType: atom
@@ -195,23 +232,83 @@ textarea {
 .form-checkbox,
 .form-radio {
 
-	padding: $spacing-inner $spacing-inner $spacing-inner $spacing-inner*2;
+	padding: $spacing-inner/2 $spacing-inner $spacing-inner/2 $spacing-inner;
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
 
 	input {
+
+		// The following is needed instead of display:none to allow for tabbed
+		// navigation to not skip over these elements.
+		opacity: 0;
+		height: 0;
+		width: 0;
+		position: absolute;
+
+		& + i::after {
 			position: absolute;
-			top: $line-height-primary * 0.95; // 0.95 = approx line-height * (line-height - font-size)
-			left: $spacing-inner/2;
+			top: 1rem;
+			left: 0;
+			font-family: $font-family-icon;
+			display: block;
+			font-style: normal;
+			color: $selector-color-unchecked;
+		}
+
+		&:focus ~ .field-title {
+			outline: 1px dotted #000;
+		}
+
+		&:checked + i::after {
+			color: $selector-color-checked;
+		}
+
 	}
 
-	.field-description {
-		padding: 0 $spacing-inner 0 0;
+	.field-title {
+		padding: 0 1rem 0 0;
 		line-height: $line-height-primary;
+		margin-bottom: 0;
 	}
 
 }
+
+.form-checkbox {
+	
+	input {
+
+		& + i::after {
+			content: "\f096";
+		}
+
+		&:checked + i::after {
+			content: "\f14a";
+			font-size: 0.95rem;
+		}
+	}
+	.field-title {
+		font-style: italic;
+		font-weight: $font-weight-semibold;
+	}
+}
+
+.form-radio {
+	
+	input {
+		
+		& + i::after {
+			content: "\f1db";
+		}
+
+		&:checked + i::after {
+			content: "\f111";
+		}
+	}
+}
+
+
+
 
 
 
@@ -231,36 +328,81 @@ textarea {
 
 
 
+// File Upload Fields
+//
+// Markup:
+// <label class="form-textfield" for="edit-file--2">
+//   <span class="field-title" id="edit-file--2--label">File</span>
+//   <input type="file" aria-labelledby="edit-file--2--label" class="form-file" size="60" name="files[file]" id="edit-file--2" aria-describedby="edit-file--2--description">
+//   <small class="description" id="edit-file--2--description">
+//     Information about the field, like what file types are selected.
+//   </small>
+// </label>
+//
+// Styleguide 3.1.3
+
+
+
+
+
+
 // Fieldsets
 //
 // Markup: form_fieldset.html
 //
 // PatternType: molecule
 //
-// Styleguide 3.1.3
+// Styleguide 3.1.4
 
+// Fieldsets have some weird padding values that are impossible to override, so a negative left
+// margin is sadly necessary.
 
 fieldset {
-
-	margin: $spacing-outer*2 0 $spacing-outer;
+	
+	@extend %form-element-spacing;
+	margin: $spacing-inner 0;
 	position: relative;
-	display: block;
-	min-width: 40rem;
+	min-width: 0; 
+	width: 100%;
+	border: none;
+	padding: 0;
 
 	legend {
-		position:absolute;
-		top: -$spacing-outer*1.5;
+		padding-top: 1em;
+		display: table;
+		font-style: italic;
+		font-weight: $font-weight-semibold;
+		font-size: $font-size-primary*1.125;
+		&::after {
+			content: ":";
+		}
+	}
+
+	.description {
+		@include clearfix();
+		display: block;
+	}
+
+	& > .form-textfield,
+	& > .form-select {
+		display: block;
 	}
 
 	&.has-checkboxes,
 	&.has-radios  {
 
-		padding: $spacing-inner $spacing-inner/2;
+		legend {
+			font-size: $font-size-primary;
+			&::after {
+				content: "";
+			}
+		}
 
 		.form-checkbox,
 		.form-radio {
 			float: left;
 			clear: left;
+			margin: 0;
 		}
 
 		&.has-inline-fields {
@@ -271,6 +413,138 @@ fieldset {
 			}
 		}
 
+		.form-checkbox .field-title {
+			font-weight: $font-weight-normal;
+			font-style: normal;
+		}
+
 	}
 }
 
+
+
+
+// Form Validation
+//
+// Markup:
+// <label for="validation-input-1" class="form-textfield has-feedback error">
+//   <span id="validation-title-1" class="field-title">Input In Error/Invalid State</span>
+//   <input id="validation-input-1" class="{{modifier_class}}" name="validation-input-1" aria-labelledby="validation-title-1" type="text" title="Input Title" value="" />
+//   <small class="feedback-message">Clear information about how to enter a valid value.</small> 
+//   <small>Description of what's expected in this field.</small>   
+// </label>
+//
+// Styleguide 3.5
+
+// Required Fields
+//
+// Markup:
+// <label class="form-textfield required" for="validation-text" id="validation-text--label">
+// 	<span class="field-title">Subject <abbr title="required">*</abbr></span>
+// 	<input type="text" aria-describedby="validation-text--title" aria-labelledby="validation-text--label" aria-required="true" required="required" id="validation-text" >
+// </label>
+//
+// Styleguide 3.5.1
+
+
+
+abbr[title='required'] {
+	font-size: $font-size-tertiary;
+	color: $form-color-error;
+	text-decoration: none;
+}
+
+.has-feedback.error {
+	& > input,
+	& > textarea {
+		border-color: $form-color-error;
+	}
+	& > .feedback-message {
+		color: $form-color-error;
+	}
+}
+
+label .feedback-message {
+	visibility: hidden;
+}
+
+.has-feedback {
+  & > .feedback-message {
+		visibility: visible;
+  }
+}
+
+// Feedback Messaging
+//
+// Feedback messaging accommodates supplemental information for a given
+// page, form, or other element. If the messaging is referring to specific
+// form fields or elements, links to those elements will be provided so
+// so those issues can be efficiently dealt with.
+//
+// Feedback messaging will have a Title describing the type of feedback
+// (error/alert/success) followed by a colon. Brevity is encouraged in all
+// type with this pattern.
+//
+// Markup: form-feedback.html
+//
+// Styleguide 3.6.2
+
+.panel.feedback-message {
+
+	$icon-width: 3.25rem;
+
+	color: #fff;
+	border: none;
+	padding-left: $icon-width*1.5;
+	position: relative;
+	margin-top: 0;
+
+	& > * {
+		margin: $spacing-inner 0 0;
+	}
+
+	.feedback-message__title,
+	a::after,
+	&::before,
+	a {
+		color: #fff
+	}
+
+	a:hover {
+		color: $font-color-tertiary;
+	}
+
+	.feedback-message__title {
+
+		margin: 0;
+		display: block;
+
+		& + * {
+			margin-top: 0;
+		}
+	}
+
+	&::before {
+		font-family: $font-family-icon;
+		content: "\f06a";
+		font-size: $icon-width;
+		font-style: normal;
+		position: absolute;
+		top: $spacing-inner;
+		left: $spacing-inner;
+		display: block;
+		width: $icon-width;
+		height: $icon-width;
+	}
+
+	&.error {
+		background: $form-color-error-background;
+	}
+	&.warning,
+	&.status {
+		background: $form-color-status-background;
+	}
+	&.success {
+		background: $form-color-success-background;
+	}
+}
