@@ -14,6 +14,11 @@ Form Elements
 Styleguide 3.1
 */
 
+label {
+	max-width: 50rem;
+	display: block;
+}
+
 
 
 // Form Fields
@@ -32,7 +37,7 @@ Styleguide 3.1
 
 %form-field {
 
-	background: $panel-background-primary;
+	background: $form-input-background;
 	box-sizing: border-box;
 	border: $border-width-primary solid $panel-background-primary;
 	padding: $spacing-inner/2 $spacing-inner;

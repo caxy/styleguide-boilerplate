@@ -143,10 +143,12 @@ header {
 		border-bottom: 2px solid $background-color-primary;
 		font-style: normal;
 		font-weight: $font-weight-normal;
+		text-decoration: none;
 
 		&:hover {
 			border-color: $site-action-color;
 			color: $font-color-primary;
+			text-decoration: none;
 		}
 	}
 

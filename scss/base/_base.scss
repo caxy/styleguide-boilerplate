@@ -13,6 +13,7 @@ html {
 body {
   color: $font-color-primary;
   font-family: $font-family-primary;
+  background: $background-color-primary;
 }
 
 hr {
@@ -47,6 +48,8 @@ Styleguide 2
 //
 // Markup: titles.html
 //
+// Hidemarkup: true
+//
 // Styleguide 2.2
 
 %titles {
@@ -70,7 +73,7 @@ Styleguide 2
 .title-1 {
 	
 	@extend %titles;
-	$font-size: 2.5rem; 
+	$font-size: 3.3rem; 
 	font-size: $font-size;
 
 	& + .subheading {
@@ -80,7 +83,7 @@ Styleguide 2
 .title-2 {
 	
 	@extend %titles;
-	$font-size: 1.25rem; 
+	$font-size: 2.5rem; 
 	font-size: $font-size;
 
 	& + .subheading {
@@ -147,6 +150,8 @@ h6 {
 // <h1></h1><span class="subheading">Subheading for Title 1</span>
 // <h2></h2><span class="subheading">Subheading for Title 2</span>
 //
+// Hidemarkup: true
+//
 // Styleguide 2.2.1
 
 .subheading {
@@ -170,6 +175,7 @@ h6 {
 // <h3>Body Copy with a Title</h3>
 // <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
 //
+// Hidemarkup: true
 //
 // Styleguide 2.3
 
@@ -189,6 +195,8 @@ p,
 //
 // Markup:
 // <p><a href="">An example link</a></p>
+//
+// Hidemarkup: true
 //
 // Styleguide 2.4
 
@@ -242,6 +250,8 @@ li {
 //   <li>Quisquam ab ex, quos ducimus quasi</li>
 // </ul>
 //
+// Hidemarkup: true
+//
 // Styleguide 2.5
 
 
@@ -254,6 +264,8 @@ li {
 //   <li>Consectetur adipisicing elit</li>
 //   <li>Quisquam ab ex, quos ducimus quasi</li>
 // </ol>
+//
+// Hidemarkup: true
 //
 // Styleguide 2.6
 
@@ -268,6 +280,8 @@ li {
 //   <dt>Term #2</dt>
 //   <dd>Defintion for the term above.</dd>
 // </dl>
+//
+// Hidemarkup: true
 //
 // Styleguide 2.7
 

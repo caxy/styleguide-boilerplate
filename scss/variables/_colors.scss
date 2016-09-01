@@ -48,36 +48,30 @@
 
 
 $site-red: (
-	'base': #CC0000,
-	'light': lighten(#CC0000, 20%),
-	'dark': darken(#CC0000, 10%)
+	'base': #df1e36,
+	'light': lighten(#df1e36, 20%),
+	'dark': darken(#df1e36, 10%)
 	);
 $site-blue: (
-	'base': #3366CC,
-	'light': lighten(#3366CC, 20%),
-	'dark': darken(#3366CC, 10%)
-	);
-$site-green: (
-	'base': #006622,
-	'light': lighten(#006622, 20%),
-	'dark': darken(#006622, 10%)
+	'base': #072736,
+	'light': #1F5363,
+	'dark': #041c25
 	);
 
 $site-grey: (
-	'base': #777,
-	'light': #C6C6C6,
+	'base': #666,
+	'light': #898989,
 	'dark': #333
-	);
+);
 
 $site-colors: (
 	'red' : $site-red,
 	'blue' : $site-blue,
-	'green' : $site-green,
 	'grey': $site-grey,
 );
 
-$site-action-color: map-get($site-green, 'base');
-$site-action-color-active: map-get($site-green, 'dark');
+$site-action-color: map-get($site-red, 'base');
+$site-action-color-active: map-get($site-red, 'dark');
 $site-action-color-background: darken($site-action-color, 6%);
 
 // Use for descriptive content that is not in and of itself actionable.
@@ -98,17 +92,17 @@ $site-accent-color: map-get($site-blue, 'base');
 //
 // Styleguide 1.2
 
-$font-color-primary: map-get($site-grey, 'dark');
-$font-color-secondary: map-get($site-grey, 'base');
-$font-color-tertiary: map-get($site-grey, 'light');
+$font-color-primary: map-get($site-grey, 'base');
+$font-color-secondary: map-get($site-grey, 'light');
+$font-color-tertiary: map-get($site-grey, 'dark');
 
 $font-color-link: $site-action-color;
-$font-color-link-hover: $site-action-color-active;
-$font-color-link-focus: $site-action-color-active;
+$font-color-link-hover: $site-action-color;
+$font-color-link-focus: $site-action-color;
 
-$title-font-color-primary: map-get($site-grey, 'dark');
-$title-font-color-secondary: map-get($site-grey, 'base');
-$title-font-color-tertiary: map-get($site-grey, 'light');
+$title-font-color-primary: $font-color-secondary;
+$title-font-color-secondary: $font-color-secondary;
+$title-font-color-tertiary: $font-color-tertiary;
 
 $font-colors: (
 	"primary": $font-color-primary,
@@ -141,7 +135,7 @@ $title-colors: (
 // __Styleguide 1.3
 
 $background-color-primary: #fff;
-$background-color-secondary: map-get($site-grey, 'light');
+$background-color-secondary: map-get($site-blue, 'dark');
 $background-color-tertiary: map-get($site-grey, 'base');
 
 $background-colors: (
@@ -154,8 +148,7 @@ $panel-background-primary: darken($background-color-primary, 10%);
 $panel-background-secondary: darken($background-color-secondary, 10%);
 $panel-background-tertiary: darken($background-color-tertiary, 10%);
 $panel-background-accent-primary: map-get($site-blue, 'base');
-$panel-background-accent-secondary: map-get($site-green, 'base');
-$panel-background-accent-teriary: map-get($site-green, 'base');
+$panel-background-accent-secondary: map-get($site-red, 'dark');
 
 $panel-colors: (
 	"primary": $panel-background-primary,
@@ -173,12 +166,10 @@ $panel-colors: (
 
 $border-color-primary: darken($background-color-primary, 20%);
 $border-color-secondary: darken($background-color-secondary, 20%);
-$border-color-tertiary: darken($background-color-tertiary, 20%);
 
 $border-colors: (
 	"primary": $border-color-primary,
 	"secondary": $border-color-secondary,
-	"tertiary": $border-color-tertiary,
 	"accent": $site-accent-color
 );
 
@@ -192,7 +183,7 @@ $border-colors: (
 // Styleguide 1.5
 
 $button-font-color: #fff;
-$button-background: darken(map-get($site-grey, 'base'), 12%);
+$button-background: map-get($site-grey, 'base');
 $button-background-hover: map-get($site-grey, 'dark');
 
 $button-primary-font-color: #fff;
@@ -218,10 +209,13 @@ $button-colors: (
 
 $form-color-error: map-get($site-red, 'base');
 $form-color-error-background: map-get($site-red, 'base');
-$form-color-success: map-get($site-green, 'base');
+$form-color-success: map-get($site-blue, 'base');
 $form-color-success-background: $site-action-color-background;
 $form-color-status: map-get($site-blue, 'base');
 $form-color-status-background: map-get($site-blue, 'base');
+
+$form-input-background: #efefef;
+$form-input-background-active: #fff;
 
 // === Checkboxes/Radios === //
 
@@ -255,7 +249,6 @@ $selector-color-checked: $site-action-color;
 $color-sets: (
 	"site-red": $site-red,
 	"site-blue": $site-blue,
-	"site-green": $site-green,
 	"site-grey": $site-grey,
 	"font": $font-colors,
 	"titles": $title-colors,
