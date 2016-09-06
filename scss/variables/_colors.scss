@@ -144,16 +144,21 @@ $background-colors: (
 	"tertiary": $background-color-tertiary
 );
 
-$panel-background-primary: darken($background-color-primary, 10%);
-$panel-background-secondary: darken($background-color-secondary, 10%);
-$panel-background-tertiary: darken($background-color-tertiary, 10%);
-$panel-background-accent-primary: map-get($site-blue, 'base');
-$panel-background-accent-secondary: map-get($site-red, 'dark');
+$panel-background-primary: darken($background-color-primary, 5%);
+$panel-background-secondary: darken($background-color-secondary, 5%);
+$panel-background-tertiary: darken($background-color-tertiary, 5%);
+
+/* the lightest hex that passes AA on #E7E7E7/$panel-background-primary */
+$panel-font-color: $font-color-primary;
+$panel-font-color-secondary: $font-color-secondary;
+$panel-font-color-tertiary: #FFF;  // passes on $panel-background-tertiary
+$font-color-placeholder: $panel-font-color;
 
 $panel-colors: (
 	"primary": $panel-background-primary,
 	"secondary": $panel-background-secondary,
-	"tertiary": $panel-background-tertiary
+	"tertiary": $panel-background-tertiary,
+	"font-color": $panel-font-color
 );
 
 // Borders

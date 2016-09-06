@@ -3,8 +3,42 @@
 //
 // Styleguide 15
 
-%container {
+@mixin container() {
+
 	padding: $spacing-inner;
+	margin: $spacing-outer auto;
+
+	header,
+	footer {
+		padding: 0;
+		margin: 0;
+	}
+
+	form {
+		max-width: 100%;
+	}
+
+	header .subheading {
+		margin: 0;
+	}
+
+	& > *:first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	& > form:nth-of-type(n) {
+		padding: $spacing-inner;
+		.has-buttons {
+			margin-top: $spacing-inner;
+		}
+	}
+
 }
 
 
@@ -61,7 +95,7 @@ header {
 }
 
 .panel {
-	@extend %container;
+	@include container;
 	@include width-capped();
 	margin: $spacing-outer 0;
 }
@@ -91,7 +125,7 @@ header {
 
 .card {
 	
-	@extend %container;
+	@include container;
 
 	position: relative;
 	text-align: left;
@@ -225,6 +259,88 @@ header {
 			}
 		}
 
+	}
+
+}
+
+
+
+
+
+// Panels
+//
+// Panels are general groupings of content that need to be separated
+// from the main flow of copy on a page, to either highlight content
+// or direct a user towards areas to learn more via a CTA.
+//
+// Ideally there should not be more than 2-3 panels per page, since
+// their point is to highlight content, and if everything is
+// highlighted, nothing is.
+//
+// The fullbleed flavor of panel needs a single direct child to wrap
+// its content.
+//
+// PatternType: organism
+//
+// ContainsPatterns: Links, Images, Titles, Body Copy, Cards, Navigation, Forms
+//
+// Markup: container_panel.html
+//
+// Styleguide 15.2
+
+.panel,
+.panel-fullbleed {
+
+	background: $panel-background-primary;
+	z-index: 2;
+	color: $panel-font-color;
+	list-style-type: none;
+
+	%titles {
+		color: $panel-font-color;
+	}
+	
+	p,
+	ul,
+	img,
+	li {
+		margin-top: $spacing-inner;
+		margin-bottom: $spacing-inner;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	%form-field {
+		background: lighten($panel-background-primary, 15%);
+	}
+
+	&.has-no-background {
+		background: none;
+	}
+
+}
+
+.panel {
+	
+	@include container;
+	@include width-capped();
+
+}
+
+.panel-fullbleed {
+
+	@include width-fullbleed();
+	
+	& > * {
+		@include container;
+		padding: $spacing-inner*2 $spacing-inner;
+		margin: 0 auto;
+		&.feedback-message {
+			padding: $spacing-inner $spacing-inner $spacing-inner 3.25rem*1.5;
+			&::before {
+				top: $spacing-inner/2;
+			}
+		}
 	}
 
 }
