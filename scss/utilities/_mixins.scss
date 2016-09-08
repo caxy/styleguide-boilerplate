@@ -115,9 +115,9 @@
 @mixin width-fullbleed() {
 	
 	max-width: none;
-	width: 100%;
+	width: 100vw;
 	position: relative;
-	left: -50%;
+	left: -50vw;
 	margin-left: 50%;
 	
 	& > * {

@@ -203,7 +203,14 @@ p,
 a {
 
 	color: $font-color-link;
-	text-decoration: $font-decoration-link;
+	text-decoration: none;
+
+	p > &,
+	blockquote > &,
+	span > &,
+	small > & {
+		text-decoration: $font-decoration-link;
+	}
 
 	&:hover,
 	&.pseudo-class-hover {

@@ -318,6 +318,14 @@ header {
 		background: none;
 	}
 
+	& > *:first-child {
+		margin-top: 0;
+	}
+	
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
 }
 
 .panel {
@@ -332,15 +340,8 @@ header {
 	@include width-fullbleed();
 	
 	& > * {
-		@include container;
 		padding: $spacing-inner*2 $spacing-inner;
 		margin: 0 auto;
-		&.feedback-message {
-			padding: $spacing-inner $spacing-inner $spacing-inner 3.25rem*1.5;
-			&::before {
-				top: $spacing-inner/2;
-			}
-		}
 	}
 
 }
