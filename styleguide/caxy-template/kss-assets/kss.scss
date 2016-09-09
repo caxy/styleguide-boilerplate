@@ -13,9 +13,9 @@ $kss-colors-border: #DDD;
 $kss-colors-link: #440000;
 $kss-colors-link-visited: #330000;
 $kss-colors-link-hover: lighten($kss-colors-link, 20%);
-$kss-colors-link-active: #faa700;
+$kss-colors-link-active: #1F5363;
 
-@import 'https://fonts.googleapis.com/css?family=Archivo+Narrow';
+@import 'https://fonts.googleapis.com/css?family=Archivo+Narrow|Open+Sans:300';
 
 @font-face {
   font-family: 'FontAwesome';
@@ -25,11 +25,12 @@ $kss-colors-link-active: #faa700;
   font-style: normal;
 }
 
-$kss-font-body: 'Archivo Narrow', Arial, sans-serif;
+$kss-font-titles: 'Archivo Narrow', Arial, sans-serif;
+$kss-font-body: 'Open Sans', Arial, sans-serif;
 $kss-icon-font: 'FontAwesome';
 $kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 
-$kss-font-size: 19px;
+$kss-font-size: 16px;
 $kss-spacing: $kss-font-size * 1.5;
 
 $screen-medium: 800px;
@@ -75,11 +76,12 @@ $screen-medium: 800px;
 
   p {
     margin: ($kss-spacing/2) 0 $kss-spacing 0;
+    max-width: 45rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin: $kss-spacing 0 0 0;
-    font-family: $kss-font-body;
+    font-family: $kss-font-titles;
     color: $kss-colors-heading;
     line-height: 1.15em;
   }
@@ -250,14 +252,15 @@ $screen-medium: 800px;
   .kss-sidebar {
 
     border-bottom: 1px solid $kss-colors-border;
-    border-right: 1px solid $kss-colors-border;
+    font-family: $kss-font-titles;
+    padding: 0 0 0 1.5rem;
 
     @media screen and (min-width: $screen-medium) {
       height: calc(100% - 4.5rem);
       overflow: scroll;
-      padding: 0 0 0 1.5rem;
-      border-bottom: 0;
+      border-right: 0;
       margin-bottom: 4.5rem;
+      border-right: 1px solid $kss-colors-border;
     }
   }
 
@@ -313,11 +316,17 @@ $screen-medium: 800px;
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-size: 0.866rem;
+    font-size: 0.75rem;
 
     @media screen and (min-width: $screen-medium) {
       display: list-item;
       padding-right: 0;
+      ul {
+        margin-top: 10px;
+        border-top: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
     }
   }
 
@@ -325,7 +334,7 @@ $screen-medium: 800px;
 
     position: relative;
     display: inline-block;
-    line-height: 2rem;
+    line-height: 1.5rem;
     padding-right: $kss-spacing;
 
     &:before {
@@ -339,10 +348,10 @@ $screen-medium: 800px;
       }
     }
 
-    &.is-in-viewport:before {
-      background-color: #000;
+    &.is-in-viewport::before {
+      background-color: #072736;
       width: 5px;
-      transition: background-color .4s, width .6s;
+      transition: background-color .4s;
     }
   }
 
@@ -361,18 +370,6 @@ $screen-medium: 800px;
         padding-left: $kss-spacing;
       }
 
-      // @TODO: The ul is output even when there are no children. Fix this, so
-      // we can put these :first-child and :last child styles back on the ul.
-      li:first-child {
-        margin-top: 10px;
-        border-top: 1px solid #ccc;
-        
-      }
-
-      li:last-child {
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
     }
   }
 
@@ -407,16 +404,16 @@ $screen-medium: 800px;
     display: block;
     font-size: $kss-font-size;
     line-height: $kss-font-size;
-    color: #666;
 
     &:before {
       content: 'Section ';
     }
   }
   .kss-title__permalink {
+
     display: block;
-    color: #000;
     text-decoration: none;
+    color: $kss-colors-foreground;
 
     &:hover,
     &:focus,
@@ -424,19 +421,22 @@ $screen-medium: 800px;
       color: $kss-colors-link;
 
       @media screen and (min-width: 607px) {
+
         .kss-title__permalink-hash {
           display: inline;
           &::after {
             font-family: $kss-icon-font;
             content: '\f0c1';
+            color: lighten($kss-colors-foreground,10%);
           }
         }
+
       }
     }
   }
   .kss-title__permalink-hash {
     display: none;
-    color: #ccc;
+    color: lighten($kss-colors-heading,15%);
   }
 
   .kss-parameters {
@@ -471,15 +471,21 @@ $screen-medium: 800px;
     border-bottom: 1px solid $kss-colors-border;
     background-color: $kss-colors-background-darker;
     padding: $kss-spacing/4 $kss-spacing/2;
+    font-family: $kss-font-titles;
   }
+
+  .kss-modifier__default-name,
+  .kss-modifier__name {
+    margin-left: $kss-spacing;
+    font-weight: 600;
+  }
+
   .kss-modifier__default-name {
-    font-weight: bold;
     margin-bottom: ($kss-spacing / 2);
   }
   .kss-modifier__name {
     float: left;
     padding-right: 10px;
-    font-weight: bold;
   }
   .kss-modifier__description {
     margin-bottom: ($kss-spacing / 2);

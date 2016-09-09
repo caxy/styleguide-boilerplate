@@ -24,7 +24,7 @@
 				}
 				
 				&::before {
-					content: "<h5>#{$name}</h5> #{$value} / rgb(#{$red}, #{$green}, #{$blue})";
+					content: "<h4>#{$name}</h4> #{$value} / rgb(#{$red}, #{$green}, #{$blue})";
 				}
 
 			}
@@ -47,8 +47,13 @@
 	.swatch {
 		@include flexbox;
 		@include flex-direction(column);
+		@include justify-content(space-between);
 		flex: 1;
 		margin: 1rem 0;
+		h4 {
+			margin: 0;
+			@extend .title-5;
+		}
 	}
 
 }
@@ -64,8 +69,9 @@
 	.dot {
 		display: block;
 		height: 6rem;
-		width: 100%;
+		width: 6rem;
 		margin: $spacing-inner auto;
+		border-radius: 100%;
 	}
 
 	small {

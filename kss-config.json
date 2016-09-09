@@ -4,6 +4,7 @@
     "scss"
   ],
   "title": "Style Guide",
+  "version": "1.0.1",
   "destination":  "styleguide",
   "builder": "styleguide/caxy-template",
   "//": "The css and js paths are URLs relative to the generated styleguide.",

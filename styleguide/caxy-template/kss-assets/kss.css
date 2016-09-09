@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Archivo+Narrow";
+@import "https://fonts.googleapis.com/css?family=Archivo+Narrow|Open+Sans:300";
 @font-face {
   font-family: 'FontAwesome';
   src: url("fonts/fontawesome-webfont.eot");
@@ -7,9 +7,9 @@
   font-style: normal; }
 .kss-style {
   color: #444;
-  font-family: "Archivo Narrow", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 28.5px; }
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
   .kss-style a {
     color: #440000; }
     .kss-style a:visited {
@@ -17,36 +17,37 @@
     .kss-style a:hover, .kss-style a:focus {
       color: #aa0000; }
     .kss-style a:active {
-      color: #faa700; }
+      color: #1F5363; }
     .kss-style a:hover, .kss-style a:active {
       outline: 0; }
     p .kss-style a, blockquote .kss-style a, ul .kss-style a {
       text-decoration: underline; }
   .kss-style p {
-    margin: 14.25px 0 28.5px 0; }
+    margin: 12px 0 24px 0;
+    max-width: 45rem; }
   .kss-style h1, .kss-style h2, .kss-style h3, .kss-style h4, .kss-style h5, .kss-style h6 {
-    margin: 28.5px 0 0 0;
+    margin: 24px 0 0 0;
     font-family: "Archivo Narrow", Arial, sans-serif;
     color: #111;
     line-height: 1.15em; }
   .kss-style h4, .kss-style h5, .kss-style h6 {
     font-weight: bold; }
   .kss-style h1 {
-    font-size: 47.5px; }
+    font-size: 40px; }
   .kss-style h2 {
-    font-size: 42.75px; }
+    font-size: 36px; }
   .kss-style h3 {
-    font-size: 40.375px; }
+    font-size: 34px; }
   .kss-style h4 {
-    font-size: 38px; }
+    font-size: 32px; }
   .kss-style h5 {
-    font-size: 35.625px; }
+    font-size: 30px; }
   .kss-style h6 {
-    font-size: 33.25px; }
+    font-size: 28px; }
   .kss-style blockquote {
     color: #666;
     margin: 0;
-    padding-left: 28.5px;
+    padding-left: 24px;
     border-left: 0.5em #d9d9d9 solid; }
   .kss-style hr {
     display: block;
@@ -54,7 +55,7 @@
     border: 0;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #e6e6e6;
-    margin: 28.5px 0;
+    margin: 24px 0;
     padding: 0; }
   .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
     font-family: Menlo, "Ubuntu Mono", "Lucida Console", "Courier New", Courier, monospace;
@@ -81,12 +82,12 @@
   .kss-style sub {
     bottom: -0.25em; }
   .kss-style ul, .kss-style ol {
-    margin: 28.5px 0;
-    padding: 0 0 0 28.5px; }
+    margin: 24px 0;
+    padding: 0 0 0 24px; }
   .kss-style li p:last-child {
     margin: 0; }
   .kss-style dd {
-    margin: 0 0 0 28.5px; }
+    margin: 0 0 0 24px; }
   .kss-style img {
     max-width: 100%;
     border: 0;
@@ -169,22 +170,23 @@
       width: 20%; } }
   #kss-node .kss-sidebar {
     border-bottom: 1px solid #DDD;
-    border-right: 1px solid #DDD; }
+    font-family: "Archivo Narrow", Arial, sans-serif;
+    padding: 0 0 0 1.5rem; }
     @media screen and (min-width: 800px) {
       #kss-node .kss-sidebar {
         height: calc(100% - 4.5rem);
         overflow: scroll;
-        padding: 0 0 0 1.5rem;
-        border-bottom: 0;
-        margin-bottom: 4.5rem; } }
+        border-right: 0;
+        margin-bottom: 4.5rem;
+        border-right: 1px solid #DDD; } }
   #kss-node .kss-footer {
     background: #f2f2f2;
     box-sizing: border-box;
-    padding: 14.25px 14.25px;
-    font-size: 14.25px;
+    padding: 12px 12px;
+    font-size: 12px;
     text-align: center;
     border: 1px solid #DDD;
-    font-family: "Archivo Narrow", Arial, sans-serif; }
+    font-family: "Open Sans", Arial, sans-serif; }
     @media screen and (min-width: 800px) {
       #kss-node .kss-footer {
         left: 0;
@@ -198,7 +200,7 @@
     #kss-node .kss-doc-title {
       font-size: 1.5em; } }
 #kss-node .kss-header {
-  padding: 28.5px 0;
+  padding: 24px 0;
   margin: 0; }
 #kss-node .kss-nav__menu {
   margin-top: 0;
@@ -209,28 +211,33 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  font-size: 0.866rem; }
+  font-size: 0.75rem; }
   @media screen and (min-width: 800px) {
     #kss-node .kss-nav__menu-item {
       display: list-item;
-      padding-right: 0; } }
+      padding-right: 0; }
+      #kss-node .kss-nav__menu-item ul {
+        margin-top: 10px;
+        border-top: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc; } }
 #kss-node .kss-nav__menu-link {
   position: relative;
   display: inline-block;
-  line-height: 2rem;
-  padding-right: 28.5px; }
+  line-height: 1.5rem;
+  padding-right: 24px; }
   @media screen and (min-width: 800px) {
     #kss-node .kss-nav__menu-link:before {
       content: ' ';
       position: absolute;
-      left: -28.5px;
+      left: -24px;
       width: 0;
       height: 100%;
       background-color: transparent; } }
-  #kss-node .kss-nav__menu-link.is-in-viewport:before {
-    background-color: #000;
+  #kss-node .kss-nav__menu-link.is-in-viewport::before {
+    background-color: #072736;
     width: 5px;
-    transition: background-color .4s, width .6s; }
+    transition: background-color .4s; }
 #kss-node .kss-nav__menu-child {
   display: none; }
   @media screen and (min-width: 800px) {
@@ -240,13 +247,7 @@
       margin: 0;
       padding: 0; }
       #kss-node .kss-nav__menu-child li {
-        padding-left: 28.5px; }
-      #kss-node .kss-nav__menu-child li:first-child {
-        margin-top: 10px;
-        border-top: 1px solid #ccc; }
-      #kss-node .kss-nav__menu-child li:last-child {
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc; } }
+        padding-left: 24px; } }
 #kss-node .kss-nav__ref {
   color: #333;
   padding-right: 1em; }
@@ -271,23 +272,22 @@
   /* Use higher contrast and text-weight for printable form. */
   /* Specify class=linenums on a pre to get line numbering */ }
   #kss-node .kss-section {
-    margin-bottom: 57px; }
+    margin-bottom: 48px; }
   #kss-node .kss-title {
     margin-bottom: 0;
     font-style: normal;
     font-weight: 400;
-    margin-bottom: 28.5px; }
+    margin-bottom: 24px; }
   #kss-node .kss-title__ref {
     display: block;
-    font-size: 19px;
-    line-height: 19px;
-    color: #666; }
+    font-size: 16px;
+    line-height: 16px; }
     #kss-node .kss-title__ref:before {
       content: 'Section '; }
   #kss-node .kss-title__permalink {
     display: block;
-    color: #000;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #444; }
     #kss-node .kss-title__permalink:hover, #kss-node .kss-title__permalink:focus, #kss-node .kss-title__permalink:active {
       color: #440000; }
       @media screen and (min-width: 607px) {
@@ -295,10 +295,11 @@
           display: inline; }
           #kss-node .kss-title__permalink:hover .kss-title__permalink-hash::after, #kss-node .kss-title__permalink:focus .kss-title__permalink-hash::after, #kss-node .kss-title__permalink:active .kss-title__permalink-hash::after {
             font-family: "FontAwesome";
-            content: '\f0c1'; } }
+            content: '\f0c1';
+            color: #5e5e5e; } }
   #kss-node .kss-title__permalink-hash {
     display: none;
-    color: #ccc; }
+    color: #373737; }
   #kss-node .kss-parameters {
     display: table;
     list-style-type: none;
@@ -322,25 +323,28 @@
   #kss-node .kss-modifier__heading {
     border-bottom: 1px solid #DDD;
     background-color: #f2f2f2;
-    padding: 7.125px 14.25px; }
+    padding: 6px 12px;
+    font-family: "Archivo Narrow", Arial, sans-serif; }
+  #kss-node .kss-modifier__default-name,
+  #kss-node .kss-modifier__name {
+    margin-left: 24px;
+    font-weight: 600; }
   #kss-node .kss-modifier__default-name {
-    font-weight: bold;
-    margin-bottom: 14.25px; }
+    margin-bottom: 12px; }
   #kss-node .kss-modifier__name {
     float: left;
-    padding-right: 10px;
-    font-weight: bold; }
+    padding-right: 10px; }
   #kss-node .kss-modifier__description {
-    margin-bottom: 14.25px; }
+    margin-bottom: 12px; }
   #kss-node .kss-modifier__example {
     clear: left;
-    padding: 1px 28.5px;
+    padding: 1px 24px;
     position: relative;
-    margin: 0 0 27.5px 0; }
+    margin: 0 0 23px 0; }
     #kss-node .kss-modifier__example:last-child {
       margin: 0; }
   #kss-node .kss-markup {
-    margin: -1px 0 28.5px 0;
+    margin: -1px 0 24px 0;
     border: 1px solid #999; }
   #kss-node .kss-markup pre {
     margin: 0; }
@@ -409,7 +413,7 @@
     list-style-type: none;
     /* Alternate shading for lines */ }
     #kss-node ol.linenums li {
-      min-height: 28.5px;
+      min-height: 24px;
       border-bottom: 1px solid #eee;
       padding: 0 10px;
       background: #fff; }

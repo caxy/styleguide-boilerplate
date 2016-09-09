@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{options.title}}</title>
+  <title>{{options.title}} - v. {{options.version}}</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -16,6 +16,7 @@
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
     <h1 class="kss-doc-title">{{options.title}}</h1>
+    <small>v. {{options.version}}</small>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -49,7 +50,7 @@
     </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main role="main" class="kss-main">
 {{#if homepage}}
   <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
     {{{homepage}}}
@@ -141,19 +142,21 @@
       {{#unless @first}}
       {{#if sourceFile.name}}
         <div class="kss-source kss-style">
-          Source: {{sourceFile.name}}, line {{sourceFile.line}}
+          <small>Source: {{sourceFile.name}}, line {{sourceFile.line}}</small>
         </div>
       {{/if}}
       {{/unless}}
     </{{#if @first}}div{{else}}section{{/if}}>
   {{/each}}
 {{/if}}
-</article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
 <script src="kss-assets/prettify.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="kss-assets/swatch-text.js"></script>
 <script>
   prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
@@ -164,9 +167,9 @@
 {{{scripts}}}
 
 
-  <footer class="kss-footer">
-    <p>This styleguide was built with <a href="https://github.com/kss-node/kss-node">KSS Node</a> using <a href="http://caxy.com">Caxy Code Creative</a>'s Zaba theme.</p>
-  </footer>
+<footer class="kss-footer">
+  This styleguide was built with <a href="https://github.com/kss-node/kss-node">KSS Node</a> using <a href="http://caxy.com">Caxy Code Creative</a>'s Zaba theme.
+</footer>
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
