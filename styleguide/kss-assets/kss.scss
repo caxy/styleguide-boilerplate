@@ -1,58 +1,86 @@
 // ------------------------------------------------------------------------------
-//   @group Variables - Colors, Fonts, etc.
+//   Variables - Colors, Fonts, etc.
 // ------------------------------------------------------------------------------
-@kss-colors-background     : #fff;
 
-@kss-colors-foreground     : #444;
-@kss-colors-heading        : #111;
-@kss-colors-quotes         : #666;
+$kss-colors-background: #fff;
+$kss-colors-background-darker: darken($kss-colors-background, 5%);
 
-@kss-colors-link           : #0645ad;
-@kss-colors-link-visited   : #0645ad;
-@kss-colors-link-hover     : lighten(@kss-colors-link, 20%);
-@kss-colors-link-active    : #faa700;
+$kss-colors-foreground: #444;
+$kss-colors-heading: #111;
+$kss-colors-quotes: #666;
+$kss-colors-border: #DDD;
 
-@kss-font-body             : Helvetica, 'Helvetica Neue', Arial, sans-serif;
-@kss-font-code             : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+$kss-colors-link: #440000;
+$kss-colors-link-visited: #330000;
+$kss-colors-link-hover: lighten($kss-colors-link, 20%);
+$kss-colors-link-active: #faa700;
 
-@kss-font-size             : 16px;
-@kss-vertical-rhythm       : @kss-font-size * 1.5;
+@import 'https://fonts.googleapis.com/css?family=Archivo+Narrow';
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$kss-font-body: 'Archivo Narrow', Arial, sans-serif;
+$kss-icon-font: 'FontAwesome';
+$kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+
+$kss-font-size: 19px;
+$kss-spacing: $kss-font-size * 1.5;
+
+$screen-medium: 800px;
 
 // ------------------------------------------------------------------------------
-// Wrap all of this template's base HTML styling inside a .kss-style selector.
+// Wrap all of this builder's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
 
 .kss-style {
-  color: @kss-colors-foreground;
-  font-family: @kss-font-body;
-  font-size: @kss-font-size;
-  line-height: @kss-vertical-rhythm;
+
+  color: $kss-colors-foreground;
+  font-family: $kss-font-body;
+  font-size: $kss-font-size;
+  line-height: $kss-spacing;
 
   a {
-    color: @kss-colors-link;
-    text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.5s;
 
-    &:visited { color: @kss-colors-link-visited; }
+    color: $kss-colors-link;
+
+    &:visited {
+      color: $kss-colors-link-visited;
+    }
     &:hover,
-    &:focus   { color: @kss-colors-link-hover;   }
-    &:active  { color: @kss-colors-link-active;  }
+    &:focus   {
+      color: $kss-colors-link-hover;
+    }
+    &:active  {
+      color: $kss-colors-link-active;
+    }
 
     &:hover,
     &:active {
       outline: 0;
     }
+
+    p &,
+    blockquote &,
+    ul & {
+      text-decoration: underline;
+    }
+
   }
 
   p {
-    margin: (@kss-vertical-rhythm/2) 0 @kss-vertical-rhythm 0;
+    margin: ($kss-spacing/2) 0 $kss-spacing 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: @kss-vertical-rhythm 0 0 0;
-    font-family: @kss-font-body;
-    color: @kss-colors-heading;
+    margin: $kss-spacing 0 0 0;
+    font-family: $kss-font-body;
+    color: $kss-colors-heading;
     line-height: 1.15em;
   }
 
@@ -60,33 +88,33 @@
     font-weight: bold;
   }
 
-  h1 { font-size: @kss-font-size * 2.5;   }
-  h2 { font-size: @kss-font-size * 2.25;  }
-  h3 { font-size: @kss-font-size * 2.125; }
-  h4 { font-size: @kss-font-size * 2;     }
-  h5 { font-size: @kss-font-size * 1.875; }
-  h6 { font-size: @kss-font-size * 1.75;  }
+  h1 { font-size: $kss-font-size * 2.5;   }
+  h2 { font-size: $kss-font-size * 2.25;  }
+  h3 { font-size: $kss-font-size * 2.125; }
+  h4 { font-size: $kss-font-size * 2;     }
+  h5 { font-size: $kss-font-size * 1.875; }
+  h6 { font-size: $kss-font-size * 1.75;  }
 
   blockquote {
-    color: @kss-colors-quotes;
+    color: $kss-colors-quotes;
     margin: 0;
-    padding-left: @kss-vertical-rhythm;
-    border-left: 0.5em mix(@kss-colors-quotes, @kss-colors-background, 25%) solid;
+    padding-left: $kss-spacing;
+    border-left: 0.5em mix($kss-colors-quotes, $kss-colors-background, 25%) solid;
   }
 
   hr {
     display: block;
     height: 2px;
     border: 0;
-    border-top: 1px solid lighten(@kss-colors-foreground, 60%);
-    border-bottom: 1px solid darken(@kss-colors-background, 10%);
-    margin: @kss-vertical-rhythm 0;
+    border-top: 1px solid lighten($kss-colors-foreground, 60%);
+    border-bottom: 1px solid darken($kss-colors-background, 10%);
+    margin: $kss-spacing 0;
     padding: 0;
   }
 
   pre, code, kbd, samp {
-    font-family: @kss-font-code;
-    color: mix(@kss-colors-foreground, @kss-colors-heading, 50%);
+    font-family: $kss-font-code;
+    color: mix($kss-colors-foreground, $kss-colors-heading, 50%);
     font-size: 1em;
   }
 
@@ -96,13 +124,13 @@
   }
 
   ins {
-    color: @kss-colors-heading;
+    color: $kss-colors-heading;
     background: #ff9;
     text-decoration: none;
   }
 
   mark {
-    color: @kss-colors-heading;
+    color: $kss-colors-heading;
     background: #ff0;
     font-weight: bold;
   }
@@ -117,14 +145,14 @@
   sub { bottom: -0.25em; }
 
   ul, ol {
-    margin: @kss-vertical-rhythm 0;
-    padding: 0 0 0 @kss-vertical-rhythm;
+    margin: $kss-spacing 0;
+    padding: 0 0 0 $kss-spacing;
   }
   li p:last-child {
     margin: 0;
   }
   dd {
-    margin: 0 0 0 @kss-vertical-rhythm;
+    margin: 0 0 0 $kss-spacing;
   }
 
   img {
@@ -161,12 +189,12 @@
 // ------------------------------------------------------------------------------
 
 #kss-node {
+
   margin: 0;
   padding: 20px;
-  background: #fff;
-  width: 100%;
+  background: $kss-colors-background;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $screen-medium) {
     padding: 0;
     background: #fff;
 
@@ -176,35 +204,82 @@
       margin-right: -100%;
       box-sizing: border-box;
     }
+
   }
 
   .kss-main {
+
     width: 100%;
     margin: 0 auto;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: $screen-medium) {
+      width: 65%;
+      margin-left: 35%;
+      padding: 0 1.5rem;
+      overflow: hidden;
+    }
+
+    @media screen and (min-width: 980px) {
+      width: 75%;
+      margin-left: 25%;
+    }
+
+    @media screen and (min-width: 1200px) {
       width: 80%;
       margin-left: 20%;
-      padding: 0 20px 0 30px;
+    }
+
+  }
+
+  .kss-sidebar,
+  .kss-footer {
+    @media screen and (min-width: $screen-medium) {
+      position: fixed;
+      width: 35%;
+    }
+
+    @media screen and (min-width: 980px) {
+      width: 25%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 20%;
     }
   }
 
   .kss-sidebar {
-    border-bottom:1px solid #ddd;
 
-    @media screen and (min-width: 769px) {
-      position: fixed;
-      width: 20%;
-      height: 100%;
-      overflow: auto;
-      padding: 0 10px 0 20px;
+    border-bottom: 1px solid $kss-colors-border;
+    border-right: 1px solid $kss-colors-border;
+
+    @media screen and (min-width: $screen-medium) {
+      height: calc(100% - 4.5rem);
+      overflow: scroll;
+      padding: 0 0 0 1.5rem;
       border-bottom: 0;
-      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
-      box-shadow: inset -10px 0px 10px -10px rgba(0,0,0,0.7)    }
+      margin-bottom: 4.5rem;
+    }
   }
+
+  .kss-footer {
+
+    background: $kss-colors-background-darker;
+    box-sizing: border-box;
+    padding: ($kss-spacing/2) $kss-spacing/2;
+    font-size: $kss-font-size*0.75;
+    text-align: center;
+    border: 1px solid $kss-colors-border;
+    font-family: $kss-font-body;
+
+    @media screen and (min-width: $screen-medium) {
+      left: 0;
+      bottom: 0;
+      border-width: 1px 1px 0 0;
+      height: 4.5rem;
+    }
+    
+  }
+
 }
 
 // ------------------------------------------------------------------------------
@@ -216,70 +291,98 @@
   .kss-doc-title {
     margin: 0;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: $screen-medium) {
       font-size: 1.5em;
     }
   }
 
-  .kss-header,
-  .kss-nav {
-    @media screen and (min-width: 769px) {
-      margin-top: 2em;
-    }
+  .kss-header {
+    padding: $kss-spacing 0;
+    margin: 0;
   }
 
   .kss-nav__menu {
-    margin-top: (@kss-vertical-rhythm/2);
-    margin-bottom: (@kss-vertical-rhythm/2);
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     list-style-type: none;
   }
 
   .kss-nav__menu-item {
-    display: inline-block;
-    padding-right: @kss-vertical-rhythm;
 
-    @media screen and (min-width: 769px) {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 0.866rem;
+
+    @media screen and (min-width: $screen-medium) {
       display: list-item;
       padding-right: 0;
     }
   }
 
+  .kss-nav__menu-link {
+
+    position: relative;
+    display: inline-block;
+    line-height: 2rem;
+    padding-right: $kss-spacing;
+
+    &:before {
+      @media screen and (min-width: $screen-medium) {
+        content: ' ';
+        position: absolute;
+        left: -$kss-spacing;
+        width: 0;
+        height: 100%;
+        background-color: rgba(#000, 0);
+      }
+    }
+
+    &.is-in-viewport:before {
+      background-color: #000;
+      width: 5px;
+      transition: background-color .4s, width .6s;
+    }
+  }
+
   .kss-nav__menu-child {
+
     display: none;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: $screen-medium) {
+      
       display: block;
       list-style-type: none;
       margin: 0;
       padding: 0;
+
+      li {
+        padding-left: $kss-spacing;
+      }
 
       // @TODO: The ul is output even when there are no children. Fix this, so
       // we can put these :first-child and :last child styles back on the ul.
       li:first-child {
         margin-top: 10px;
         border-top: 1px solid #ccc;
-        padding: 10px 0 0;
+        
       }
 
       li:last-child {
         margin-bottom: 10px;
         border-bottom: 1px solid #ccc;
-        padding: 0 0 10px;
       }
     }
   }
 
   .kss-nav__ref {
     color: #333;
-    font-weight: bold;
-
-    &:after {
-      content: ' ';
-    }
+    padding-right: 1em;
   }
+
   .kss-nav__ref-child {
-    font-weight: normal;
+    font-weight: 400;
   }
 }
 
@@ -290,18 +393,20 @@
 #kss-node {
 
   .kss-section {
-    max-width: 48em;
-    margin-bottom: (@kss-vertical-rhythm * 2);
+    margin-bottom: ($kss-spacing * 2);
   }
-
 
   .kss-title {
     margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: $kss-spacing;
   }
+
   .kss-title__ref {
     display: block;
-    font-size: @kss-font-size;
-    line-height: @kss-font-size;
+    font-size: $kss-font-size;
+    line-height: $kss-font-size;
     color: #666;
 
     &:before {
@@ -316,11 +421,15 @@
     &:hover,
     &:focus,
     &:active {
-      color: @kss-colors-link;
+      color: $kss-colors-link;
 
       @media screen and (min-width: 607px) {
         .kss-title__permalink-hash {
           display: inline;
+          &::after {
+            font-family: $kss-icon-font;
+            content: '\f0c1';
+          }
         }
       }
     }
@@ -333,8 +442,12 @@
   .kss-parameters {
     display: table;
     list-style-type: none;
+    margin-top: 0;
     margin-left: 0;
     padding-left: 0;
+  }
+  .kss-parameters__title {
+    font-weight: bold;
   }
   .kss-parameters__item {
     display: table-row;
@@ -342,25 +455,26 @@
   .kss-parameters__name {
     display: table-cell;
     padding-right: 20px;
+    white-space: nowrap;
   }
   .kss-parameters__description {
     display: table-cell;
   }
+  .kss-parameters__default-value code {
+    white-space: nowrap;
+  }
 
   .kss-modifier__wrapper {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 1px solid $kss-colors-border;
   }
   .kss-modifier__heading {
-    margin: -10px -10px 10px -10px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #eee;
-    font-weight: bold;
+    border-bottom: 1px solid $kss-colors-border;
+    background-color: $kss-colors-background-darker;
+    padding: $kss-spacing/4 $kss-spacing/2;
   }
   .kss-modifier__default-name {
     font-weight: bold;
-    margin-bottom: (@kss-vertical-rhythm / 2);
+    margin-bottom: ($kss-spacing / 2);
   }
   .kss-modifier__name {
     float: left;
@@ -368,13 +482,13 @@
     font-weight: bold;
   }
   .kss-modifier__description {
-    margin-bottom: (@kss-vertical-rhythm / 2);
+    margin-bottom: ($kss-spacing / 2);
   }
   .kss-modifier__example {
     clear: left;
-    padding: 1px 0; // Contain the example's margins.
+    padding: 1px $kss-spacing; // 1px to contain the example's margins.
     position: relative; // Contain the example's absolute positioning.
-    margin: 0 0 (@kss-vertical-rhythm - 1px) 0;
+    margin: 0 0 ($kss-spacing - 1px) 0;
 
     &:last-child {
       margin: 0;
@@ -382,11 +496,15 @@
   }
 
   .kss-markup {
-    margin: -1px 0 @kss-vertical-rhythm 0;
+    margin: -1px 0 $kss-spacing 0;
     border: 1px solid #999;
   }
   .kss-markup pre {
     margin: 0;
+  }
+
+  .kss-source {
+    font-size: 80%;
   }
 
   .kss-github {
@@ -405,7 +523,7 @@
   }
 
   // ------------------------------------------------------------------------------
-  //   @group prettyprint.js styling
+  //   group prettyprint.js styling
   // ------------------------------------------------------------------------------
   /* Pretty printing styles. Used with prettify.js. */
 
@@ -445,7 +563,7 @@
     list-style-type: none;
 
     li {
-      min-height: @kss-vertical-rhythm;
+      min-height: $kss-spacing;
       border-bottom: 1px solid #eee;
       padding: 0 10px;
       background: #fff;

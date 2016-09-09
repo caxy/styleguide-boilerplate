@@ -1,14 +1,14 @@
 {
-  "//": "The source and destination paths are relative to this file.",
+  "//": "The source and destination paths are relative to this config file.",
   "source": [
-    "scss/"
+    "scss"
   ],
   "title": "Style Guide",
-  "destination":  "styleguide/",
-  "template": "styleguide/caxy-template",
-  "//": "The css and js paths are URLs relative to the generated style guide.",
+  "destination":  "styleguide",
+  "builder": "styleguide/caxy-template",
+  "//": "The css and js paths are URLs relative to the generated styleguide.",
   "css": [
-    "public/main-dev.css"
+    "kss-assets/main-dev.css"
   ],
   "js": [
   ],
@@ -17,6 +17,7 @@
      "hidemarkup",
      "patterntype",
      "containspatterns"
-  ],
-  "version": 1.0.1
+  ]
 }
+
+

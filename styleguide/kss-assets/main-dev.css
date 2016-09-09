@@ -1714,14 +1714,4 @@ header {
   .kss-style pre li {
     margin: 0; }
 
-.card-font .font-title {
-  font-size: 1.5rem; }
-.card-font.primary .font-title {
-  font-family: "Montserrat", sans-serif; }
-.card-font.secondary .font-title {
-  font-family: "Varela Round", sans-serif; }
-
-.kss-header {
-  background: #595959; }
-
 /*# sourceMappingURL=main-dev.css.map */

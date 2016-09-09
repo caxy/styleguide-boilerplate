@@ -6,10 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/http-server",
     "generate-css": "sass scss/main.scss css/main.css && cleancss -o css/main-min.css css/main.css",
-    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss --config kss-config.json",
-    "generate-styleguide-verbose": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/public/main-dev.css && ./node_modules/.bin/kss --config kss-config.json --verbose",
-    "kss": "./node_modules/.bin/kss"
-
+    "generate-styleguide": "sass scss/styleguide/_styleguide.scss styleguide/caxy-template/kss-assets/main-dev.css && sass styleguide/caxy-template/kss-assets/kss.scss styleguide/caxy-template/kss-assets/kss.css && ./node_modules/.bin/kss --config kss-config.json"
   },
   "repository": {
     "type": "git",

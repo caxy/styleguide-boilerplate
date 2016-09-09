@@ -191,24 +191,6 @@
 //
 // Styleguide 1.0
 
-.card-font {
-
-	.font-title {
-		font-size: 1.5rem;
-	}
-
-	&.primary {
-		.font-title {
-			font-family: $font-family-primary;
-		}
-	}
-	&.secondary {
-		.font-title {
-			font-family: $font-family-secondary;
-		}
-	}
-}
-
 // Large copy example
 //
 // Markup: typography.html
@@ -218,7 +200,3 @@
 // Styleguide 2.1000
 
 // Styleguide-specific 
-
-.kss-header {
-	background: $panel-background-tertiary;
-}
