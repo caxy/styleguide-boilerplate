@@ -17,5 +17,6 @@
      "hidemarkup",
      "patterntype",
      "containspatterns"
-  ]
+  ],
+  "version": 1.0.1
 }
