@@ -374,8 +374,7 @@ textarea {
   clear: both; }
 
 .has-inline-elements {
-  margin: 3rem 0;
-  white-space: nowrap; }
+  margin: 3rem 0; }
   .has-inline-elements:before {
     content: '';
     display: inline-block;
@@ -389,6 +388,9 @@ textarea {
     vertical-align: bottom; }
     .has-inline-elements > *:first-child {
       margin: 0; }
+  @media (min-width: 940px) {
+    .has-inline-elements {
+      white-space: nowrap; } }
 
 .width-capped {
   max-width: 700px;

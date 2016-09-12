@@ -62,7 +62,6 @@
 @mixin has-inline-elements() {
 
 	margin: $spacing-outer 0;
-	white-space: nowrap;
 
 	&:before {
 	  content: '';
@@ -79,6 +78,10 @@
 		&:first-child {
 			margin: 0;
 		}
+	}
+
+	@media (min-width: $screen-medium) {
+		white-space: nowrap;
 	}
 
 }
