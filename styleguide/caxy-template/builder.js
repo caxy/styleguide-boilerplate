@@ -57,7 +57,7 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         describe: 'Title of the style guide',
         default: 'KSS Style Guide'
       },
-      version: {
+      styleguide_version: {
         group: 'Style guide:',
         string: true,
         multiple: false,
