@@ -105,6 +105,8 @@ header {
 	@include width-fullbleed();
 	margin-top: $spacing-outer;
 	margin-bottom: $spacing-outer;
+	border-left: none;
+	border-right: none;
 }
 
 
