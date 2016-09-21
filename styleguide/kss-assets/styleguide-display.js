@@ -18,8 +18,9 @@
     var $main = $('.kss-main');
     var padding = parseInt($main.css('padding-left').replace('px',''), 10) * 2;
     var mainWidth = $main.innerWidth() - padding;
-
-    if ($(window).innerWidth() > 799) {
+    var mobileWidth = 799;
+    
+    if ($(window).innerWidth() > mobileWidth) {
       $fullbleedElement
         .width(mainWidth)
         .css({
