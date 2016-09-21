@@ -167,8 +167,6 @@ h6 {
 
 // Body Copy
 //
-// Body copy uses the Calluna font, sized 18px, with a line height of 1.5rem.
-//
 // Markup:
 // <p>Lorem ipsum dolor sit amet, <a href="">consectetur adipisicing</a> elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
 // <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui ullam praesentium sed odio deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
@@ -185,9 +183,7 @@ p,
 	margin: $spacing-inner 0;
 }
 
-.copy-tertiary {
-	font-size: $font-size-tertiary;
-}
+
 
 
 
@@ -341,6 +337,24 @@ blockquote {
 		text-align: right;
 	}
 
+}
+
+
+
+
+
+// Legal Text
+//
+// Markup:
+// <div class="legal-text">
+// <p>Lorem ipsum dolor sit amet, <a href="">consectetur adipisicing</a> elit. Voluptas atque ratione doloremque ut, aut temporibus quibusdam libero, quod incidunt nemo, sint est, provident! Vitae hic impedit, deleniti, aliquid necessitatibus inventore!</p>
+// <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam perspiciatis ea eum possimus optio qui <a href="">ullam praesentium sed odio</a> deleniti officiis nesciunt veritatis deserunt, corporis excepturi id at consequatur modi!</p>
+//</div>
+//
+// Styleguide 2.9
+
+.legal-text {
+	font-size: $font-size-tertiary;
 }
 
 
