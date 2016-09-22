@@ -25,7 +25,7 @@
         .width(mainWidth)
         .css({
           'left': 0,
-          'margin-left': -(padding + 1) + 'px' // 1 = kss-section border
+          'margin-left': -(padding - 1) + 'px' // 1 = kss-section border
         });
     } else {
       if ($fullbleedElement.attr('style') && $fullbleedElement.attr('style').length > 0) {
