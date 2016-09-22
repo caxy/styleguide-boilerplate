@@ -268,10 +268,15 @@ $screen-medium: 800px;
     border: 1px solid $kss-colors-border;
     font-family: $kss-font-body;
 
+    img {
+      display: block;
+      margin: auto;
+    }
+
     @media screen and (min-width: $screen-medium) {
       bottom: 0;
       border-width: 1px 1px 0 0;
-      height: 4.5rem;
+      height: 5.5rem;
     }
     
   }

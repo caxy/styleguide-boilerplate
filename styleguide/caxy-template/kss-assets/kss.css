@@ -167,11 +167,14 @@
     text-align: center;
     border: 1px solid #DDD;
     font-family: "Open Sans", Arial, sans-serif; }
+    #kss-node .kss-footer img {
+      display: block;
+      margin: auto; }
     @media screen and (min-width: 800px) {
       #kss-node .kss-footer {
         bottom: 0;
         border-width: 1px 1px 0 0;
-        height: 4.5rem; } }
+        height: 5.5rem; } }
 
 #kss-node .kss-doc-title {
   margin: 0; }
