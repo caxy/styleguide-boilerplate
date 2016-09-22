@@ -916,6 +916,28 @@ button,
       .has-buttons.stacked .button--primary + .button--primary {
         margin: 1.5rem 0 0; } }
 
+table {
+  margin: 3rem 0;
+  border-spacing: 1px;
+  border-collapse: collapse;
+  border-color: #cccccc;
+  border-width: 1px 1px 0 1px;
+  border-style: solid; }
+  table tr {
+    border-bottom: 1px solid #cccccc; }
+  table th,
+  table td {
+    padding: 0.75rem 1.5rem; }
+    table th + th, table th + td,
+    table td + th,
+    table td + td {
+      border-left: 1px solid #cccccc; }
+  table th {
+    font-style: italic;
+    background: #f2f2f2; }
+  table td {
+    vertical-align: top; }
+
 form {
   padding: 1.5rem 0;
   margin-bottom: 3rem; }
