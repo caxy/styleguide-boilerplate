@@ -23,16 +23,12 @@
 					border: 1px solid darken($value, 10%);
 				}
 				
-				&::before {
-					content: "<h4>#{$name}</h4> #{$value} / rgb(#{$red}, #{$green}, #{$blue})";
+				&::after {
+					content: "<strong>#{$name}</strong><br />#{$value}<br />rgb(#{$red}, #{$green}, #{$blue})";
 				}
-
 			}
-
 		}
-
 	}
-	
 }
 
 .has-swatches {
@@ -116,6 +112,24 @@
 // Markup and Display Example Titles
 .title-5.has-border--primary--bottom {
 	margin-top: $spacing-outer;
+}
+
+
+
+
+// Font Examples
+
+.card-font.primary {
+	&,
+	h3 {
+		font-family: $font-family-primary !important;
+	}
+}
+.card-font.secondary {
+	&,
+	h3 {
+		font-family: $font-family-secondary !important;
+	}
 }
 
 

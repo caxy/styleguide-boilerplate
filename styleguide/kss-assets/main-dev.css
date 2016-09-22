@@ -494,20 +494,16 @@ Styleguide 2
     font-size: 1.875rem; }
 
 .title-3, h3 {
-  font-style: italic;
   font-size: 2rem; }
 
 .title-4, h4 {
-  font-style: italic;
   font-size: 1.5rem; }
 
 .title-5, h5, dt, .has-swatches .swatch h4 {
-  font-style: italic;
   font-size: 1.2rem;
   font-weight: 600; }
 
 .title-6, h6 {
-  font-style: italic;
   font-size: 1rem;
   font-weight: 600; }
 
@@ -1479,173 +1475,173 @@ header {
   .swatch.site-red--base .dot {
     background-color: #df1e36;
     border: 1px solid #b2182b; }
-  .swatch.site-red--base::before {
-    content: "<h4>base</h4> #df1e36 / rgb(223, 30, 54)"; }
+  .swatch.site-red--base::after {
+    content: "<strong>base</strong><br />#df1e36<br />rgb(223, 30, 54)"; }
   .swatch.site-red--light .dot {
     background-color: #ed7685;
     border: 1px solid #e7495d; }
-  .swatch.site-red--light::before {
-    content: "<h4>light</h4> #ed7685 / rgb(237, 118, 133)"; }
+  .swatch.site-red--light::after {
+    content: "<strong>light</strong><br />#ed7685<br />rgb(237, 118, 133)"; }
   .swatch.site-red--dark .dot {
     background-color: #b2182b;
     border: 1px solid #851220; }
-  .swatch.site-red--dark::before {
-    content: "<h4>dark</h4> #b2182b / rgb(178, 24, 43)"; }
+  .swatch.site-red--dark::after {
+    content: "<strong>dark</strong><br />#b2182b<br />rgb(178, 24, 43)"; }
   .swatch.site-blue--base .dot {
     background-color: #072736;
     border: 1px solid #010609; }
-  .swatch.site-blue--base::before {
-    content: "<h4>base</h4> #072736 / rgb(7, 39, 54)"; }
+  .swatch.site-blue--base::after {
+    content: "<strong>base</strong><br />#072736<br />rgb(7, 39, 54)"; }
   .swatch.site-blue--light .dot {
     background-color: #1F5363;
     border: 1px solid #13323c; }
-  .swatch.site-blue--light::before {
-    content: "<h4>light</h4> #1F5363 / rgb(31, 83, 99)"; }
+  .swatch.site-blue--light::after {
+    content: "<strong>light</strong><br />#1F5363<br />rgb(31, 83, 99)"; }
   .swatch.site-blue--dark .dot {
     background-color: #041c25;
     border: 1px solid black; }
-  .swatch.site-blue--dark::before {
-    content: "<h4>dark</h4> #041c25 / rgb(4, 28, 37)"; }
+  .swatch.site-blue--dark::after {
+    content: "<strong>dark</strong><br />#041c25<br />rgb(4, 28, 37)"; }
   .swatch.site-grey--base .dot {
     background-color: #666;
     border: 1px solid #4d4d4d; }
-  .swatch.site-grey--base::before {
-    content: "<h4>base</h4> #666 / rgb(102, 102, 102)"; }
+  .swatch.site-grey--base::after {
+    content: "<strong>base</strong><br />#666<br />rgb(102, 102, 102)"; }
   .swatch.site-grey--light .dot {
     background-color: #898989;
     border: 1px solid #707070; }
-  .swatch.site-grey--light::before {
-    content: "<h4>light</h4> #898989 / rgb(137, 137, 137)"; }
+  .swatch.site-grey--light::after {
+    content: "<strong>light</strong><br />#898989<br />rgb(137, 137, 137)"; }
   .swatch.site-grey--dark .dot {
     background-color: #333;
     border: 1px solid #1a1a1a; }
-  .swatch.site-grey--dark::before {
-    content: "<h4>dark</h4> #333 / rgb(51, 51, 51)"; }
+  .swatch.site-grey--dark::after {
+    content: "<strong>dark</strong><br />#333<br />rgb(51, 51, 51)"; }
   .swatch.font--primary .dot {
     background-color: #666;
     border: 1px solid #4d4d4d; }
-  .swatch.font--primary::before {
-    content: "<h4>primary</h4> #666 / rgb(102, 102, 102)"; }
+  .swatch.font--primary::after {
+    content: "<strong>primary</strong><br />#666<br />rgb(102, 102, 102)"; }
   .swatch.font--secondary .dot {
     background-color: #898989;
     border: 1px solid #707070; }
-  .swatch.font--secondary::before {
-    content: "<h4>secondary</h4> #898989 / rgb(137, 137, 137)"; }
+  .swatch.font--secondary::after {
+    content: "<strong>secondary</strong><br />#898989<br />rgb(137, 137, 137)"; }
   .swatch.font--tertiary .dot {
     background-color: #333;
     border: 1px solid #1a1a1a; }
-  .swatch.font--tertiary::before {
-    content: "<h4>tertiary</h4> #333 / rgb(51, 51, 51)"; }
+  .swatch.font--tertiary::after {
+    content: "<strong>tertiary</strong><br />#333<br />rgb(51, 51, 51)"; }
   .swatch.font--link .dot {
     background-color: #df1e36;
     border: 1px solid #b2182b; }
-  .swatch.font--link::before {
-    content: "<h4>link</h4> #df1e36 / rgb(223, 30, 54)"; }
+  .swatch.font--link::after {
+    content: "<strong>link</strong><br />#df1e36<br />rgb(223, 30, 54)"; }
   .swatch.font--link-hover .dot {
     background-color: #df1e36;
     border: 1px solid #b2182b; }
-  .swatch.font--link-hover::before {
-    content: "<h4>link-hover</h4> #df1e36 / rgb(223, 30, 54)"; }
+  .swatch.font--link-hover::after {
+    content: "<strong>link-hover</strong><br />#df1e36<br />rgb(223, 30, 54)"; }
   .swatch.font--link-focus .dot {
     background-color: #df1e36;
     border: 1px solid #b2182b; }
-  .swatch.font--link-focus::before {
-    content: "<h4>link-focus</h4> #df1e36 / rgb(223, 30, 54)"; }
+  .swatch.font--link-focus::after {
+    content: "<strong>link-focus</strong><br />#df1e36<br />rgb(223, 30, 54)"; }
   .swatch.titles--primary .dot {
     background-color: #898989;
     border: 1px solid #707070; }
-  .swatch.titles--primary::before {
-    content: "<h4>primary</h4> #898989 / rgb(137, 137, 137)"; }
+  .swatch.titles--primary::after {
+    content: "<strong>primary</strong><br />#898989<br />rgb(137, 137, 137)"; }
   .swatch.titles--secondary .dot {
     background-color: #898989;
     border: 1px solid #707070; }
-  .swatch.titles--secondary::before {
-    content: "<h4>secondary</h4> #898989 / rgb(137, 137, 137)"; }
+  .swatch.titles--secondary::after {
+    content: "<strong>secondary</strong><br />#898989<br />rgb(137, 137, 137)"; }
   .swatch.titles--tertiary .dot {
     background-color: #333;
     border: 1px solid #1a1a1a; }
-  .swatch.titles--tertiary::before {
-    content: "<h4>tertiary</h4> #333 / rgb(51, 51, 51)"; }
+  .swatch.titles--tertiary::after {
+    content: "<strong>tertiary</strong><br />#333<br />rgb(51, 51, 51)"; }
   .swatch.background--primary .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
-  .swatch.background--primary::before {
-    content: "<h4>primary</h4> #fff / rgb(255, 255, 255)"; }
+  .swatch.background--primary::after {
+    content: "<strong>primary</strong><br />#fff<br />rgb(255, 255, 255)"; }
   .swatch.background--secondary .dot {
     background-color: #041c25;
     border: 1px solid black; }
-  .swatch.background--secondary::before {
-    content: "<h4>secondary</h4> #041c25 / rgb(4, 28, 37)"; }
+  .swatch.background--secondary::after {
+    content: "<strong>secondary</strong><br />#041c25<br />rgb(4, 28, 37)"; }
   .swatch.background--tertiary .dot {
     background-color: #666;
     border: 1px solid #4d4d4d; }
-  .swatch.background--tertiary::before {
-    content: "<h4>tertiary</h4> #666 / rgb(102, 102, 102)"; }
+  .swatch.background--tertiary::after {
+    content: "<strong>tertiary</strong><br />#666<br />rgb(102, 102, 102)"; }
   .swatch.panel--primary .dot {
     background-color: #f2f2f2;
     border: 1px solid #d9d9d9; }
-  .swatch.panel--primary::before {
-    content: "<h4>primary</h4> #f2f2f2 / rgb(242, 242, 242)"; }
+  .swatch.panel--primary::after {
+    content: "<strong>primary</strong><br />#f2f2f2<br />rgb(242, 242, 242)"; }
   .swatch.panel--secondary .dot {
     background-color: #020b0e;
     border: 1px solid black; }
-  .swatch.panel--secondary::before {
-    content: "<h4>secondary</h4> #020b0e / rgb(2, 11, 14)"; }
+  .swatch.panel--secondary::after {
+    content: "<strong>secondary</strong><br />#020b0e<br />rgb(2, 11, 14)"; }
   .swatch.panel--tertiary .dot {
     background-color: #595959;
     border: 1px solid #404040; }
-  .swatch.panel--tertiary::before {
-    content: "<h4>tertiary</h4> #595959 / rgb(89, 89, 89)"; }
+  .swatch.panel--tertiary::after {
+    content: "<strong>tertiary</strong><br />#595959<br />rgb(89, 89, 89)"; }
   .swatch.panel--font-color .dot {
     background-color: #666;
     border: 1px solid #4d4d4d; }
-  .swatch.panel--font-color::before {
-    content: "<h4>font-color</h4> #666 / rgb(102, 102, 102)"; }
+  .swatch.panel--font-color::after {
+    content: "<strong>font-color</strong><br />#666<br />rgb(102, 102, 102)"; }
   .swatch.border--primary .dot {
     background-color: #cccccc;
     border: 1px solid #b3b3b3; }
-  .swatch.border--primary::before {
-    content: "<h4>primary</h4> #cccccc / rgb(204, 204, 204)"; }
+  .swatch.border--primary::after {
+    content: "<strong>primary</strong><br />#cccccc<br />rgb(204, 204, 204)"; }
   .swatch.border--secondary .dot {
     background-color: black;
     border: 1px solid black; }
-  .swatch.border--secondary::before {
-    content: "<h4>secondary</h4> black / rgb(0, 0, 0)"; }
+  .swatch.border--secondary::after {
+    content: "<strong>secondary</strong><br />black<br />rgb(0, 0, 0)"; }
   .swatch.border--accent .dot {
     background-color: #072736;
     border: 1px solid #010609; }
-  .swatch.border--accent::before {
-    content: "<h4>accent</h4> #072736 / rgb(7, 39, 54)"; }
+  .swatch.border--accent::after {
+    content: "<strong>accent</strong><br />#072736<br />rgb(7, 39, 54)"; }
   .swatch.button--font-color .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
-  .swatch.button--font-color::before {
-    content: "<h4>font-color</h4> #fff / rgb(255, 255, 255)"; }
+  .swatch.button--font-color::after {
+    content: "<strong>font-color</strong><br />#fff<br />rgb(255, 255, 255)"; }
   .swatch.button--background .dot {
     background-color: #666;
     border: 1px solid #4d4d4d; }
-  .swatch.button--background::before {
-    content: "<h4>background</h4> #666 / rgb(102, 102, 102)"; }
+  .swatch.button--background::after {
+    content: "<strong>background</strong><br />#666<br />rgb(102, 102, 102)"; }
   .swatch.button--background-hover .dot {
     background-color: #333;
     border: 1px solid #1a1a1a; }
-  .swatch.button--background-hover::before {
-    content: "<h4>background-hover</h4> #333 / rgb(51, 51, 51)"; }
+  .swatch.button--background-hover::after {
+    content: "<strong>background-hover</strong><br />#333<br />rgb(51, 51, 51)"; }
   .swatch.button--primary-font-color .dot {
     background-color: #fff;
     border: 1px solid #e6e6e6; }
-  .swatch.button--primary-font-color::before {
-    content: "<h4>primary-font-color</h4> #fff / rgb(255, 255, 255)"; }
+  .swatch.button--primary-font-color::after {
+    content: "<strong>primary-font-color</strong><br />#fff<br />rgb(255, 255, 255)"; }
   .swatch.button--primary-background .dot {
     background-color: #c41a2f;
     border: 1px solid #971425; }
-  .swatch.button--primary-background::before {
-    content: "<h4>primary-background</h4> #c41a2f / rgb(196, 26, 47)"; }
+  .swatch.button--primary-background::after {
+    content: "<strong>primary-background</strong><br />#c41a2f<br />rgb(196, 26, 47)"; }
   .swatch.button--primary-background-hover .dot {
     background-color: #b2182b;
     border: 1px solid #851220; }
-  .swatch.button--primary-background-hover::before {
-    content: "<h4>primary-background-hover</h4> #b2182b / rgb(178, 24, 43)"; }
+  .swatch.button--primary-background-hover::after {
+    content: "<strong>primary-background-hover</strong><br />#b2182b<br />rgb(178, 24, 43)"; }
 
 .navigation-site .menu ul {
   display: -webkit-box;
@@ -1692,6 +1688,14 @@ header {
 
 .title-5.has-border--primary--bottom, h5.has-border--primary--bottom, dt.has-border--primary--bottom, .has-swatches .swatch h4.has-border--primary--bottom {
   margin-top: 3rem; }
+
+.card-font.primary,
+.card-font.primary h3 {
+  font-family: "Montserrat", sans-serif !important; }
+
+.card-font.secondary,
+.card-font.secondary h3 {
+  font-family: "Varela Round", sans-serif !important; }
 
 .pattern-info,
 .pattern-info dt,
