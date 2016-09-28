@@ -1,7 +1,7 @@
 
 (function($) {
 
-  var $fullbleedElement = $('.panel-fullbleed');
+  var $fullbleedElement = $('.panel--fullbleed');
 
   if ($fullbleedElement.length > 0) {
     $(window)

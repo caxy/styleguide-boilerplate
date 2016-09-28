@@ -11,7 +11,8 @@
   font-size: 16px;
   line-height: 24px; }
   .kss-style a {
-    color: #440000; }
+    color: #440000;
+    text-decoration: underline; }
     .kss-style a:visited {
       color: #330000; }
     .kss-style a:hover, .kss-style a:focus {
@@ -37,13 +38,13 @@
   .kss-style h2 {
     font-size: 36px; }
   .kss-style h3 {
-    font-size: 34px; }
-  .kss-style h4 {
     font-size: 32px; }
-  .kss-style h5 {
+  .kss-style h4 {
     font-size: 30px; }
-  .kss-style h6 {
+  .kss-style h5 {
     font-size: 28px; }
+  .kss-style h6 {
+    font-size: 24px; }
   .kss-style blockquote {
     color: #666;
     margin: 0;
@@ -152,6 +153,8 @@
     border-bottom: 1px solid #DDD;
     font-family: "Archivo Narrow", Arial, sans-serif;
     padding: 0 0 0 1.5rem; }
+    #kss-node .kss-sidebar a {
+      text-decoration: none; }
     @media screen and (min-width: 800px) {
       #kss-node .kss-sidebar {
         height: calc(100% - 4.5rem);
@@ -166,7 +169,8 @@
     font-size: 12px;
     text-align: center;
     border: 1px solid #DDD;
-    font-family: "Open Sans", Arial, sans-serif; }
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #444; }
     #kss-node .kss-footer img {
       display: block;
       margin: auto; }
@@ -319,7 +323,7 @@
     margin-bottom: 12px; }
   #kss-node .kss-modifier__example {
     clear: left;
-    padding: 1px 24px;
+    padding: 24px;
     position: relative;
     margin: 0 0 23px 0; }
     #kss-node .kss-modifier__example:last-child {

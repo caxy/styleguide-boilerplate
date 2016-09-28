@@ -58,56 +58,6 @@ header {
 }
 
 
-// Panels
-//
-// Panels are general groupings of content that need to be separated
-// from the main flow of copy on a page, to either highlight content
-// or direct a user towards areas to learn more via a CTA.
-//
-// Ideally there should not be more than 2-3 panels per page, since
-// their point is to highlight content, and if everything is
-// highlighted, nothing is.
-//
-// PatternType: organism
-//
-// ContainsPatterns: Links, Images, Titles, Body Copy, Cards, Navigation, Forms
-//
-// Markup: container_panel.html
-//
-// __Styleguide 5.2
-
-.panel,
-.panel-fullbleed {
-
-	background: $panel-background-primary;
-	border: $border-width-primary solid $border-color-primary;
-
-	p,
-	ul,
-	img {
-		margin: $spacing-inner 0;
-	}
-
-	%form-field {
-		background: lighten($panel-background-primary, 5%);
-	}
-
-}
-
-.panel {
-	@include container;
-	@include width-capped();
-	margin: $spacing-outer 0;
-}
-
-.panel-fullbleed {
-	@extend .panel;
-	@include width-fullbleed();
-	margin-top: $spacing-outer;
-	margin-bottom: $spacing-outer;
-	border-left: none;
-	border-right: none;
-}
 
 
 
@@ -142,8 +92,9 @@ header {
 
 		max-width:100%;
 		display: block;
-		margin: $spacing-inner*1.5;
-		box-shadow: 0 3px 5px 2px #ccc;
+		margin: $spacing-inner/2;
+		border-radius: $border-radius-primary;
+		background: $panel-background-secondary;
 
 		& > *:first-child {
 			margin: 0;
@@ -175,28 +126,35 @@ header {
 
 		@include flexbox();
 		@include flex-direction(column);
-
-		border-bottom: 2px solid $background-color-primary;
+		
 		font-style: normal;
 		font-weight: $font-weight-normal;
 		text-decoration: none;
+		color: $font-color-primary;
 
 		&:hover {
-			border-color: $site-action-color;
-			color: $font-color-primary;
+			color: #fff;
 			text-decoration: none;
 		}
 	}
 
 	.card__copy {
-		padding: $spacing-inner;
-		background: $background-color-primary;
+
 		@include flex(1);
+		padding: $spacing-inner;
+		background: $panel-background-secondary;
+		border-radius: $border-radius-primary;
 
 		& > *:last-child {
 			margin-bottom: 0;
 		}
 
+	}
+
+	&.card--image {
+		.card__copy {
+			border-radius: 0 0 $border-radius-primary $border-radius-primary;
+		}
 	}
 
 }
@@ -279,8 +237,7 @@ header {
 // their point is to highlight content, and if everything is
 // highlighted, nothing is.
 //
-// The fullbleed flavor of panel needs a single direct child to wrap
-// its content.
+// .panel--light - A panel with a lighter background.
 //
 // PatternType: organism
 //
@@ -290,34 +247,28 @@ header {
 //
 // Styleguide 5.2
 
-.panel,
-.panel-fullbleed {
+.panel {
 
-	background: $panel-background-primary;
+	@include container;
 	z-index: 2;
 	color: $panel-font-color;
+	background: $panel-background-primary;
 	list-style-type: none;
-
-	%titles {
-		color: $panel-font-color;
-	}
+	text-align: center;
+	font-weight: $font-weight-semibold;
+	font-family: $font-family-secondary;
 	
 	p,
 	ul,
 	img,
 	li {
-		margin-top: $spacing-inner;
-		margin-bottom: $spacing-inner;
+		margin: $spacing-inner auto;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
 	%form-field {
 		background: lighten($panel-background-primary, 5%);
-	}
-
-	&.has-no-background {
-		background: none;
 	}
 
 	& > *:first-child {
@@ -328,18 +279,40 @@ header {
 		margin-bottom: 0;
 	}
 
+	&:not(.panel--fullbleed) {
+		@include width-capped();
+		border-radius: $border-radius-primary;
+	}
+
+	&.panel--light {
+		background: $panel-background-secondary;
+	}
+
 }
 
-.panel {
-	
-	@include container;
-	@include width-capped();
 
-}
 
-.panel-fullbleed {
+// Fullbleed Panel
+//
+// The fullbleed flavor of panel needs a single direct child to wrap
+// its content.
+//
+// PatternType: organism
+//
+// ContainsPatterns: Links, Images, Titles, Body Copy, Cards, Navigation, Forms
+//
+// Markup: container_panel-fullbleed.html
+//
+// Styleguide 5.2.1
+
+.panel.panel--fullbleed {
 
 	@include width-fullbleed();
+	margin-top: $spacing-outer;
+	margin-bottom: $spacing-outer;
+	border-left: none;
+	border-right: none;
+	background: $panel-background-secondary;
 	
 	& > * {
 		padding: $spacing-inner*2 $spacing-inner;

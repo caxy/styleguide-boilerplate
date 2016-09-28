@@ -49,6 +49,7 @@ $screen-medium: 800px;
   a {
 
     color: $kss-colors-link;
+    text-decoration: underline;
 
     &:visited {
       color: $kss-colors-link-visited;
@@ -92,10 +93,10 @@ $screen-medium: 800px;
 
   h1 { font-size: $kss-font-size * 2.5;   }
   h2 { font-size: $kss-font-size * 2.25;  }
-  h3 { font-size: $kss-font-size * 2.125; }
-  h4 { font-size: $kss-font-size * 2;     }
-  h5 { font-size: $kss-font-size * 1.875; }
-  h6 { font-size: $kss-font-size * 1.75;  }
+  h3 { font-size: $kss-font-size * 2; }
+  h4 { font-size: $kss-font-size * 1.875;     }
+  h5 { font-size: $kss-font-size * 1.75; }
+  h6 { font-size: $kss-font-size * 1.5;  }
 
   blockquote {
     color: $kss-colors-quotes;
@@ -249,6 +250,10 @@ $screen-medium: 800px;
     font-family: $kss-font-titles;
     padding: 0 0 0 1.5rem;
 
+    a {
+      text-decoration: none;
+    }
+
     @media screen and (min-width: $screen-medium) {
       height: calc(100% - 4.5rem);
       overflow: scroll;
@@ -267,6 +272,7 @@ $screen-medium: 800px;
     text-align: center;
     border: 1px solid $kss-colors-border;
     font-family: $kss-font-body;
+    color: $kss-colors-foreground;
 
     img {
       display: block;
@@ -488,8 +494,9 @@ $screen-medium: 800px;
     margin-bottom: ($kss-spacing / 2);
   }
   .kss-modifier__example {
+
     clear: left;
-    padding: 1px $kss-spacing; // 1px to contain the example's margins.
+    padding: $kss-spacing;
     position: relative; // Contain the example's absolute positioning.
     margin: 0 0 ($kss-spacing - 1px) 0;
 

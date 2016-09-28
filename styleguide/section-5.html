@@ -61,6 +61,12 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
+                  <a class="kss-nav__menu-link" href="section-5.html#kssref-5-2-1">
+                    <span class="kss-nav__ref kss-nav__ref-child">5.2.1</span
+                    ><span class="kss-nav__name">Fullbleed Panel</span>
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
                   <a class="kss-nav__menu-link" href="section-5.html#kssref-5-3">
                     <span class="kss-nav__ref ">5.3</span
                     ><span class="kss-nav__name">Cards</span>
@@ -111,8 +117,6 @@ or direct a user towards areas to learn more via a CTA.</p>
 <p>Ideally there should not be more than 2-3 panels per page, since
 their point is to highlight content, and if everything is
 highlighted, nothing is.</p>
-<p>The fullbleed flavor of panel needs a single direct child to wrap
-its content.</p>
 
             </div>
 
@@ -120,9 +124,12 @@ its content.</p>
 
           <div class="kss-modifier__wrapper">
             <div class="kss-modifier__heading kss-style">
-              Example
+              Examples
             </div>
 
+              <div class="kss-modifier__default-name kss-style">
+                Default styling
+              </div>
 
             <div class="kss-modifier__example">
               <div class="panel">
@@ -136,15 +143,27 @@ its content.</p>
   <hr />
   <p class="legal-text">Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.</p>
 </div>
-
-<div class="panel-fullbleed">
-  <div>
-    <h2 class="title-1">Fullbleed Panel Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
-  </div>
-</div>
             </div>
 
+              <div class="kss-modifier__name kss-style">
+                .panel--light
+              </div>
+              <div class="kss-modifier__description kss-style">
+                A panel with a lighter background.
+              </div>
+              <div class="kss-modifier__example">
+                <div class="panel">
+  <h2 class="title-1">Simple Panel Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
+</div>
+
+<div class="panel">
+  <h2 class="title-1">More Complex Panel Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
+  <hr />
+  <p class="legal-text">Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.</p>
+</div>
+              </div>
           </div>
             <div class="kss-markup kss-style">
               <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;panel&quot;&gt;
@@ -157,17 +176,61 @@ its content.</p>
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
   &lt;hr /&gt;
   &lt;p class&#x3D;&quot;legal-text&quot;&gt;Legal text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ut similique beatae ratione incidunt officia perspiciatis, voluptates maxime, at a dicta, libero aut illum voluptate! Voluptatibus id eius facere impedit.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          <div class="kss-source kss-style">
+            <small>Source: components/_containers.scss, line 230</small>
+          </div>
+      </section>
+      <section id="kssref-5-2-1" class="kss-section kss-section--depth-3">
 
-&lt;div class&#x3D;&quot;panel-fullbleed&quot;&gt;
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-3">
+            <a class="kss-title__permalink" href="#kssref-5-2-1">
+              <span class="kss-title__ref">
+                5.2.1
+                <span class="kss-title__permalink-hash"></span>
+              </span>
+              Fullbleed Panel
+            </a>
+          </h3>
+
+            <div class="kss-description">
+              <p>The fullbleed flavor of panel needs a single direct child to wrap
+its content.</p>
+
+            </div>
+
+        </div>
+
+          <div class="kss-modifier__wrapper">
+            <div class="kss-modifier__heading kss-style">
+              Example
+            </div>
+
+
+            <div class="kss-modifier__example">
+              <div class="panel panel--fullbleed">
+  <div>
+    <h2 class="title-1">Fullbleed Panel Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.</p>
+    <p>Consectetur adipisicing elit. Quo odit dignissimos ipsum modi ducimus ex, blanditiis earum mollitia quis. Voluptatibus autem quisquam enim, labore adipisci suscipit. Quo veniam impedit voluptate.</p>
+  </div>
+</div>
+            </div>
+
+          </div>
+            <div class="kss-markup kss-style">
+              <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;panel panel--fullbleed&quot;&gt;
   &lt;div&gt;
     &lt;h2 class&#x3D;&quot;title-1&quot;&gt;Fullbleed Panel Title&lt;/h2&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi delectus eius, voluptatibus sunt, suscipit quibusdam sapiente et qui ducimus explicabo ex ullam architecto earum blanditiis possimus consectetur maiores corrupti neque.&lt;/p&gt;
+    &lt;p&gt;Consectetur adipisicing elit. Quo odit dignissimos ipsum modi ducimus ex, blanditiis earum mollitia quis. Voluptatibus autem quisquam enim, labore adipisci suscipit. Quo veniam impedit voluptate.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
           <div class="kss-source kss-style">
-            <small>Source: components/_containers.scss, line 272</small>
+            <small>Source: components/_containers.scss, line 295</small>
           </div>
       </section>
       <section id="kssref-5-3" class="kss-section kss-section--depth-2">
@@ -257,7 +320,7 @@ a different pattern should be leveraged instead (eg. panel).</p>
 &lt;/ul&gt;</code></pre>
             </div>
           <div class="kss-source kss-style">
-            <small>Source: components/_containers.scss, line 114</small>
+            <small>Source: components/_containers.scss, line 64</small>
           </div>
       </section>
 
