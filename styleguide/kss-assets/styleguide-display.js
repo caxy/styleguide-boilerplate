@@ -1,28 +1,69 @@
 
 (function($) {
 
-  var $fullbleedElement = $('.panel--fullbleed');
+  var $kssSection = $('.kss-section');
+  var $kssExample = $('.kss-modifier__example');
 
-  if ($fullbleedElement.length > 0) {
-    $(window)
-      .load(function(){
-        adjustFullbleedForStyleguide($fullbleedElement)
-      })
-      .resize(function(){
-        adjustFullbleedForStyleguide($fullbleedElement)
-      });
+  // Add any additional fullbleed elements here.
+  var fullbleedElements = [
+    $('.panel--fullbleed'),
+    $('.header--site'),
+    $('.footer--site')
+  ];
+
+  applyWidthEvents(fullbleedElements);
+
+  // For all elements that are fullbleed, add load/resize listener
+  // and width adjustment function.
+  function applyWidthEvents(fullbleedElements) {
+
+    // Only apply events for elements that are actually rendered
+    // on the current page.
+    var renderedFullbleedElements = findElements(fullbleedElements);
+    
+    for (var i = 0; i < renderedFullbleedElements.length; i++) {
+      
+      var $fullbleedElement = renderedFullbleedElements[i];
+      
+      $(window)
+        .load(function(){
+          adjustFullbleedWidth($fullbleedElement)
+        })
+        .resize(function(){
+          adjustFullbleedWidth($fullbleedElement)
+        });
+    }
   }
 
-  function adjustFullbleedForStyleguide($fullbleedElement) {
+  // Create/return an array of elements rendered
+  // to the current page.
+  function findElements(fullbleedElements) {
     
-    var $main = $('.kss-main');
-    var padding = parseInt($main.css('padding-left').replace('px',''), 10) * 2;
-    var mainWidth = $main.innerWidth() - padding;
+    var renderedFullbleedElements = [];
+    
+    for (var i = 0; i < fullbleedElements.length; i++) {
+
+      var $fullbleedElement = fullbleedElements[i];
+
+      if ($fullbleedElement.length > 0) {
+        renderedFullbleedElements.push($fullbleedElement);
+      }
+    }
+    return renderedFullbleedElements;
+  }
+  
+  // This calculates the width of the example area so
+  // that an accurate display of 'fullwidth' behavior
+  // can happen.
+  function adjustFullbleedWidth($fullbleedElement) {
+    
+    var padding = parseInt($kssExample.css('padding-left').replace('px',''), 10);
+    var sectionWidth = $kssSection.outerWidth();
     var mobileWidth = 799;
-    
-    if ($(window).innerWidth() > mobileWidth) {
+
+    if (sectionWidth > mobileWidth) {
       $fullbleedElement
-        .width(mainWidth)
+        .width(sectionWidth)
         .css({
           'left': 0,
           'margin-left': -(padding - 1) + 'px' // 1 = kss-section border
