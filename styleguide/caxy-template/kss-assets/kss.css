@@ -330,7 +330,9 @@
       margin: 0; }
   #kss-node .kss-markup {
     margin: -1px 0 24px 0;
-    border: 1px solid #999; }
+    border: 1px solid #999;
+    max-height: 300px;
+    overflow: scroll; }
   #kss-node .kss-markup pre {
     margin: 0; }
   #kss-node .kss-source {

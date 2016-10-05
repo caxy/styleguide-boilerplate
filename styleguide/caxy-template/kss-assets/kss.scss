@@ -508,6 +508,8 @@ $screen-medium: 800px;
   .kss-markup {
     margin: -1px 0 $kss-spacing 0;
     border: 1px solid #999;
+    max-height: 300px;
+    overflow: scroll;
   }
   .kss-markup pre {
     margin: 0;
