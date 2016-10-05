@@ -17,9 +17,8 @@
   "custom": [
      "devnotes",
      "hidemarkup",
+     "state",
      "patterntype",
      "containspatterns"
   ]
 }
-
-

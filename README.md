@@ -37,3 +37,9 @@ One quirk of KSS-node is the fact that it renders its index page from a markdown
 ## Color Swatches
 
 Color swatches are the most this-only-exists-for-the-styleguide part of a project's SCSS/CSS with this approach. As such, most of the code driving them lives in `/scss/kss-markup/` as HTML templates  or in `/scss/styleguide/`.
+
+## Using Pattern State Markers
+
+Pattern state markers are aggressively applied in an effort to encourage mindful documentation. If no state is set for a given pattern, it will automatically display as In Development. In light of this, they are not active by default when you clone this boilerplate styleguide.
+
+To activate pattern state markers for your project, set `hide_pattern_status` to `false` in the kss-config.json file.
