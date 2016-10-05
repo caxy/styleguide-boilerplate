@@ -12,9 +12,7 @@
   {{{styles}}}
 </head>
 <body id="kss-node">
-
 <main role="main" class="kss-main">
-
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
       <h1 class="kss-doc-title">{{options.title}}</h1>
@@ -109,6 +107,22 @@
         {{#if example}}
           <div class="kss-modifier__wrapper">
             <div class="kss-modifier__heading kss-style">
+
+              {{!
+                Display pattern state.
+
+                To encourage mindful documentation, if no state is added
+                in the css files for a pattern, a pattern will default to
+                In Development.
+              }}
+              {{#unless ../options.hide_pattern_status}}
+              {{#if state}}
+              {{stateMarker state}}
+              {{else}}
+              <span class="kss-state development">In Development</span>
+              {{/if}}
+              {{/unless}}
+
               Example{{#if modifiers}}s{{/if}}
             </div>
 

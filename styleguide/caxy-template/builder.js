@@ -63,6 +63,13 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         multiple: false,
         describe: 'Styleguide version',
         default: '0.0.1'
+      },
+      hide_pattern_status: {
+        group: 'Style guide:',
+        string: false,
+        multiple: false,
+        describe: 'Hide Pattern Status',
+        default: true
       }
     });
   }
@@ -135,6 +142,23 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
           return buffer;
         });
       }
+
+      // Adds markers for different pattern states
+      this.Handlebars.registerHelper('stateMarker', function(state) {
+        var stateObject = {
+          'label' : 'In Development',
+          'class' : 'development'
+        };
+        if (state === 'review') {
+          stateObject.label = 'In Review';
+          stateObject.class = 'review'
+        }
+        if (state === 'ready') {
+          stateObject.label = 'Production Ready';
+          stateObject.class = 'ready'
+        }
+        return '<span class="kss-state ' + stateObject.class + '">' + stateObject.label + '</span>';
+      });
 
       return Promise.resolve(styleGuide);
     });

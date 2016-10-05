@@ -35,6 +35,15 @@ $kss-spacing: $kss-font-size * 1.5;
 
 $screen-medium: 800px;
 
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 // ------------------------------------------------------------------------------
 // Wrap all of this builder's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
@@ -471,6 +480,7 @@ $screen-medium: 800px;
     border: 1px solid $kss-colors-border;
   }
   .kss-modifier__heading {
+    @include clearfix;
     border-bottom: 1px solid $kss-colors-border;
     background-color: $kss-colors-background-darker;
     padding: $kss-spacing/4 $kss-spacing/2;
@@ -591,6 +601,46 @@ $screen-medium: 800px;
     li.L6,
     li.L8 {
       background: #fcfcfc;
+    }
+  }
+}
+
+.kss-state {
+
+  border-radius: 3px;
+  color: #fff;
+  padding: $kss-spacing/4;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  float: right;
+  display: inline-block;
+  line-height: 1em;
+
+  &.documented {
+    float: none;
+  }
+
+  &::before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+
+  &.development {
+    background: #770000;
+    &::before {
+      content: "\f013";
+    }
+  }
+  &.review {
+    background: #665300;
+    &::before {
+      content: "\f059";
+    }
+  }
+  &.ready {
+    background: #006633;
+    &::before {
+      content: "\f164";
     }
   }
 }

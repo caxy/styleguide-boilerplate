@@ -310,6 +310,10 @@
     background-color: #f2f2f2;
     padding: 6px 12px;
     font-family: "Archivo Narrow", Arial, sans-serif; }
+    #kss-node .kss-modifier__heading::before, #kss-node .kss-modifier__heading::after {
+      content: '';
+      display: table;
+      clear: both; }
   #kss-node .kss-modifier__default-name,
   #kss-node .kss-modifier__name {
     margin-left: 24px;
@@ -412,5 +416,32 @@
     #kss-node ol.linenums li.L6,
     #kss-node ol.linenums li.L8 {
       background: #fcfcfc; }
+
+.kss-state {
+  border-radius: 3px;
+  color: #fff;
+  padding: 6px;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  float: right;
+  display: inline-block;
+  line-height: 1em; }
+  .kss-state.documented {
+    float: none; }
+  .kss-state::before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em; }
+  .kss-state.development {
+    background: #770000; }
+    .kss-state.development::before {
+      content: "\f013"; }
+  .kss-state.review {
+    background: #665300; }
+    .kss-state.review::before {
+      content: "\f059"; }
+  .kss-state.ready {
+    background: #006633; }
+    .kss-state.ready::before {
+      content: "\f164"; }
 
 /*# sourceMappingURL=kss.css.map */
