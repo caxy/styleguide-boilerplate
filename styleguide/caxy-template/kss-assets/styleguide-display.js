@@ -1,37 +1,68 @@
 
 (function($) {
 
-  var $fullbleedElement = $('.panel--fullbleed');
+  var $kssSection = $('.kss-section');
+  var $kssExample = $('.kss-modifier__example');
+  var fullbleedElements = [
+    $('.panel--fullbleed')
+  ];
 
-  if ($fullbleedElement.length > 0) {
+  applyWidthEvents(fullbleedElements);
+
+  // For all elements that are fullbleed, add load/resize listener
+  // and width adjustment function.
+  function applyWidthEvents(fullbleedElements) {
+
+    // Only apply events for elements that are actually rendered
+    // on the current page.
+    var renderedFullbleedElements = findElements(fullbleedElements);
+
     $(window)
       .load(function(){
-        adjustFullbleedForStyleguide($fullbleedElement)
+        for (var i = 0; i < renderedFullbleedElements.length; i++) {
+          console.log(renderedFullbleedElements[i]);
+          adjustFullbleedWidth(renderedFullbleedElements[i]);
+        }
       })
       .resize(function(){
-        adjustFullbleedForStyleguide($fullbleedElement)
+        for (var i = 0; i < renderedFullbleedElements.length; i++) {
+          adjustFullbleedWidth(renderedFullbleedElements[i]);
+        }
       });
   }
 
-  function adjustFullbleedForStyleguide($fullbleedElement) {
+  // Create/return an array of elements rendered
+  // to the current page.
+  function findElements(fullbleedElements) {
     
-    var $main = $('.kss-main');
-    var padding = parseInt($main.css('padding-left').replace('px',''), 10) * 2;
-    var mainWidth = $main.innerWidth() - padding;
-    var mobileWidth = 799;
+    var renderedFullbleedElements = [];
     
-    if ($(window).innerWidth() > mobileWidth) {
-      $fullbleedElement
-        .width(mainWidth)
-        .css({
-          'left': 0,
-          'margin-left': -(padding - 1) + 'px' // 1 = kss-section border
-        });
-    } else {
-      if ($fullbleedElement.attr('style') && $fullbleedElement.attr('style').length > 0) {
-        $fullbleedElement.attr('style', '');
+    for (var i = 0; i < fullbleedElements.length; i++) {
+
+      var $fullbleedElement = fullbleedElements[i];
+
+      if ($fullbleedElement.length > 0) {
+        renderedFullbleedElements.push($fullbleedElement);
       }
     }
+    return renderedFullbleedElements;
+  }
+  
+  // This calculates the width of the example area so
+  // that an accurate display of 'fullwidth' behavior
+  // can happen.
+  function adjustFullbleedWidth($fullbleedElement) {
+    
+    var padding = parseInt($kssExample.css('padding-left').replace('px',''), 10);
+    var sectionWidth = $kssSection.outerWidth();
+    var mobileWidth = 799;
+    
+    $fullbleedElement
+      .width(sectionWidth)
+      .css({
+        'left': 0,
+        'margin-left': -(padding - 1) + 'px' // 1 = kss-section border
+      });
   }
 
 })(jQuery);

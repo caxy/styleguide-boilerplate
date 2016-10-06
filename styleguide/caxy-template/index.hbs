@@ -128,17 +128,17 @@
             <div class="kss-modifier__heading kss-style">
 
               {{!
-                Display pattern state.
+                Display pattern status.
 
-                To encourage mindful documentation, if no state is added
+                To encourage mindful documentation, if no status is added
                 in the css files for a pattern, a pattern will default to
                 In Development.
               }}
               {{#unless ../options.hide_pattern_status}}
-              {{#if state}}
-              {{stateMarker state}}
+              {{#if status}}
+              {{{statusMarker status}}}
               {{else}}
-              <span class="kss-state development">In Development</span>
+              <span class="kss-status development">In Development</span>
               {{/if}}
               {{/unless}}
 

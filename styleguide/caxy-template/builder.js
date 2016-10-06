@@ -144,20 +144,20 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
       }
 
       // Adds markers for different pattern states
-      this.Handlebars.registerHelper('stateMarker', function(state) {
-        var stateObject = {
+      this.Handlebars.registerHelper('statusMarker', function(status) {
+        var statusObject = {
           'label' : 'In Development',
           'class' : 'development'
         };
-        if (state === 'review') {
-          stateObject.label = 'In Review';
-          stateObject.class = 'review'
+        if (status === 'review') {
+          statusObject.label = 'In Review';
+          statusObject.class = 'review'
         }
-        if (state === 'ready') {
-          stateObject.label = 'Production Ready';
-          stateObject.class = 'ready'
+        if (status === 'ready') {
+          statusObject.label = 'Production Ready';
+          statusObject.class = 'ready'
         }
-        return '<span class="kss-state ' + stateObject.class + '">' + stateObject.label + '</span>';
+        return '<span class="kss-status ' + statusObject.class + '">' + statusObject.label + '</span>';
       });
 
       return Promise.resolve(styleGuide);
