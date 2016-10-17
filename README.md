@@ -4,6 +4,7 @@ Caxy's boilerplate styleguide. Uses KSS-node to render.
 
 [KSS Documentation](http://warpspire.com/kss/)
 
+
 ## How to Generate Styleguide
 
 Just pull these files into your project's assets folder and run `npm install` to get up and running. If you don't need to adjust the folder structure, you can then run the following to build your styleguide:
@@ -18,9 +19,10 @@ if you would like more information. Running either command also compiles a style
 
 If your folder structure needs to be different, just adjust the path found in the `package.json` file included here.
 
+
 ## Viewing the Styleguide
 
-To view your styleguide locally, it's recommended you run `http-server` to get around quirks that can crop up with font rendering outside of a server setting.
+Running `npm start` will start a local server to aid in review, which is recommended. This will get around quirks that can crop up with font rendering outside of a server setting.
 
 # Populating the Styleguide
 
@@ -33,6 +35,7 @@ Also, if you don't want your markdown to appear in your final compiled CSS (and 
 ## Modifying the Styleguide's Homepage
 
 One quirk of KSS-node is the fact that it renders its index page from a markdown file. This file needs to be in the same folder as the Sass/Less files kss-node is iterating over to populate the styleguide with.
+
 
 ## Color Swatches
 
