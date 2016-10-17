@@ -4,7 +4,9 @@
   var $kssSection = $('.kss-section');
   var $kssExample = $('.kss-modifier__example');
   var fullbleedElements = [
-    $('.panel--fullbleed')
+    $('.panel--fullbleed'),
+    $('.header--site'),
+    $('.footer--site')
   ];
 
   applyWidthEvents(fullbleedElements);
@@ -64,5 +66,41 @@
         'margin-left': -(padding - 1) + 'px' // 1 = kss-section border
       });
   }
+
+  // Toggle view of sections based on status
+  $('.status-toggle').on('click', function(){
+
+    // Define the current status based on what's in the button's data attribute
+    var activeStatus = $(this).data('status');
+
+    // Clear out any current active classes and apply to the just-clicked button
+    $('.status-toggle').removeClass('active');
+    $(this).addClass('active');
+
+    if(activeStatus === 'all') {
+      $kssSection.fadeIn();
+    } else {
+
+      // Hide/Show sections based on selection
+      $kssSection.fadeOut();
+
+      // Sort through all sections and show ones that match our toggle.
+      $kssSection.each(function(){
+
+        // If no status is found, default to development
+        var sectionStatus = ($(this).data('status') === '') ? 'development' : $(this).data('status');
+
+        console.log(sectionStatus);
+        
+        if(sectionStatus === activeStatus) {
+          $(this).fadeIn();
+        }
+      });
+    }
+
+  });
+  
+
+
 
 })(jQuery);

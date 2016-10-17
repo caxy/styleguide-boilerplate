@@ -12,7 +12,16 @@
   {{{styles}}}
 </head>
 <body id="kss-node">
-<main role="main" class="kss-main">
+{{#unless options.hide_pattern_status}}
+<div class="status-toggles kss-style">
+  Filter Patterns: 
+  <button class="status-toggle active" data-status="all">Show All</button>
+  <button class="status-toggle" data-status="development">In Development</button>
+  <button class="status-toggle" data-status="review">In Review</button>
+  <button class="status-toggle" data-status="ready">Production Ready</button>
+</div>
+{{/unless}}
+<main role="main" class="kss-main{{#unless options.hide_pattern_status}} has-status-toggle{{/unless}}">
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
       <h1 class="kss-doc-title">{{options.title}}</h1>
@@ -65,13 +74,13 @@
       <p>Patterns will be broken up into different types based on the classifications outlined by <a href="http://atomicdesign.bradfrost.com/chapter-2/">Brad Frost's Atomic Design Methodology</a>.</p>
       
       {{#unless options.hide_pattern_status}}
-      <h3>Pattern State</h3>
+      <h3>Pattern Staus</h3>
       <p>For this project, it's important to have a simple way of determining whether or not a pattern is ready to be folded into a production site. Because of this, all patterns will have the following state indicators in place.</p>
-      <p><span class="kss-state documented development">In Development</span></p>
+      <p><span class="kss-status documented development">In Development</span></p>
       <p>Pattern is being actively worked on and should not be used outside of the styleguide in its current state.</p>
-      <p><span class="kss-state documented review">In Review</span></p>
+      <p><span class="kss-status documented review">In Review</span></p>
       <p>Pattern is complete with regards to active work, but needs review from relevant parties.</p>
-      <span class="kss-state documented ready">Production Ready</span>
+      <span class="kss-status documented ready">Production Ready</span>
       <p>Pattern has been vetted and tested and is ready for use on a production site.</p>
       {{/unless}}
     </div>
@@ -84,7 +93,7 @@
       the "#if @first" block as seen below.
     }}
     {{#each sections}}
-      <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+      <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}" data-status="{{~status~}}">
 
         <div class="kss-style">
           <h{{depth}} class="kss-title kss-title--level-{{depth}}">
@@ -97,10 +106,26 @@
             </a>
           </h{{depth}}>
 
+          {{#if patterntype}}
+          <dl class="pattern-info kss-style">
+            <dt>Pattern Type:</dt>
+            <dd class="pattern-type {{patterntype}}">{{patterntype}}</dd>
+            {{#if containspatterns}}
+            <br />
+            <dt>Pattern Can Contain:</dt>
+            <dd>{{{containspatterns}}}</dd>
+            {{/if}}
+          </dl>
+          {{/if}}
+
           {{#if description}}
             <div class="kss-description">
               {{{description}}}
             </div>
+          {{/if}}
+
+          {{#if @first}}
+          <hr />
           {{/if}}
 
           {{#if parameters}}
@@ -205,7 +230,7 @@
 {{{scripts}}}
 
 
-<footer class="kss-footer">
+<footer class="kss-footer kss-style">
   <img src="kss-assets/caxy.png" alt="Caxy Code Creative logo" height="30" />
   This styleguide was built with <a href="https://github.com/kss-node/kss-node">KSS Node</a> using <a href="http://caxy.com">Caxy Code Creative</a>'s Zaba theme.
 </footer>

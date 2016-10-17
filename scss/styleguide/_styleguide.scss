@@ -134,64 +134,7 @@
 
 
 
-// ====== Styleguide Presentation Classes ====== //
 
-.pattern-info {
-	&,
-	dt,
-	dd {
-		margin-top: 0;
-		margin-bottom: 0;
-		display: inline-block;
-	}
-}
-
-.pattern-type {
-
-	display: inline-block;
-	text-transform: capitalize;
-
-	&::before {
-
-		display: inline-block;
-		font-weight: 300;
-		padding: 0 $spacing-inner/2 0 0;
-		font-family: $font-family-icon;
-		color: $font-color-secondary;
-
-	}
-
-	&.atom {
-		&::before {
-			content: "\f0c8";
-		}
-	}
-
-	&.molecule {
-		&::before {
-			content: "\f009";
-		}
-	}
-
-	&.organism {
-		&::before {
-			content: "\f00a";
-		}
-	}
-
-	&.template {
-		&::before {
-			content: "\f0db";
-		}
-	}
-
-	&.page {
-		&::before {
-			content: "\f15b";
-		}
-	}
-
-}
 
 .kss-style {
 	code,
@@ -212,10 +155,51 @@
 //
 // Styleguide 1.0
 
-// Large copy example
+
+
+
+
+// Page Examples
 //
-// Markup: typography.html
+// The following are presented as examples for how patterns found
+// elsewhere in this styleguide can fit together in the context of a page.
 //
-// HideMarkup: true
+// Styleguide 50
+
+
+
+// Basic Page
 //
-// Styleguide 2.10
+// Meant for general information.
+//
+// Hidemarkup: true
+//
+// PatternType: page
+//
+// Markup: page_basic.html
+//
+// Styleguide 50.1
+
+
+
+// Detail Page
+//
+// Meant for information that includes an icon and blurb/summary.
+
+
+
+// Portfolio Page
+//
+// Hidemarkup: true
+//
+// PatternType: page
+//
+// ContainsPatterns: 
+// <a href="section-5.html#kssref-5-2">Panel (Light)</a>,
+// <a href="section-2.html#kssref-2-12-2">Copy (with Hand)</a>,
+// <a href="section-5.html#kssref-5-2-1-1">Panel (Fullbleed, Light)</a>,
+// <a href="section-5.html#kssref-5-2-2-1">Panel (CTA with Hand)</a>
+//
+// Markup: page_portfolio.html
+//
+// Styleguide 50.3

@@ -1597,33 +1597,6 @@ header {
 .card-font.secondary h3 {
   font-family: "Varela Round", sans-serif !important; }
 
-.pattern-info,
-.pattern-info dt,
-.pattern-info dd {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: inline-block; }
-
-.pattern-type {
-  display: inline-block;
-  text-transform: capitalize; }
-  .pattern-type::before {
-    display: inline-block;
-    font-weight: 300;
-    padding: 0 0.75rem 0 0;
-    font-family: "FontAwesome", serif;
-    color: #898989; }
-  .pattern-type.atom::before {
-    content: "\f0c8"; }
-  .pattern-type.molecule::before {
-    content: "\f009"; }
-  .pattern-type.organism::before {
-    content: "\f00a"; }
-  .pattern-type.template::before {
-    content: "\f0db"; }
-  .pattern-type.page::before {
-    content: "\f15b"; }
-
 .kss-style code,
 .kss-style pre {
   background: none; }

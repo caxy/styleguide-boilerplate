@@ -13,7 +13,14 @@
 
 </head>
 <body id="kss-node">
-<main role="main" class="kss-main">
+<div class="status-toggles kss-style">
+  Filter Patterns: 
+  <button class="status-toggle active" data-status="all">Show All</button>
+  <button class="status-toggle" data-status="development">In Development</button>
+  <button class="status-toggle" data-status="review">In Review</button>
+  <button class="status-toggle" data-status="ready">Production Ready</button>
+</div>
+<main role="main" class="kss-main has-status-toggle">
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
       <h1 class="kss-doc-title">Style Guide</h1>
@@ -52,17 +59,45 @@
             <span class="kss-nav__ref">5</span><span class="kss-nav__name">Containers</span>
           </a>
         </li>
+        <li class="kss-nav__menu-item">
+          <a class="kss-nav__menu-link" href="section-50.html">
+            <span class="kss-nav__ref">50</span><span class="kss-nav__name">Page Examples</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
   
 
     <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-      <h1>Welcome to the Style Guide</h1>
-
+      <h1 id="welcome-to-the-caxy-com-style-guide">Welcome to the Caxy.com Style Guide</h1>
 <p>A record of patterns and components will be maintained here as they are
-added to the styleguide, grouped by version number. This should help us
-see at a glance what is new or what has been altered over time.</p>
+added to the styleguide, grouped by version number.</p>
+<hr>
+<h2 id="version-1">Version 1</h2>
+<p>Version 1 is concerned with setting up all default/base HTML patterns and stuctures, as well as the baseline styling for our main container for this site, panels.</p>
+<h3 id="patterns-added-with-this-version-">Patterns added with this version:</h3>
+<p><strong>1.0.2</strong></p>
+<ul>
+<li><a href="section-2.html#kssref-2-12">Formatted Code Examples</a></li>
+<li><a href="section-2.html#kssref-2-3-2">Copy Block Types</a></li>
+<li><a href="section-5.html#kssref-5-2-1-1">Light Fullbleed Panel</a></li>
+<li><a href="section-5.html#kssref-5-3">Teasers</a></li>
+<li><a href="section-5.html#kssref-5-2-2-1">CTA Panel with Hand</a></li>
+</ul>
+<p><strong>1.0.1</strong></p>
+<ul>
+<li><a href="section-8.html#kssref-8-3">Site Header</a></li>
+<li><a href="section-7.html#kssref-7-1">Site Navigation</a></li>
+<li><a href="section-7.html#kssref-7-2">Social Media Navigation</a></li>
+</ul>
+<p><strong>1.0.0</strong></p>
+<ul>
+<li><a href="section-1.html#kssref-1-1">Color Swatches and Rules</a></li>
+<li><a href="section-1.html#kssref-1-7">Fonts</a></li>
+<li><a href="section-3.html#kssref-3-2-1">Buttons</a></li>
+<li><a href="section-5.html#kssref-5-2">Panels</a></li>
+</ul>
 
 
       <hr />
@@ -73,6 +108,14 @@ see at a glance what is new or what has been altered over time.</p>
       <h3>Atomic Design</h3>
       <p>Patterns will be broken up into different types based on the classifications outlined by <a href="http://atomicdesign.bradfrost.com/chapter-2/">Brad Frost's Atomic Design Methodology</a>.</p>
       
+      <h3>Pattern Staus</h3>
+      <p>For this project, it's important to have a simple way of determining whether or not a pattern is ready to be folded into a production site. Because of this, all patterns will have the following state indicators in place.</p>
+      <p><span class="kss-status documented development">In Development</span></p>
+      <p>Pattern is being actively worked on and should not be used outside of the styleguide in its current state.</p>
+      <p><span class="kss-status documented review">In Review</span></p>
+      <p>Pattern is complete with regards to active work, but needs review from relevant parties.</p>
+      <span class="kss-status documented ready">Production Ready</span>
+      <p>Pattern has been vetted and tested and is ready for use on a production site.</p>
     </div>
 
 </main>
@@ -94,7 +137,7 @@ see at a glance what is new or what has been altered over time.</p>
 
 
 
-<footer class="kss-footer">
+<footer class="kss-footer kss-style">
   <img src="kss-assets/caxy.png" alt="Caxy Code Creative logo" height="30" />
   This styleguide was built with <a href="https://github.com/kss-node/kss-node">KSS Node</a> using <a href="http://caxy.com">Caxy Code Creative</a>'s Zaba theme.
 </footer>
