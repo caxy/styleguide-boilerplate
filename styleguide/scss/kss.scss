@@ -1,53 +1,4 @@
 // ------------------------------------------------------------------------------
-//   Variables - Colors, Fonts, etc.
-// ------------------------------------------------------------------------------
-
-$kss-colors-background: #fff;
-$kss-colors-background-darker: darken($kss-colors-background, 5%);
-
-$kss-colors-foreground: #444;
-$kss-colors-heading: #111;
-$kss-colors-quotes: #666;
-$kss-colors-border: #CCC;
-
-$kss-colors-link: #440000;
-$kss-colors-link-visited: #330000;
-$kss-colors-link-hover: #df1e36;
-$kss-colors-link-active: #1F5363;
-
-$kss-toggle-height: 2.5rem;
-$kss-sidebar-width: 15rem;
-
-@import 'https://fonts.googleapis.com/css?family=Archivo+Narrow|Open+Sans:300';
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../caxy-zaba-template/kss-assets/fonts/fontawesome-webfont.eot");
-  src: url("../caxy-zaba-template/kss-assets/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../caxy-zaba-template/kss-assets/fonts/fontawesome-webfont.woff") format("woff"), url("../caxy-zaba-template/kss-assets/fonts/fontawesome-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-$kss-font-titles: 'Archivo Narrow', Arial, sans-serif;
-$kss-font-body: 'Open Sans', Arial, sans-serif;
-$kss-icon-font: 'FontAwesome';
-$kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
-
-$kss-font-size: 16px;
-$kss-spacing: $kss-font-size * 1.5;
-
-$screen-medium: 800px;
-
-@mixin clearfix() {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-// ------------------------------------------------------------------------------
 // Wrap all of this builder's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
 
@@ -56,11 +7,15 @@ $screen-medium: 800px;
   color: $kss-colors-foreground;
   font-family: $kss-font-body;
   font-size: $kss-font-size;
+  letter-spacing: 0 !important;
+  text-align: left;
+  box-sizing: border-box;
 
   a {
 
     color: $kss-colors-link;
     text-decoration: underline;
+    font-style: normal;
 
     &:visited {
       color: $kss-colors-link-visited;
@@ -84,6 +39,10 @@ $screen-medium: 800px;
       text-decoration: underline;
     }
 
+    &.kss-button {
+      color: #fff;
+    }
+
   }
 
   p {
@@ -91,23 +50,47 @@ $screen-medium: 800px;
     max-width: 45rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: $kss-spacing 0 0 0;
+  h1.kss-title,
+  h2.kss-title,
+  h3.kss-title,
+  h4.kss-title,
+  h5.kss-title,
+  h6.kss-title {
     font-family: $kss-font-titles;
     color: $kss-colors-heading;
     line-height: 1.15em;
   }
 
-  h4, h5, h6 {
-    font-weight: bold;
+  h1.kss-title,
+  h2.kss-title,
+  h3.kss-title {
+    font-weight: 400;
   }
 
-  h1 { font-size: $kss-font-size * 2.5;   }
-  h2 { font-size: $kss-font-size * 2.25;  }
-  h3 { font-size: $kss-font-size * 2; }
-  h4 { font-size: $kss-font-size * 1.875;     }
-  h5 { font-size: $kss-font-size * 1.75; }
-  h6 { font-size: $kss-font-size * 1.5;  }
+  h4.kss-title,
+  h5.kss-title,
+  h6.kss-title {
+    font-weight: 600;
+  }
+
+  h1.kss-title {
+    font-size: $kss-font-size * 2.5;
+  }
+  h2.kss-title {
+    font-size: $kss-font-size * 2.2;
+  }
+  h3.kss-title {
+    font-size: $kss-font-size * 1.5;
+  }
+  h4.kss-title {
+    font-size: $kss-font-size * 1.25;
+  }
+  h5.kss-title {
+    font-size: $kss-font-size * 1;
+  }
+  h6.kss-title {
+    font-size: $kss-font-size * 0.866;
+  }
 
   blockquote {
     color: $kss-colors-quotes;
@@ -122,7 +105,7 @@ $screen-medium: 800px;
     border: 0;
     border-top: 1px solid lighten($kss-colors-foreground, 60%);
     border-bottom: 1px solid darken($kss-colors-background, 10%);
-    margin: $kss-spacing 0;
+    margin: $kss-spacing*2 0;
     padding: 0;
   }
 
@@ -161,8 +144,19 @@ $screen-medium: 800px;
 
   ul, ol {
     margin: $kss-spacing 0;
-    padding: 0 0 0 $kss-spacing;
+    padding: 0;
   }
+
+  li {
+    list-style: inside none square;
+    margin-left: 0;
+  }
+
+  li::before {
+    content: ""
+  }
+
+
   li p:last-child {
     margin: 0;
   }
@@ -191,6 +185,10 @@ $screen-medium: 800px;
     vertical-align: top;
   }
 
+  button {
+    font-size: $kss-font-body;
+  }
+
   @media print {
     a, a:visited { text-decoration: underline; }
     hr { height: 1px; border:0; border-bottom:1px solid black; }
@@ -209,83 +207,49 @@ $screen-medium: 800px;
 // Layout and page background
 // ------------------------------------------------------------------------------
 
+#kssref-0 {
+  padding: 0 $kss-spacing;
+}
+
 #kss-node {
 
-  margin: 0;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0;
   background: $kss-colors-background;
-
-  @media screen and (min-width: $screen-medium) {
-    padding: 0;
-    background: #fff;
-  }
+  box-sizing: border-box;
 
   .kss-main {
 
-    margin: 0 auto;
+    margin: $kss-toggle-height 0 0;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+
+    .kss__content {
+      padding: 0 $kss-spacing;
+    }
 
     &.has-status-toggle {
-      margin: $kss-toggle-height auto 0; // toggle bar height
+      margin-top: $kss-toggle-height*2;
     }
-
-    @media screen and (min-width: $screen-medium) {
-      //width: 65%;
-      margin-left: $kss-sidebar-width;
-      padding: 0 1.5rem;
-      overflow: hidden;
-      &.has-status-toggle {
-        margin-left: $kss-sidebar-width;
-      }
-    }
-
-    @media screen and (min-width: 980px) {
-      //width: 75%;
-      //margin-left: 25%;
-    }
-
-    @media screen and (min-width: 1200px) {
-      //width: 80%;
-      //margin-left: 20%;
-    }
-
   }
 
   .kss-sidebar,
   .kss-footer {
-
-    left: 0;
-
-    @media screen and (min-width: $screen-medium) {
-      position: fixed;
-      width: $kss-sidebar-width;
-    }
-
-    @media screen and (min-width: 980px) {
-      //width: 25%;
-    }
-
-    @media screen and (min-width: 1200px) {
-      //width: 20%;
-    }
+    left: -100%;
+    position: fixed;
+    width: $kss-sidebar-width;
   }
 
   .kss-sidebar {
-
     border-bottom: 1px solid $kss-colors-border;
     font-family: $kss-font-titles;
-    padding: 0 0 0 1.5rem;
-
-    a {
-      text-decoration: none;
-    }
-
-    @media screen and (min-width: $screen-medium) {
-      height: calc(100% - 4.5rem);
-      overflow: scroll;
-      border-right: 0;
-      margin-bottom: 5rem;
-      border-right: 1px solid $kss-colors-border;
-    }
+    padding: $kss-toggle-height 0 0 1.5rem;
+    height: calc(100% - 4.5rem);
+    overflow: scroll;
+    margin-bottom: 5rem;
+    border-right: 1px solid $kss-colors-border;
+    background: #fff;
   }
 
   .kss-footer {
@@ -295,23 +259,35 @@ $screen-medium: 800px;
     padding: ($kss-spacing/2) $kss-spacing/2;
     font-size: $kss-font-size*0.75;
     text-align: center;
-    border: 1px solid $kss-colors-border;
+    border-style: solid;
+    border-color: $kss-colors-border;
+    border-width: 1px 1px 0 0;
     font-family: $kss-font-body;
     color: $kss-colors-foreground;
+    bottom: 0;
+
+    height: 6rem;
 
     img {
       display: block;
       margin: auto;
     }
 
-    @media screen and (min-width: $screen-medium) {
-      bottom: 0;
-      border-width: 1px 1px 0 0;
-      height: 6rem;
-    }
-    
   }
 
+  &.show-sidebar {
+
+    margin: 0 0 0 $kss-sidebar-width;
+
+    .kss-sidebar,
+    .kss-footer {
+      left: 0;
+    }
+
+    &.full-page {
+      margin: 0 auto;
+    }
+  }
 }
 
 // ------------------------------------------------------------------------------
@@ -321,7 +297,9 @@ $screen-medium: 800px;
 #kss-node {
 
   .kss-doc-title {
+
     margin: 0 $kss-spacing/4 0 0;
+    font-weight: 400;
 
     @media screen and (min-width: $screen-medium) {
       font-size: 1.5em;
@@ -342,19 +320,19 @@ $screen-medium: 800px;
 
   .kss-nav__menu-item {
 
-    display: inline-block;
+    list-style-type: none;
+    padding-right: 0;
     margin: 0;
-    padding: 0;
 
-    @media screen and (min-width: $screen-medium) {
-      display: list-item;
-      padding-right: 0;
-      ul {
-        margin-top: 10px;
-        border-top: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
+    ul {
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
@@ -365,15 +343,13 @@ $screen-medium: 800px;
     line-height: 1.5rem;
     padding-right: $kss-spacing;
 
-    &:before {
-      @media screen and (min-width: $screen-medium) {
-        content: ' ';
-        position: absolute;
-        left: -$kss-spacing;
-        width: 0;
-        height: 100%;
-        background-color: rgba(#000, 0);
-      }
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: -$kss-spacing;
+      width: 0;
+      height: 100%;
+      background-color: rgba(#000, 0);
     }
 
     &.is-in-viewport::before {
@@ -388,7 +364,7 @@ $screen-medium: 800px;
     display: none;
 
     @media screen and (min-width: $screen-medium) {
-      
+
       display: block;
       list-style-type: none;
       margin: 0;
@@ -420,14 +396,15 @@ $screen-medium: 800px;
   .kss-section {
     margin-bottom: ($kss-spacing * 2);
     position: relative;
-    z-index: 10;
+    z-index: 0;
   }
 
-  .kss-title {
-    margin-bottom: 0;
+  .kss-title,
+  .version-info h2 {
     font-style: normal;
     font-weight: 400;
-    margin-bottom: $kss-spacing;
+    margin: 0 0 $kss-spacing;
+    padding-top: $kss-spacing*2;
   }
 
   .kss-title__ref {
@@ -439,7 +416,14 @@ $screen-medium: 800px;
       content: 'Section ';
     }
   }
+
   .kss-title__permalink {
+
+    padding-top: $kss-toggle-height + $kss-spacing;
+
+    .has-status-toggle & {
+      padding-top: $kss-toggle-height*2 + $kss-spacing;
+    }
 
     display: block;
     text-decoration: none;
@@ -495,10 +479,16 @@ $screen-medium: 800px;
   }
 
   .kss-modifier__wrapper {
-    border: 1px solid $kss-colors-border;
+    margin-top: $kss-spacing;
+    position: relative;
+    z-index: 100;
+    .show-sidebar & {
+      border: 1px solid $kss-colors-border;
+    }
   }
   .kss-modifier__heading {
     @include clearfix;
+    border-top: 1px solid $kss-colors-border;
     border-bottom: 1px solid $kss-colors-border;
     background-color: $kss-colors-background-darker;
     padding: $kss-spacing/4 $kss-spacing/2;
@@ -506,19 +496,19 @@ $screen-medium: 800px;
     line-height: 1.5rem;
   }
 
-  .kss-modifier__default-name,
-  .kss-modifier__name {
-    margin-left: $kss-spacing;
-    font-weight: 600;
+  .kss-modifier__copy {
+    padding: 0 $kss-spacing $kss-spacing;
   }
 
   .kss-modifier__default-name {
-    margin-bottom: ($kss-spacing / 2);
+    padding-top: $kss-spacing;
   }
+
+  .kss-modifier__default-name,
   .kss-modifier__name {
-    float: left;
-    padding-right: 10px;
+    font-weight: 600;
   }
+
   .kss-modifier__description {
     margin-bottom: ($kss-spacing / 2);
   }
@@ -542,10 +532,12 @@ $screen-medium: 800px;
   }
 
   .kss-markup {
-    margin: -1px 0 $kss-spacing 0;
-    border: 1px solid #999;
+    margin: -1px 0 0;
+    border: 1px solid $kss-colors-border;
     max-height: 300px;
     overflow: scroll;
+    position: relative;
+    z-index: 1;
   }
   .kss-markup pre {
     margin: 0;
@@ -553,6 +545,7 @@ $screen-medium: 800px;
 
   .kss-source {
     font-size: 80%;
+    padding: 0 $kss-spacing;
   }
 
   .kss-github {
@@ -615,6 +608,7 @@ $screen-medium: 800px;
       border-bottom: 1px solid #eee;
       padding: 0 10px;
       background: #fff;
+      list-style-type: none;
 
       &:first-child {
         padding-top: 3px;
@@ -673,16 +667,22 @@ $screen-medium: 800px;
   }
 }
 
-.kss-style > button {
-  
-  font-size: 11px;
-  padding: 0.5em 1em;
+a.kss-button,
+.kss-button{
+
+  font-size: $kss-font-size-small;
+  padding: 0.25em 1em;
   background: $kss-colors-link;
   border: none;
   box-shadow: none;
   border-radius: 2px;
   letter-spacing: inherit;
   font-family: $kss-font-body;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
 
   &:hover,
   &:focus,
@@ -691,33 +691,93 @@ $screen-medium: 800px;
     border-width: 0;
     box-shadow: none;
     top: 0;
+    color: #fff;
+    background: darken($kss-colors-link, 10%);
   }
 
   &.active {
+
     background: $kss-colors-link-active;
     border: none;
     border-width: 0;
     box-shadow: none;
     top: 0;
+    color: #fff;
+
+    &:hover {
+      background: darken($kss-colors-link-active, 10%);
+      color: #fff;
+    }
   }
 }
 
-.status-toggles {
-  margin: 0 0 $kss-spacing/2;
+a.jira-button {
+  display: none;
+}
+
+.kss-status-bar {
+
+  margin: 0;
+  padding: $kss-spacing/4;
   position: fixed;
-  text-align: right;
   top: 0;
   right: 0;
   width: 100%;
   height: $kss-toggle-height;
-  background: $kss-colors-background-darker;
+  background: lighten($kss-colors-border, 5%);
   border-bottom: 1px solid $kss-colors-border;
-  z-index: 500;
+  z-index: 600;
 
-  button {
-    margin: $kss-spacing/4;
-    display: inline-block;
-    text-transform: uppercase;
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+  &.status-toggles {
+
+    top: $kss-toggle-height;
+    margin: 0 0 $kss-spacing/2;
+    text-align: right;
+    background: $kss-colors-background-darker;
+
+    .kss-button {
+      margin: 0 $kss-spacing/4;
+      display: inline-block;
+      float: right;
+    }
+
+    @media (max-width: 565px) {
+      display: none;
+    }
+  }
+}
+
+.sidebar-toggle {
+
+  float: left;
+  position: static;
+
+  &::before {
+    content: 'Hide ';
+  }
+
+  &.active {
+    &::before {
+      content: 'Show ';
+    }
+  }
+}
+
+#width-marker {
+
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  float: right;
+
+  &::after {
+    content: "Smaller than Micro";
+    display: block;
   }
 }
 
@@ -781,4 +841,15 @@ $screen-medium: 800px;
     }
   }
 
+}
+
+#kss-node .is-fixed--top {
+  top: 0;
+  position: fixed;
+}
+
+#kss-node main {
+  body {
+    position: relative;
+  }
 }

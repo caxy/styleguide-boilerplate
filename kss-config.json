@@ -1,16 +1,18 @@
 {
   "//": "The source and destination paths are relative to this config file.",
   "source": [
-    "scss"
+    "scss",
+    "styleguide/scss",
+    "styleguide/pattern-markup"
   ],
   "title": "Style Guide",
   "styleguide_version": "0.0.1",
   "hide_pattern_status": false,
   "destination":  "dist/styleguide",
-  "builder": "assets/caxy-zaba-template",
+  "builder": "styleguide/caxy-zaba-template",
   "//": "The css and js paths are URLs relative to the generated styleguide.",
   "css": [
-    "kss-assets/main-dev.css"
+    "kss-assets/styles/styleguide.css"
   ],
   "js": [
   ],
