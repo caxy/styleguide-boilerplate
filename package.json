@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/http-server",
-    "generate-css": "sass scss/main.scss css/main.css && cleancss -o css/main-min.css css/main.css",
-    "generate-styleguide": "./node_modules/.bin/kss --config kss-config.json && sass ./styleguide/scss/caxy-zaba.scss dist/styleguide/kss-assets/styles/styleguide.css"
+    "generate-css": "sass scss/main.scss dist/css/main.css",
+    "generate-styleguide": "./bin/generate-styleguide"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,13 @@
     "url": "https://github.com/caxy/styleguide-boilerplate/issues"
   },
   "homepage": "https://github.com/caxy/styleguide-boilerplate#readme",
-  "devDependencies": {
-    "clean-css": "^3.4.10",
-    "foundation": "^4.2.1-1",
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
     "http-server": "^0.9.0",
     "kss": "^3.0.0-beta.14",
-    "node-sass": "^3.4.2"
-  }
+    "node-sass": "^3.4.2",
+    "normalize": "^0.3.1"
+  },
+  "devDependencies": {}
 }
