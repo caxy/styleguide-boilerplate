@@ -6,8 +6,8 @@
   "title": "Style Guide",
   "styleguide_version": "0.0.1",
   "hide_pattern_status": false,
-  "destination":  "styleguide",
-  "builder": "styleguide/caxy-template",
+  "destination":  "dist/styleguide",
+  "builder": "assets/caxy-zaba-template",
   "//": "The css and js paths are URLs relative to the generated styleguide.",
   "css": [
     "kss-assets/main-dev.css"
