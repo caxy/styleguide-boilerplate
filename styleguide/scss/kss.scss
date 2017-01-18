@@ -1,0 +1,855 @@
+// ------------------------------------------------------------------------------
+// Wrap all of this builder's base HTML styling inside a .kss-style selector.
+// ------------------------------------------------------------------------------
+
+.kss-style {
+
+  color: $kss-colors-foreground;
+  font-family: $kss-font-body;
+  font-size: $kss-font-size;
+  letter-spacing: 0 !important;
+  text-align: left;
+  box-sizing: border-box;
+
+  a {
+
+    color: $kss-colors-link;
+    text-decoration: underline;
+    font-style: normal;
+
+    &:visited {
+      color: $kss-colors-link-visited;
+    }
+    &:hover,
+    &:focus   {
+      color: $kss-colors-link-hover;
+    }
+    &:active  {
+      color: $kss-colors-link-active;
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+
+    p &,
+    blockquote &,
+    ul & {
+      text-decoration: underline;
+    }
+
+    &.kss-button {
+      color: #fff;
+    }
+
+  }
+
+  p {
+    margin: $kss-spacing 0;
+    max-width: 45rem;
+  }
+
+  h1.kss-title,
+  h2.kss-title,
+  h3.kss-title,
+  h4.kss-title,
+  h5.kss-title,
+  h6.kss-title {
+    font-family: $kss-font-titles;
+    color: $kss-colors-heading;
+    line-height: 1.15em;
+  }
+
+  h1.kss-title,
+  h2.kss-title,
+  h3.kss-title {
+    font-weight: 400;
+  }
+
+  h4.kss-title,
+  h5.kss-title,
+  h6.kss-title {
+    font-weight: 600;
+  }
+
+  h1.kss-title {
+    font-size: $kss-font-size * 2.5;
+  }
+  h2.kss-title {
+    font-size: $kss-font-size * 2.2;
+  }
+  h3.kss-title {
+    font-size: $kss-font-size * 1.5;
+  }
+  h4.kss-title {
+    font-size: $kss-font-size * 1.25;
+  }
+  h5.kss-title {
+    font-size: $kss-font-size * 1;
+  }
+  h6.kss-title {
+    font-size: $kss-font-size * 0.866;
+  }
+
+  blockquote {
+    color: $kss-colors-quotes;
+    margin: 0;
+    padding-left: $kss-spacing;
+    border-left: 0.5em mix($kss-colors-quotes, $kss-colors-background, 25%) solid;
+  }
+
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid lighten($kss-colors-foreground, 60%);
+    border-bottom: 1px solid darken($kss-colors-background, 10%);
+    margin: $kss-spacing*2 0;
+    padding: 0;
+  }
+
+  pre, code, kbd, samp {
+    font-family: $kss-font-code;
+    color: mix($kss-colors-foreground, $kss-colors-heading, 50%);
+    font-size: 1em;
+  }
+
+  pre {
+    white-space: pre;
+    overflow: scroll;
+    max-width: none;
+  }
+
+  ins {
+    color: $kss-colors-heading;
+    background: #ff9;
+    text-decoration: none;
+  }
+
+  mark {
+    color: $kss-colors-heading;
+    background: #ff0;
+    font-weight: bold;
+  }
+
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup { top: -0.5em;     }
+  sub { bottom: -0.25em; }
+
+  ul, ol {
+    margin: $kss-spacing 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: inside none square;
+    margin-left: 0;
+  }
+
+  li::before {
+    content: ""
+  }
+
+
+  li p:last-child {
+    margin: 0;
+  }
+
+  dd, dl, dt {
+    color: $kss-colors-foreground;
+    font-family: $kss-font-body;
+    font-size: $kss-font-size*.866;
+  }
+  dd {
+    margin: 0 0 0 $kss-spacing/2;
+  }
+
+  img {
+    max-width:100%;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td {
+    vertical-align: top;
+  }
+
+  button {
+    font-size: $kss-font-body;
+  }
+
+  @media print {
+    a, a:visited { text-decoration: underline; }
+    hr { height: 1px; border:0; border-bottom:1px solid black; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+  }
+}
+
+// ------------------------------------------------------------------------------
+// Layout and page background
+// ------------------------------------------------------------------------------
+
+#kssref-0 {
+  padding: 0 $kss-spacing;
+}
+
+#kss-node {
+
+  margin: 0 auto;
+  padding: 0;
+  background: $kss-colors-background;
+  box-sizing: border-box;
+
+  .kss-main {
+
+    margin: $kss-toggle-height 0 0;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+
+    .kss__content {
+      padding: 0 $kss-spacing;
+    }
+
+    &.has-status-toggle {
+      margin-top: $kss-toggle-height*2;
+    }
+  }
+
+  .kss-sidebar,
+  .kss-footer {
+    left: -100%;
+    position: fixed;
+    width: $kss-sidebar-width;
+  }
+
+  .kss-sidebar {
+    border-bottom: 1px solid $kss-colors-border;
+    font-family: $kss-font-titles;
+    padding: $kss-toggle-height 0 0 1.5rem;
+    height: calc(100% - 4.5rem);
+    overflow: scroll;
+    margin-bottom: 5rem;
+    border-right: 1px solid $kss-colors-border;
+    background: #fff;
+  }
+
+  .kss-footer {
+
+    background: $kss-colors-background-darker;
+    box-sizing: border-box;
+    padding: ($kss-spacing/2) $kss-spacing/2;
+    font-size: $kss-font-size*0.75;
+    text-align: center;
+    border-style: solid;
+    border-color: $kss-colors-border;
+    border-width: 1px 1px 0 0;
+    font-family: $kss-font-body;
+    color: $kss-colors-foreground;
+    bottom: 0;
+
+    height: 6rem;
+
+    img {
+      display: block;
+      margin: auto;
+    }
+
+  }
+
+  &.show-sidebar {
+
+    margin: 0 0 0 $kss-sidebar-width;
+
+    .kss-sidebar,
+    .kss-footer {
+      left: 0;
+    }
+
+    &.full-page {
+      margin: 0 auto;
+    }
+  }
+}
+
+// ------------------------------------------------------------------------------
+// Sidebar-area components
+// ------------------------------------------------------------------------------
+
+#kss-node {
+
+  .kss-doc-title {
+
+    margin: 0 $kss-spacing/4 0 0;
+    font-weight: 400;
+
+    @media screen and (min-width: $screen-medium) {
+      font-size: 1.5em;
+    }
+  }
+
+  .kss-header {
+    padding: $kss-spacing 0;
+    margin: 0;
+  }
+
+  .kss-nav__menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .kss-nav__menu-item {
+
+    list-style-type: none;
+    padding-right: 0;
+    margin: 0;
+
+    ul {
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .kss-nav__menu-link {
+
+    position: relative;
+    display: inline-block;
+    line-height: 1.5rem;
+    padding-right: $kss-spacing;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: -$kss-spacing;
+      width: 0;
+      height: 100%;
+      background-color: rgba(#000, 0);
+    }
+
+    &.is-in-viewport::before {
+      background-color: #072736;
+      width: 5px;
+      transition: background-color .4s;
+    }
+  }
+
+  .kss-nav__menu-child {
+
+    display: none;
+
+    @media screen and (min-width: $screen-medium) {
+
+      display: block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding-left: $kss-spacing;
+      }
+
+    }
+  }
+
+  .kss-nav__ref {
+    color: #333;
+    padding-right: 1em;
+  }
+
+  .kss-nav__ref-child {
+    font-weight: 400;
+  }
+}
+
+// ------------------------------------------------------------------------------
+// Content-area components
+// ------------------------------------------------------------------------------
+
+#kss-node {
+
+  .kss-section {
+    margin-bottom: ($kss-spacing * 2);
+    position: relative;
+    z-index: 0;
+  }
+
+  .kss-title,
+  .version-info h2 {
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 0 $kss-spacing;
+    padding-top: $kss-spacing*2;
+  }
+
+  .kss-title__ref {
+    display: block;
+    font-size: $kss-font-size;
+    line-height: $kss-font-size;
+
+    &:before {
+      content: 'Section ';
+    }
+  }
+
+  .kss-title__permalink {
+
+    padding-top: $kss-toggle-height + $kss-spacing;
+
+    .has-status-toggle & {
+      padding-top: $kss-toggle-height*2 + $kss-spacing;
+    }
+
+    display: block;
+    text-decoration: none;
+    color: $kss-colors-foreground;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $kss-colors-link;
+
+      @media screen and (min-width: 607px) {
+
+        .kss-title__permalink-hash {
+          display: inline;
+          &::after {
+            font-family: $kss-icon-font;
+            content: '\f0c1';
+            color: lighten($kss-colors-foreground,10%);
+          }
+        }
+
+      }
+    }
+  }
+  .kss-title__permalink-hash {
+    display: none;
+    color: lighten($kss-colors-heading,15%);
+  }
+
+  .kss-parameters {
+    display: table;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .kss-parameters__title {
+    font-weight: bold;
+  }
+  .kss-parameters__item {
+    display: table-row;
+  }
+  .kss-parameters__name {
+    display: table-cell;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+  .kss-parameters__description {
+    display: table-cell;
+  }
+  .kss-parameters__default-value code {
+    white-space: nowrap;
+  }
+
+  .kss-modifier__wrapper {
+    margin-top: $kss-spacing;
+    position: relative;
+    z-index: 100;
+    .show-sidebar & {
+      border: 1px solid $kss-colors-border;
+    }
+  }
+  .kss-modifier__heading {
+    @include clearfix;
+    border-top: 1px solid $kss-colors-border;
+    border-bottom: 1px solid $kss-colors-border;
+    background-color: $kss-colors-background-darker;
+    padding: $kss-spacing/4 $kss-spacing/2;
+    font-family: $kss-font-titles;
+    line-height: 1.5rem;
+  }
+
+  .kss-modifier__copy {
+    padding: 0 $kss-spacing $kss-spacing;
+  }
+
+  .kss-modifier__default-name {
+    padding-top: $kss-spacing;
+  }
+
+  .kss-modifier__default-name,
+  .kss-modifier__name {
+    font-weight: 600;
+  }
+
+  .kss-modifier__description {
+    margin-bottom: ($kss-spacing / 2);
+  }
+  .kss-modifier__example {
+
+    color: #333;
+    clear: left;
+    padding: $kss-spacing;
+    position: relative; // Contain the example's absolute positioning.
+    margin: 0 0 ($kss-spacing - 1px) 0;
+    overflow-x: hidden;
+
+    .kss-style,
+    .kss-style h3 {
+      color: #333;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .kss-markup {
+    margin: -1px 0 0;
+    border: 1px solid $kss-colors-border;
+    max-height: 300px;
+    overflow: scroll;
+    position: relative;
+    z-index: 1;
+  }
+  .kss-markup pre {
+    margin: 0;
+  }
+
+  .kss-source {
+    font-size: 80%;
+    padding: 0 $kss-spacing;
+  }
+
+  .kss-github {
+    display:none;
+
+    @media screen and (min-width: 501px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    img {
+      border: 0;
+    }
+  }
+
+  // ------------------------------------------------------------------------------
+  //   group prettyprint.js styling
+  // ------------------------------------------------------------------------------
+  /* Pretty printing styles. Used with prettify.js. */
+
+  /* SPAN elements with the classes below are added by prettyprint. */
+  .pln { color: #000 }  /* plain text */
+
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+
+  /* Use higher contrast and text-weight for printable form. */
+  @media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+  }
+
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0;
+    padding: 0 0 3px 0;
+    list-style-type: none;
+
+    li {
+      min-height: $kss-spacing;
+      border-bottom: 1px solid #eee;
+      padding: 0 10px;
+      background: #fff;
+      list-style-type: none;
+
+      &:first-child {
+        padding-top: 3px;
+      }
+    }
+    /* Alternate shading for lines */
+    li.L0,
+    li.L2,
+    li.L4,
+    li.L6,
+    li.L8 {
+      background: #fcfcfc;
+    }
+  }
+}
+
+
+
+.kss-status {
+
+  border-radius: 3px;
+  color: #fff;
+  padding: $kss-spacing/4;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  float: right;
+  display: inline-block;
+  line-height: 1em;
+
+  &.documented {
+    float: none;
+  }
+
+  &::before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+
+  &.development {
+    background: #770000;
+    &::before {
+      content: "\f013";
+    }
+  }
+  &.review {
+    background: #665300;
+    &::before {
+      content: "\f059";
+    }
+  }
+  &.ready {
+    background: #006633;
+    &::before {
+      content: "\f164";
+    }
+  }
+}
+
+a.kss-button,
+.kss-button{
+
+  font-size: $kss-font-size-small;
+  padding: 0.25em 1em;
+  background: $kss-colors-link;
+  border: none;
+  box-shadow: none;
+  border-radius: 2px;
+  letter-spacing: inherit;
+  font-family: $kss-font-body;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    top: 0;
+    color: #fff;
+    background: darken($kss-colors-link, 10%);
+  }
+
+  &.active {
+
+    background: $kss-colors-link-active;
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    top: 0;
+    color: #fff;
+
+    &:hover {
+      background: darken($kss-colors-link-active, 10%);
+      color: #fff;
+    }
+  }
+}
+
+a.jira-button {
+  display: none;
+}
+
+.kss-status-bar {
+
+  margin: 0;
+  padding: $kss-spacing/4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: $kss-toggle-height;
+  background: lighten($kss-colors-border, 5%);
+  border-bottom: 1px solid $kss-colors-border;
+  z-index: 600;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+  &.status-toggles {
+
+    top: $kss-toggle-height;
+    margin: 0 0 $kss-spacing/2;
+    text-align: right;
+    background: $kss-colors-background-darker;
+
+    .kss-button {
+      margin: 0 $kss-spacing/4;
+      display: inline-block;
+      float: right;
+    }
+
+    @media (max-width: 565px) {
+      display: none;
+    }
+  }
+}
+
+.sidebar-toggle {
+
+  float: left;
+  position: static;
+
+  &::before {
+    content: 'Hide ';
+  }
+
+  &.active {
+    &::before {
+      content: 'Show ';
+    }
+  }
+}
+
+#width-marker {
+
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  float: right;
+
+  &::after {
+    content: "Smaller than Micro";
+    display: block;
+  }
+}
+
+
+
+// ====== Styleguide Presentation Classes ====== //
+
+.pattern-info {
+
+  margin: 0 0 $kss-spacing;
+  padding-left: $kss-spacing/2;
+  border-left: 1px solid $kss-colors-border;
+
+  dt,
+  dd {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+}
+
+.pattern-type {
+
+  display: inline-block;
+  text-transform: capitalize;
+
+  &::before {
+    display: inline-block;
+    font-weight: 300;
+    padding: 0 $kss-spacing/2 0 0;
+    font-family: 'FontAwesome';
+  }
+
+  &.atom {
+    &::before {
+      content: "\f0c8";
+    }
+  }
+
+  &.molecule {
+    &::before {
+      content: "\f009";
+    }
+  }
+
+  &.organism {
+    &::before {
+      content: "\f00a";
+    }
+  }
+
+  &.template {
+    &::before {
+      content: "\f0db";
+    }
+  }
+
+  &.page {
+    &::before {
+      content: "\f15b";
+    }
+  }
+
+}
+
+#kss-node .is-fixed--top {
+  top: 0;
+  position: fixed;
+}
+
+#kss-node main {
+  body {
+    position: relative;
+  }
+}
