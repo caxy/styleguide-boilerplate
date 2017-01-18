@@ -643,7 +643,7 @@
   }
 
   &::before {
-    font-family: "FontAwesome";
+    font-family: $kss-icon-font;
     padding-right: 0.5em;
   }
 
@@ -808,7 +808,7 @@ a.jira-button {
     display: inline-block;
     font-weight: 300;
     padding: 0 $kss-spacing/2 0 0;
-    font-family: 'FontAwesome';
+    font-family: $kss-icon-font;
   }
 
   &.atom {
