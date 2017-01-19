@@ -5,7 +5,7 @@ they are not selectable. As this is less than ideal for a styleguide
 that someone might want to pull CSS-provided values from, this function
 will append swatch values to a given .swatch element.
 */
-var $swatches = $(".swatch");
+var $swatches = $(".kss-swatch");
 
 $swatches.each(renderColorValues);
 

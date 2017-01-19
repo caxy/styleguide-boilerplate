@@ -1,5 +1,7 @@
 #!/bin/bash
-echo "Building Styleguide..." \
-&& (cd ./src/styleguide; npm run generate-styleguide-pages) \
-&& echo "Generating Styleguide CSS..." \
-&& (cd ./src/styleguide; npm run generate-styleguide-css) \
+echo "Reseting Styleguide..."
+(cd ./dist; rm -r styleguide)
+echo "Building Styleguide..."
+(cd ./src/styleguide; npm run generate-styleguide-pages)
+echo "Generating Styleguide CSS..."
+(cd ./src/styleguide; npm run generate-styleguide-css)

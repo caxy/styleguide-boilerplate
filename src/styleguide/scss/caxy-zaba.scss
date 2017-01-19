@@ -57,7 +57,6 @@ $kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, 
 @import 'mixins-flexbox';
 @import 'mixins-styleguide';
 @import 'kss';
-// @import path/to/project/variable/scss
 
 
 
@@ -115,60 +114,8 @@ $example-screen-xxlarge: 100rem;
 // ------------------------------------------------------------------------------
 //   Color Swatches
 // ------------------------------------------------------------------------------
-//
-// NOTE: Requires project color variables are imported.
-//
-// Sets of colors should be grouped into a Color Set as follows:
-//
-// $color-set-name (
-//   primary: $color-primary,
-//   secondary: $color-secondary
-// );
-//
-// These should all then be added to the Color Sets Object below.
-//
-// Swatches will be created for the styleguide with the following class
-// naming convention:
-//
-// .[color set name]--[variable name]
-//
-// So a color in the $font-colors set with the name `primary` will end up
-// with the class name `.font-colors--primary`
-//
-// Example color set declaration:
-//
-// $color-sets: (
-//   "site-red": $site-red,
-//   "site-blue": $site-blue,
-//   "site-grey": $site-grey,
-//   "font": $font-colors,
-//   "titles": $title-colors,
-//   "background": $background-colors,
-//   "panel": $panel-colors,
-//   "border": $border-colors,
-//   "button": $button-colors
-// );
-//
 
-$example-color-1: (
-  'base': #072736,
-  'light': #1F5363,
-  'dark': #041c25
-);
-
-$example-color-2: (
-  'base': #df1e36,
-  'light': lighten(#df1e36, 20%),
-  'dark': darken(#df1e36, 10%)
-);
-
-$color-sets: (
-  "example-1": $example-color-1,
-  "example-2": $example-color-2
-);
-
-
-
+@import '../../styles/example-colors.scss';
 
 .has-swatches {
 
@@ -179,16 +126,12 @@ $color-sets: (
   margin: 0;
   padding: 0;
 
-  .swatch {
+  .kss-swatch {
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between);
     flex: 1;
     margin: 1rem 0;
-    .swatch__title {
-      margin: 0;
-      font-size: $kss-font-size*1.25;
-    }
   }
 
 }
@@ -218,9 +161,7 @@ $color-sets: (
     visibility: hidden;
   }
 
-  @if($color-sets) {
-    @include make-swatches($color-sets);
-  }
+  @include make-swatches($color-sets);
 
 }
 
