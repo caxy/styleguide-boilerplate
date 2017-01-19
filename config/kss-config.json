@@ -2,7 +2,7 @@
   "//": "The source and destination paths are relative to this config file.",
   "source": [
     "../src/styles",
-    "../src/styleguide"
+    "../src/styleguide/pattern-markup"
   ],
   "title": "Style Guide",
   "styleguide_version": "0.0.1",

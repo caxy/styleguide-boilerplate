@@ -45,8 +45,8 @@ than `/* */` so that the markdown will be omitted.
 
 ## Modifying the Styleguide's Homepage
 
-One quirk of KSS-node is the fact that it renders its index page from a
-markdown file: homepage.md in the src/styleguide/ folder.
+The styleguide's index page is rendered from the markdown file
+homepage.md in the src/styleguide/pattern-markup folder.
 
 ## Using Pattern Markers
 

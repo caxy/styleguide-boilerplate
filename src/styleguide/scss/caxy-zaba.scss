@@ -57,7 +57,6 @@ $kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, 
 @import 'mixins-flexbox';
 @import 'mixins-styleguide';
 @import 'kss';
-// @import path/to/project/variable/scss
 
 
 
@@ -115,37 +114,8 @@ $example-screen-xxlarge: 100rem;
 // ------------------------------------------------------------------------------
 //   Color Swatches
 // ------------------------------------------------------------------------------
-//
-// The following example color sets are provided for reference. Remove or comment
-// out for your project.
 
-// Example Color Swatches
-//
-// Markup: swatches_example.html
-//
-// Styleguide 1
-
-$example-color-1: (
-  'base': #072736,
-  'light': #1F5363,
-  'dark': #041c25
-);
-
-$example-color-2: (
-  'base': #df1e36,
-  'light': lighten(#df1e36, 20%),
-  'dark': darken(#df1e36, 10%)
-);
-
-// The $color-sets object is required if working swatches are needed. It can either
-// remain here, or be pulled into your project's color variable file.
-$color-sets: (
-  "example-1": $example-color-1,
-  "example-2": $example-color-2
-);
-
-
-
+@import '../../styles/example-colors.scss';
 
 .has-swatches {
 
