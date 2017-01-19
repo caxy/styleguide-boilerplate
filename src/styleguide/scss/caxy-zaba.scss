@@ -116,39 +116,14 @@ $example-screen-xxlarge: 100rem;
 //   Color Swatches
 // ------------------------------------------------------------------------------
 //
-// NOTE: Requires project color variables are imported.
+// The following example color sets are provided for reference. Remove or comment
+// out for your project.
+
+// Example Color Swatches
 //
-// Sets of colors should be grouped into a Color Set as follows:
+// Markup: swatches_example.html
 //
-// $color-set-name (
-//   primary: $color-primary,
-//   secondary: $color-secondary
-// );
-//
-// These should all then be added to the Color Sets Object below.
-//
-// Swatches will be created for the styleguide with the following class
-// naming convention:
-//
-// .[color set name]--[variable name]
-//
-// So a color in the $font-colors set with the name `primary` will end up
-// with the class name `.font-colors--primary`
-//
-// Example color set declaration:
-//
-// $color-sets: (
-//   "site-red": $site-red,
-//   "site-blue": $site-blue,
-//   "site-grey": $site-grey,
-//   "font": $font-colors,
-//   "titles": $title-colors,
-//   "background": $background-colors,
-//   "panel": $panel-colors,
-//   "border": $border-colors,
-//   "button": $button-colors
-// );
-//
+// Styleguide 1.1
 
 $example-color-1: (
   'base': #072736,
