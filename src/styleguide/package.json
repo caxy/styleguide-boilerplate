@@ -4,7 +4,7 @@
   "description": "A boilerplate KSS node styleguide implementation for projects.",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/http-server",
+    "start": "./node_modules/.bin/http-server ../../dist/styleguide",
     "generate-styleguide": "../../bin/generate-styleguide",
     "generate-styleguide-css": "node-sass --include-path node_modules/normalize-css/ scss/caxy-zaba.scss ../../dist/styleguide/kss-assets/styles/styleguide.css",
     "generate-styleguide-pages": "kss --config ../../config/kss-config.json"
