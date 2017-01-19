@@ -1,7 +1,5 @@
 #!/bin/bash
 ./node_modules/.bin/kss --config kss-config.json \
 && node-sass \
-  --include-path ./node_modules/normalize-scss/sass/ \
-  --include-path ./node_modules/bourbon/app/assets/stylesheets/ \
-  --include-path ./node_modules/bourbon-neat/app/assets/stylesheets/ \
+  --include-path ./node_modules/normalize-css/ \
   ./styleguide/scss/caxy-zaba.scss dist/styleguide/kss-assets/styles/styleguide.css
