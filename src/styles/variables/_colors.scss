@@ -37,31 +37,3 @@
 // This makes things a little more readable, but use what works best for you.
 // The important things is to keep any brand- or company-specific variable
 // names in variable files only.
-
-
-
-
-
-// Site Colors
-// 
-// Markup: swatches_site.html
-//
-// HideMarkup: true
-//
-// Styleguide 1.1
-
-$site-red: (
-    'base': #df1e36,
-    'light': lighten(#df1e36, 20%),
-    'dark': darken(#df1e36, 10%)
-    );
-$site-blue: (
-    'base': #072736,
-    'light': #1F5363,
-    'dark': #041c25
-    );
-
-$site-colors: (
-    'red' : $site-red,
-    'blue' : $site-blue
-);
