@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/http-server",
-    "generate-css": "sass scss/main.scss dist/css/main.css",
-    "generate-styleguide": "./bin/generate-styleguide"
+    "generate-styleguide": "../../bin/generate-styleguide",
+    "generate-styleguide-css": "node-sass --include-path node_modules/normalize-css/ scss/caxy-zaba.scss ../../dist/styleguide/kss-assets/styles/styleguide.css",
+    "generate-styleguide-pages": "kss --config ../../config/kss-config.json"
   },
   "repository": {
     "type": "git",
