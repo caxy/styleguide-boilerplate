@@ -123,7 +123,7 @@ $example-screen-xxlarge: 100rem;
 //
 // Markup: swatches_example.html
 //
-// Styleguide 1.1
+// Styleguide 1
 
 $example-color-1: (
   'base': #072736,
@@ -137,6 +137,8 @@ $example-color-2: (
   'dark': darken(#df1e36, 10%)
 );
 
+// The $color-sets object is required if working swatches are needed. It can either
+// remain here, or be pulled into your project's color variable file.
 $color-sets: (
   "example-1": $example-color-1,
   "example-2": $example-color-2
@@ -154,16 +156,12 @@ $color-sets: (
   margin: 0;
   padding: 0;
 
-  .swatch {
+  .kss-swatch {
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between);
     flex: 1;
     margin: 1rem 0;
-    .swatch__title {
-      margin: 0;
-      font-size: $kss-font-size*1.25;
-    }
   }
 
 }
@@ -193,9 +191,7 @@ $color-sets: (
     visibility: hidden;
   }
 
-  @if($color-sets) {
-    @include make-swatches($color-sets);
-  }
+  @include make-swatches($color-sets);
 
 }
 
