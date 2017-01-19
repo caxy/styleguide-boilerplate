@@ -1,5 +1,5 @@
 #!/bin/bash
-./node_modules/.bin/kss --config kss-config.json \
+./node_modules/.bin/kss --config ./src/styleguide/kss-config.json \
 && node-sass \
-  --include-path ./node_modules/normalize-css/ \
-  ./styleguide/scss/caxy-zaba.scss dist/styleguide/kss-assets/styles/styleguide.css
+  --include-path ./src/styleguide/node_modules/normalize-css/ \
+  .src/styleguide/scss/caxy-zaba.scss dist/styleguide/kss-assets/styles/styleguide.css
