@@ -7,7 +7,7 @@
   ],
   "title": "Style Guide",
   "styleguide_version": "0.0.1",
-  "hide_pattern_status": false,
+  "hide_pattern_status": true,
   "destination":  "../dist/styleguide",
   "builder": "../src/styleguide/caxy-zaba-template",
   "//": "The css and js paths are URLs relative to the generated styleguide.",
