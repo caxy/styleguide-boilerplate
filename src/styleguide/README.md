@@ -1,17 +1,9 @@
-# KSS Styleguide
+# KSS Styleguide with Caxy's Zaba Theme Builder
 
-Caxy's boilerplate styleguide setup. Uses KSS-node to render, and Caxy's
-Zaba theme to build.
+This styleguide setup and builder has the following features:
 
-[KSS Documentation](http://warpspire.com/kss/)
-
-This styleguide boilerplate has its assets completely removed from the 
-project assets. This does two things:
- 
--   Streamlines implementation of the CSS assets themselves, since they
-    aren't tangled up with the styleguide assets
--   Allows the styleguide to represent the project CSS with 100%
-    accuracy, without styleguide CSS being misconstrued for project CSS.
+- Color Swatches
+- Pattern Markers
 
 ## How to Generate Styleguide
 
@@ -56,18 +48,66 @@ than `/* */` so that the markdown will be omitted.
 One quirk of KSS-node is the fact that it renders its index page from a
 markdown file: homepage.md in the src/styleguide/ folder.
 
-## Using Pattern Status Markers
+## Using Pattern Markers
 
-Pattern status markers are aggressively applied in an effort to
-encourage mindful documentation. If no status is set for a given
-pattern, it will automatically display as In Development. In light of
-this, they are not active by default when you clone this boilerplate
-styleguide.
+Caxy's Zaba theme builder adds two pattern markers, defined with custom
+kss values:
+
+- `PatternType` : Pattern Type
+- `Status` : Pattern Status (not active by default)
+
+The are added to your markup in the following way:
+
+~~~~
+// Pattern Name
+//
+// Pattern description...
+//
+// PatternType: atom
+//
+// Status: ready
+//
+// Styleguide 3.1.1
+~~~~
+
+Marker values should be lowercase.
+
+### Pattern Status
+
+Because not all styleguide projects will be iterative, pattern status
+markers are not active by default. For situations where patterns will
+need some kind of indicator of their production-readiness, these status
+markers can be activated.
 
 To activate pattern status markers for your project, set
 `hide_pattern_status` to `false` in the config/kss-config.json file.
 
-## Color Swatches
+This marker has three values available:
+
+- `development` : In Development (default)
+- `review` : In Review
+- `ready` : Production Ready
+
+Pattern status markers are aggressively applied in an effort to
+encourage mindful documentation. If no status is set for a given
+pattern, it will automatically display as In Development.
+
+### Pattern Type
+
+Pattern types follow [Brad Frost's Atomic Design methodology](http://bradfrost.com/blog/post/atomic-web-design/).
+
+Use of this marker is entirely optional. If no `PatternType` value is
+found, no marker displays.
+
+To utilize these markers, the following values are available:
+
+- `atom`
+- `molecule`
+- `organism`
+- `template`
+- `page`
+
+## Using Color Swatches
 
 To populate your project's color swatches, do the following:
 
