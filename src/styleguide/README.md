@@ -5,6 +5,7 @@ This styleguide setup and builder has the following features:
 - Color Swatches
 - Pattern Markers
 
+
 ## How to Generate Styleguide
 
 **From within the /src/styleguide folder**
@@ -15,8 +16,8 @@ to build your styleguide:
 `npm run generate-styleguide`
 
 This will compile the styleguide's CSS and create the styleguide pages 
-based on comments found in files in the /src/styles/ folder and the
-markup HTML found in the src/styleguide/pattern-markup/ folder.
+based on comments found in files in the `/src/styles/` folder and the
+markup HTML found in the `src/styleguide/pattern-markup/` folder.
 
 
 ## Viewing the Styleguide
@@ -26,12 +27,14 @@ local server to aid in review, which is recommended. This will get
 around quirks that can crop up with font rendering outside of a server
 setting.
 
-# Populating the Styleguide
+
+## Populating and Editing the Styleguide
 
 KSS uses a slight variation of markdown to populate Handlebars templates
 and create your styleguide. This markdown should be included in relevant
 CSS files, and provides inline documentation of your CSS as a nice
-byproduct.
+byproduct. Detailed examples can be found in the
+[KSS Node project repo](https://github.com/kss-node/kss-node).
 
 If you find your example markup extends beyond four or five lines, it's
 best to move it into a separate HTML file that KSS-node will reference,
@@ -43,12 +46,14 @@ Also, if you don't want your markdown to appear in your final compiled
 CSS (and ideally you shouldn't), remember to use `//` to comment rather
 than `/* */` so that the markdown will be omitted.
 
-## Modifying the Styleguide's Homepage
+
+### Modifying the Styleguide's Homepage
 
 The styleguide's index page is rendered from the markdown file
-homepage.md in the src/styleguide/pattern-markup folder.
+homepage.md in the `src/styleguide/project-assets` folder.
 
-## Using Pattern Markers
+
+### Using Pattern Markers
 
 Caxy's Zaba theme builder adds two pattern markers, defined with custom
 kss values:
@@ -72,7 +77,7 @@ The are added to your markup in the following way:
 
 Marker values should be lowercase.
 
-### Pattern Status
+#### Pattern Status
 
 Because not all styleguide projects will be iterative, pattern status
 markers are not active by default. For situations where patterns will
@@ -92,7 +97,7 @@ Pattern status markers are aggressively applied in an effort to
 encourage mindful documentation. If no status is set for a given
 pattern, it will automatically display as In Development.
 
-### Pattern Type
+#### Pattern Type
 
 Pattern types follow [Brad Frost's Atomic Design methodology](http://bradfrost.com/blog/post/atomic-web-design/).
 
@@ -107,11 +112,11 @@ To utilize these markers, the following values are available:
 - `template`
 - `page`
 
-## Using Color Swatches
+### Using Color Swatches
 
 To populate your project's color swatches, do the following:
 
-### Step 1: Create Color Sets
+#### Step 1: Create Color Sets
 
 Sets of colors should be grouped as follows:
 
@@ -131,7 +136,7 @@ $color-sets: (
 );
 ~~~~
 
-### Step 2: Create Swatch Markup
+#### Step 2: Create Swatch Markup
 
 Swatches will be created for the styleguide via a mixin with the
 following class naming convention:
