@@ -52,6 +52,27 @@ than `/* */` so that the markdown will be omitted.
 The styleguide's index page is rendered from the markdown file
 homepage.md in the `src/styleguide/project-assets` folder.
 
+### Adding Breakpoints
+
+Caxy's Zaba theme can display the current breakpoint in the upper
+righthand corner. To enable this, add a breakpoints object to your
+`kss-config.json` file like so:
+
+```
+{
+  "source": [
+    ...
+  ],
+  "breakpoints": {
+    "micro": "20.3125rem",
+    "small": "42.5rem",
+    "medium": "57.5rem",
+    "large": "75rem",
+    "xlarge": "88.75rem",
+    "xxlarge": "100rem"
+  }
+}
+```
 
 ### Using Pattern Markers
 
