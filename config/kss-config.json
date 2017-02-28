@@ -22,5 +22,13 @@
      "status",
      "patterntype",
      "containspatterns"
-  ]
+  ],
+  "breakpoints": {
+    "micro": "20.3125rem",
+    "small": "42.5rem",
+    "medium": "57.5rem",
+    "large": "75rem",
+    "xlarge": "88.75rem",
+    "xxlarge": "100rem"
+  }
 }

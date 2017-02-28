@@ -70,6 +70,13 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         multiple: false,
         describe: 'Hide Pattern Status',
         default: true
+      },
+      breakpoints: {
+        group: 'Style guide:',
+        string: false,
+        multiple: false,
+        describe: 'Breakpoints',
+        default: true
       }
     });
   }
@@ -94,9 +101,11 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
    *   `KssStyleGuide` object.
    */
   prepare(styleGuide) {
+
     // First call the prepare() of the parent KssBuilderBaseHandlebars class.
     // Since it returns a Promise, we do our prep work in a then().
     return super.prepare(styleGuide).then(styleGuide => {
+
       // Load this builder's extra Handlebars helpers.
 
       // Allow a builder user to override the {{section [reference]}} helper
@@ -109,7 +118,6 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
          */
         this.Handlebars.registerHelper('section', function(reference, options) {
           let section = options.data.root.styleGuide.sections(reference);
-
           return section.toJSON ? options.fn(section.toJSON()) : options.inverse('');
         });
       }
