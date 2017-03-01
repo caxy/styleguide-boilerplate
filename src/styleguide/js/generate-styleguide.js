@@ -15,13 +15,6 @@ const colorOptions = {
 };
 
 
-// Create color swatch markup file if needed.
-
-color.createSassJson(colorOptions).then((data) => {
-  // TODO: Insert function to create color swatch markup from this data
-});
-
-
 
 
 let compileSass = (outputCss) => {
@@ -44,11 +37,22 @@ let compileSass = (outputCss) => {
 
 
 
-
 let buildKSS = (options) => {
   kss(options).then(function () {
       compileSass(outputCss);
   });
 };
 
-buildKSS(JSON.parse(kssConfig));
+
+
+// Create color swatch markup file if needed.
+
+color.createSassJson(colorOptions).then((data) => {
+  color.createSwatchMarkup(data)
+    .then(() => {
+      buildKSS(JSON.parse(kssConfig));
+    })
+    .catch((error) => {
+      return error;
+    });
+});

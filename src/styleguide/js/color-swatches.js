@@ -39,6 +39,39 @@ module.exports = {
 
     })
 
+  },
+
+  createSwatchMarkup : (data) => {
+
+    return new Promise((resolve, reject) => {
+
+      let swatchSetMarkup = `<div class="kss-style">\n`;
+
+      for(let prop in data) {
+
+        swatchSetMarkup += `  <h3 class="kss-title">${ prop }</h3>\n  <ul class="has-swatches kss-style">\n`;
+
+        for(let child in data[prop]) {
+          let propClass = prop.toLowerCase().replace(' ', '-');
+          swatchSetMarkup += `    <li class="kss-swatch ${ propClass }--${ child }"><span class="dot"></span></li>\n`;
+        }
+
+        swatchSetMarkup += `  </ul>\n`;
+      }
+
+      swatchSetMarkup += `</div>`;
+
+      fs.writeFile('./pattern-markup/generated-swatches.html', swatchSetMarkup, function(error, result){
+        if(error){
+          console.log(error);
+        }
+      }).then(() => {
+        return resolve;
+      }).catch((error) => {
+        return reject('Error creating swatch markup file: ' + error);
+      });
+
+    });
   }
 
 };
