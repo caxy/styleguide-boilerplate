@@ -115,8 +115,3 @@ const generateSwatches = (options) => {
 };
 
 module.exports = generateSwatches;
-
-
-
-
-
