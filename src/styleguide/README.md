@@ -135,11 +135,15 @@ To utilize these markers, the following values are available:
 
 ### Using Color Swatches
 
+Color swatches for Zaba are generated using a specially named map in your
+project's Sass files.
+
 To populate your project's color swatches, do the following:
 
 #### Step 1: Create Color Sets
 
-Sets of colors should be grouped as follows:
+In your styleguide-specific Sass file, create sets of colors and group
+them as follows:
 
 ~~~~
 $color-set-1 (
@@ -148,35 +152,32 @@ $color-set-1 (
 );
 ~~~~
 
-These should all then be added to an object named `$color-sets`:
+**Please note:** This file cannot contain `//` comments, only `/* */`;
+
+#### Step 2: Name and Organize Color Sets
+
+Add your created color sets to a Sass map and note the name (the
+styleguide will reference `$kss-color-sets` by default). For the keys,
+use names you would like to have appear in the styleguide.
 
 ~~~~
-$color-sets: (
-  "color-set-1": $color-set-1,
-  "color-set-2": $color-set-2,
+$kss-color-sets: (
+  "Brand Colors": $color-set-1,
+  "Font Colors": $color-set-2,
 );
 ~~~~
 
-#### Step 2: Create Swatch Markup
+**Please note:** At this time, special characters are not allowed. 
 
-Swatches will be created for the styleguide via a mixin with the
-following class naming convention:
+#### Step 3: Populate File Options
 
-`.[color set name]--[variable name]`
+In `src/styleguide/js/generate-styleguide.js`, update the following
+object with information for your project:
 
-So a color in the $color-set-1 set above with the name `primary` will
-end up with the class name `.color-set-1--primary`. Your markup would
-then look like this:
-
-~~~~
-<div class="kss-style">
-  <h3 class="kss-title">Color Set 1</h3>
-  <ul class="has-swatches kss-style">
-    <li class="swatch color-set-1--primary"><span class="dot"></span></li>
-    <li class="swatch color-set-1--secondary"><span class="dot"></span></li>
-  </ul>
-</div>
-~~~~
-
-The mixin will add the hex and rgba values to the page for reference for
-you at this point.
+```
+const colorOptions = {
+  variableFile : '../styles/example-colors.scss', // File where your $kss-color-sets map is.
+  swatchColorSetName : '$kss-color-sets', // Default value
+  markupPath : './pattern-markup/' // Path to your project's styleguide markup files
+};
+```

@@ -1,25 +1,23 @@
 
 'use strict';
 
-/*
-* Import all color swatch variables or maps from a given source file.
-*
-* Note: All referenced .scss files need to have comments in multiline,
-* not // format.
-*/
-
 const fs = require('fs');
 const sassVars = require('get-sass-vars');
 
 /*
 * const options = {
 *   variableFile : 'path/to/color/variable/file.scss',
-*   swatchColorSetName : '$kss-color-sets'
+*   swatchColorSetName : '$kss-color-sets',
+*   markupPath: './path/to/markup/'
 * };
  */
 
 const generateSwatches = (options) => {
 
+  /*
+  * Note: Referenced .scss files need to have comments in multiline,
+  * not // format, and cannot depend on @import for values.
+  */
   const createSassJson = ( options) => {
 
     return new Promise((resolve, reject) => {
