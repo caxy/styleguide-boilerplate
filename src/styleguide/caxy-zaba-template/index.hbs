@@ -19,15 +19,10 @@
   </style>
   {{#if options.breakpoints }}
   <style media="screen">
-
     {{#each options.breakpoints }}
-
     @media (min-width: {{this}}) {
-      #width-marker::after {
-        content: "Breakpoint: {{@key}}/{{this}}";
-      }
+      #width-marker::after { content: "Breakpoint: {{@key}}/{{this}}"; }
     }
-
     {{/each}}
   </style>
   {{/if}}

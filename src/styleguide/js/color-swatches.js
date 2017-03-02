@@ -63,7 +63,7 @@ const generateSwatches = (options) => {
 
           css += `.${ propClass } .dot { background: ${ data[prop][child] } }\n`;
 
-          markup += `    <li class="kss-swatch ${ propClass }"><span class="dot"></span><span>${ data[prop][child] }</span></li>\n`;
+          markup += `    <li class="kss-swatch ${ propClass }"><span class="dot"></span><span>${ child }<br />${ data[prop][child] }</span></li>\n`;
         }
 
         markup += `  </ul>\n`;
