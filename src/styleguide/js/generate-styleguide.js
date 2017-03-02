@@ -13,7 +13,8 @@ const kssConfig = fs.readFileSync(kssConfigPath, 'utf-8');
 
 const colorOptions = {
   variableFile : '../styles/example-colors.scss', // Would it be better to pass the result of fs.readFileSync instead?
-  swatchColorSetName : '$kss-color-sets'
+  swatchColorSetName : '$kss-color-sets',
+  markupPath : './pattern-markup/'
 };
 
 const kssOptions = {

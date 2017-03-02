@@ -20,8 +20,6 @@ const sassVars = require('get-sass-vars');
 
 const generateSwatches = (options) => {
 
-  let markupPath = './pattern-markup/'; // TODO: make this something passed in.
-
   const createSassJson = ( options) => {
 
     return new Promise((resolve, reject) => {
@@ -47,7 +45,6 @@ const generateSwatches = (options) => {
       }
 
     }).then((data) => {
-      console.log('Sass converted to JSON.');
       return data;
     }).catch((error) => {
       console.log('Error converting Sass to JSON: ' + error);
@@ -83,7 +80,7 @@ const generateSwatches = (options) => {
 
       swatchContent = css + markup;
 
-      fs.writeFile(markupPath + 'generated-swatches.html', swatchContent, function(error, result){
+      fs.writeFile(options.markupPath + 'generated-swatches.html', swatchContent, function(error, result){
         if(error){
           return reject(error);
         } else {
@@ -93,7 +90,7 @@ const generateSwatches = (options) => {
 
     })
       .then(() => {
-      console.log('Swatch markup created at ' + markupPath + 'generated-swatches.html');
+      console.log('Swatch markup created at ' + options.markupPath + 'generated-swatches.html');
     }).catch((error) => {
       console.log('Error creating swatch markup file: ' + error);
     });
