@@ -11,9 +11,18 @@
 const fs = require('fs');
 const sassVars = require('get-sass-vars');
 
-module.exports = {
+/*
+* const options = {
+*   variableFile : 'path/to/color/variable/file.scss',
+*   swatchColorSetName : '$kss-color-sets'
+* };
+ */
 
-  createSassJson : (options) => {
+const generateSwatches = (options) => {
+
+  let markupPath = './pattern-markup/'; // TODO: make this something passed in.
+
+  const createSassJson = ( options) => {
 
     return new Promise((resolve, reject) => {
 
@@ -37,44 +46,84 @@ module.exports = {
           });
       }
 
-    })
+    }).then((data) => {
+      console.log('Sass converted to JSON.');
+      return data;
+    }).catch((error) => {
+      console.log('Error converting Sass to JSON: ' + error);
+    });
+  };
 
-  },
-
-  createSwatchMarkup : (data) => {
+  const createSwatchMarkup = (data) => {
 
     return new Promise((resolve, reject) => {
 
-      let swatchSetMarkup = `<div class="kss-style">\n`;
+      let swatchContent;
+      let css = '<style>';
+      let markup = `\n\n<div class="kss-style">\n`;
 
       for(let prop in data) {
 
-        swatchSetMarkup += `  <h3 class="kss-title">${ prop }</h3>\n  <ul class="has-swatches kss-style">\n`;
+        markup += `  <h3 class="kss-title">${ prop }</h3>\n  <ul class="has-swatches kss-style">\n`;
 
         for(let child in data[prop]) {
-          let propClass = prop.toLowerCase().replace(' ', '-');
-          swatchSetMarkup += `    <li class="kss-swatch ${ propClass }--${ child }"><span class="dot"></span></li>\n`;
+
+          let propClass = prop.toLowerCase().replace(' ', '-') + '--' + child;
+
+          css += `.${ propClass } .dot { background: ${ data[prop][child] } }\n`;
+
+          markup += `    <li class="kss-swatch ${ propClass }"><span class="dot"></span><span>${ data[prop][child] }</span></li>\n`;
         }
 
-        swatchSetMarkup += `  </ul>\n`;
+        markup += `  </ul>\n`;
       }
 
-      swatchSetMarkup += `</div>`;
+      css += '</style>';
+      markup += '</div>';
 
-      fs.writeFile('./pattern-markup/generated-swatches.html', swatchSetMarkup, function(error, result){
+      swatchContent = css + markup;
+
+      fs.writeFile(markupPath + 'generated-swatches.html', swatchContent, function(error, result){
         if(error){
-          console.log(error);
+          return reject(error);
+        } else {
+          return resolve();
         }
-      }).then(() => {
-        return resolve;
-      }).catch((error) => {
-        return reject('Error creating swatch markup file: ' + error);
       });
 
+    })
+      .then(() => {
+      console.log('Swatch markup created at ' + markupPath + 'generated-swatches.html');
+    }).catch((error) => {
+      console.log('Error creating swatch markup file: ' + error);
     });
-  }
+  };
+
+  return new Promise((resolve, reject) => {
+
+    createSassJson(options)
+      .then((data) => {
+        createSwatchMarkup(data)
+          .then(() => {
+            return resolve();
+          })
+          .catch((error) => {
+            return reject(error);
+          });
+      })
+      .catch((error) => {
+        return reject('Error: ' + error);
+      });
+
+  }).then(() => {
+    console.log('Swatch generation complete.');
+  }).catch((error) => {
+    console.log('Error building swatches: ' + error);
+  });
 
 };
+
+module.exports = generateSwatches;
 
 
 
