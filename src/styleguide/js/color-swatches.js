@@ -14,10 +14,6 @@ const sassVars = require('get-sass-vars');
 
 const generateSwatches = (options) => {
 
-  /*
-  * Note: Referenced .scss files need to have comments in multiline,
-  * not // format, and cannot depend on @import for values.
-  */
   const createSassJson = ( options) => {
 
     return new Promise((resolve, reject) => {

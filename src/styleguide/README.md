@@ -152,7 +152,9 @@ $color-set-1 (
 );
 ~~~~
 
-**Please note:** This file cannot contain `//` comments, only `/* */`;
+**Please note:** Referenced .scss files need to have comments in 
+multiline (`/* */`, not single line (`//`) format, and cannot depend
+on `@import` for values.
 
 #### Step 2: Name and Organize Color Sets
 
