@@ -15,9 +15,27 @@ to build your styleguide:
 
 `npm run generate-styleguide`
 
+### Additional Options
+
+#### Swatches
+
+Run `npm run generate-styleguide swatches` to also generate color
+swatches.
+
 This will compile the styleguide's CSS and create the styleguide pages 
 based on comments found in files in the `/src/styles/` folder and the
 markup HTML found in the `src/styleguide/pattern-markup/` folder.
+
+#### Compile Styleguide CSS
+
+Odds are good this won't be needed regularly, but in the event you need
+to rebuild the styleguide-specific theme CSS, run 
+`npm run generate-styleguide compile-css`.
+
+#### Generate Styleguide with All Options
+
+Run `npm run generate-styleguide complete` to generate the styleguide 
+while running all optional build tasks outlined above.
 
 
 ## Viewing the Styleguide
