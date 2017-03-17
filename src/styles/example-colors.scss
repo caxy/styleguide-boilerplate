@@ -1,17 +1,27 @@
-// Example Color Swatches
-//
-// Markup: swatches_example.html
-//
-// Styleguide 1.0
+/*
+Example Color Swatches
 
-$example-color-1: (
+Markup: generated-swatches.html
+
+HideMarkup: true
+
+Styleguide 1.0
+*/
+
+$colorset-1: (
   'base': #072736,
   'light': #1F5363,
   'dark': #041c25
 );
 
-$example-color-2: (
+$colorset-2: (
   'base': #df1e36,
   'light': lighten(#df1e36, 20%),
   'dark': darken(#df1e36, 10%)
+);
+
+/* This needs to be defined with a set variable for the color swatch generation script to find. */
+$kss-color-sets: (
+  'Brand Blues': $colorset-1,
+  'Brand Reds': $colorset-2
 );

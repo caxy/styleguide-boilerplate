@@ -1,32 +1,3 @@
-// Output background/swatch classes for all color variables
-@mixin make-swatches($color-sets: null) {
-
-  $i: 0;
-
-  @each $color-set-name, $color-set in $color-sets {
-
-    @each $name, $value in $color-set {
-
-      $i: $i + 1;
-
-      $red: red($value);
-      $green: green($value);
-      $blue: blue($value);
-
-      &.#{$color-set-name}--#{$name} {
-
-        .dot {
-          background-color: $value;
-          border: 1px solid darken($value, 10%);
-        }
-
-        &::after {
-          content: "<strong>#{$name}</strong><br />#{$value}<br />rgb(#{$red}, #{$green}, #{$blue})";
-        }
-      }
-    }
-  }
-}
 
 @mixin clearfix() {
   &::before,

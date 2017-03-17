@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@debug 'Building CSS for Styleguide.';
-
 // ------------------------------------------------------------------------------
 //   Variables - Colors, Fonts, etc.
 // ------------------------------------------------------------------------------
@@ -56,8 +54,6 @@ $kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, 
 @import 'normalize';
 @import 'mixins-flexbox';
 @import 'mixins-styleguide';
-
-@import '../project-assets/project-specific';
 @import 'kss';
 
 
@@ -101,6 +97,7 @@ $kss-font-code: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, 
     width: 6rem;
     margin: $kss-spacing auto;
     border-radius: 100%;
+    border: 1px solid rgba(0,0,0,0.25);
   }
 
   small {

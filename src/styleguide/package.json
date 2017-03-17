@@ -1,13 +1,11 @@
 {
   "name": "styleguide-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A boilerplate KSS node styleguide implementation for projects.",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/http-server ../../dist/styleguide",
-    "generate-styleguide": "../../bin/generate-styleguide",
-    "generate-styleguide-css": "node-sass --include-path node_modules/normalize-css/ scss/caxy-zaba.scss ../../dist/styleguide/kss-assets/styles/styleguide.css",
-    "generate-styleguide-pages": "kss --config ../../config/kss-config.json"
+    "generate-styleguide": "node js/generate-styleguide.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +25,7 @@
   },
   "homepage": "https://github.com/caxy/styleguide-boilerplate#readme",
   "dependencies": {
+    "get-sass-vars": "^1.0.2",
     "http-server": "^0.9.0",
     "kss": "^3.0.0-beta.14",
     "node-sass": "^3.4.2",

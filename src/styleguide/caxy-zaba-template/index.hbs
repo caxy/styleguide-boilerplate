@@ -17,6 +17,15 @@
       display: none;
     }
   </style>
+  {{#if options.breakpoints }}
+  <style media="screen">
+    {{#each options.breakpoints }}
+    @media (min-width: {{this}}) {
+      #width-marker::after { content: "Breakpoint: {{@key}}/{{this}}"; }
+    }
+    {{/each}}
+  </style>
+  {{/if}}
   {{{styles}}}
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -26,7 +35,9 @@
 
 <div class="kss-status-bar">
   <button class="kss-button sidebar-toggle">Menu</button>
+  {{#if options.breakpoints }}
   <div id="width-marker" class="kss-style"></div>
+  {{/if}}
 </div>
 
 {{#unless options.hide_pattern_status}}
@@ -292,8 +303,7 @@
     var jsFiles = [
       "kss-assets/js/kss.js",
       "kss-assets/js/scrollspy.js",
-      "kss-assets/js/prettify.js",
-      "kss-assets/js/swatch-text.js"
+      "kss-assets/js/prettify.js"
     ];
 
     for (var i = 0; i < jsFiles.length; i++) {

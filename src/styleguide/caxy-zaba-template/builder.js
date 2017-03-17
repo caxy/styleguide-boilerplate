@@ -40,7 +40,7 @@ try {
  * A kss-node builder that takes input files and builds a style guide using
  * Handlebars templates.
  */
-class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
+class KssBuilderZabaHandlebars extends KssBuilderBaseHandlebars {
   /**
    * Create a builder object.
    */
@@ -69,6 +69,13 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         string: false,
         multiple: false,
         describe: 'Hide Pattern Status',
+        default: true
+      },
+      breakpoints: {
+        group: 'Style guide:',
+        string: false,
+        multiple: false,
+        describe: 'Breakpoints',
         default: true
       }
     });
@@ -144,25 +151,28 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
       }
 
       // Adds markers for different pattern states
-      this.Handlebars.registerHelper('statusMarker', function(status) {
-        var statusObject = {
-          'label' : 'In Development',
-          'class' : 'development'
-        };
-        if (status === 'review') {
-          statusObject.label = 'In Review';
-          statusObject.class = 'review'
-        }
-        if (status === 'ready') {
-          statusObject.label = 'Production Ready';
-          statusObject.class = 'ready'
-        }
-        return '<span class="kss-status ' + statusObject.class + '">' + statusObject.label + '</span>';
-      });
+      if (!this.Handlebars.helpers['statusMarker']) {
+
+        this.Handlebars.registerHelper('statusMarker', function(status) {
+          var statusObject = {
+            'label' : 'In Development',
+            'class' : 'development'
+          };
+          if (status === 'review') {
+            statusObject.label = 'In Review';
+            statusObject.class = 'review'
+          }
+          if (status === 'ready') {
+            statusObject.label = 'Production Ready';
+            statusObject.class = 'ready'
+          }
+          return '<span class="kss-status ' + statusObject.class + '">' + statusObject.label + '</span>';
+        });
+      }
 
       return Promise.resolve(styleGuide);
     });
   }
 }
 
-module.exports = KssBuilderHandlebars;
+module.exports = KssBuilderZabaHandlebars;

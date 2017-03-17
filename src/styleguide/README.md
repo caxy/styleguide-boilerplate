@@ -15,9 +15,27 @@ to build your styleguide:
 
 `npm run generate-styleguide`
 
+### Additional Options
+
+#### Swatches
+
+Run `npm run generate-styleguide swatches` to also generate color
+swatches.
+
 This will compile the styleguide's CSS and create the styleguide pages 
 based on comments found in files in the `/src/styles/` folder and the
 markup HTML found in the `src/styleguide/pattern-markup/` folder.
+
+#### Compile Styleguide CSS
+
+Odds are good this won't be needed regularly, but in the event you need
+to rebuild the styleguide-specific theme CSS, run 
+`npm run generate-styleguide compile-css`.
+
+#### Generate Styleguide with All Options
+
+Run `npm run generate-styleguide complete` to generate the styleguide 
+while running all optional build tasks outlined above.
 
 
 ## Viewing the Styleguide
@@ -52,6 +70,27 @@ than `/* */` so that the markdown will be omitted.
 The styleguide's index page is rendered from the markdown file
 homepage.md in the `src/styleguide/project-assets` folder.
 
+### Adding Breakpoints
+
+Caxy's Zaba theme can display the current breakpoint in the upper
+righthand corner. To enable this, add a breakpoints object to your
+`kss-config.json` file like so:
+
+```
+{
+  "source": [
+    ...
+  ],
+  "breakpoints": {
+    "micro": "20.3125rem",
+    "small": "42.5rem",
+    "medium": "57.5rem",
+    "large": "75rem",
+    "xlarge": "88.75rem",
+    "xxlarge": "100rem"
+  }
+}
+```
 
 ### Using Pattern Markers
 
@@ -114,11 +153,15 @@ To utilize these markers, the following values are available:
 
 ### Using Color Swatches
 
+Color swatches for Zaba are generated using a specially named map in your
+project's Sass files.
+
 To populate your project's color swatches, do the following:
 
 #### Step 1: Create Color Sets
 
-Sets of colors should be grouped as follows:
+In your styleguide-specific Sass file, create sets of colors and group
+them as follows:
 
 ~~~~
 $color-set-1 (
@@ -127,35 +170,34 @@ $color-set-1 (
 );
 ~~~~
 
-These should all then be added to an object named `$color-sets`:
+**Please note:** Referenced .scss files need to have comments in 
+multiline (`/* */`, not single line (`//`) format, and cannot depend
+on `@import` for values.
+
+#### Step 2: Name and Organize Color Sets
+
+Add your created color sets to a Sass map and note the name (the
+styleguide will reference `$kss-color-sets` by default). For the keys,
+use names you would like to have appear in the styleguide.
 
 ~~~~
-$color-sets: (
-  "color-set-1": $color-set-1,
-  "color-set-2": $color-set-2,
+$kss-color-sets: (
+  "Brand Colors": $color-set-1,
+  "Font Colors": $color-set-2,
 );
 ~~~~
 
-#### Step 2: Create Swatch Markup
+**Please note:** At this time, special characters are not allowed. 
 
-Swatches will be created for the styleguide via a mixin with the
-following class naming convention:
+#### Step 3: Populate File Options
 
-`.[color set name]--[variable name]`
+In `src/styleguide/js/generate-styleguide.js`, update the following
+object with information for your project:
 
-So a color in the $color-set-1 set above with the name `primary` will
-end up with the class name `.color-set-1--primary`. Your markup would
-then look like this:
-
-~~~~
-<div class="kss-style">
-  <h3 class="kss-title">Color Set 1</h3>
-  <ul class="has-swatches kss-style">
-    <li class="swatch color-set-1--primary"><span class="dot"></span></li>
-    <li class="swatch color-set-1--secondary"><span class="dot"></span></li>
-  </ul>
-</div>
-~~~~
-
-The mixin will add the hex and rgba values to the page for reference for
-you at this point.
+```
+const colorOptions = {
+  variableFile : '../styles/example-colors.scss', // File where your $kss-color-sets map is.
+  swatchColorSetName : '$kss-color-sets', // Default value
+  markupPath : './pattern-markup/' // Path to your project's styleguide markup files
+};
+```

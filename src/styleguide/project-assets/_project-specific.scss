@@ -10,56 +10,6 @@
 
 
 
-
-// ------------------------------------------------------------------------------
-//   Breakpoint Display
-// ------------------------------------------------------------------------------
-
-$example-screen-micro: 20.3125rem;
-$example-screen-small: 42.5rem;
-$example-screen-medium: 57.5rem;
-$example-screen-large: 75rem;
-$example-screen-xlarge: 88.75rem;
-$example-screen-xxlarge: 100rem;
-
-#width-marker {
-
-  @media (min-width: $example-screen-micro) {
-    &::after {
-      content: "Breakpoint: Micro (#{$example-screen-micro})";
-    }
-  }
-  @media (min-width: $example-screen-small) {
-    &::after {
-      content: "Breakpoint: Small (#{$example-screen-small})";
-    }
-  }
-  @media (min-width: $example-screen-medium) {
-    &::after {
-      content: "Breakpoint: Medium (#{$example-screen-medium})";
-    }
-  }
-  @media (min-width: $example-screen-large) {
-    &::after {
-      content: "Breakpoint: Large (#{$example-screen-large})";
-    }
-  }
-  @media (min-width: $example-screen-xlarge) {
-    &::after {
-      content: "Breakpoint: XLarge (#{$example-screen-xlarge})";
-    }
-  }
-  @media (min-width: $example-screen-xxlarge) {
-    &::after {
-      content: "Breakpoint: XXLarge (#{$example-screen-xxlarge})";
-    }
-  }
-}
-
-
-
-
-
 // ------------------------------------------------------------------------------
 //   Color Swatches
 // ------------------------------------------------------------------------------

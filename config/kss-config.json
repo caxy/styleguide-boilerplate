@@ -1,15 +1,15 @@
 {
   "//": "The source and destination paths are relative to this config file.",
   "source": [
-    "../src/styles",
-    "../src/styleguide/project-assets",
-    "../src/styleguide/pattern-markup"
+    "../styles",
+    "./project-assets",
+    "./pattern-markup"
   ],
   "title": "Style Guide",
   "styleguide_version": "0.0.1",
-  "hide_pattern_status": true,
-  "destination":  "../dist/styleguide",
-  "builder": "../src/styleguide/caxy-zaba-template",
+  "hide_pattern_status": false,
+  "destination":  "../../dist/styleguide",
+  "builder": "./caxy-zaba-template",
   "//": "The css and js paths are URLs relative to the generated styleguide.",
   "css": [
     "kss-assets/styles/styleguide.css"
@@ -17,10 +17,18 @@
   "js": [
   ],
   "custom": [
-     "devnotes",
-     "hidemarkup",
-     "status",
-     "patterntype",
-     "containspatterns"
-  ]
+    "devnotes",
+    "hidemarkup",
+    "status",
+    "patterntype",
+    "containspatterns"
+  ],
+  "breakpoints": {
+    "micro": "20.3125rem",
+    "small": "42.5rem",
+    "medium": "57.5rem",
+    "large": "75rem",
+    "xlarge": "88.75rem",
+    "xxlarge": "100rem"
+  }
 }
